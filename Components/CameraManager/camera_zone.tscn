@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://prmvfl2foyy7"]
+
+[ext_resource type="Script" uid="uid://d22g8s76koc81" path="res://Components/CameraManager/camera_zone.gd" id="1_8xegu"]
+
+[node name="CameraZone" type="Node2D" unique_id=2111838270 groups=["camera_zone"]]
+script = ExtResource("1_8xegu")
+
+[node name="Jurisdiction" type="Polygon2D" parent="." unique_id=609086849]
