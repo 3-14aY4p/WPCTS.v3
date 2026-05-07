@@ -1,13 +1,17 @@
-extends Camera2D
+class_name CustomCamera extends Camera2D
 
 
-@export var target: Node2D
+@onready var target = $"..":
+	set(node):
+		global_position = node.global_position
+		reparent(node)
 
 var all_areas: Array[CameraZone] = []
 var current_area: CameraZone
 var camera_bounds: TileMapLayer
 
 func _ready() -> void:
+	zoom = Vector2(8, 8)
 	await get_tree().process_frame
 
 func _process(delta: float) -> void:
@@ -16,8 +20,6 @@ func _process(delta: float) -> void:
 	camera_bounds = get_tree().get_first_node_in_group("camera_bounds")
 	setup_camera_limits()
 	_find_current_area()
-	
-	global_position = target.global_position
 
 func setup_camera_limits():
 	if not camera_bounds:
@@ -32,7 +34,7 @@ func setup_camera_limits():
 	limit_right = (used_rect.position.x + used_rect.size.x) * bounds_size.x
 
 func _find_current_area():
-	if not get_tree().get_first_node_in_group("camera_area"):
+	if not get_tree().get_first_node_in_group("camera_zone"):
 		return
 	else:
 		if not target:

@@ -6,3 +6,4 @@
 script = ExtResource("1_8xegu")
 
 [node name="Jurisdiction" type="Polygon2D" parent="." unique_id=609086849]
+color = Color(1, 0, 1, 0.11764706)

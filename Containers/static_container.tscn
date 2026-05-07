@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://b5a4ukc1uw60v"]
+
+[node name="StaticContainer" type="Node2D" unique_id=1708936030]
+y_sort_enabled = true

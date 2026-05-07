@@ -2,6 +2,14 @@
 
 [ext_resource type="Script" uid="uid://dg8qagexqhhwt" path="res://Entities/Player/player.gd" id="1_mv1ah"]
 [ext_resource type="Texture2D" uid="uid://babbqstx2ptg7" path="res://Assets/Art/player.png" id="2_3uyv8"]
+[ext_resource type="Script" uid="uid://cg0nwknkxhi6g" path="res://Components/StateMachine/state_machine.gd" id="2_lu8i8"]
+[ext_resource type="Script" uid="uid://djimeiq387sgd" path="res://Entities/Player/States/player_disabled.gd" id="3_lub02"]
+[ext_resource type="Script" uid="uid://cxcnu7yyxifll" path="res://Entities/Player/States/player_idle.gd" id="3_tekja"]
+[ext_resource type="Script" uid="uid://yx0gcchvusbo" path="res://Entities/Player/States/player_walk.gd" id="5_x1y6q"]
+[ext_resource type="Script" uid="uid://cuka3njmx1q8a" path="res://Entities/Player/States/player_carry.gd" id="6_ap3xn"]
+[ext_resource type="Script" uid="uid://ccbq5tq7xnvb0" path="res://Entities/Player/States/player_shove.gd" id="7_iplt1"]
+[ext_resource type="Script" uid="uid://b4e1hci1ac8pv" path="res://Entities/Player/States/player_knockback.gd" id="8_owvpp"]
+[ext_resource type="PackedScene" uid="uid://cqngnytombuvg" path="res://Components/CameraManager/custom_camera.tscn" id="10_x1y6q"]
 
 [sub_resource type="Animation" id="Animation_lu8i8"]
 length = 0.001
@@ -105,6 +113,22 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3]
 }
 
+[sub_resource type="Animation" id="Animation_lub02"]
+resource_name = "knockback"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [24, 25, 26, 27]
+}
+
 [sub_resource type="Animation" id="Animation_5c2io"]
 resource_name = "shove_charge"
 length = 0.2
@@ -123,7 +147,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_4wf4l"]
 resource_name = "shove_release"
-length = 0.2
+length = 0.15
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -131,7 +155,7 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.099999994, 0.19999999),
+"times": PackedFloat32Array(0, 0.033333335, 0.13333334),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [12, 13, 14]
@@ -160,6 +184,7 @@ _data = {
 &"carry_idle": SubResource("Animation_01a4e"),
 &"carry_walk": SubResource("Animation_7a1se"),
 &"idle": SubResource("Animation_3uyv8"),
+&"knockback": SubResource("Animation_lub02"),
 &"shove_charge": SubResource("Animation_5c2io"),
 &"shove_release": SubResource("Animation_4wf4l"),
 &"walk": SubResource("Animation_tekja")
@@ -190,9 +215,40 @@ ProgressBar/styles/background = SubResource("StyleBoxFlat_3uyv8")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_lu8i8")
 
 [node name="Player" type="CharacterBody2D" unique_id=1674835234 groups=["player"]]
+z_index = 1
+y_sort_enabled = true
 collision_layer = 8
 collision_mask = 7
 script = ExtResource("1_mv1ah")
+metadata/_edit_group_ = true
+
+[node name="StateMachine" type="Node" parent="." unique_id=396408628 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("2_lu8i8")
+initial_state = NodePath("PlayerIdle")
+
+[node name="PlayerDisabled" type="Node" parent="StateMachine" unique_id=1716338636]
+script = ExtResource("3_lub02")
+metadata/_custom_type_script = "uid://djimeiq387sgd"
+
+[node name="PlayerIdle" type="Node" parent="StateMachine" unique_id=1456609666]
+script = ExtResource("3_tekja")
+metadata/_custom_type_script = "uid://cxcnu7yyxifll"
+
+[node name="PlayerWalk" type="Node" parent="StateMachine" unique_id=196126636]
+script = ExtResource("5_x1y6q")
+metadata/_custom_type_script = "uid://yx0gcchvusbo"
+
+[node name="PlayerCarry" type="Node" parent="StateMachine" unique_id=2141275815]
+script = ExtResource("6_ap3xn")
+metadata/_custom_type_script = "uid://cuka3njmx1q8a"
+
+[node name="PlayerShove" type="Node" parent="StateMachine" unique_id=1685656973]
+script = ExtResource("7_iplt1")
+metadata/_custom_type_script = "uid://ccbq5tq7xnvb0"
+
+[node name="PlayerKnockback" type="Node" parent="StateMachine" unique_id=1406346572]
+script = ExtResource("8_owvpp")
+metadata/_custom_type_script = "uid://b4e1hci1ac8pv"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=735697984]
 libraries/ = SubResource("AnimationLibrary_lu8i8")
@@ -207,14 +263,15 @@ shape = SubResource("CapsuleShape2D_3uyv8")
 texture = ExtResource("2_3uyv8")
 offset = Vector2(0, -8)
 hframes = 4
-vframes = 6
+vframes = 7
 
 [node name="Marker2D" type="Marker2D" parent="Sprite2D" unique_id=801964823]
 position = Vector2(0, -13)
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=2111730866]
-position = Vector2(0, -2)
+position = Vector2(0, -1)
 target_position = Vector2(12, 0)
+collision_mask = 7
 
 [node name="PointerArea" type="Area2D" parent="RayCast2D" unique_id=709768660]
 collision_layer = 0
@@ -226,7 +283,7 @@ position = Vector2(6, 0)
 shape = SubResource("CircleShape2D_3uyv8")
 
 [node name="Marker2D" type="Marker2D" parent="RayCast2D" unique_id=914220051]
-position = Vector2(11, 0)
+position = Vector2(10, 0)
 
 [node name="MiniHUD" type="Control" parent="." unique_id=196997915]
 layout_mode = 3
@@ -251,7 +308,7 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -6.0
-offset_top = -4.0
+offset_top = -3.0
 offset_right = 6.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -259,3 +316,5 @@ theme = SubResource("Theme_tekja")
 step = 0.0
 value = 50.0
 show_percentage = false
+
+[node name="Camera" parent="." unique_id=1171970425 instance=ExtResource("10_x1y6q")]

@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bgdacbfpjdyxs"]
+
+[ext_resource type="Texture2D" uid="uid://cj10xnuyer7uy" path="res://Assets/Art/objects.png" id="1_pboed"]
+[ext_resource type="Script" uid="uid://ch4qrb53yjgl5" path="res://Entities/DynamicObjects/dynamic_object.gd" id="1_xdflr"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pboed"]
+friction = 0.5
+bounce = 0.3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xdflr"]
+size = Vector2(12, 5)
+
+[node name="MediumBox" type="RigidBody2D" unique_id=1906501228 groups=["pickable_object"]]
+z_index = 1
+collision_layer = 4
+collision_mask = 15
+mass = 5.0
+physics_material_override = SubResource("PhysicsMaterial_pboed")
+lock_rotation = true
+linear_damp_mode = 1
+linear_damp = 3.0
+script = ExtResource("1_xdflr")
+minimum_force = 100.0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=911643185]
+texture = ExtResource("1_pboed")
+offset = Vector2(0, -7)
+region_enabled = true
+region_rect = Rect2(0, 80, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=713959176]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_xdflr")

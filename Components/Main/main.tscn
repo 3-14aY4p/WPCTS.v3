@@ -2,20 +2,15 @@
 
 [ext_resource type="Script" uid="uid://1reikhkg7ev2" path="res://Components/Main/Scripts/world.gd" id="1_pnopi"]
 [ext_resource type="Script" uid="uid://chkgbxt67akew" path="res://Components/Main/Scripts/user_interface.gd" id="2_j6wt8"]
-[ext_resource type="Script" uid="uid://dy17h8ueiyfx8" path="res://Components/CameraManager/camera.gd" id="2_tcdda"]
-[ext_resource type="PackedScene" uid="uid://c0twyucy5xnqo" path="res://Entities/Player/player.tscn" id="3_tcdda"]
+[ext_resource type="PackedScene" uid="uid://ddhar5ehgr4m1" path="res://LevelScenes/demo.tscn" id="3_tcdda"]
 
 [node name="Components" type="Node" unique_id=1119820998]
 
 [node name="World" type="Node2D" parent="." unique_id=590916064]
+y_sort_enabled = true
 script = ExtResource("1_pnopi")
 
-[node name="Camera2D" type="Camera2D" parent="World" unique_id=2055430668 node_paths=PackedStringArray("target")]
-zoom = Vector2(4, 4)
-script = ExtResource("2_tcdda")
-target = NodePath("../Player")
-
-[node name="Player" parent="World" unique_id=1674835234 instance=ExtResource("3_tcdda")]
+[node name="DEMO" parent="World" unique_id=517280954 instance=ExtResource("3_tcdda")]
 
 [node name="UserInterface" type="Control" parent="." unique_id=1306257953]
 layout_mode = 3

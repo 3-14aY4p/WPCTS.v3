@@ -45,6 +45,10 @@ window/vsync/vsync_mode=0
 
 player=""
 camera_zone=""
+object_container=""
+pickable_object=""
+camera_bounds=""
+camera=""
 
 [input]
 
