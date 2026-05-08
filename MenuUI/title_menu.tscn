@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://ch2mm3rlr513m"]
+
+[ext_resource type="Script" uid="uid://c6u6p6jitpamr" path="res://MenuUI/title_menu.gd" id="1_ha7ql"]
+[ext_resource type="Theme" uid="uid://b4gxjcrjef1na" path="res://Themes/button_theme_2.tres" id="2_ha7ql"]
+
+[node name="TitleMenu" type="Control" unique_id=1273646821]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ha7ql")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1278940095]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.20784314, 0.23921569, 0.27450982, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=318064720]
+layout_mode = 1
+offset_left = 504.0
+offset_top = 208.0
+offset_right = 581.0
+offset_bottom = 306.0
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="PlayGame" type="Button" parent="VBoxContainer" unique_id=1898250689]
+layout_mode = 2
+theme = ExtResource("2_ha7ql")
+text = "Play"
+
+[node name="ExitGame" type="Button" parent="VBoxContainer" unique_id=1165733767]
+layout_mode = 2
+theme = ExtResource("2_ha7ql")
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/PlayGame" to="." method="_on_play_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitGame" to="." method="_on_exit_game_pressed"]

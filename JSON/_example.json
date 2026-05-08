@@ -1,0 +1,72 @@
+{
+	"0": {
+		"name": "Ms. Barbara",
+		"anim": "mt",
+		"text": “Good morning, Colin!”,
+
+		"next": "1",
+	},
+	"1": {
+		"name": "Ms. Barbara",
+		"anim": "mt",
+		"text": “Late start today?”,
+
+		"next": "2",
+	},
+	"2": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": “Oh, Ms. Barbara. Lovely morning!”,
+
+		"next": "3",
+	},
+	"3": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": “Not at all, I’m right on schedule.”,
+
+		"next": "4",
+	},
+	"4": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "(To be late, that is...)",
+
+		"next": "5",
+	},
+	"5": {
+		"name": "",
+		"anim": "",
+		"text": "",
+
+		"next": "",
+	},
+	"6": {
+		"name": "",
+		"anim": "",
+		"text": "",
+
+		"next": "",
+	},
+	"7": {
+		"name": "",
+		"anim": "",
+		"text": "",
+
+		"next": "",
+	},
+	"8": {
+		"name": "",
+		"anim": "",
+		"text": "",
+
+		"next": "",
+	},
+	"9": {
+		"name": "",
+		"anim": "",
+		"text": "",
+
+		"next": "",
+	},
+}

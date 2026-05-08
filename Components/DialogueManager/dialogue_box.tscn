@@ -1,0 +1,232 @@
+[gd_scene format=3 uid="uid://c1g30yjbrt5um"]
+
+[ext_resource type="Script" uid="uid://bjr3lwaepedk2" path="res://Components/DialogueManager/dialogue_box.gd" id="1_2msrq"]
+[ext_resource type="Texture2D" uid="uid://cejr7n5mqmd57" path="res://Assets/Art/ui.png" id="2_486cr"]
+[ext_resource type="FontFile" uid="uid://bthadkgdkntt8" path="res://Assets/Font/superstar_memesbruh03.ttf" id="3_ijj8p"]
+[ext_resource type="Texture2D" uid="uid://17svgm5pbki0" path="res://Assets/Art/characters.png" id="4_p6euh"]
+[ext_resource type="Theme" uid="uid://dimc0cp4ncfuj" path="res://Themes/richtextlabel_theme.tres" id="5_0qpf6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_s6cjy"]
+font = ExtResource("3_ijj8p")
+font_size = 24
+font_color = Color(0.6627451, 0.72156864, 0.46666667, 1)
+outline_size = 12
+outline_color = Color(0.19607843, 0.22745098, 0.25882354, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hul4x"]
+atlas = ExtResource("4_p6euh")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_246lh"]
+atlas = ExtResource("4_p6euh")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1d5j2"]
+atlas = ExtResource("4_p6euh")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpcgg"]
+atlas = ExtResource("4_p6euh")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fyq7u"]
+atlas = ExtResource("4_p6euh")
+region = Rect2(0, 48, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_histc"]
+atlas = ExtResource("4_p6euh")
+region = Rect2(32, 48, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s6cjy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hul4x")
+}],
+"loop": true,
+"name": &"dm",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_246lh")
+}],
+"loop": true,
+"name": &"mc",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1d5j2")
+}],
+"loop": true,
+"name": &"mt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpcgg")
+}],
+"loop": true,
+"name": &"pf",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fyq7u")
+}],
+"loop": true,
+"name": &"rand",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_histc")
+}],
+"loop": true,
+"name": &"unkn",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btloh"]
+atlas = ExtResource("2_486cr")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_quh4j"]
+atlas = ExtResource("2_486cr")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_goxuc"]
+atlas = ExtResource("2_486cr")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjo1r"]
+atlas = ExtResource("2_486cr")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3qlue"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_btloh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_quh4j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_goxuc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjo1r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_goxuc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_quh4j")
+}],
+"loop": true,
+"name": &"ready",
+"speed": 5.0
+}]
+
+[node name="DialogueBox" type="Control" unique_id=1290065068]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2msrq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=19607380]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1059957652]
+anchors_preset = -1
+anchor_top = 0.62222224
+anchor_right = 1.0
+anchor_bottom = 1.0000001
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 75
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 75
+theme_override_constants/margin_bottom = 15
+metadata/_edit_use_anchors_ = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/MarginContainer" unique_id=1133421123]
+layout_mode = 2
+texture = ExtResource("2_486cr")
+region_rect = Rect2(0, 0, 48, 48)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="CharacterName" type="Label" parent="CanvasLayer/MarginContainer/NinePatchRect" unique_id=1143908181]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25918368
+anchor_top = -0.19811335
+anchor_right = 0.9918367
+anchor_bottom = 0.028301742
+grow_horizontal = 0
+grow_vertical = 0
+text = "Colin (?)"
+label_settings = SubResource("LabelSettings_s6cjy")
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer/NinePatchRect" unique_id=1335216960]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.026530612
+anchor_top = 0.12264136
+anchor_right = 0.9734694
+anchor_bottom = 0.8773583
+metadata/_edit_use_anchors_ = true
+
+[node name="PortraitContainer" type="Control" parent="CanvasLayer/MarginContainer/NinePatchRect/HBoxContainer" unique_id=208022038]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+
+[node name="CharacterPortrait" type="AnimatedSprite2D" parent="CanvasLayer/MarginContainer/NinePatchRect/HBoxContainer/PortraitContainer" unique_id=2071016575]
+unique_name_in_owner = true
+position = Vector2(51, -8)
+scale = Vector2(3.75, 3.75)
+sprite_frames = SubResource("SpriteFrames_s6cjy")
+animation = &"mc"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/NinePatchRect/HBoxContainer" unique_id=594738985]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="DialogueLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/NinePatchRect/HBoxContainer/VBoxContainer" unique_id=1882307091]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("5_0qpf6")
+bbcode_enabled = true
+text = "This is a dialogue!!"
+fit_content = true
+scroll_active = false
+
+[node name="ButtonContainer" type="GridContainer" parent="CanvasLayer/MarginContainer/NinePatchRect/HBoxContainer/VBoxContainer" unique_id=1659735954]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+columns = 2
+
+[node name="IndicatorSprite" type="AnimatedSprite2D" parent="CanvasLayer/MarginContainer/NinePatchRect/HBoxContainer" unique_id=1926549328]
+unique_name_in_owner = true
+visible = false
+position = Vector2(452, 68)
+scale = Vector2(1.75, 1.75)
+sprite_frames = SubResource("SpriteFrames_3qlue")
+animation = &"ready"
+autoplay = "ready"
+frame_progress = 0.6841805

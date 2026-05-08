@@ -1,0 +1,26 @@
+{
+	"template 1": {
+		"name": "",
+		"anim": "",
+		"text": "",
+		
+		"next": "",
+	},
+	"template 2": {
+		"text": "",
+		
+		"choices": {
+			"dialogue": "path 1",
+			"dialogue": "path 2",
+		},
+	},
+	"template 3": {
+		"node": "/root/..",
+		"func": "",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": "path",
+	},
+}

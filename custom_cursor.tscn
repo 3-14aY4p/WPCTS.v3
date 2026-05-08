@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://xu57t5k0qjtn"]
+
+[ext_resource type="Script" uid="uid://b71u3a15c2e05" path="res://custom_cursor.gd" id="1_cawem"]
+[ext_resource type="Texture2D" uid="uid://dv4x5pd5v3y7m" path="res://Assets/Art/cursors.png" id="1_k6yab"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ddajh"]
+atlas = ExtResource("1_k6yab")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6yab"]
+atlas = ExtResource("1_k6yab")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_la5gc"]
+atlas = ExtResource("1_k6yab")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ll0ov"]
+atlas = ExtResource("1_k6yab")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cawem"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ddajh")
+}],
+"loop": true,
+"name": &"arrow",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6yab")
+}],
+"loop": true,
+"name": &"hand_hold",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_la5gc")
+}],
+"loop": true,
+"name": &"hand_palm",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ll0ov")
+}],
+"loop": true,
+"name": &"hand_point",
+"speed": 5.0
+}]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=2103422841]
+
+[node name="CustomCursor" type="AnimatedSprite2D" parent="." unique_id=1363698895]
+z_index = 4096
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_cawem")
+animation = &"hand_point"
+offset = Vector2(8, 8)
+script = ExtResource("1_cawem")

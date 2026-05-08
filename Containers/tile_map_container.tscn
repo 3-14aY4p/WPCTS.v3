@@ -398,6 +398,13 @@ texture = ExtResource("3_tm52h")
 0:7/0/z_index = 2
 0:7/0/y_sort_origin = 8
 0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(4.8, -8, 8, -8, 8, 8, 4.8, 8)
+4:7/0 = 0
+4:7/0/z_index = 2
+4:7/0/y_sort_origin = 8
+3:7/0 = 0
+3:7/0/z_index = 2
+3:7/0/y_sort_origin = 8
+3:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -1.333333, 4, -1.333333, 4, 16, -4, 16)
 
 [sub_resource type="TileSet" id="TileSet_cttmu"]
 physics_layer_0/collision_layer = 1
@@ -408,6 +415,7 @@ terrain_set_0/terrain_0/color = Color(0.8880515, 0, 0.4328096, 1)
 sources/0 = SubResource("TileSetAtlasSource_pwjlh")
 
 [node name="TileMapContainer" type="Node2D" unique_id=695135423]
+y_sort_enabled = true
 metadata/_edit_group_ = true
 
 [node name="Background" type="TileMapLayer" parent="." unique_id=1231930454 groups=["camera_bounds"]]
@@ -420,9 +428,12 @@ tile_set = SubResource("TileSet_u17fg")
 tile_set = SubResource("TileSet_j0553")
 
 [node name="RoomBase" type="TileMapLayer" parent="." unique_id=489774172]
+y_sort_enabled = true
 tile_set = SubResource("TileSet_fb6ar")
 
 [node name="RoomOverlay" type="TileMapLayer" parent="." unique_id=2082319703]
+z_index = 1
+y_sort_enabled = true
 tile_set = SubResource("TileSet_pwjlh")
 
 [node name="Walls" type="TileMapLayer" parent="." unique_id=597676183]

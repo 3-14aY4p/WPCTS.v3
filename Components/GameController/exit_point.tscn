@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://v8g3hjhyk64b"]
+
+[ext_resource type="Script" uid="uid://d3r3jsq46r3pe" path="res://Components/GameController/exit_point.gd" id="1_8ge10"]
+
+[node name="ExitPoint" type="Area2D" unique_id=1305555057]
+collision_layer = 0
+collision_mask = 16
+monitorable = false
+script = ExtResource("1_8ge10")
+dialogue_file = "res://JSON/constants/exit_point.json"
+action_hint = "[E] Exit"
+metadata/_edit_group_ = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="interact" from="." to="." method="_on_interact"]

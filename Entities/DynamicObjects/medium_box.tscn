@@ -10,7 +10,7 @@ bounce = 0.3
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xdflr"]
 size = Vector2(12, 5)
 
-[node name="MediumBox" type="RigidBody2D" unique_id=1906501228 groups=["pickable_object"]]
+[node name="MediumBox" type="RigidBody2D" unique_id=1906501228]
 z_index = 1
 collision_layer = 4
 collision_mask = 15
@@ -20,7 +20,6 @@ lock_rotation = true
 linear_damp_mode = 1
 linear_damp = 3.0
 script = ExtResource("1_xdflr")
-minimum_force = 100.0
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=911643185]

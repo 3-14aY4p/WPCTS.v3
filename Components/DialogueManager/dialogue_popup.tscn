@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://bnmud0js0ff3v"]
+
+[ext_resource type="Texture2D" uid="uid://cejr7n5mqmd57" path="res://Assets/Art/ui.png" id="1_02nin"]
+[ext_resource type="Theme" uid="uid://dimc0cp4ncfuj" path="res://Themes/richtextlabel_theme.tres" id="2_l2pk7"]
+[ext_resource type="FontFile" uid="uid://ckbixblavooub" path="res://Assets/Font/Pixel Millennium.ttf" id="3_lpfid"]
+
+[node name="DiialoguePopup" type="Control" unique_id=1080280741]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1340654619]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer" unique_id=493725361]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -92.0
+offset_right = 144.0
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_02nin")
+region_rect = Rect2(0, 48, 48, 48)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/NinePatchRect" unique_id=1691871375]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/NinePatchRect/MarginContainer" unique_id=258645805]
+layout_mode = 2
+
+[node name="DialogueLabel" type="RichTextLabel" parent="CanvasLayer/NinePatchRect/MarginContainer/VBoxContainer" unique_id=2106791032]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_l2pk7")
+theme_override_fonts/normal_font = ExtResource("3_lpfid")
+bbcode_enabled = true
+text = "This should be a dialogue."
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1

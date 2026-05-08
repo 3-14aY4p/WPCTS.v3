@@ -274,8 +274,8 @@ target_position = Vector2(12, 0)
 collision_mask = 7
 
 [node name="PointerArea" type="Area2D" parent="RayCast2D" unique_id=709768660]
-collision_layer = 0
-collision_mask = 7
+collision_layer = 16
+collision_mask = 0
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RayCast2D/PointerArea" unique_id=1321335551]
@@ -286,6 +286,7 @@ shape = SubResource("CircleShape2D_3uyv8")
 position = Vector2(10, 0)
 
 [node name="MiniHUD" type="Control" parent="." unique_id=196997915]
+z_index = 999
 layout_mode = 3
 anchors_preset = 7
 anchor_left = 0.5

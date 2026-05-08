@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://b6y17r8ueojg4"]
+
+[ext_resource type="FontFile" uid="uid://ckbixblavooub" path="res://Assets/Font/Pixel Millennium.ttf" id="1_d8cvw"]
+
+[resource]
+font = ExtResource("1_d8cvw")
+font_size = 8
+font_color = Color(0.67058825, 0.7294118, 0.4745098, 1)
+outline_size = 4
+outline_color = Color(0.2, 0.23137255, 0.26666668, 1)

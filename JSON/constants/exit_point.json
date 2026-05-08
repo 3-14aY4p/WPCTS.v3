@@ -1,0 +1,33 @@
+{
+	"0": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "It seems like I can go through...",
+		
+		"next": "1",
+	},
+	"1": {
+		"text": "Do you want to go to the next level?",
+		
+		"choices": {
+			"Proceed.": "proceed",
+			"Stay.": "stay"
+		},
+	},
+	"proceed": {
+		"node": "/root/GameController",
+		"func": "load_next_scene",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": "",
+	},
+	"stay": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "I'll be back for you, door!",
+		
+		"next": "",
+	},
+}

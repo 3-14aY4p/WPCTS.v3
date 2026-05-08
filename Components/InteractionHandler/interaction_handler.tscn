@@ -1,23 +1,17 @@
 [gd_scene format=3 uid="uid://bjpuhqhsimmyl"]
 
 [ext_resource type="Script" uid="uid://dn01ogb8a0nit" path="res://Components/InteractionHandler/interaction_handler.gd" id="1_pc7ch"]
-[ext_resource type="FontFile" uid="uid://ckbixblavooub" path="res://Assets/Font/Pixel Millennium.ttf" id="2_h3raq"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_qwmyk"]
-font = ExtResource("2_h3raq")
-font_size = 8
-font_color = Color(0.67058825, 0.7294118, 0.4745098, 1)
-outline_size = 4
-outline_color = Color(0.2, 0.23137255, 0.26666668, 1)
+[ext_resource type="LabelSettings" uid="uid://b6y17r8ueojg4" path="res://Themes/label_settings_1.tres" id="2_h3raq"]
 
 [node name="InteractionHandler" type="Node" unique_id=404507671]
 script = ExtResource("1_pc7ch")
 
 [node name="Label" type="Label" parent="." unique_id=662822152]
+z_index = 999
 offset_left = -64.0
 offset_right = 64.0
 offset_bottom = 8.0
 text = "[E] interact"
-label_settings = SubResource("LabelSettings_qwmyk")
+label_settings = ExtResource("2_h3raq")
 horizontal_alignment = 1
 vertical_alignment = 1

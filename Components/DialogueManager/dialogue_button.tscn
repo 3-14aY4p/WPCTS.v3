@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cc70oile13cbd"]
+
+[ext_resource type="Theme" uid="uid://c30dy0ihh6qsb" path="res://Themes/button_theme_1.tres" id="1_qnwcd"]
+
+[node name="DialogueButton" type="Button" unique_id=455013511]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_qnwcd")
