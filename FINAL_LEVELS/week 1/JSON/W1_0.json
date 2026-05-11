@@ -1,0 +1,39 @@
+{
+	"0": {
+		"name": "",
+		"anim": "",
+		"text": "* ALARM RINGS *",
+		
+		"next": "1",
+	},
+	"1": {
+		"name": "",
+		"anim": "",
+		"text": "Darn it... It’s already 7:49 AM?!",
+		
+		"next": "2",
+	},
+	"2": {
+		"name": "",
+		"anim": "",
+		"text": "I’m gonna be late again!",
+		
+		"next": "3",
+	},
+	"3": {
+		"name": "",
+		"anim": "",
+		"text": "Prof. Candice is soooo gonna have my head...",
+		
+		"next": "END",
+	},
+	"END": {
+		"node": "/root/GameController",
+		"func": "transition_to_next_scene",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": "",
+	},
+}

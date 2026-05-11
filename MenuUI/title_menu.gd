@@ -8,7 +8,7 @@ func _on_play_game_pressed() -> void:
 	# - quiz game
 	# - leaderboards
 	
-	GameController.load_next_scene()
+	GameController.transition_to_next_scene()
 
 func _on_exit_game_pressed() -> void:
 	get_tree().quit()

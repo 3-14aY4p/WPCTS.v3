@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://rltul4frnr2"]
+
+[ext_resource type="Texture2D" uid="uid://cj10xnuyer7uy" path="res://Assets/Art/objects.png" id="1_fapb7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fapb7"]
+size = Vector2(26, 8)
+
+[node name="SofaH" type="StaticBody2D" unique_id=1916313207]
+z_index = 1
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=306405198]
+texture = ExtResource("1_fapb7")
+offset = Vector2(0, -7)
+vframes = 2
+region_enabled = true
+region_rect = Rect2(80, 0, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1050424067]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_fapb7")

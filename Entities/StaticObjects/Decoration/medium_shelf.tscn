@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://duw0li1k7c3ur"]
+
+[ext_resource type="Texture2D" uid="uid://cj10xnuyer7uy" path="res://Assets/Art/objects.png" id="1_sdj1d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_73vii"]
+size = Vector2(24, 5)
+
+[node name="MediumShelf" type="StaticBody2D" unique_id=1841013634]
+z_index = 1
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=137812619]
+texture = ExtResource("1_sdj1d")
+offset = Vector2(0, -7)
+vframes = 2
+region_enabled = true
+region_rect = Rect2(128, 32, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=659646853]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_73vii")

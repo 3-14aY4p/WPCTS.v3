@@ -2,6 +2,7 @@ class_name DialogueBox extends Control
 
 
 @onready var player: Player = get_tree().get_first_node_in_group("player")
+@onready var camera: CustomCamera = get_tree().get_first_node_in_group("camera")
 
 @onready var portrait_container: Control = %PortraitContainer
 @onready var character_name: Label = %CharacterName
@@ -56,6 +57,11 @@ func get_json(src: String):
 
 # update GUI
 func load_block(block: Dictionary): 
+	# star of the show!! (determines the focus of the camera)
+	if block.has("star"):
+		var target_group = block["star"]
+		camera.target = get_tree().get_first_node_in_group(target_group)
+	
 	# no name to display if no portrait to display
 	if block.has("anim") and block["anim"] != "": 
 		portrait_container.show()

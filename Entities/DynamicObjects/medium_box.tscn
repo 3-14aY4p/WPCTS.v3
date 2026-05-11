@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bgdacbfpjdyxs"]
 
 [ext_resource type="Texture2D" uid="uid://cj10xnuyer7uy" path="res://Assets/Art/objects.png" id="1_pboed"]
-[ext_resource type="Script" uid="uid://ch4qrb53yjgl5" path="res://Entities/DynamicObjects/dynamic_object.gd" id="1_xdflr"]
+[ext_resource type="Script" uid="uid://ch4qrb53yjgl5" path="res://Entities/DynamicObjects/_dynamic_object.gd" id="1_xdflr"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pboed"]
 friction = 0.5

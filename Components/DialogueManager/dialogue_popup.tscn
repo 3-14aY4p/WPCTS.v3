@@ -1,8 +1,51 @@
 [gd_scene format=3 uid="uid://bnmud0js0ff3v"]
 
 [ext_resource type="Texture2D" uid="uid://cejr7n5mqmd57" path="res://Assets/Art/ui.png" id="1_02nin"]
+[ext_resource type="Script" uid="uid://bb0giaehporxd" path="res://Components/DialogueManager/dialogue_popup.gd" id="1_lcki0"]
 [ext_resource type="Theme" uid="uid://dimc0cp4ncfuj" path="res://Themes/richtextlabel_theme.tres" id="2_l2pk7"]
 [ext_resource type="FontFile" uid="uid://ckbixblavooub" path="res://Assets/Font/Pixel Millennium.ttf" id="3_lpfid"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btloh"]
+atlas = ExtResource("1_02nin")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_quh4j"]
+atlas = ExtResource("1_02nin")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_goxuc"]
+atlas = ExtResource("1_02nin")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjo1r"]
+atlas = ExtResource("1_02nin")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lpfid"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_btloh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_quh4j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_goxuc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjo1r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_goxuc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_quh4j")
+}],
+"loop": true,
+"name": &"ready",
+"speed": 5.0
+}]
 
 [node name="DiialoguePopup" type="Control" unique_id=1080280741]
 layout_mode = 3
@@ -11,9 +54,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_lcki0")
 metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1340654619]
+layer = 2
 
 [node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer" unique_id=493725361]
 anchors_preset = 8
@@ -28,7 +73,7 @@ offset_bottom = 92.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_02nin")
-region_rect = Rect2(0, 48, 48, 48)
+region_rect = Rect2(0, 96, 48, 48)
 patch_margin_left = 16
 patch_margin_top = 16
 patch_margin_right = 16
@@ -44,19 +89,27 @@ grow_vertical = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
+theme_override_constants/margin_bottom = 36
 metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/NinePatchRect/MarginContainer" unique_id=258645805]
 layout_mode = 2
 
 [node name="DialogueLabel" type="RichTextLabel" parent="CanvasLayer/NinePatchRect/MarginContainer/VBoxContainer" unique_id=2106791032]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_l2pk7")
 theme_override_fonts/normal_font = ExtResource("3_lpfid")
 bbcode_enabled = true
-text = "This should be a dialogue."
+text = "This is for dialogue popups!"
 fit_content = true
 scroll_active = false
-horizontal_alignment = 1
+
+[node name="IndicatorSprite" type="AnimatedSprite2D" parent="CanvasLayer/NinePatchRect/MarginContainer/VBoxContainer" unique_id=1792971902]
+unique_name_in_owner = true
+position = Vector2(242, 138)
+scale = Vector2(1.75, 1.75)
+sprite_frames = SubResource("SpriteFrames_lpfid")
+animation = &"ready"
+autoplay = "ready"

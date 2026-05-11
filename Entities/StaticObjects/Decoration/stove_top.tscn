@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cffsrgjxvp2fl"]
+
+[ext_resource type="Texture2D" uid="uid://1jtf0yjwsgpb" path="res://Assets/Art/custom_objects.png" id="1_ummri"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rxvrv"]
+size = Vector2(14, 26)
+
+[node name="StoveTop" type="StaticBody2D" unique_id=1301172030]
+z_index = 1
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1622093890]
+texture = ExtResource("1_ummri")
+offset = Vector2(0, -15)
+region_enabled = true
+region_rect = Rect2(80, 0, 16, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2013865534]
+position = Vector2(0, -13)
+shape = SubResource("RectangleShape2D_rxvrv")

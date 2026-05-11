@@ -1,6 +1,7 @@
 class_name TutorialPopup extends Control
 
 
+@onready var exit_hint: RichTextLabel = $CanvasLayer/NinePatchRect/ExitHint
 @onready var tutorial_label: RichTextLabel = %TutorialLabel
 @onready var prev_button: Button = %PrevButton
 @onready var next_button: Button = %NextButton
@@ -44,10 +45,7 @@ at least [pulse]75%[/pulse] of the test
 right. You FAIL otherwise.",
 
 "[font size=28]That's it?[/font] [font size=12][fade](yes, it is.)[/fade][/font]
-[shake]You can open this tutorial
-menu anytime you want.
-Come back here anytime
-you feel lost![/shake]",
+[shake]Goodluck out there!![/shake]",
 ]
 var current_page: int = 0
 
@@ -61,8 +59,13 @@ func _process(delta: float) -> void:
 	tutorial_label.text = tutorial_pages[current_page]
 	indicator_texture.region = frame_coords[current_frame]
 
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("_exit"):
+		queue_free()
+
 func _on_prev_button_pressed() -> void:
 	next_button.show()
+	exit_hint.hide()
 	current_page -= 1
 	if current_page <= 0:
 		prev_button.hide()
@@ -80,6 +83,7 @@ func _on_next_button_pressed() -> void:
 	indicator.position.x += 16
 	if current_page >= tutorial_pages.size() - 1:
 		next_button.hide()
+		exit_hint.show()
 		current_page = tutorial_pages.size() - 1
 		indicator.position.x -= 16
 		

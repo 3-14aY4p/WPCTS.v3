@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bqs2vg423tebs"]
+
+[ext_resource type="Texture2D" uid="uid://1jtf0yjwsgpb" path="res://Assets/Art/custom_objects.png" id="1_yqmos"]
+
+[node name="LibraryDesk" type="StaticBody2D" unique_id=255491941]
+z_index = 1
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1320535138]
+texture = ExtResource("1_yqmos")
+offset = Vector2(0, -2)
+region_enabled = true
+region_rect = Rect2(48, 64, 48, 32)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=760257736]
+position = Vector2(0, 9)
+polygon = PackedVector2Array(-23, -18, -23, 4, -9, 4, -9, -9, 17, -9, 17, -18)

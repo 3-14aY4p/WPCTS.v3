@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d3r3jsq46r3pe" path="res://Components/GameController/exit_point.gd" id="1_8ge10"]
 
-[node name="ExitPoint" type="Area2D" unique_id=1305555057]
+[node name="ExitPoint" type="Area2D" unique_id=1305555057 groups=["exit_point"]]
 collision_layer = 0
 collision_mask = 16
 monitorable = false

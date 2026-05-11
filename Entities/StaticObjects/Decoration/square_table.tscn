@@ -13,9 +13,10 @@ metadata/_edit_group_ = true
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1506714561]
 texture = ExtResource("1_u2d5c")
 offset = Vector2(0, -15)
+hframes = 2
 region_enabled = true
-region_rect = Rect2(96, 64, 32, 32)
+region_rect = Rect2(96, 64, 64, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1332405792]
-position = Vector2(-1, -7)
+position = Vector2(0, -7)
 shape = SubResource("RectangleShape2D_7d8l3")

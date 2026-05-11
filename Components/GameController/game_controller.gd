@@ -1,33 +1,43 @@
 extends Node
 # this is an autoload
 
+
+@onready var transition_handler: CanvasLayer = $TransitionHandler
+@onready var animation_player: AnimationPlayer = $TransitionHandler/AnimationPlayer
+
 # for saving progress
-var current_day: int = 0 # starts at demos
+var current_day: int = 1
 var current_scene_index: int = 0
 var total_score: int = 0
 
 # houses the list of scenes per day
 var scene_data: Dictionary = {
-	0: {
-		0: "uid://ddhar5ehgr4m1", # DEMO_Shove_0
-		1: "uid://dpfckcwljdleq", # DEMO_Delivery_0
-		2: "uid://juk6mt0v8why", # DEMO_Shove_1
-		3: "uid://bmywuxv5nek85", # DEMO_Delivery_1
+	1: {
+		0: "uid://djlbee5dfgims", # blank
+		1: "uid://qyb4xoryjck8", # dorm room
+		2: "", # 
+		3: "", # 
+		4: "", # 
+		5: "", # 
+		6: "", # 
 	},
-	#1: {
-		#
+	#2 : {
+		#0: "", # 
+		#1: "", # 
+		#2: "", # 
+		#3: "", # 
+		#4: "", # 
+		#5: "", # 
+		#6: "", # 
 	#},
-	#2: {
-		#
-	#},
-	#3: {
-		#
-	#},
-	#4: {
-		#
-	#},
-	#5: {
-		#
+	#: {
+		#0: "", # 
+		#1: "", # 
+		#2: "", # 
+		#3: "", # 
+		#4: "", # 
+		#5: "", # 
+		#6: "", # 
 	#},
 }
 var current_scene: String
@@ -47,8 +57,15 @@ func load_next_scene():
 	load_scene(scene_data[current_day][current_scene_index])
 	current_scene_index += 1
 
+func transition_to_next_scene():
+	animation_player.play("fade")
+	await animation_player.animation_finished
+	load_next_scene()
+	animation_player.play_backwards("fade")
+
 func display_results():
 	pass
+
 
 func restart_scene():
 	get_tree().reload_current_scene()

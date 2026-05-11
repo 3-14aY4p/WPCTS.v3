@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://dgkd53alfxttf"]
+
+[ext_resource type="PackedScene" uid="uid://b841dvk8ijc3w" path="res://Components/InteractionHandler/interactable_area.tscn" id="1_2ucqi"]
+[ext_resource type="Script" uid="uid://b4r4kfrwx8ykb" path="res://Entities/StaticObjects/Interactable/scripts/toggleable_door.gd" id="1_72i7c"]
+[ext_resource type="Texture2D" uid="uid://beuw62p1yh2ks" path="res://Assets/Art/tilemap_room.png" id="2_72i7c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2ucqi"]
+radius = 5.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdn1t"]
+atlas = ExtResource("2_72i7c")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3ek4"]
+atlas = ExtResource("2_72i7c")
+region = Rect2(16, 64, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m8amp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hdn1t")
+}],
+"loop": true,
+"name": &"close",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3ek4")
+}],
+"loop": true,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_72i7c"]
+size = Vector2(10, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hdn1t"]
+size = Vector2(2, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e3ek4"]
+size = Vector2(2, 16)
+
+[node name="BathroomDoor" type="StaticBody2D" unique_id=233875917]
+z_index = 1
+collision_mask = 0
+script = ExtResource("1_72i7c")
+
+[node name="InteractableArea" parent="." unique_id=1780815943 instance=ExtResource("1_2ucqi")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=588597305]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_2ucqi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1370991007]
+sprite_frames = SubResource("SpriteFrames_m8amp")
+animation = &"open"
+autoplay = "open"
+frame_progress = 0.6693463
+offset = Vector2(0, -8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1508140641]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_72i7c")
+disabled = true
+
+[node name="L" type="CollisionShape2D" parent="." unique_id=844258829]
+position = Vector2(-7, -8)
+shape = SubResource("RectangleShape2D_hdn1t")
+
+[node name="R" type="CollisionShape2D" parent="." unique_id=1951929903]
+position = Vector2(7, -8)
+shape = SubResource("RectangleShape2D_e3ek4")
+
+[connection signal="interact" from="InteractableArea" to="." method="_on_interactable_area_interact"]
+[connection signal="interaction_available" from="InteractableArea" to="." method="_on_interactable_area_interaction_available"]
+[connection signal="interaction_unavailable" from="InteractableArea" to="." method="_on_interactable_area_interaction_unavailable"]

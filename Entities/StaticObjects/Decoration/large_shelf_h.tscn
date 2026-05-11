@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ck5ugcio87088"]
+
+[ext_resource type="Texture2D" uid="uid://cj10xnuyer7uy" path="res://Assets/Art/objects.png" id="1_arly8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1plko"]
+size = Vector2(24, 5)
+
+[node name="LargeShelfH" type="StaticBody2D" unique_id=2013339451]
+z_index = 1
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1231658475]
+texture = ExtResource("1_arly8")
+offset = Vector2(0, -11)
+hframes = 2
+region_enabled = true
+region_rect = Rect2(128, 8, 64, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1478286851]
+position = Vector2(0, -2.5)
+shape = SubResource("RectangleShape2D_1plko")

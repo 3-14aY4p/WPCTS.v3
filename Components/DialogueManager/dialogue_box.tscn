@@ -140,6 +140,7 @@ grow_vertical = 2
 script = ExtResource("1_2msrq")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=19607380]
+layer = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1059957652]
 anchors_preset = -1

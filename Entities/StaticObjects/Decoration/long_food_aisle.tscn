@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cm4j648a2rb77"]
+
+[ext_resource type="Texture2D" uid="uid://1jtf0yjwsgpb" path="res://Assets/Art/custom_objects.png" id="1_ue6mq"]
+
+[node name="LongFoodAisle" type="StaticBody2D" unique_id=37285916]
+z_index = 1
+collision_mask = 0
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=189087923]
+texture = ExtResource("1_ue6mq")
+offset = Vector2(0, -55)
+region_enabled = true
+region_rect = Rect2(0, 0, 48, 112)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1086878177]
+polygon = PackedVector2Array(-17, -8, -17, 0, 23, 0, 23, -100, 9, -100, 9, -8)

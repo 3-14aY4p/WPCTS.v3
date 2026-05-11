@@ -6,6 +6,6 @@ class_name ExitPoint extends InteractableArea
 
 func _on_interact() -> void:
 	if not locked:
-		DialogueManager.activate_dialogue(dialogue_file)
+		DialogueManager.activate_box(dialogue_file)
 	else:
-		DialogueManager.activate_line("Colin", "mc", "I'm not done here.")
+		DialogueManager.activate_box_line("Colin", "mc", "I'm not done here...")
