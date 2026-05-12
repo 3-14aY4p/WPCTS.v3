@@ -4,7 +4,7 @@ extends Node
 
 @onready var player: Player = get_tree().get_first_node_in_group("player")
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if not player:
 		player = get_tree().get_first_node_in_group("player")
 

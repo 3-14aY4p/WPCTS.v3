@@ -56,6 +56,13 @@ target_area=""
 completed_task_item=""
 task_controller=""
 exit_point=""
+NPC_MT=""
+NPC_DM=""
+NPC_PF=""
+NPC_RAND=""
+NPC_UNKN=""
+target=""
+extra_light=""
 
 [input]
 
@@ -120,6 +127,7 @@ _exit={
 2d_physics/layer_4="Player"
 2d_physics/layer_5="Interaction"
 2d_physics/layer_6="TargetArea"
+2d_physics/layer_7="Layer 7"
 
 [physics]
 

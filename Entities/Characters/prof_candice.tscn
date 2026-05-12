@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://u2ebgsullxsk"]
+
+[ext_resource type="Texture2D" uid="uid://po8lvqowtl4t" path="res://Assets/Art/npcs.png" id="1_6hpyd"]
+[ext_resource type="Script" uid="uid://cwxgqhsnuy5bq" path="res://Entities/Characters/_character.gd" id="1_6rnuf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rnuf"]
+atlas = ExtResource("1_6hpyd")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kklim"]
+atlas = ExtResource("1_6hpyd")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmjj8"]
+atlas = ExtResource("1_6hpyd")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03606"]
+atlas = ExtResource("1_6hpyd")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_672h7"]
+atlas = ExtResource("1_6hpyd")
+region = Rect2(0, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46eue"]
+atlas = ExtResource("1_6hpyd")
+region = Rect2(16, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vp303"]
+atlas = ExtResource("1_6hpyd")
+region = Rect2(32, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ej7u"]
+atlas = ExtResource("1_6hpyd")
+region = Rect2(48, 80, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mug2x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rnuf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kklim")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cmjj8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03606")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_672h7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46eue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vp303")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ej7u")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 9.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6hpyd"]
+radius = 3.0
+height = 10.0
+
+[node name="ProfCandice" type="CharacterBody2D" unique_id=999642883 groups=["NPC_PF"]]
+z_index = 1
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_6rnuf")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=63455122]
+sprite_frames = SubResource("SpriteFrames_mug2x")
+animation = &"idle"
+autoplay = "idle"
+frame = 1
+frame_progress = 0.8972954
+offset = Vector2(0, -8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1569214077]
+position = Vector2(0, -1)
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_6hpyd")
+
+[node name="Timer" type="Timer" parent="." unique_id=991257348]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

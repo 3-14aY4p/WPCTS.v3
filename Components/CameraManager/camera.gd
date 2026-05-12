@@ -1,10 +1,17 @@
 class_name CustomCamera extends Camera2D
 
 
+@onready var player: Player = get_tree().get_first_node_in_group("player")
 @onready var target = $"..":
 	set(node):
-		global_position = node.global_position
+		var tween: Tween = get_tree().create_tween()
+		tween.tween_property(self, 
+			"global_position", 
+			node.global_position, .5)
 		reparent(node)
+		
+		await tween.finished
+@export var override_zoom: Vector2 = Vector2.ZERO
 
 var all_areas: Array[CameraZone] = []
 var current_area: CameraZone
@@ -47,4 +54,7 @@ func _find_current_area():
 		var tween = get_tree().create_tween()
 		for area in all_areas:
 			if area.contains_point(target_pos):
-				tween.tween_property(self, "zoom", area.camera_zoom, 1.0)
+				if override_zoom == Vector2.ZERO:
+					tween.tween_property(self, "zoom", area.camera_zoom, 1.0)
+				else:
+					tween.tween_property(self, "zoom", override_zoom, 1.0)

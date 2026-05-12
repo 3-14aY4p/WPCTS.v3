@@ -18,13 +18,6 @@
 		"anim": "",
 		"text": "I’m gonna be late again!",
 		
-		"next": "3",
-	},
-	"3": {
-		"name": "",
-		"anim": "",
-		"text": "Prof. Candice is soooo gonna have my head...",
-		
 		"next": "END",
 	},
 	"END": {

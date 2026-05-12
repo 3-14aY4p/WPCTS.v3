@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://b8bmbdr7owniy"]
+
+[ext_resource type="Texture2D" uid="uid://po8lvqowtl4t" path="res://Assets/Art/npcs.png" id="1_n38xy"]
+[ext_resource type="Script" uid="uid://cwxgqhsnuy5bq" path="res://Entities/Characters/_character.gd" id="1_uojg0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ll6u"]
+atlas = ExtResource("1_n38xy")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uojg0"]
+atlas = ExtResource("1_n38xy")
+region = Rect2(16, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5ype"]
+atlas = ExtResource("1_n38xy")
+region = Rect2(32, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmpt1"]
+atlas = ExtResource("1_n38xy")
+region = Rect2(48, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6t3ap"]
+atlas = ExtResource("1_n38xy")
+region = Rect2(0, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vicxs"]
+atlas = ExtResource("1_n38xy")
+region = Rect2(16, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anbok"]
+atlas = ExtResource("1_n38xy")
+region = Rect2(32, 80, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2vgn"]
+atlas = ExtResource("1_n38xy")
+region = Rect2(48, 80, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6t3ap"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ll6u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uojg0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5ype")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmpt1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6t3ap")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vicxs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anbok")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u2vgn")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 9.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vicxs"]
+radius = 3.0
+height = 10.0
+
+[node name="MsBarbara" type="CharacterBody2D" unique_id=305785106 groups=["NPC_MT"]]
+z_index = 1
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_uojg0")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1223570923]
+sprite_frames = SubResource("SpriteFrames_6t3ap")
+animation = &"idle"
+autoplay = "idle"
+offset = Vector2(0, -8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1653868590]
+position = Vector2(0, -1)
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_vicxs")
+
+[node name="Timer" type="Timer" parent="." unique_id=1364684452]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,25 @@
+{
+	"0": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Well that was tough...",
+		
+		"next": "1",
+	},
+	"1": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Just what were in those boxes?",
+		
+		"next": "END",
+	},
+	"END": {
+		"node": "/root/DialogueManager",
+		"func": "player.statemachine.change_state",
+		"args": ["playeridle"],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": "",
+	},
+}

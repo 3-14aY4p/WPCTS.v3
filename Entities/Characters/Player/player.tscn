@@ -220,7 +220,6 @@ y_sort_enabled = true
 collision_layer = 8
 collision_mask = 7
 script = ExtResource("1_mv1ah")
-character_id = "mc"
 metadata/_edit_group_ = true
 
 [node name="StateMachine" type="Node" parent="." unique_id=396408628 node_paths=PackedStringArray("initial_state")]

@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://dexfk8n4vtikx"]
+
+[ext_resource type="Texture2D" uid="uid://po8lvqowtl4t" path="res://Assets/Art/npcs.png" id="1_6cyd3"]
+[ext_resource type="Script" uid="uid://cwxgqhsnuy5bq" path="res://Entities/Characters/_character.gd" id="1_13hn8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13hn8"]
+atlas = ExtResource("1_6cyd3")
+region = Rect2(0, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5w7kf"]
+atlas = ExtResource("1_6cyd3")
+region = Rect2(16, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3vv3q"]
+atlas = ExtResource("1_6cyd3")
+region = Rect2(32, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3byu"]
+atlas = ExtResource("1_6cyd3")
+region = Rect2(48, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cyd3"]
+atlas = ExtResource("1_6cyd3")
+region = Rect2(0, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5nyv"]
+atlas = ExtResource("1_6cyd3")
+region = Rect2(16, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctabu"]
+atlas = ExtResource("1_6cyd3")
+region = Rect2(32, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxc04"]
+atlas = ExtResource("1_6cyd3")
+region = Rect2(48, 112, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d5nyv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13hn8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5w7kf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3vv3q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3byu")
+}],
+"loop": true,
+"name": &"baldie_idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6cyd3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d5nyv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ctabu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxc04")
+}],
+"loop": true,
+"name": &"baldie_walk",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_13hn8"]
+radius = 3.0
+height = 10.0
+
+[node name="NPC" type="CharacterBody2D" unique_id=744398630]
+z_index = 1
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_13hn8")
+random_turns = true
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2028275097]
+sprite_frames = SubResource("SpriteFrames_d5nyv")
+animation = &"baldie_idle"
+autoplay = "baldie_idle"
+offset = Vector2(0, -8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1030702814]
+position = Vector2(0, -1)
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_13hn8")
+
+[node name="Timer" type="Timer" parent="." unique_id=340723537]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,4 +1,4 @@
-class_name Player extends Character
+class_name Player extends CharacterBody2D
 
 
 @onready var state_machine: StateMachine = $StateMachine

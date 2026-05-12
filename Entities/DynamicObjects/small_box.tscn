@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://elbnp47bsh7e"]
+
+[ext_resource type="Script" uid="uid://ch4qrb53yjgl5" path="res://Entities/DynamicObjects/_dynamic_object.gd" id="1_t3a4n"]
+[ext_resource type="Texture2D" uid="uid://cj10xnuyer7uy" path="res://Assets/Art/objects.png" id="1_uqlim"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_uqlim"]
+friction = 0.7
+bounce = 0.4
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t3a4n"]
+size = Vector2(10, 4)
+
+[node name="SmallBox" type="RigidBody2D" unique_id=130535706]
+z_index = 1
+collision_layer = 4
+collision_mask = 15
+mass = 5.0
+physics_material_override = SubResource("PhysicsMaterial_uqlim")
+lock_rotation = true
+linear_damp_mode = 1
+linear_damp = 3.0
+script = ExtResource("1_t3a4n")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=421028914]
+texture = ExtResource("1_uqlim")
+offset = Vector2(0, -7)
+region_enabled = true
+region_rect = Rect2(32, 80, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1035775320]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_t3a4n")

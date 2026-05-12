@@ -12,6 +12,9 @@ var curr_block: Dictionary
 var next_block: Dictionary
 
 func _ready() -> void:
+	if player:
+		player.state_machine.change_state("playerdisabled")
+		
 	visible = false
 	indicator.hide()
 	
@@ -49,6 +52,47 @@ func load_block(block: Dictionary):
 			next_block = scene_script[key]
 		else:
 			next_block = {}
+			
+	elif block.has("func"):
+		indicator.hide()
+		
+		if block["hide_box"]:
+			visible = false
+		
+		var target_node = get_node(block["node"])
+		var func_name = block["func"]
+		
+		# Since we can't directly put the properties in the
+		# json file itself, we can just retrieve them here
+		var raw_args = block["args"]	# String values
+		var func_args = []
+		
+		# convert string values to property
+		if raw_args:
+			for arg in raw_args:
+				func_args.append(get(arg))
+		
+		if target_node.has_method(func_name):
+			if func_args.is_empty():
+				target_node.call(func_name)
+			else:
+				target_node.callv(func_name, func_args)
+				
+		if block["await"]:
+			var signal_name = block["await"]
+			if target_node.has_signal(signal_name):
+				var signal_state = {"done": false} # dict because lambda functions
+				var callable = func(_args): signal_state.done = true
+				target_node.connect(signal_name, callable, CONNECT_ONE_SHOT)
+				while not signal_state.done:
+					await get_tree().process_frame
+					
+		if block["comment"] != "":
+			var key = block["comment"]
+			next_block = scene_script[key]
+		else:
+			next_block = {}
+		next()
 		
 	else:
 		assert(false, "Err: INVALID BLOCK.")
@@ -58,5 +102,6 @@ func next():
 		curr_block = next_block
 		load_block(curr_block)
 	else:
-		player.state_machine.change_state("playeridle")
+		if player:
+			player.state_machine.change_state("playeridle")
 		queue_free()

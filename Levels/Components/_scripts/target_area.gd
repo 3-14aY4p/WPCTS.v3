@@ -15,7 +15,7 @@ var objects_delivered: int = 0
 var objects_in_area: Array
 
 var area_goal_reached: bool = false
-var hide_label: bool = false
+@export var hide_label: bool = false
 
 func _ready() -> void:
 	label.hide()
@@ -24,6 +24,9 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if not player:
 		player = get_tree().get_first_node_in_group("player")
+		
+	if object_group == "player":
+		hide_label = true
 		
 	var mouse_pos: Vector2 = get_global_mouse_position()
 	if global_position.distance_to(mouse_pos) <= 20 and not deactivated and not hide_label:

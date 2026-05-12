@@ -1,0 +1,32 @@
+{
+	"0": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Man... Why is it so cramped in here?",
+		
+		"next": "1",
+	},
+	"1": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Who owns these?",
+		
+		"next": "2",
+	},
+	"2": {
+		"star": "target",
+		"name": "Colin",
+		"anim": "mc",
+		"text": "I have to get to the stairs.",
+		
+		"next": "3",
+	},
+	"3": {
+		"star": "player",
+		"name": "Colin",
+		"anim": "mc",
+		"text": "I should get these out of the way...",
+		
+		"next": "",
+	},
+}

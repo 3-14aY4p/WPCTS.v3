@@ -17,7 +17,8 @@ size = Vector2(14, 14)
 [node name="DormRoom" type="Node2D" unique_id=453450293]
 y_sort_enabled = true
 script = ExtResource("1_e05tx")
-task_fail_dialogue = "<null>"
+initial_dialogue = "res://FINAL_LEVELS/week 1/JSON/W1_1.json"
+dialogue_bubble = "popup"
 
 [node name="UserInterface" parent="." unique_id=1485922269 instance=ExtResource("2_18pul")]
 
@@ -64,6 +65,8 @@ position = Vector2(72, 69)
 
 [node name="ExitPoint" parent="GameWorld" unique_id=1305555057 instance=ExtResource("8_kq035")]
 position = Vector2(120, 64)
+dialogue_file = "res://FINAL_LEVELS/week 1/JSON/W1_1-E.json"
+locked = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GameWorld/ExitPoint" unique_id=1033436047]
 position = Vector2(0, -7)

@@ -15,7 +15,11 @@ func physics_update(delta: float):
 	
 	var modifier = player.on_hand.mass/2
 	modifier = clamp(modifier, 2.0, 10.0)
-	player.handle_movement(player.DEFAULT_SPEED/modifier)
+	
+	if player.on_hand.is_in_group("extra_light"):
+		player.handle_movement(player.DEFAULT_SPEED/1.2)
+	else:
+		player.handle_movement(player.DEFAULT_SPEED/modifier)
 	player.handle_look_dir(true)
 	
 	if player.velocity == Vector2.ZERO:

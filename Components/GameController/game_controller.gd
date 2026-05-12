@@ -13,13 +13,14 @@ var total_score: int = 0
 # houses the list of scenes per day
 var scene_data: Dictionary = {
 	1: {
-		0: "uid://djlbee5dfgims", # blank
+		0: "uid://djlbee5dfgims", # blank screen
 		1: "uid://qyb4xoryjck8", # dorm room
-		2: "", # 
-		3: "", # 
-		4: "", # 
-		5: "", # 
-		6: "", # 
+		2: "uid://cfmw7cwkvevs1", # dorm hallway
+		3: "uid://bgg4lmgk586mt", # dorm lobby
+		4: "uid://cg3fhfygs5tmk", # cafeteria
+		5: "uid://pnmxiwj47qni", # blank screen
+		6: "uid://db43argg36g4o", # classroom
+		7: "", # initial assessment
 	},
 	#2 : {
 		#0: "", # 
@@ -41,21 +42,37 @@ var scene_data: Dictionary = {
 	#},
 }
 var current_scene: String
+var task_controller: TaskController
 
 func _ready() -> void:
 	pass
 
+func _physics_process(delta: float) -> void:
+	if not task_controller:
+		task_controller = get_tree().get_first_node_in_group("task_controller")
+
+func start_next_task():
+	if task_controller:
+		task_controller.start_task()
+
 # load next level; dependent on scene_data dictionary
 func load_next_scene():
+	# player reached the end of the game
 	if current_day > scene_data.size():
 		display_results()
 		return
+	# player reached the end of the day
 	if current_scene_index > scene_data[current_day].size():
 		current_scene_index = 0
 		return
 		
-	load_scene(scene_data[current_day][current_scene_index])
-	current_scene_index += 1
+	var curr_scene = scene_data[current_day][current_scene_index]
+	if current_scene == "":
+		current_scene_index += 1
+		load_scene(scene_data[current_day][current_scene_index])
+	else:
+		load_scene(curr_scene)
+		current_scene_index += 1
 
 func transition_to_next_scene():
 	animation_player.play("fade")

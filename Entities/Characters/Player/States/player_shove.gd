@@ -23,7 +23,7 @@ func physics_update(delta: float):
 		player.applied_force = player.force_meter.value * 4
 		player.force_dir = player.mouse_dir
 		var collided = player.handle_raycast_collision()
-		if collided is DynamicObject:
+		if collided is DynamicObject and not collided.is_in_group("non-shoveable"):
 			collided.apply_shove(player.force_dir, player.applied_force)
 			player.set_collision_layer_value(4, true)
 			

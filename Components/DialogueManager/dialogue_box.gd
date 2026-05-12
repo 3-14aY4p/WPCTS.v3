@@ -61,7 +61,13 @@ func load_block(block: Dictionary):
 	if block.has("star"):
 		var target_group = block["star"]
 		camera.target = get_tree().get_first_node_in_group(target_group)
-	
+		
+	# camera zoom
+	if camera:
+		if block.has("zoom"):
+			camera.override_zoom = Vector2(block["zoom"][0], block["zoom"][1])
+		else: camera.override_zoom = Vector2.ZERO
+		
 	# no name to display if no portrait to display
 	if block.has("anim") and block["anim"] != "": 
 		portrait_container.show()
@@ -171,5 +177,6 @@ func next():
 		curr_block = next_block
 		load_block(curr_block)
 	else:
-		player.state_machine.change_state("playeridle")
+		if player:
+			player.state_machine.change_state("playeridle")
 		queue_free()

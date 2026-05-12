@@ -4,6 +4,8 @@ signal task_start
 signal task_completed
 signal task_failed
 
+@onready var camera: CustomCamera = get_tree().get_first_node_in_group("camera")
+
 @onready var task_objects: Array = get_tree().get_nodes_in_group("task_object")
 @onready var target_areas: Array = get_tree().get_nodes_in_group("target_area")
 @onready var area_boundary: TileMapLayer = $AreaBoundary
@@ -15,7 +17,7 @@ enum TaskType {
 }
 @export var task_type: TaskType
 
-@export_range(0, 240, 1) var time_limit: int = 30
+@export_range(0, 240, 1) var time_limit: int = 0
 var timer: Timer
 
 enum TaskState {
@@ -71,7 +73,7 @@ func start_task():
 			area.deactivated = false
 		area_boundary.show()
 		
-		if time_limit != 0:
+		if time_limit > 0:
 			timer = Timer.new()
 			add_child(timer)
 			
@@ -88,7 +90,6 @@ func complete_task():
 		area_boundary.hide()
 		for area: TargetArea in target_areas:
 			area.deactivated = true
-			
 		if time_limit != 0:
 			timer.stop()
 			

@@ -105,6 +105,8 @@ bbcode_enabled = true
 text = "This is for dialogue popups!"
 fit_content = true
 scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="IndicatorSprite" type="AnimatedSprite2D" parent="CanvasLayer/NinePatchRect/MarginContainer/VBoxContainer" unique_id=1792971902]
 unique_name_in_owner = true
