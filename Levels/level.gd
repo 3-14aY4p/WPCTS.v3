@@ -8,6 +8,7 @@ class_name Level extends Node2D
 @onready var exit_points = get_tree().get_nodes_in_group("exit_point")
 
 @export_file("*.json") var initial_dialogue
+@export_file("*.json") var task_start_dialogue
 @export_file("*.json") var task_complete_dialogue
 @export_file("*.json") var task_fail_dialogue
 @export_enum("box", "popup") var dialogue_bubble = "box"
@@ -47,6 +48,9 @@ func _on_task_controller_task_start() -> void:
 		
 		await tween.finished
 		node.queue_free()
+		
+	if task_start_dialogue:
+		DialogueManager.activate_box(task_start_dialogue)
 
 func _on_task_controller_task_completed() -> void:
 	for exit in exit_points:

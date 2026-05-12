@@ -17,6 +17,11 @@ func _process(delta: float) -> void:
 		active_areas.sort_custom(sort_by_distance_to_player)
 		nearest = active_areas[0]
 		
+		if nearest.get_parent() is InteractableObject:
+			if nearest.get_parent().disabled:
+				label.hide()
+				return
+			
 		label.text = nearest.action_hint
 		label.global_position = nearest.global_position
 		label.global_position.y -= 30

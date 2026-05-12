@@ -1,6 +1,6 @@
 {
 	"0": {
-		"zoom": [4, 4],
+		"zoom": [2.5, 2.5],
 		"star": "NPC_PF",
 		"name": "Prof. Candice",
 		"anim": "pf",
@@ -28,7 +28,7 @@
 	},
 	"3": {
 		"zoom": [6, 6],
-		"star": "player",
+		"star": "NPC_PF",
 		"name": "Colin",
 		"anim": "mc",
 		"text": "...it's 8:21 AM... ma'am?",
@@ -46,7 +46,7 @@
 	},
 	"5": {
 		"zoom": [8, 8],
-		"star": "player",
+		"star": "NPC_PF",
 		"name": "Colin",
 		"anim": "mc",
 		"text": "[font size=16]...it's 7:30 AM... ma'am?[/font]",
@@ -63,7 +63,8 @@
 		"next": "7",
 	},
 	"7": {
-		"zoom": [5, 5],
+		"zoom": [3, 3],
+		"star": "player",
 		"name": "Colin",
 		"anim": "mc",
 		"text": "...",

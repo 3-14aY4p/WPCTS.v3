@@ -1,12 +1,12 @@
 {
-	"template 1": {
+	"": {
 		"name": "",
 		"anim": "",
 		"text": "",
 		
 		"next": "",
 	},
-	"template 2": {
+	"": {
 		"text": "",
 		
 		"choices": {
@@ -14,7 +14,7 @@
 			"dialogue": "path 2",
 		},
 	},
-	"template 3": {
+	"": {
 		"node": "/root/..",
 		"func": "",
 		"args": [],

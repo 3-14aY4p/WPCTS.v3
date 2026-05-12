@@ -7,15 +7,15 @@
 		"next": "1",
 	},
 	"1": {
-		"name": "",
-		"anim": "",
+		"name": "Colin",
+		"anim": "mc",
 		"text": "Darn it... It’s already 7:49 AM?!",
 		
 		"next": "2",
 	},
 	"2": {
-		"name": "",
-		"anim": "",
+		"name": "Colin",
+		"anim": "mc",
 		"text": "I’m gonna be late again!",
 		
 		"next": "END",

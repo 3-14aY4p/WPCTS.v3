@@ -125,7 +125,7 @@ tracks/4/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_f2v83"]
 _data = {
 &"RESET": SubResource("Animation_aktn0"),
-&"task_complete": SubResource("Animation_5apfb")
+&"task_finished": SubResource("Animation_5apfb")
 }
 
 [node name="UserInterface" type="CanvasLayer" unique_id=1485922269]

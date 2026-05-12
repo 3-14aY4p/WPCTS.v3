@@ -1,0 +1,57 @@
+{
+	"0": {
+		"star": "NPC_PF",
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Ok... now that you're seated...",
+		
+		"next": "1",
+	},
+	"1": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Since you were late... why don't we give you some punishment? Right, class?",
+		
+		"next": "2",
+	},
+	"2": {
+		"zoom": [2.5, 2.5],
+		"name": "Classmate",
+		"anim": "rand",
+		"text": "YEAHHH!! IT'S ONLY FAIRRRRR!!!",
+		
+		"next": "3",
+	},
+	"3": {
+		"star": "player",
+		"name": "Colin",
+		"anim": "mc",
+		"text": "* Gulp * Uhm... guys?",
+		
+		"next": "4",
+	},
+	"4": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Hope you're ready for a surprise quiz!",
+		
+		"next": "5",
+	},
+	"5": {
+		"zoom": [6, 6],
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Dang it, not again!",
+		
+		"next": "END",
+	},
+	"END": {
+		"node": "/root/GameController",
+		"func": "transition_to_next_scene",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": "",
+	},
+}

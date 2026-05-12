@@ -1,0 +1,24 @@
+{
+	"0": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Ugh... I can't believe it...",
+		
+		"next": "1",
+	},
+	"1": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Do I really have to study right now?",
+		
+		"next": "2",
+	},
+	"2": {
+		"text": "Answer a couple of worksheets?",
+		
+		"choices": {
+			"Yes.": "",
+			"No.": "",
+		},
+	},
+}

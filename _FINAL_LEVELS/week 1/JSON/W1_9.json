@@ -1,0 +1,23 @@
+{
+	"0": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "What a day!",
+		
+		"next": "1",
+	},
+	"1": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Next week sounds like a drag already...",
+		
+		"next": "2",
+	},
+	"2": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "I should probably get some sleep now.",
+		
+		"next": "",
+	},
+}

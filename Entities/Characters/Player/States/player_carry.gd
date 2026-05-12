@@ -9,6 +9,9 @@ func enter():
 	
 	player.on_hand.set_collision_layer_value(3, false)
 	player.on_hand.reparent(player.carry_point)
+	
+	if player.on_hand.is_in_group("extra_light"):
+		player.on_hand.z_index = 1
 
 func physics_update(delta: float):
 	player.on_hand.global_position = player.carry_point.global_position

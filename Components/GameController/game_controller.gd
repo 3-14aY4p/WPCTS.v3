@@ -7,8 +7,9 @@ extends Node
 
 # for saving progress
 var current_day: int = 1
-var current_scene_index: int = 0
-var total_score: int = 0
+var current_scene_index: int = 11
+var tasks_failed: int = 0
+var total_credit: int = 0
 
 # houses the list of scenes per day
 var scene_data: Dictionary = {
@@ -20,17 +21,22 @@ var scene_data: Dictionary = {
 		4: "uid://cg3fhfygs5tmk", # cafeteria
 		5: "uid://pnmxiwj47qni", # blank screen
 		6: "uid://db43argg36g4o", # classroom
-		7: "", # initial assessment
+		7: "---", # initial assessment
+		8: "uid://cws4d336mldtl", # classroom ()PRE Perry
+		9: "uid://lrey5nrrad7h", # classroom ()POST Perry
+		10: "uid://pj6lqnqb1tjq",
+		11: "uid://d1b61hjlmplrr",
+		12: "uid://bpywkotjygshj", # dorm
 	},
-	#2 : {
-		#0: "", # 
-		#1: "", # 
-		#2: "", # 
-		#3: "", # 
-		#4: "", # 
-		#5: "", # 
-		#6: "", # 
-	#},
+	2 : {
+		0: "", # 
+		1: "", # 
+		2: "", # 
+		3: "", # 
+		4: "", # 
+		5: "", # 
+		6: "", # 
+	},
 	#: {
 		#0: "", # 
 		#1: "", # 
@@ -43,6 +49,7 @@ var scene_data: Dictionary = {
 }
 var current_scene: String
 var task_controller: TaskController
+var end_of_day: bool = false
 
 func _ready() -> void:
 	pass
@@ -58,21 +65,25 @@ func start_next_task():
 # load next level; dependent on scene_data dictionary
 func load_next_scene():
 	# player reached the end of the game
-	if current_day > scene_data.size():
+	if current_day >= scene_data.size():
 		display_results()
 		return
 	# player reached the end of the day
-	if current_scene_index > scene_data[current_day].size():
+	if current_scene_index >= scene_data[current_day].size():
+		current_day += 1
 		current_scene_index = 0
-		return
+		load_next_scene()
 		
 	var curr_scene = scene_data[current_day][current_scene_index]
-	if current_scene == "":
+	if curr_scene == "---":
 		current_scene_index += 1
-		load_scene(scene_data[current_day][current_scene_index])
+		load_next_scene()
 	else:
 		load_scene(curr_scene)
 		current_scene_index += 1
+		
+	if current_scene_index == scene_data[current_day].size():
+		end_of_day = true
 
 func transition_to_next_scene():
 	animation_player.play("fade")

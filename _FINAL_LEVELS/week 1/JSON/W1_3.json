@@ -1,6 +1,6 @@
 {
 	"0": {
-		"zoom": [3, 3],
+		"zoom": [4, 4],
 		"star": "NPC_MT",
 		"name": "???",
 		"anim": "mt",
@@ -9,7 +9,7 @@
 		"next": "1",
 	},
 	"1": {
-		"zoom": [3, 3],
+		"zoom": [4, 4],
 		"star": "player",
 		"name": "Colin",
 		"anim": "mc",
@@ -18,7 +18,7 @@
 		"next": "2",
 	},
 	"2": {
-		"zoom": [3, 3],
+		"zoom": [4, 4],
 		"name": "Colin",
 		"anim": "mc",
 		"text": "Not at all miss, I'm right on schedule!",
@@ -26,7 +26,7 @@
 		"next": "3",
 	},
 	"3": {
-		"zoom": [3, 3],
+		"zoom": [4, 4],
 		"name": "Colin",
 		"anim": "mc",
 		"text": "* To be late, that is...! *",
@@ -34,7 +34,7 @@
 		"next": "4",
 	},
 	"4": {
-		"zoom": [3, 3],
+		"zoom": [4, 4],
 		"star": "NPC_MT",
 		"name": "Ms. Barbara",
 		"anim": "mt",
@@ -43,7 +43,7 @@
 		"next": "5",
 	},
 	"5": {
-		"zoom": [3, 3],
+		"zoom": [4, 4],
 		"name": "Ms. Barbara",
 		"anim": "mt",
 		"text": "Perfect timing, then. I prepared you some breakfast!",
@@ -51,7 +51,7 @@
 		"next": "6",
 	},
 	"6": {
-		"zoom": [3, 3],
+		"zoom": [4, 4],
 		"star": "player",
 		"name": "Colin",
 		"anim": "mc",
@@ -60,24 +60,15 @@
 		"next": "7",
 	},
 	"7": {
-		"zoom": [3, 3],
-		"star": "player",
-		"name": "Colin",
-		"anim": "mc",
-		"text": "Oh you really shouldn't have...",
-		
-		"next": "8",
-	},
-	"8": {
-		"zoom": [3, 3],
+		"zoom": [4, 4],
 		"star": "NPC_MT",
 		"name": "Ms. Barbara",
 		"anim": "mt",
 		"text": "Aww don't be shy sweetie! Come along now!",
 		
-		"next": "9",
+		"next": "8",
 	},
-	"9": {
+	"8": {
 		"star": "player",
 		"name": "Colin",
 		"anim": "mc",

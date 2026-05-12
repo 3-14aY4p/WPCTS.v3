@@ -1,36 +1,36 @@
 [gd_scene format=4 uid="uid://bgg4lmgk586mt"]
 
-[ext_resource type="Script" uid="uid://bqj7qe6p744c8" path="res://Levels/level.gd" id="1_6xdae"]
-[ext_resource type="PackedScene" uid="uid://bi64xwfbb4jjq" path="res://Levels/Components/user_interface.tscn" id="2_3sn33"]
-[ext_resource type="PackedScene" uid="uid://16qn3y3y8hs3" path="res://Levels/Components/game_world.tscn" id="3_u66ti"]
-[ext_resource type="PackedScene" uid="uid://prmvfl2foyy7" path="res://Components/CameraManager/camera_zone.tscn" id="4_d0nc2"]
-[ext_resource type="PackedScene" uid="uid://dxmrnleip8m31" path="res://Entities/StaticObjects/Decoration/square_table.tscn" id="5_ism6g"]
-[ext_resource type="PackedScene" uid="uid://rltul4frnr2" path="res://Entities/StaticObjects/Decoration/sofa_h.tscn" id="6_upl1e"]
-[ext_resource type="PackedScene" uid="uid://grt41fq6urrg" path="res://Entities/StaticObjects/Decoration/sofa_v.tscn" id="7_6opa3"]
-[ext_resource type="PackedScene" uid="uid://gxnfe6h3cvt3" path="res://Entities/StaticObjects/Decoration/small_shelf.tscn" id="8_rski0"]
-[ext_resource type="PackedScene" uid="uid://c0twyucy5xnqo" path="res://Entities/Characters/Player/player.tscn" id="9_hl83v"]
-[ext_resource type="PackedScene" uid="uid://3om0cgx1mkfr" path="res://Levels/Components/task_controller.tscn" id="10_cyq47"]
-[ext_resource type="PackedScene" uid="uid://b8bmbdr7owniy" path="res://Entities/Characters/ms_barbara.tscn" id="10_okurt"]
-[ext_resource type="PackedScene" uid="uid://dhbj1bg2g2vme" path="res://Components/DialogueManager/dialogue_area.tscn" id="11_0vtjk"]
+[ext_resource type="Script" uid="uid://bqj7qe6p744c8" path="res://Levels/level.gd" id="1_m78e3"]
+[ext_resource type="PackedScene" uid="uid://bi64xwfbb4jjq" path="res://Levels/Components/user_interface.tscn" id="2_vr6kt"]
+[ext_resource type="PackedScene" uid="uid://16qn3y3y8hs3" path="res://Levels/Components/game_world.tscn" id="3_q5jib"]
+[ext_resource type="PackedScene" uid="uid://prmvfl2foyy7" path="res://Components/CameraManager/camera_zone.tscn" id="4_kmp32"]
+[ext_resource type="PackedScene" uid="uid://dxmrnleip8m31" path="res://Entities/StaticObjects/Decoration/square_table.tscn" id="5_4rb1a"]
+[ext_resource type="PackedScene" uid="uid://rltul4frnr2" path="res://Entities/StaticObjects/Decoration/sofa_h.tscn" id="6_t0giv"]
+[ext_resource type="PackedScene" uid="uid://grt41fq6urrg" path="res://Entities/StaticObjects/Decoration/sofa_v.tscn" id="7_7yt8j"]
+[ext_resource type="PackedScene" uid="uid://gxnfe6h3cvt3" path="res://Entities/StaticObjects/Decoration/small_shelf.tscn" id="8_0e0is"]
+[ext_resource type="PackedScene" uid="uid://c0twyucy5xnqo" path="res://Entities/Characters/Player/player.tscn" id="9_ulutb"]
+[ext_resource type="PackedScene" uid="uid://b8bmbdr7owniy" path="res://Entities/Characters/ms_barbara.tscn" id="10_2l11w"]
+[ext_resource type="PackedScene" uid="uid://dhbj1bg2g2vme" path="res://Components/DialogueManager/dialogue_area.tscn" id="11_t6j1u"]
+[ext_resource type="PackedScene" uid="uid://3om0cgx1mkfr" path="res://Levels/Components/task_controller.tscn" id="12_0srf6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6bgd5"]
 size = Vector2(68, 2)
 
 [node name="DormLobby" type="Node2D" unique_id=2071895273]
 y_sort_enabled = true
-script = ExtResource("1_6xdae")
+script = ExtResource("1_m78e3")
 
-[node name="UserInterface" parent="." unique_id=1485922269 instance=ExtResource("2_3sn33")]
+[node name="UserInterface" parent="." unique_id=1485922269 instance=ExtResource("2_vr6kt")]
 
-[node name="GameWorld" parent="." unique_id=1410708023 instance=ExtResource("3_u66ti")]
+[node name="GameWorld" parent="." unique_id=1410708023 instance=ExtResource("3_q5jib")]
 
-[node name="CameraZone" parent="GameWorld/CameraZoneContainer" parent_id_path=PackedInt32Array(1410708023, 749433630) index="0" unique_id=2111838270 instance=ExtResource("4_d0nc2")]
+[node name="CameraZone" parent="GameWorld/CameraZoneContainer" parent_id_path=PackedInt32Array(1410708023, 749433630) index="0" unique_id=2111838270 instance=ExtResource("4_kmp32")]
 camera_zoom = Vector2(3, 3)
 
 [node name="Jurisdiction" parent="GameWorld/CameraZoneContainer/CameraZone" index="0" unique_id=609086849]
 polygon = PackedVector2Array(64, 48, 64, 128, 48, 128, 48, 160, 64, 160, 64, 192, 168, 192, 168, 160, 240, 160, 240, 96, 168, 96, 168, 48)
 
-[node name="CameraZone2" parent="GameWorld/CameraZoneContainer" parent_id_path=PackedInt32Array(1410708023, 749433630) index="1" unique_id=1865537618 instance=ExtResource("4_d0nc2")]
+[node name="CameraZone2" parent="GameWorld/CameraZoneContainer" parent_id_path=PackedInt32Array(1410708023, 749433630) index="1" unique_id=1865537618 instance=ExtResource("4_kmp32")]
 camera_zoom = Vector2(5, 5)
 
 [node name="Jurisdiction" parent="GameWorld/CameraZoneContainer/CameraZone2" index="0" unique_id=609086849]
@@ -54,38 +54,38 @@ tile_map_data = PackedByteArray("AAAFAAMAAAAAAAAAAAAGAAMAAAACAAAAAAAHAAMAAAADAAA
 [node name="Walls" parent="GameWorld/TileMapContainer" parent_id_path=PackedInt32Array(1410708023, 695135423) index="5" unique_id=597676183]
 tile_map_data = PackedByteArray("AAAPAAsAAAACAAIAAAAPAAoAAAACAAEAAAAPAAkAAAACAAEAAAAPAAgAAAACAAEAAAAPAAcAAAACAAEAAAAPAAYAAAACAAEAAAAPAAUAAAACAAEAAAAPAAQAAAACAAEAAAAPAAMAAAACAAEAAAAPAAIAAAACAAAAAAAOAAsAAAABAAIAAAAOAAoAAAABAAEAAAAOAAkAAAABAAEAAAAOAAgAAAABAAEAAAAOAAcAAAABAAEAAAAOAAYAAAABAAEAAAAOAAUAAAABAAEAAAAOAAQAAAABAAEAAAAOAAMAAAABAAEAAAAOAAIAAAABAAAAAAANAAsAAAACAAMAAAANAAoAAAABAAEAAAANAAkAAAABAAEAAAANAAgAAAABAAEAAAANAAcAAAABAAEAAAANAAYAAAABAAEAAAANAAUAAAABAAEAAAANAAQAAAABAAEAAAANAAMAAAABAAEAAAANAAIAAAABAAAAAAAMAAsAAAABAAMAAAAMAAoAAAABAAEAAAAMAAkAAAABAAEAAAAMAAgAAAABAAEAAAAMAAcAAAABAAEAAAAMAAYAAAABAAEAAAAMAAUAAAABAAEAAAAMAAQAAAABAAEAAAAMAAMAAAABAAEAAAAMAAIAAAABAAAAAAALAAsAAAABAAIAAAALAAoAAAABAAEAAAALAAkAAAABAAEAAAALAAgAAAABAAEAAAALAAcAAAABAAEAAAALAAYAAAABAAEAAAALAAUAAAABAAEAAAALAAQAAAABAAEAAAALAAMAAAABAAEAAAALAAIAAAABAAAAAAAKAAsAAAAEAAUAAAAKAAoAAAAGAAQAAAAKAAkAAAAGAAQAAAAKAAgAAAAGAAMAAAAKAAYAAAABAAEAAAAKAAQAAAAGAAUAAAAKAAMAAAAGAAQAAAAKAAIAAAAEAAMAAAAJAAsAAAABAAIAAAAJAAoAAAABAAEAAAAJAAkAAAABAAEAAAAJAAgAAAABAAEAAAAJAAcAAAABAAEAAAAJAAYAAAABAAEAAAAJAAUAAAABAAEAAAAJAAQAAAABAAEAAAAJAAMAAAABAAEAAAAJAAIAAAABAAAAAAAIAAsAAAABAAIAAAAIAAoAAAABAAEAAAAIAAkAAAABAAEAAAAIAAgAAAABAAEAAAAIAAcAAAABAAEAAAAIAAYAAAABAAEAAAAIAAUAAAABAAEAAAAIAAQAAAABAAEAAAAIAAMAAAABAAEAAAAIAAIAAAABAAAAAAAHAAsAAAABAAIAAAAHAAoAAAABAAEAAAAHAAkAAAABAAEAAAAHAAgAAAABAAEAAAAHAAcAAAABAAEAAAAHAAYAAAABAAEAAAAHAAUAAAABAAEAAAAHAAQAAAABAAEAAAAHAAMAAAABAAEAAAAHAAIAAAABAAAAAAAGAAsAAAABAAIAAAAGAAoAAAABAAEAAAAGAAkAAAABAAEAAAAGAAgAAAABAAEAAAAGAAcAAAABAAEAAAAGAAYAAAABAAEAAAAGAAUAAAABAAEAAAAGAAQAAAABAAEAAAAGAAMAAAABAAEAAAAGAAIAAAABAAAAAAAFAAsAAAABAAIAAAAFAAoAAAABAAEAAAAFAAkAAAABAAEAAAAFAAgAAAABAAEAAAAFAAcAAAABAAEAAAAFAAYAAAABAAEAAAAFAAUAAAABAAEAAAAFAAQAAAABAAEAAAAFAAMAAAABAAEAAAAFAAIAAAABAAAAAAAEAAsAAAABAAIAAAAEAAoAAAABAAEAAAAEAAkAAAABAAEAAAAEAAgAAAABAAEAAAAEAAcAAAABAAEAAAAEAAYAAAABAAEAAAAEAAUAAAABAAEAAAAEAAQAAAABAAEAAAAEAAMAAAABAAEAAAAEAAIAAAABAAAAAAADAAsAAAAAAAIAAAADAAoAAAAAAAEAAAADAAkAAAACAAMAAFADAAgAAAABAAMAAFADAAcAAAAAAAEAAAADAAYAAAAAAAEAAAADAAUAAAAAAAEAAAADAAQAAAAAAAEAAAADAAMAAAAAAAEAAAADAAIAAAAAAAAAAAA=")
 
-[node name="SquareTable" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="0" unique_id=416914537 instance=ExtResource("5_ism6g")]
+[node name="SquareTable" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="0" unique_id=416914537 instance=ExtResource("5_4rb1a")]
 position = Vector2(112, 112)
 
 [node name="Sprite2D" parent="GameWorld/StaticContainer/SquareTable" index="0" unique_id=1506714561]
 frame = 1
 
-[node name="SofaH" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="1" unique_id=1916313207 instance=ExtResource("6_upl1e")]
+[node name="SofaH" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="1" unique_id=1916313207 instance=ExtResource("6_t0giv")]
 position = Vector2(112, 89)
 
-[node name="SofaV" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="2" unique_id=1070439883 instance=ExtResource("7_6opa3")]
+[node name="SofaV" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="2" unique_id=1070439883 instance=ExtResource("7_7yt8j")]
 position = Vector2(84, 115)
 
-[node name="SmallShelf" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="3" unique_id=1695072608 instance=ExtResource("8_rski0")]
+[node name="SmallShelf" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="3" unique_id=1695072608 instance=ExtResource("8_0e0is")]
 position = Vector2(137, 69)
 
 [node name="Sprite2D" parent="GameWorld/StaticContainer/SmallShelf" index="0" unique_id=252253773]
 frame = 2
 
-[node name="Player" parent="GameWorld" unique_id=1674835234 instance=ExtResource("9_hl83v")]
+[node name="Player" parent="GameWorld" unique_id=1674835234 instance=ExtResource("9_ulutb")]
 position = Vector2(208, 74)
 
-[node name="MsBarbara" parent="GameWorld" unique_id=305785106 instance=ExtResource("10_okurt")]
+[node name="MsBarbara" parent="GameWorld" unique_id=305785106 instance=ExtResource("10_2l11w")]
 position = Vector2(160, 130)
 
-[node name="DialogueArea" parent="GameWorld/MsBarbara" unique_id=1132444875 instance=ExtResource("11_0vtjk")]
-dialogue_file = "res://FINAL_LEVELS/week 1/JSON/W1_3.json"
+[node name="DialogueArea" parent="GameWorld/MsBarbara" unique_id=1132444875 instance=ExtResource("11_t6j1u")]
+dialogue_file = "res://_FINAL_LEVELS/week 1/JSON/W1_3.json"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GameWorld/MsBarbara/DialogueArea" unique_id=1612546631]
 position = Vector2(46, -35)
 shape = SubResource("RectangleShape2D_6bgd5")
 
-[node name="TaskController" parent="." unique_id=673560431 instance=ExtResource("10_cyq47")]
+[node name="TaskController" parent="." unique_id=673560431 instance=ExtResource("12_0srf6")]
 
 [editable path="GameWorld"]
 [editable path="GameWorld/CameraZoneContainer/CameraZone"]
