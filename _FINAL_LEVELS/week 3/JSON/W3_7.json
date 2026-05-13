@@ -1,0 +1,23 @@
+{
+	"0": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Hmmm... I wonder which book it was...",
+		
+		"next": "1",
+	},
+	"1": {
+		"name": "Perry",
+		"anim": "dm",
+		"text": "W-what if we picked a couple from a likely bunch and skim through them for a bit...?",
+		
+		"next": "2",
+	},
+	"2": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Hmmm... Alright. I'll go ask the librarian for an idea, then.",
+		
+		"next": "",
+	},
+}

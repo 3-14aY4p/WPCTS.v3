@@ -13,8 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://dexfk8n4vtikx" path="res://Entities/Characters/npc.tscn" id="11_gux2p"]
 [ext_resource type="PackedScene" uid="uid://c0twyucy5xnqo" path="res://Entities/Characters/Player/player.tscn" id="11_pbrra"]
 [ext_resource type="PackedScene" uid="uid://3om0cgx1mkfr" path="res://Levels/Components/task_controller.tscn" id="12_gp1uw"]
-[ext_resource type="PackedScene" uid="uid://db76wka6i6443" path="res://Entities/Characters/perry.tscn" id="13_3v3wb"]
-[ext_resource type="PackedScene" uid="uid://b8bmbdr7owniy" path="res://Entities/Characters/ms_barbara.tscn" id="14_1lemg"]
+[ext_resource type="PackedScene" uid="uid://db76wka6i6443" path="res://Entities/Characters/NPCs/perry.tscn" id="13_3v3wb"]
+[ext_resource type="PackedScene" uid="uid://b8bmbdr7owniy" path="res://Entities/Characters/NPCs/ms_barbara.tscn" id="14_1lemg"]
 [ext_resource type="PackedScene" uid="uid://bc656gimj8coc" path="res://Components/CameraManager/camera_marker.tscn" id="15_3v3wb"]
 [ext_resource type="PackedScene" uid="uid://d11hpb8uv2jhd" path="res://Levels/Components/target_area.tscn" id="17_q0qkc"]
 
@@ -103,89 +103,145 @@ position = Vector2(263, 158)
 [node name="Trashbin" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="0" unique_id=1848538655 instance=ExtResource("9_bjskl")]
 position = Vector2(69, 122)
 
-[node name="StoolChair" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="1" unique_id=1407493826 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="1" unique_id=1407493826 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(190, 72)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair2" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="2" unique_id=1781242005 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair2" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="2" unique_id=1781242005 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(223, 78)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair4" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="3" unique_id=1472779807 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair4" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="3" unique_id=1472779807 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(169, 86)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair3" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="4" unique_id=1530325781 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair3" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="4" unique_id=1530325781 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(196, 106)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair5" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="5" unique_id=324378080 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair5" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="5" unique_id=324378080 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(254, 76)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair6" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="6" unique_id=195635828 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair6" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="6" unique_id=195635828 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(287, 85)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair7" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="7" unique_id=1410247425 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair7" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="7" unique_id=1410247425 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(242, 94)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair8" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="8" unique_id=143319050 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair8" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="8" unique_id=143319050 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(264, 107)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair9" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="9" unique_id=618538896 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair9" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="9" unique_id=618538896 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(178, 106)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair10" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="10" unique_id=297381915 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair10" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="10" unique_id=297381915 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(204, 114)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair11" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="11" unique_id=1149409475 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair11" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="11" unique_id=1149409475 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(156, 119)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair12" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="12" unique_id=846949763 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair12" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="12" unique_id=846949763 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(170, 139)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair13" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="13" unique_id=465958336 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair13" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="13" unique_id=465958336 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(226, 107)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair14" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="14" unique_id=724829502 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair14" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="14" unique_id=724829502 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(250, 127)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair15" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="15" unique_id=11152842 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair15" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="15" unique_id=11152842 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(212, 123)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair16" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="16" unique_id=453543042 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair16" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="16" unique_id=453543042 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(224, 135)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair17" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="17" unique_id=1446885996 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair17" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="17" unique_id=1446885996 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(286, 110)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair18" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="18" unique_id=1125923809 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair18" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="18" unique_id=1125923809 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(297, 129)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair19" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="19" unique_id=430992872 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair19" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="19" unique_id=430992872 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(258, 119)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair20" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="20" unique_id=1419420148 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair20" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="20" unique_id=1419420148 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(272, 135)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair21" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="21" unique_id=497031937 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair21" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="21" unique_id=497031937 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(195, 140)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair22" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="22" unique_id=305794124 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair22" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="22" unique_id=305794124 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(215, 150)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair23" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="23" unique_id=1256373513 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair23" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="23" unique_id=1256373513 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(182, 154)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair24" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="24" unique_id=1040635788 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair24" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="24" unique_id=1040635788 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(199, 170)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair25" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="25" unique_id=37619859 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair25" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="25" unique_id=37619859 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(259, 138)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair26" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="26" unique_id=959746996 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair26" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="26" unique_id=959746996 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(280, 154)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair27" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="27" unique_id=1271198665 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair27" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="27" unique_id=1271198665 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(244, 150)
+mass = 7.0
+minimum_force = 100.0
 
-[node name="StoolChair28" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="28" unique_id=581480133 groups=["task_object"] instance=ExtResource("10_vj0vu")]
+[node name="StoolChair28" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="28" unique_id=581480133 groups=["pickable_object", "task_object"] instance=ExtResource("10_vj0vu")]
 position = Vector2(270, 168)
+mass = 7.0
+minimum_force = 100.0
 
 [node name="NPCS" type="Node2D" parent="GameWorld" unique_id=118731407]
 y_sort_enabled = true

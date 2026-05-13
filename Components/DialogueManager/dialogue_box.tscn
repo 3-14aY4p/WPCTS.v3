@@ -220,7 +220,6 @@ unique_name_in_owner = true
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
-columns = 2
 
 [node name="IndicatorSprite" type="AnimatedSprite2D" parent="CanvasLayer/MarginContainer/NinePatchRect/HBoxContainer" unique_id=1926549328]
 unique_name_in_owner = true

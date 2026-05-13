@@ -1,0 +1,81 @@
+[gd_scene format=4 uid="uid://sk2hvgesb0tg"]
+
+[ext_resource type="Script" uid="uid://bqj7qe6p744c8" path="res://Levels/level.gd" id="1_cyuj2"]
+[ext_resource type="PackedScene" uid="uid://bi64xwfbb4jjq" path="res://Levels/Components/user_interface.tscn" id="2_ko3cu"]
+[ext_resource type="PackedScene" uid="uid://16qn3y3y8hs3" path="res://Levels/Components/game_world.tscn" id="3_s0gep"]
+[ext_resource type="PackedScene" uid="uid://prmvfl2foyy7" path="res://Components/CameraManager/camera_zone.tscn" id="4_wpacs"]
+[ext_resource type="PackedScene" uid="uid://cw5v0xodqc5ob" path="res://Entities/StaticObjects/Interactable/bed.tscn" id="5_apdf7"]
+[ext_resource type="PackedScene" uid="uid://ce4biku3uir3v" path="res://Entities/StaticObjects/Interactable/study_desk.tscn" id="6_jcjcd"]
+[ext_resource type="PackedScene" uid="uid://bcc1dsvs0kte3" path="res://Entities/StaticObjects/Interactable/study_shelf.tscn" id="7_t68sd"]
+[ext_resource type="PackedScene" uid="uid://v8g3hjhyk64b" path="res://Components/GameController/exit_point.tscn" id="8_s1x7x"]
+[ext_resource type="PackedScene" uid="uid://c0twyucy5xnqo" path="res://Entities/Characters/Player/player.tscn" id="9_jc5c0"]
+[ext_resource type="PackedScene" uid="uid://3om0cgx1mkfr" path="res://Levels/Components/task_controller.tscn" id="10_u7dr2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rcnug"]
+size = Vector2(14, 14)
+
+[node name="DormRoom" type="Node2D" unique_id=453450293]
+y_sort_enabled = true
+script = ExtResource("1_cyuj2")
+task_fail_dialogue = "<null>"
+
+[node name="UserInterface" parent="." unique_id=1485922269 instance=ExtResource("2_ko3cu")]
+
+[node name="GameWorld" parent="." unique_id=1410708023 instance=ExtResource("3_s0gep")]
+
+[node name="CameraZone" parent="GameWorld/CameraZoneContainer" parent_id_path=PackedInt32Array(1410708023, 749433630) index="0" unique_id=2111838270 instance=ExtResource("4_wpacs")]
+camera_zoom = Vector2(4, 4)
+
+[node name="Jurisdiction" parent="GameWorld/CameraZoneContainer/CameraZone" index="0" unique_id=609086849]
+polygon = PackedVector2Array(64, 48, 64, 112, 144, 112, 144, 80, 112, 80, 112, 48)
+
+[node name="CameraZone2" parent="GameWorld/CameraZoneContainer" parent_id_path=PackedInt32Array(1410708023, 749433630) index="1" unique_id=1615004789 instance=ExtResource("4_wpacs")]
+camera_zoom = Vector2(5, 5)
+
+[node name="Jurisdiction" parent="GameWorld/CameraZoneContainer/CameraZone2" index="0" unique_id=609086849]
+polygon = PackedVector2Array(112, 48, 112, 80, 144, 80, 144, 48)
+
+[node name="Background" parent="GameWorld/TileMapContainer" parent_id_path=PackedInt32Array(1410708023, 695135423) index="0" unique_id=1231930454]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAMAAAAAAAEAAAAAAAMAAAAAAAIAAAAAAAMAAAAAAAMAAAAAAAMAAAAAAAQAAAAAAAMAAAAAAAUAAAAAAAMAAAAAAAYAAAAAAAMAAAAAAAcAAAAAAAMAAAAAAAgAAAAAAAMAAAABAAAAAAAAAAMAAAABAAEAAAAAAAMAAAABAAIAAAAAAAMAAAABAAMAAAAAAAMAAAABAAQAAAAAAAMAAAABAAUAAAAAAAMAAAABAAYAAAAAAAMAAAABAAcAAAAAAAMAAAABAAgAAAAAAAMAAAACAAAAAAAAAAMAAAACAAEAAAAAAAMAAAACAAIAAAAAAAMAAAACAAMAAAAAAAMAAAACAAQAAAAAAAMAAAACAAUAAAAAAAMAAAACAAYAAAAAAAMAAAACAAcAAAAAAAMAAAACAAgAAAAAAAMAAAADAAAAAAAAAAMAAAADAAEAAAAAAAMAAAADAAIAAAAAAAMAAAADAAMAAAAAAAMAAAADAAQAAAAAAAMAAAADAAUAAAAAAAMAAAADAAYAAAAAAAMAAAADAAcAAAAAAAMAAAADAAgAAAAAAAMAAAAEAAAAAAAAAAMAAAAEAAEAAAAAAAMAAAAEAAIAAAAAAAMAAAAEAAMAAAAAAAMAAAAEAAQAAAAAAAMAAAAEAAUAAAAAAAMAAAAEAAYAAAAAAAMAAAAEAAcAAAAAAAMAAAAEAAgAAAAAAAMAAAAFAAAAAAAAAAMAAAAFAAEAAAAAAAMAAAAFAAIAAAAAAAMAAAAFAAMAAAAAAAMAAAAFAAQAAAAAAAMAAAAFAAUAAAAAAAMAAAAFAAYAAAAAAAMAAAAFAAcAAAAAAAMAAAAFAAgAAAAAAAMAAAAGAAAAAAAAAAMAAAAGAAEAAAAAAAMAAAAGAAIAAAAAAAMAAAAGAAMAAAAAAAMAAAAGAAQAAAAAAAMAAAAGAAUAAAAAAAMAAAAGAAYAAAAAAAMAAAAGAAcAAAAAAAMAAAAGAAgAAAAAAAMAAAAHAAAAAAAAAAMAAAAHAAEAAAAAAAMAAAAHAAIAAAAAAAMAAAAHAAMAAAAAAAMAAAAHAAQAAAAAAAMAAAAHAAUAAAAAAAMAAAAHAAYAAAAAAAMAAAAHAAcAAAAAAAMAAAAHAAgAAAAAAAMAAAAIAAAAAAAAAAMAAAAIAAEAAAAAAAMAAAAIAAIAAAAAAAMAAAAIAAMAAAAAAAMAAAAIAAQAAAAAAAMAAAAIAAUAAAAAAAMAAAAIAAYAAAAAAAMAAAAIAAcAAAAAAAMAAAAIAAgAAAAAAAMAAAAJAAAAAAAAAAMAAAAJAAEAAAAAAAMAAAAJAAIAAAAAAAMAAAAJAAMAAAAAAAMAAAAJAAQAAAAAAAMAAAAJAAUAAAAAAAMAAAAJAAYAAAAAAAMAAAAJAAcAAAAAAAMAAAAJAAgAAAAAAAMAAAAKAAAAAAAAAAMAAAAKAAEAAAAAAAMAAAAKAAIAAAAAAAMAAAAKAAMAAAAAAAMAAAAKAAQAAAAAAAMAAAAKAAUAAAAAAAMAAAAKAAYAAAAAAAMAAAAKAAcAAAAAAAMAAAAKAAgAAAAAAAMAAAALAAAAAAAAAAMAAAALAAEAAAAAAAMAAAALAAIAAAAAAAMAAAALAAMAAAAAAAMAAAALAAQAAAAAAAMAAAALAAUAAAAAAAMAAAALAAYAAAAAAAMAAAALAAcAAAAAAAMAAAALAAgAAAAAAAMAAAAMAAAAAAAAAAMAAAAMAAEAAAAAAAMAAAAMAAIAAAAAAAMAAAAMAAMAAAAAAAMAAAAMAAQAAAAAAAMAAAAMAAUAAAAAAAMAAAAMAAYAAAAAAAMAAAAMAAcAAAAAAAMAAAAMAAgAAAAAAAMAAAA=")
+
+[node name="FloorBase" parent="GameWorld/TileMapContainer" parent_id_path=PackedInt32Array(1410708023, 695135423) index="1" unique_id=1255974423]
+tile_map_data = PackedByteArray("AAAEAAMAAAABAAMAAAAEAAQAAAABAAMAAAAEAAUAAAABAAMAAAAEAAYAAAABAAMAAAAFAAMAAAABAAMAAAAFAAQAAAABAAMAAAAFAAUAAAABAAMAAAAFAAYAAAABAAMAAAAGAAMAAAABAAMAAAAGAAQAAAABAAMAAAAGAAUAAAABAAMAAAAGAAYAAAABAAMAAAAHAAMAAAABAAMAAAAHAAQAAAABAAMAAAAHAAUAAAABAAMAAAAHAAYAAAABAAMAAAAIAAMAAAABAAMAAAAIAAQAAAABAAMAAAAIAAUAAAABAAMAAAAIAAYAAAABAAMAAAA=")
+
+[node name="FloorOverlay" parent="GameWorld/TileMapContainer" parent_id_path=PackedInt32Array(1410708023, 695135423) index="2" unique_id=1749672302]
+tile_map_data = PackedByteArray("AAAFAAQAAAAFAAEAAAAGAAQAAAAFAAEAAAAHAAQAAAAAAAEAAAAIAAQAAAAFAAEAAAAEAAQAAAAFAAEAAAA=")
+
+[node name="RoomBase" parent="GameWorld/TileMapContainer" parent_id_path=PackedInt32Array(1410708023, 695135423) index="3" unique_id=489774172]
+tile_map_data = PackedByteArray("AAAEAAMAAAAFAAAAAAAFAAMAAAAFAAAAAAAGAAMAAAAFAAAAAAAHAAMAAAAAAAAAAAAIAAMAAAAFAAAAAAA=")
+
+[node name="RoomOverlay" parent="GameWorld/TileMapContainer" parent_id_path=PackedInt32Array(1410708023, 695135423) index="4" unique_id=2082319703]
+tile_map_data = PackedByteArray("AAAIAAMAAAABAAAAAAAGAAMAAAAAAAAAAAA=")
+
+[node name="Walls" parent="GameWorld/TileMapContainer" parent_id_path=PackedInt32Array(1410708023, 695135423) index="5" unique_id=597676183]
+tile_map_data = PackedByteArray("AAAJAAYAAAACAAIAAAAJAAUAAAACAAEAAAAJAAQAAAACAAEAAAAJAAMAAAACAAEAAAAIAAYAAAABAAIAAAAIAAUAAAABAAEAAAAIAAQAAAABAAEAAAAIAAMAAAABAAEAAAAIAAIAAAABAAAAAAAHAAYAAAABAAIAAAAHAAUAAAABAAEAAAAHAAQAAAABAAEAAAAHAAMAAAABAAEAAAAHAAIAAAABAAAAAAAGAAYAAAABAAIAAAAGAAUAAAABAAEAAAAGAAQAAAABAAEAAAAGAAMAAAABAAEAAAAGAAIAAAABAAAAAAAFAAYAAAABAAIAAAAFAAUAAAABAAEAAAAFAAQAAAABAAEAAAAFAAMAAAABAAEAAAAFAAIAAAABAAAAAAAEAAYAAAABAAIAAAAEAAUAAAABAAEAAAAEAAQAAAABAAEAAAAEAAMAAAABAAEAAAAEAAIAAAABAAAAAAADAAYAAAAAAAIAAAADAAUAAAAAAAEAAAADAAQAAAAAAAEAAAADAAMAAAAAAAEAAAADAAIAAAAAAAAAAAAJAAIAAAACAAAAAAA=")
+
+[node name="Bed" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="0" unique_id=98163697 instance=ExtResource("5_apdf7")]
+position = Vector2(78, 104)
+
+[node name="StudyDesk" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="1" unique_id=1637569631 instance=ExtResource("6_jcjcd")]
+position = Vector2(93, 74)
+
+[node name="SmallShelf" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="2" unique_id=1719944828 instance=ExtResource("7_t68sd")]
+position = Vector2(72, 69)
+
+[node name="ExitPoint" parent="GameWorld" unique_id=1305555057 instance=ExtResource("8_s1x7x")]
+position = Vector2(120, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameWorld/ExitPoint" unique_id=1033436047]
+position = Vector2(0, -7)
+shape = SubResource("RectangleShape2D_rcnug")
+
+[node name="Player" parent="GameWorld" unique_id=1674835234 instance=ExtResource("9_jc5c0")]
+position = Vector2(120, 74)
+
+[node name="TaskController" parent="." unique_id=673560431 instance=ExtResource("10_u7dr2")]
+
+[editable path="GameWorld"]
+[editable path="GameWorld/CameraZoneContainer/CameraZone"]
+[editable path="GameWorld/CameraZoneContainer/CameraZone2"]
+[editable path="GameWorld/TileMapContainer"]
+[editable path="TaskController"]

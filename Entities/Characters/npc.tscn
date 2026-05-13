@@ -35,6 +35,38 @@ region = Rect2(32, 112, 16, 16)
 atlas = ExtResource("1_6cyd3")
 region = Rect2(48, 112, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_6yv5c"]
+atlas = ExtResource("1_6cyd3")
+region = Rect2(0, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1f1hm"]
+atlas = ExtResource("1_6cyd3")
+region = Rect2(16, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_flocy"]
+atlas = ExtResource("1_6cyd3")
+region = Rect2(32, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8t4j"]
+atlas = ExtResource("1_6cyd3")
+region = Rect2(48, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74x01"]
+atlas = ExtResource("1_6cyd3")
+region = Rect2(0, 144, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6bhju"]
+atlas = ExtResource("1_6cyd3")
+region = Rect2(16, 144, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2goi4"]
+atlas = ExtResource("1_6cyd3")
+region = Rect2(32, 144, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0q3f7"]
+atlas = ExtResource("1_6cyd3")
+region = Rect2(48, 144, 16, 16)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_d5nyv"]
 animations = [{
 "frames": [{
@@ -70,6 +102,40 @@ animations = [{
 "loop": true,
 "name": &"baldie_walk",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6yv5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1f1hm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_flocy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i8t4j")
+}],
+"loop": true,
+"name": &"big_girl_idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74x01")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6bhju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2goi4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0q3f7")
+}],
+"loop": true,
+"name": &"slim_girl_idle",
+"speed": 6.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_13hn8"]

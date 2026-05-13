@@ -23,7 +23,8 @@ class_name Level extends Node2D
 func _ready() -> void:
 	if player:
 		player.state_machine.change_state("playerdisabled")
-	
+		
+	if not objects: get_tree().get_first_node_in_group("object_container").get_children()
 	for object: DynamicObject in objects:
 		object.disabled = true
 		

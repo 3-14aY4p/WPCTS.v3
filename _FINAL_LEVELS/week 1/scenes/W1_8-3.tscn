@@ -9,10 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://d64f4is78q7e" path="res://Entities/DynamicObjects/chair_h.tscn" id="7_n1cxl"]
 [ext_resource type="PackedScene" uid="uid://cq5nry25y5yvx" path="res://Entities/DynamicObjects/large_box.tscn" id="8_46yip"]
 [ext_resource type="PackedScene" uid="uid://c0twyucy5xnqo" path="res://Entities/Characters/Player/player.tscn" id="8_oh6b8"]
-[ext_resource type="PackedScene" uid="uid://u2ebgsullxsk" path="res://Entities/Characters/prof_candice.tscn" id="9_2kl48"]
+[ext_resource type="PackedScene" uid="uid://u2ebgsullxsk" path="res://Entities/Characters/NPCs/prof_candice.tscn" id="9_2kl48"]
 [ext_resource type="PackedScene" uid="uid://dexfk8n4vtikx" path="res://Entities/Characters/npc.tscn" id="10_nabvs"]
 [ext_resource type="PackedScene" uid="uid://3om0cgx1mkfr" path="res://Levels/Components/task_controller.tscn" id="10_sv2t8"]
-[ext_resource type="PackedScene" uid="uid://db76wka6i6443" path="res://Entities/Characters/perry.tscn" id="11_6xgif"]
+[ext_resource type="PackedScene" uid="uid://db76wka6i6443" path="res://Entities/Characters/NPCs/perry.tscn" id="11_6xgif"]
 [ext_resource type="PackedScene" uid="uid://d11hpb8uv2jhd" path="res://Levels/Components/target_area.tscn" id="13_1eroo"]
 [ext_resource type="PackedScene" uid="uid://bc656gimj8coc" path="res://Components/CameraManager/camera_marker.tscn" id="14_r8x0g"]
 

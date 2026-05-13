@@ -1,0 +1,33 @@
+{
+	"0": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "I wonder if these are enough?",
+		
+		"next": "1",
+	},
+	"1": {
+		"name": "Perry",
+		"anim": "dm",
+		"text": "I-I think for now, yes. But we could definitely use some more...",
+		
+		"next": "2",
+	},
+	"2": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Oh welp, let's just get more later. Let's get studying, for now.",
+		
+		"next": "",
+	},
+	"END": {
+		"star": "player",
+		"node": "/root/GameController",
+		"func": "transition_to_next_scene",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": "",
+	},
+}

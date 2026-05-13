@@ -104,7 +104,7 @@ func load_block(block: Dictionary):
 		var choices: Array = block["choices"].keys()
 		var paths: Array = block["choices"].values()
 		
-		if choices.size() > 1:
+		if choices.size() > 2:
 			button_container.columns = 2
 		else:
 			button_container.columns = 1

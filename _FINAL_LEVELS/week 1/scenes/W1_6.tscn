@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bg8y4dnhwihwu" path="res://Entities/StaticObjects/Decoration/small_table.tscn" id="6_2a0uk"]
 [ext_resource type="PackedScene" uid="uid://d64f4is78q7e" path="res://Entities/DynamicObjects/chair_h.tscn" id="7_yu38q"]
 [ext_resource type="PackedScene" uid="uid://c0twyucy5xnqo" path="res://Entities/Characters/Player/player.tscn" id="8_bm0t8"]
-[ext_resource type="PackedScene" uid="uid://u2ebgsullxsk" path="res://Entities/Characters/prof_candice.tscn" id="9_r3bub"]
+[ext_resource type="PackedScene" uid="uid://u2ebgsullxsk" path="res://Entities/Characters/NPCs/prof_candice.tscn" id="9_r3bub"]
 [ext_resource type="PackedScene" uid="uid://dexfk8n4vtikx" path="res://Entities/Characters/npc.tscn" id="10_k8uh0"]
 [ext_resource type="PackedScene" uid="uid://dhbj1bg2g2vme" path="res://Components/DialogueManager/dialogue_area.tscn" id="11_nqpum"]
 [ext_resource type="PackedScene" uid="uid://bc656gimj8coc" path="res://Components/CameraManager/camera_marker.tscn" id="12_ya4oo"]

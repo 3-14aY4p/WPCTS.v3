@@ -1,16 +1,22 @@
 [gd_scene format=4 uid="uid://rquw8k5471g6"]
 
 [ext_resource type="PackedScene" uid="uid://bi64xwfbb4jjq" path="res://Levels/Components/user_interface.tscn" id="1_dai81"]
+[ext_resource type="Script" uid="uid://bqj7qe6p744c8" path="res://Levels/level.gd" id="1_mq14h"]
 [ext_resource type="PackedScene" uid="uid://16qn3y3y8hs3" path="res://Levels/Components/game_world.tscn" id="2_el64x"]
 [ext_resource type="PackedScene" uid="uid://prmvfl2foyy7" path="res://Components/CameraManager/camera_zone.tscn" id="3_f555c"]
 [ext_resource type="PackedScene" uid="uid://4b57skeon417" path="res://Entities/StaticObjects/Decoration/medium_table_h.tscn" id="4_qsh7o"]
 [ext_resource type="PackedScene" uid="uid://bg8y4dnhwihwu" path="res://Entities/StaticObjects/Decoration/small_table.tscn" id="5_q1xhj"]
 [ext_resource type="PackedScene" uid="uid://d64f4is78q7e" path="res://Entities/DynamicObjects/chair_h.tscn" id="6_6kwwm"]
 [ext_resource type="PackedScene" uid="uid://c0twyucy5xnqo" path="res://Entities/Characters/Player/player.tscn" id="7_buuhx"]
+[ext_resource type="PackedScene" uid="uid://dexfk8n4vtikx" path="res://Entities/Characters/npc.tscn" id="7_ekhwo"]
+[ext_resource type="PackedScene" uid="uid://db76wka6i6443" path="res://Entities/Characters/NPCs/perry.tscn" id="8_1un2e"]
 [ext_resource type="PackedScene" uid="uid://3om0cgx1mkfr" path="res://Levels/Components/task_controller.tscn" id="8_ayo21"]
+[ext_resource type="PackedScene" uid="uid://u2ebgsullxsk" path="res://Entities/Characters/NPCs/prof_candice.tscn" id="10_ucfa4"]
 
 [node name="CampusClassroom" type="Node2D" unique_id=1450742048]
 y_sort_enabled = true
+script = ExtResource("1_mq14h")
+initial_dialogue = "res://_FINAL_LEVELS/week 3/JSON/W3_4.json"
 
 [node name="UserInterface" parent="." unique_id=1485922269 instance=ExtResource("1_dai81")]
 
@@ -102,49 +108,49 @@ position = Vector2(128, 120)
 frame = 1
 
 [node name="ChairH4" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="3" unique_id=950545141 instance=ExtResource("6_6kwwm")]
-position = Vector2(160, 120)
+position = Vector2(160, 126)
 
 [node name="Sprite2D" parent="GameWorld/ObjectContainer/ChairH4" index="0" unique_id=1356431179]
 frame = 1
 
 [node name="ChairH5" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="4" unique_id=1631787201 instance=ExtResource("6_6kwwm")]
-position = Vector2(192, 120)
+position = Vector2(192, 126)
 
 [node name="Sprite2D" parent="GameWorld/ObjectContainer/ChairH5" index="0" unique_id=1356431179]
 frame = 1
 
 [node name="ChairH6" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="5" unique_id=591983566 instance=ExtResource("6_6kwwm")]
-position = Vector2(96, 152)
+position = Vector2(96, 158)
 
 [node name="Sprite2D" parent="GameWorld/ObjectContainer/ChairH6" index="0" unique_id=1356431179]
 frame = 1
 
 [node name="ChairH7" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="6" unique_id=1959288708 instance=ExtResource("6_6kwwm")]
-position = Vector2(128, 152)
+position = Vector2(128, 158)
 
 [node name="Sprite2D" parent="GameWorld/ObjectContainer/ChairH7" index="0" unique_id=1356431179]
 frame = 1
 
 [node name="ChairH8" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="7" unique_id=1016633643 instance=ExtResource("6_6kwwm")]
-position = Vector2(160, 152)
+position = Vector2(160, 158)
 
 [node name="Sprite2D" parent="GameWorld/ObjectContainer/ChairH8" index="0" unique_id=1356431179]
 frame = 1
 
 [node name="ChairH9" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="8" unique_id=363590700 instance=ExtResource("6_6kwwm")]
-position = Vector2(192, 152)
+position = Vector2(192, 158)
 
 [node name="Sprite2D" parent="GameWorld/ObjectContainer/ChairH9" index="0" unique_id=1356431179]
 frame = 1
 
 [node name="ChairH10" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="9" unique_id=1802008651 instance=ExtResource("6_6kwwm")]
-position = Vector2(96, 184)
+position = Vector2(96, 190)
 
 [node name="Sprite2D" parent="GameWorld/ObjectContainer/ChairH10" index="0" unique_id=1356431179]
 frame = 1
 
 [node name="ChairH11" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="10" unique_id=1102802117 instance=ExtResource("6_6kwwm")]
-position = Vector2(128, 184)
+position = Vector2(128, 190)
 
 [node name="Sprite2D" parent="GameWorld/ObjectContainer/ChairH11" index="0" unique_id=1356431179]
 frame = 1
@@ -156,13 +162,55 @@ position = Vector2(160, 184)
 frame = 1
 
 [node name="ChairH13" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="12" unique_id=1929146620 instance=ExtResource("6_6kwwm")]
-position = Vector2(192, 184)
+position = Vector2(192, 190)
 
 [node name="Sprite2D" parent="GameWorld/ObjectContainer/ChairH13" index="0" unique_id=1356431179]
 frame = 1
 
+[node name="NPCS" type="Node2D" parent="GameWorld" unique_id=723537658]
+y_sort_enabled = true
+
+[node name="NPC" parent="GameWorld/NPCS" unique_id=744398630 instance=ExtResource("7_ekhwo")]
+position = Vector2(160, 118)
+
+[node name="NPC2" parent="GameWorld/NPCS" unique_id=1379011455 instance=ExtResource("7_ekhwo")]
+position = Vector2(192, 118)
+
+[node name="NPC3" parent="GameWorld/NPCS" unique_id=244301513 instance=ExtResource("7_ekhwo")]
+position = Vector2(96, 150)
+
+[node name="NPC4" parent="GameWorld/NPCS" unique_id=873615288 instance=ExtResource("7_ekhwo")]
+position = Vector2(128, 150)
+
+[node name="NPC5" parent="GameWorld/NPCS" unique_id=210680977 instance=ExtResource("7_ekhwo")]
+position = Vector2(160, 150)
+
+[node name="NPC6" parent="GameWorld/NPCS" unique_id=1435488773 instance=ExtResource("7_ekhwo")]
+position = Vector2(192, 150)
+
+[node name="NPC7" parent="GameWorld/NPCS" unique_id=1210205789 instance=ExtResource("7_ekhwo")]
+position = Vector2(96, 182)
+
+[node name="NPC8" parent="GameWorld/NPCS" unique_id=1875164867 instance=ExtResource("7_ekhwo")]
+position = Vector2(128, 182)
+
+[node name="NPC9" parent="GameWorld/NPCS" unique_id=569212896 instance=ExtResource("7_ekhwo")]
+position = Vector2(192, 182)
+
 [node name="Player" parent="GameWorld" unique_id=1674835234 instance=ExtResource("7_buuhx")]
-position = Vector2(216, 192)
+position = Vector2(212, 179)
+
+[node name="Sprite2D" parent="GameWorld/Player" index="3" unique_id=1162693820]
+flip_h = true
+
+[node name="Perry" parent="GameWorld" unique_id=1000218583 instance=ExtResource("8_1un2e")]
+position = Vector2(217, 190)
+
+[node name="AnimatedSprite2D" parent="GameWorld/Perry" index="0" unique_id=1834865738]
+flip_h = true
+
+[node name="ProfCandice" parent="GameWorld" unique_id=999642883 instance=ExtResource("10_ucfa4")]
+position = Vector2(144, 81)
 
 [node name="TaskController" parent="." unique_id=673560431 instance=ExtResource("8_ayo21")]
 
@@ -182,4 +230,6 @@ position = Vector2(216, 192)
 [editable path="GameWorld/ObjectContainer/ChairH11"]
 [editable path="GameWorld/ObjectContainer/ChairH12"]
 [editable path="GameWorld/ObjectContainer/ChairH13"]
+[editable path="GameWorld/Player"]
+[editable path="GameWorld/Perry"]
 [editable path="TaskController"]

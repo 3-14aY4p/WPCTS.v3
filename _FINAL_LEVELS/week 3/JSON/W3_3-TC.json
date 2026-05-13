@@ -62,21 +62,21 @@
 		
 		"next": "9",
 	},
-	"10": {
+	"9": {
 		"name": "Colin",
 		"anim": "mc",
 		"text": "Oh, darn it! We're gonna be late!",
 		
-		"next": "11",
+		"next": "10",
 	},
-	"11": {
+	"10": {
 		"name": "Colin",
 		"anim": "mc",
 		"text": "Let's go, Perry! Food will have to wait for later!",
 		
-		"next": "12",
+		"next": "11",
 	},
-	"12": {
+	"11": {
 		"name": "Perry",
 		"anim": "dm",
 		"text": "Alright.",

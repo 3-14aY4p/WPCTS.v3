@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://ocoa45qdyuqx" path="res://Entities/DynamicObjects/stool_chair.tscn" id="10_ymm24"]
 [ext_resource type="PackedScene" uid="uid://cwlqu78i5gty0" path="res://Entities/DynamicObjects/plate.tscn" id="11_txjxn"]
 [ext_resource type="PackedScene" uid="uid://c0twyucy5xnqo" path="res://Entities/Characters/Player/player.tscn" id="12_rr4cn"]
-[ext_resource type="PackedScene" uid="uid://b8bmbdr7owniy" path="res://Entities/Characters/ms_barbara.tscn" id="13_a6ctt"]
+[ext_resource type="PackedScene" uid="uid://b8bmbdr7owniy" path="res://Entities/Characters/NPCs/ms_barbara.tscn" id="13_a6ctt"]
 [ext_resource type="PackedScene" uid="uid://dexfk8n4vtikx" path="res://Entities/Characters/npc.tscn" id="14_am3w2"]
 [ext_resource type="PackedScene" uid="uid://bc656gimj8coc" path="res://Components/CameraManager/camera_marker.tscn" id="15_owyyq"]
 [ext_resource type="PackedScene" uid="uid://v8g3hjhyk64b" path="res://Components/GameController/exit_point.tscn" id="16_s1732"]

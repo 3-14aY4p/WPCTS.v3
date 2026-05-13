@@ -9,13 +9,13 @@ class_name TargetArea extends Area2D
 @export var object_limit: int = 1
 @export var object_persistence: bool = true
 @export var deactivated: bool = true
-@export var is_task_started: bool = false
+@export var hide_label: bool = false
 
 var objects_delivered: int = 0
 var objects_in_area: Array
 
 var area_goal_reached: bool = false
-@export var hide_label: bool = false
+var is_task_started: bool = false
 
 func _ready() -> void:
 	label.hide()

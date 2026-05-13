@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://ihtnil7as3dc"]
+
+[ext_resource type="Script" uid="uid://ch4qrb53yjgl5" path="res://Entities/DynamicObjects/_dynamic_object.gd" id="1_kx0ey"]
+[ext_resource type="Texture2D" uid="uid://cj10xnuyer7uy" path="res://Assets/Art/objects.png" id="1_p8k15"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p8k15"]
+radius = 4.0
+
+[node name="Book" type="RigidBody2D" unique_id=7818531 groups=["extra_light", "non-shoveable", "pickable_object"]]
+z_index = 1
+collision_layer = 4
+collision_mask = 0
+mass = 7.0
+script = ExtResource("1_kx0ey")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=778759161]
+texture = ExtResource("1_p8k15")
+offset = Vector2(0, -5)
+hframes = 3
+frame = 2
+region_enabled = true
+region_rect = Rect2(0, 112, 48, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1751993944]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_p8k15")

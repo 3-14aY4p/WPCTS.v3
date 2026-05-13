@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://d11hpb8uv2jhd" path="res://Levels/Components/target_area.tscn" id="9_k0hhr"]
 [ext_resource type="PackedScene" uid="uid://b8btcyhn5d17r" path="res://Entities/DynamicObjects/trash.tscn" id="9_pi4v1"]
 [ext_resource type="PackedScene" uid="uid://dhbj1bg2g2vme" path="res://Components/DialogueManager/dialogue_area.tscn" id="11_n2h03"]
-[ext_resource type="PackedScene" uid="uid://u2ebgsullxsk" path="res://Entities/Characters/prof_candice.tscn" id="12_na4y1"]
+[ext_resource type="PackedScene" uid="uid://u2ebgsullxsk" path="res://Entities/Characters/NPCs/prof_candice.tscn" id="12_na4y1"]
 [ext_resource type="PackedScene" uid="uid://v8g3hjhyk64b" path="res://Components/GameController/exit_point.tscn" id="12_q6yev"]
 [ext_resource type="PackedScene" uid="uid://bc656gimj8coc" path="res://Components/CameraManager/camera_marker.tscn" id="14_d1c8h"]
 

@@ -1,0 +1,41 @@
+{
+	"0": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Uhm... excuse me, ma'am. But would you have an idea where the Physics textbooks might be at?",
+		
+		"next": "1",
+	},
+	"1": {
+		"name": "Librarian",
+		"anim": "rand",
+		"text": "Oh... I'm really sorry, but we haven't finished reshelving and cataloging the books yet.",
+		
+		"next": "2",
+	},
+	"2": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "I see, is that so...",
+		
+		"next": "",
+	},
+	"2": {
+		"star": "target",
+		"name": "Librarian",
+		"anim": "rand",
+		"text": "But if you want, you can go search through the piles. Do feel free!",
+			
+		"next": "END",
+	},
+	"END": {
+		"star": "player",
+		"node": "/root/GameController",
+		"func": "start_next_task",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": "",
+	},
+}

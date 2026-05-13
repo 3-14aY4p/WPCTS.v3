@@ -8,9 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://bg8y4dnhwihwu" path="res://Entities/StaticObjects/Decoration/small_table.tscn" id="6_bmuvp"]
 [ext_resource type="PackedScene" uid="uid://d64f4is78q7e" path="res://Entities/DynamicObjects/chair_h.tscn" id="7_3ri5v"]
 [ext_resource type="PackedScene" uid="uid://c0twyucy5xnqo" path="res://Entities/Characters/Player/player.tscn" id="8_ne1nt"]
-[ext_resource type="PackedScene" uid="uid://u2ebgsullxsk" path="res://Entities/Characters/prof_candice.tscn" id="9_kyy2n"]
+[ext_resource type="PackedScene" uid="uid://u2ebgsullxsk" path="res://Entities/Characters/NPCs/prof_candice.tscn" id="9_kyy2n"]
 [ext_resource type="PackedScene" uid="uid://dexfk8n4vtikx" path="res://Entities/Characters/npc.tscn" id="10_ydkvj"]
-[ext_resource type="PackedScene" uid="uid://db76wka6i6443" path="res://Entities/Characters/perry.tscn" id="11_dy27r"]
+[ext_resource type="PackedScene" uid="uid://db76wka6i6443" path="res://Entities/Characters/NPCs/perry.tscn" id="11_dy27r"]
 [ext_resource type="PackedScene" uid="uid://3om0cgx1mkfr" path="res://Levels/Components/task_controller.tscn" id="13_pmqqn"]
 
 [node name="CampusClassroom" type="Node2D" unique_id=1450742048]
