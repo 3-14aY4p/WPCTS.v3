@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://c6u6p6jitpamr" path="res://MenuUI/title_menu.gd" id="1_ha7ql"]
 [ext_resource type="Theme" uid="uid://b4gxjcrjef1na" path="res://Themes/button_theme_2.tres" id="2_ha7ql"]
+[ext_resource type="Texture2D" uid="uid://8ysa2xtbp2ae" path="res://Assets/Art/cover.png" id="2_sqprt"]
+[ext_resource type="Theme" uid="uid://dimc0cp4ncfuj" path="res://Themes/richtextlabel_theme.tres" id="3_xmeli"]
 
 [node name="TitleMenu" type="Control" unique_id=1273646821]
 layout_mode = 3
@@ -21,12 +23,30 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.20784314, 0.23921569, 0.27450982, 1)
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=212790389]
+visible = false
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+texture = ExtResource("2_sqprt")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1020767544]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 448.0
+offset_bottom = 152.0
+theme = ExtResource("3_xmeli")
+theme_override_font_sizes/normal_font_size = 54
+bbcode_enabled = true
+text = "WHEN PUSH COMES TO SHOVE"
+
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=318064720]
 layout_mode = 1
-offset_left = 504.0
-offset_top = 208.0
-offset_right = 581.0
-offset_bottom = 306.0
+offset_left = 512.0
+offset_top = 216.0
+offset_right = 589.0
+offset_bottom = 314.0
 theme_override_constants/separation = 10
 alignment = 1
 

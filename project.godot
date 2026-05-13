@@ -20,6 +20,7 @@ config/icon="res://Assets/icon.svg"
 GameController="*uid://dkw4pcy3cctqw"
 InteractionHandler="*uid://bjpuhqhsimmyl"
 DialogueManager="*uid://cmg0q64tj4ikb"
+SaveHandler="*uid://bqlxc08uviqq6"
 
 [debug]
 

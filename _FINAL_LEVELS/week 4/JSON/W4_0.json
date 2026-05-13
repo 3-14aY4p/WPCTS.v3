@@ -1,0 +1,32 @@
+{
+	"": {
+		"name": "",
+		"anim": "",
+		"text": "",
+		
+		"next": "",
+	},
+	"": {
+		"name": "",
+		"anim": "",
+		"text": "",
+		
+		"next": "",
+	},
+	"": {
+		"name": "",
+		"anim": "",
+		"text": "",
+		
+		"next": "",
+	},
+	"": {
+		"node": "/root/..",
+		"func": "",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": "path",
+	},
+}

@@ -6,10 +6,10 @@ extends Node
 @onready var animation_player: AnimationPlayer = $TransitionHandler/AnimationPlayer
 
 # for saving progress
-var current_day: int = 3
-var current_scene_index: int = 8
+var current_day: int = 1
+var current_scene_index: int = 0
 var total_score: int = 0
-var total_tasks_passed: int = 0
+var total_task_completed: int = 0
 
 const total_tests: int = 4
 const total_tasks: int = 5 # [2, 3, 3, 0, 0]
@@ -53,8 +53,8 @@ var scene_data: Dictionary = {
 		'5': "---", # Second Law assessment
 		'6': "uid://b6wmei7ck26re", # classroom
 		'7': "uid://bql6duk7bnc8s", # library
-		'8': "uid://q78sikh4v3ep", # dorm room
-		'9': "uid://sk2hvgesb0tg", # dorm hallway
+		'8': "uid://q78sikh4v3ep", # dorm hallway
+		'9': "uid://sk2hvgesb0tg", # dorm room
 	},
 	"4": {
 		'0': "", # blank screen

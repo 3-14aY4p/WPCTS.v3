@@ -59,7 +59,7 @@ func _on_task_controller_task_completed() -> void:
 		
 	if task_complete_dialogue:
 		DialogueManager.activate_box(task_complete_dialogue)
-		GameController.total_tasks_passed += 1
+		GameController.total_task_completed += 1
 		
 	delete_nodes(delete_nodes_on_task_completed)
 

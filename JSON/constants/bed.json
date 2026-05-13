@@ -21,6 +21,15 @@
 		"await": "",
 		"hide_box": true,
 		
+		"comment": "save",
+	},
+	"save": {
+		"node": "/root/SaveHandler",
+		"func": "save_game",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
 		"comment": "",
 	}
 }
