@@ -31,7 +31,6 @@ func _physics_process(delta: float) -> void:
 	mouse_dir = get_local_mouse_position().normalized()
 	ray_cast_2d.look_at(get_global_mouse_position())
 
-
 func handle_movement(speed: float = DEFAULT_SPEED):
 	velocity = Input.get_vector("_left", "_right", "_up", "_down") * speed
 	move_and_slide()

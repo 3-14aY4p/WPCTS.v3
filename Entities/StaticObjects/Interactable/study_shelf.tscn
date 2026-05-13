@@ -13,6 +13,7 @@ size = Vector2(12, 5)
 [node name="StudyShelf" type="StaticBody2D" unique_id=1719944828]
 z_index = 1
 script = ExtResource("1_j4xe5")
+disabled = true
 metadata/_edit_group_ = true
 
 [node name="InteractableArea" parent="." unique_id=1780815943 instance=ExtResource("2_k7sy4")]

@@ -32,29 +32,29 @@
 		"star": "target",
 		"name": "Colin",
 		"anim": "mc",
-		"text": "All done and dusted!",
+		"text": "Uhm...",
 		
 		"next": "5",
 	},
 	"5": {
 		"name": "",
 		"anim": "",
-		"text": "= Great! I'll make sure to give you extra credits for that. You may go home now. =",
+		"text": "= ... =",
 		
 		"next": "6",
 	},
 	"6": {
-		"star": "player",
-		"name": "Colin",
-		"anim": "mc",
-		"text": "Thank you, Ma'am!\n\n# Call Ends #",
+		"name": "",
+		"anim": "",
+		"text": "= I'll be giving you some deductions, for that. = \n\n# Call Ends #",
 		
 		"next": "7",
 	},
 	"7": {
+		"star": "player",
 		"name": "Colin",
 		"anim": "mc",
-		"text": "She was actually being nice... damn...",
+		"text": "...",
 		
 		"next": "8",
 	},

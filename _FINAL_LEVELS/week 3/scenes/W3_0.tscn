@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://djd50uku08326"]
+
+[ext_resource type="Script" uid="uid://ba1xlr2bfaj8r" path="res://Levels/Blank/blank_screen.gd" id="1_q7gig"]
+
+[node name="BlankScreen" type="CanvasLayer" unique_id=1999547854]
+script = ExtResource("1_q7gig")
+dialogue_file = "res://_FINAL_LEVELS/week 3/JSON/W3_0.json"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=531310683]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.20784314, 0.23921569, 0.27450982, 1)
+metadata/_edit_use_anchors_ = true

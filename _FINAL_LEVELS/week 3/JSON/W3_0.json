@@ -1,0 +1,32 @@
+{
+	"0": {
+		"name": "",
+		"anim": "",
+		"text": "...",
+		
+		"next": "1",
+	},
+	"1": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "...?",
+		
+		"next": "2",
+	},
+	"2": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Don't tell me I...?",
+		
+		"next": "END",
+	},
+	"END": {
+		"node": "/root/GameController",
+		"func": "transition_to_next_scene",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": "",
+	},
+}

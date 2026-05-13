@@ -7,7 +7,7 @@ extends Node
 
 # for saving progress
 var current_day: int = 2
-var current_scene_index: int = 0
+var current_scene_index: int = 9
 var total_score: int = 0
 var total_tasks_passed: int = 0
 
@@ -35,23 +35,24 @@ var scene_data: Dictionary = {
 	"2": {
 		'0': "uid://btoibh04mpfbv", # blank screen
 		'1': "uid://bhlidls2l4083", # dorm room
-		'2': "uid://dglxi3xwixvcw", # dorm hallway 
+		'2': "uid://dglxi3xwixvcw", # dorm hallway help task
 		'3': "uid://cptqqy4qhid5i", # classroom
 		'4': "---", # First Law assessment
-		'5': "uid://cc5k68iydaues", # 
-		'6': "uid://41tf8o343xgw", # 
-		'7': "", # 
-		'8': "", # 
+		'5': "uid://cc5k68iydaues", # classroom week 2 demo
+		'6': "uid://41tf8o343xgw", # classroom cleanup task
+		'7': "uid://dkfy0ry2rpufm", # blank screen
+		'8': "uid://cd3rm34d3gcna", # bathroom
+		'9': "uid://bnp1inc00da0f", # dorm room
 	},
-	#: {
-		#0: "", # 
-		#1: "", # 
-		#2: "", # 
-		#3: "", # 
-		#4: "", # 
-		#5: "", # 
-		#6: "", # 
-	#},
+	"3": {
+		'0': "uid://djd50uku08326", # blank screen
+		'1': "uid://rvib30m0jqdx", # dorm room
+		'2': "uid://tc3h7goy7g58", # dorm hallway
+		'3': "uid://0203j4k7rht4", # cafeteria
+		'4': "", # 
+		'5': "", # 
+		'6': "", # 
+	},
 }
 var current_scene: String
 var task_controller: TaskController
@@ -76,7 +77,7 @@ func load_next_scene():
 		return
 		
 	# player reached the end of the day
-	if current_scene_index > scene_data[str(current_day)].size():
+	if current_scene_index >= scene_data[str(current_day)].size():
 		current_scene_index = 0
 		current_day += 1
 		
@@ -102,6 +103,9 @@ func transition_to_next_scene():
 func display_results():
 	pass
 
+func unlock_exit_points():
+	for exit: ExitPoint in get_tree().get_nodes_in_group("exit_point"):
+		exit.locked = false
 
 func restart_scene():
 	get_tree().reload_current_scene()

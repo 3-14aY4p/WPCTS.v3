@@ -1,0 +1,61 @@
+{
+	"0": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Oh hey, ain't that our Perry!",
+		
+		"next": "1",
+	},
+	"1": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Don't need any help with the boxes this time?",
+		
+		"next": "2",
+	},
+	"2": {
+		"name": "Perry",
+		"anim": "dm",
+		"text": "O-Oh, hi Colin. Yeah, I managed to get them in by myself this time.",
+		
+		"next": "3",
+	},
+	"3": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "That's nice, that's nice.",
+		
+		"next": "4",
+	},
+	"4": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "I'm gonna go have some breakfast, do you wanna come with? Ms. Barbara makes the best scrambled eggs!",
+		
+		"next": "5",
+	},
+	"5": {
+		"name": "Perry",
+		"anim": "dm",
+		"text": "* He's not... cranky...? * U-uhm...",
+		
+		"next": "6",
+	},
+	"6": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "It'll be fun!",
+		
+		"next": "END",
+	},
+	"END": {
+		"node": "/root/GameController",
+		"func": "transition_to_next_scene",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": "",
+	},
+	
+}

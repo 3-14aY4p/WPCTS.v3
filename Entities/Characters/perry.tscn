@@ -52,7 +52,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 6.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -87,6 +87,7 @@ metadata/_edit_group_ = true
 sprite_frames = SubResource("SpriteFrames_w48mm")
 animation = &"idle"
 autoplay = "idle"
+frame_progress = 0.51529
 offset = Vector2(0, -8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1036671086]

@@ -68,112 +68,112 @@ position = Vector2(70, 115)
 rotation = 0.00070062216
 
 [node name="SquareTable" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="3" unique_id=416914537 instance=ExtResource("6_acw1n")]
-position = Vector2(208, 91)
+position = Vector2(199, 94)
 
-[node name="SquareTable2" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="4" unique_id=660172214 instance=ExtResource("6_acw1n")]
-position = Vector2(256, 91)
+[node name="SquareTable2" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="4" unique_id=1550878139 instance=ExtResource("6_acw1n")]
+position = Vector2(263, 94)
 
-[node name="SquareTable3" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="5" unique_id=2000317228 instance=ExtResource("6_acw1n")]
-position = Vector2(184, 123)
+[node name="SquareTable3" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="5" unique_id=227809252 instance=ExtResource("6_acw1n")]
+position = Vector2(183, 126)
 
-[node name="SquareTable4" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="6" unique_id=742278799 instance=ExtResource("6_acw1n")]
-position = Vector2(232, 123)
+[node name="SquareTable4" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="6" unique_id=1661819398 instance=ExtResource("6_acw1n")]
+position = Vector2(231, 126)
 
-[node name="SquareTable5" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="7" unique_id=688953858 instance=ExtResource("6_acw1n")]
-position = Vector2(280, 124)
+[node name="SquareTable5" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="7" unique_id=1463100770 instance=ExtResource("6_acw1n")]
+position = Vector2(279, 126)
 
-[node name="SquareTable6" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="8" unique_id=1537841628 instance=ExtResource("6_acw1n")]
-position = Vector2(208, 163)
+[node name="SquareTable6" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="8" unique_id=1467692825 instance=ExtResource("6_acw1n")]
+position = Vector2(199, 158)
 
-[node name="SquareTable7" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="9" unique_id=1079904301 instance=ExtResource("6_acw1n")]
-position = Vector2(256, 164)
+[node name="SquareTable7" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="9" unique_id=615259943 instance=ExtResource("6_acw1n")]
+position = Vector2(263, 158)
 
 [node name="Trashbin" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="0" unique_id=1848538655 instance=ExtResource("7_jxtuj")]
 position = Vector2(69, 122)
 
 [node name="StoolChair" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="1" unique_id=1407493826 instance=ExtResource("7_kghvv")]
-position = Vector2(208, 76)
+position = Vector2(199, 80)
 
-[node name="StoolChair2" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="2" unique_id=215425561 instance=ExtResource("7_kghvv")]
-position = Vector2(221, 86)
+[node name="StoolChair2" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="2" unique_id=817960065 instance=ExtResource("7_kghvv")]
+position = Vector2(212, 89)
 
-[node name="StoolChair3" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="3" unique_id=419897977 instance=ExtResource("7_kghvv")]
-position = Vector2(208, 96)
+[node name="StoolChair4" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="3" unique_id=569045418 instance=ExtResource("7_kghvv")]
+position = Vector2(186, 89)
 
-[node name="StoolChair4" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="4" unique_id=2099725208 instance=ExtResource("7_kghvv")]
-position = Vector2(195, 86)
+[node name="StoolChair3" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="4" unique_id=644325991 instance=ExtResource("7_kghvv")]
+position = Vector2(199, 99)
 
-[node name="StoolChair5" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="5" unique_id=1088132358 instance=ExtResource("7_kghvv")]
-position = Vector2(256, 77)
+[node name="StoolChair5" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="5" unique_id=917173463 instance=ExtResource("7_kghvv")]
+position = Vector2(263, 80)
 
-[node name="StoolChair6" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="6" unique_id=1856883138 instance=ExtResource("7_kghvv")]
-position = Vector2(269, 87)
+[node name="StoolChair6" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="6" unique_id=224746198 instance=ExtResource("7_kghvv")]
+position = Vector2(276, 89)
 
-[node name="StoolChair7" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="7" unique_id=1810496356 instance=ExtResource("7_kghvv")]
-position = Vector2(256, 97)
+[node name="StoolChair7" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="7" unique_id=494755919 instance=ExtResource("7_kghvv")]
+position = Vector2(250, 89)
 
-[node name="StoolChair8" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="8" unique_id=151489589 instance=ExtResource("7_kghvv")]
-position = Vector2(243, 87)
+[node name="StoolChair8" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="8" unique_id=860343155 instance=ExtResource("7_kghvv")]
+position = Vector2(263, 99)
 
-[node name="StoolChair9" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="9" unique_id=1949894400 instance=ExtResource("7_kghvv")]
-position = Vector2(184, 109)
+[node name="StoolChair9" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="9" unique_id=1288621545 instance=ExtResource("7_kghvv")]
+position = Vector2(183, 112)
 
-[node name="StoolChair10" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="10" unique_id=19441375 instance=ExtResource("7_kghvv")]
-position = Vector2(197, 119)
+[node name="StoolChair10" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="10" unique_id=286410869 instance=ExtResource("7_kghvv")]
+position = Vector2(196, 121)
 
-[node name="StoolChair11" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="11" unique_id=431516197 instance=ExtResource("7_kghvv")]
-position = Vector2(184, 129)
+[node name="StoolChair11" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="11" unique_id=1891351332 instance=ExtResource("7_kghvv")]
+position = Vector2(170, 121)
 
-[node name="StoolChair12" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="12" unique_id=159677077 instance=ExtResource("7_kghvv")]
-position = Vector2(171, 119)
+[node name="StoolChair12" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="12" unique_id=1757433977 instance=ExtResource("7_kghvv")]
+position = Vector2(183, 131)
 
-[node name="StoolChair13" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="13" unique_id=1279491796 instance=ExtResource("7_kghvv")]
-position = Vector2(232, 109)
+[node name="StoolChair13" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="13" unique_id=875059307 instance=ExtResource("7_kghvv")]
+position = Vector2(231, 112)
 
-[node name="StoolChair14" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="14" unique_id=1575000912 instance=ExtResource("7_kghvv")]
-position = Vector2(245, 119)
+[node name="StoolChair14" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="14" unique_id=1599308244 instance=ExtResource("7_kghvv")]
+position = Vector2(244, 121)
 
-[node name="StoolChair15" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="15" unique_id=1980545386 instance=ExtResource("7_kghvv")]
-position = Vector2(232, 129)
+[node name="StoolChair15" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="15" unique_id=1772355390 instance=ExtResource("7_kghvv")]
+position = Vector2(218, 121)
 
-[node name="StoolChair16" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="16" unique_id=1001331372 instance=ExtResource("7_kghvv")]
-position = Vector2(219, 119)
+[node name="StoolChair16" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="16" unique_id=1628649778 instance=ExtResource("7_kghvv")]
+position = Vector2(231, 131)
 
-[node name="StoolChair17" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="17" unique_id=1967615955 instance=ExtResource("7_kghvv")]
-position = Vector2(280, 110)
+[node name="StoolChair17" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="17" unique_id=394371919 instance=ExtResource("7_kghvv")]
+position = Vector2(279, 112)
 
-[node name="StoolChair18" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="18" unique_id=277518712 instance=ExtResource("7_kghvv")]
-position = Vector2(293, 120)
+[node name="StoolChair18" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="18" unique_id=2073296006 instance=ExtResource("7_kghvv")]
+position = Vector2(292, 121)
 
-[node name="StoolChair19" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="19" unique_id=1819660311 instance=ExtResource("7_kghvv")]
-position = Vector2(280, 130)
+[node name="StoolChair19" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="19" unique_id=2106593467 instance=ExtResource("7_kghvv")]
+position = Vector2(266, 121)
 
-[node name="StoolChair20" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="20" unique_id=1417384469 instance=ExtResource("7_kghvv")]
-position = Vector2(267, 120)
+[node name="StoolChair20" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="20" unique_id=105281541 instance=ExtResource("7_kghvv")]
+position = Vector2(279, 131)
 
-[node name="StoolChair21" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="21" unique_id=1377545778 instance=ExtResource("7_kghvv")]
-position = Vector2(208, 149)
+[node name="StoolChair21" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="21" unique_id=2054692867 instance=ExtResource("7_kghvv")]
+position = Vector2(199, 144)
 
-[node name="StoolChair22" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="22" unique_id=667854716 instance=ExtResource("7_kghvv")]
-position = Vector2(221, 159)
+[node name="StoolChair22" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="22" unique_id=887477609 instance=ExtResource("7_kghvv")]
+position = Vector2(212, 153)
 
-[node name="StoolChair23" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="23" unique_id=245569187 instance=ExtResource("7_kghvv")]
-position = Vector2(208, 169)
+[node name="StoolChair23" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="23" unique_id=727166020 instance=ExtResource("7_kghvv")]
+position = Vector2(186, 153)
 
-[node name="StoolChair24" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="24" unique_id=801070287 instance=ExtResource("7_kghvv")]
-position = Vector2(195, 159)
+[node name="StoolChair24" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="24" unique_id=2025676217 instance=ExtResource("7_kghvv")]
+position = Vector2(199, 163)
 
-[node name="StoolChair25" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="25" unique_id=2056075334 instance=ExtResource("7_kghvv")]
-position = Vector2(256, 150)
+[node name="StoolChair25" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="25" unique_id=2123464356 instance=ExtResource("7_kghvv")]
+position = Vector2(263, 144)
 
-[node name="StoolChair26" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="26" unique_id=1100355969 instance=ExtResource("7_kghvv")]
-position = Vector2(269, 160)
+[node name="StoolChair26" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="26" unique_id=1650802837 instance=ExtResource("7_kghvv")]
+position = Vector2(276, 153)
 
-[node name="StoolChair27" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="27" unique_id=315548601 instance=ExtResource("7_kghvv")]
-position = Vector2(256, 170)
+[node name="StoolChair27" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="27" unique_id=1965206648 instance=ExtResource("7_kghvv")]
+position = Vector2(250, 153)
 
-[node name="StoolChair28" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="28" unique_id=1270808128 instance=ExtResource("7_kghvv")]
-position = Vector2(243, 160)
+[node name="StoolChair28" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="28" unique_id=958441319 instance=ExtResource("7_kghvv")]
+position = Vector2(263, 163)
 
 [node name="Player" parent="GameWorld" unique_id=1674835234 instance=ExtResource("3_j6hig")]
 position = Vector2(240, 188)

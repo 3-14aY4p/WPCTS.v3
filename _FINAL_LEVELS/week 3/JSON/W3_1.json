@@ -1,0 +1,44 @@
+{
+	"0": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "...",
+		
+		"next": "1",
+	},
+	"1": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "[shake][font size=30]I BEAT THE ALARM CLOCK, HELL YEAH![/font][/shake]",
+		
+		"next": "2",
+	},
+	"2": {
+		"name": "",
+		"anim": "",
+		"text": "* Alarm rings *",
+		
+		"next": "3",
+	},
+	"3": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "HAH! Take that- I win!",
+		
+		"next": "4",
+	},
+	"4": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Eitherway, I should get going...",
+		
+		"next": "5",
+	},
+	"5": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "You never know what might come up later...",
+		
+		"next": "",
+	},
+}

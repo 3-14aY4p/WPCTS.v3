@@ -1,0 +1,30 @@
+{
+	"0": {
+		"name": "",
+		"anim": "",
+		"text": "* Shuffle shuffle *",
+		
+		"next": "1",
+	},
+	"1": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "...",
+		
+		"next": "2",
+	},
+	"2": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "* I swear there's got to be someone in the other stall... *",
+		
+		"next": "3",
+	},
+	"3": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "* Perhaps I could investigate? *",
+		
+		"next": "",
+	}
+}

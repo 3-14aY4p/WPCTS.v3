@@ -1,0 +1,173 @@
+{
+	"0": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Uhm... pardon?",
+		
+		"next": "1",
+	},
+	"1": {
+		"star": "NPC_RAND",
+		"name": "Bully 1",
+		"anim": "rand",
+		"text": "Well, well, well... If it isn't Perry...",
+		
+		"next": "2",
+	},
+	"2": {
+		"star": "NPC_DM",
+		"name": "Perry",
+		"anim": "dm",
+		"text": "[shake][font size=30]Eeeeeeeeekk-!![/font] Please... Not right now![/shake]",
+		
+		"next": "3",
+	},
+	"3": {
+		"name": "Bully 2",
+		"anim": "rand",
+		"text": "Why? You off to get a nice breakfast, hoping to get some peace??",
+		
+		"next": "4",
+	},
+	"4": {
+		"zoom": [7, 7],
+		"star": "NPC_DM",
+		"name": "Bully 2",
+		"anim": "rand",
+		"text": "[font size=30]Dream on, nerd[/font]!",
+		
+		"next": "5",
+	},
+	"5": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "[font size=16]Uhm... hello? Are we all forgetting about me being here?[/font]",
+		
+		"next": "6",
+	},
+	"6": {
+		"name": "Bully 3",
+		"anim": "rand",
+		"text": "Nerds like you don't deserve [font size=26]ANY[/font] sort of peace in the real world!",
+		
+		"next": "7",
+	},
+	"7": {
+		"name": "Bully 4",
+		"anim": "rand",
+		"text": "Go back to burying your nose inside them books, neeeerd!",
+		
+		"next": "8",
+	},
+	"8": {
+		"zoom": [8, 8],
+		"star": "player",
+		"name": "Colin",
+		"anim": "mc",
+		"text": "[font size=36]Hey![/font] Stop ignoring me, you jerks!",
+		
+		"next": "9",
+	},
+	"9": {
+		"name": "Bully 5",
+		"anim": "rand",
+		"text": "Shut up, small fry...",
+		
+		"next": "10",
+	},
+	"10": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Excuse you?? * ouch... * Perhaps [font size=26]YOU'RE[/font] the small fries!",
+		
+		"next": "11",
+	},
+	"11": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Getting off bullying kids who can't fight back. Pick someone your own size!",
+		
+		"next": "12",
+	},
+	"12": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Oh right... You are doing that... HAHAHAHAHA! Small fries indeed, you lot!",
+		
+		"next": "13",
+	},
+	"13": {
+		"name": "Bully 2",
+		"anim": "rand",
+		"text": "You are asking to be [font size=26]beat[/font]!",
+		
+		"next": "14",
+	},
+	"14": {
+		"zoom": [8, 8],
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Do it, then...?",
+		
+		"next": "15",
+	},
+	"15": {
+		"star": "NPC_RAND",
+		"name": "Bully 1",
+		"anim": "rand",
+		"text": "Tsk... Leave them be... Let's go, boys. We're done here!",
+		
+		"next": "16",
+	},
+	"16": {
+		"name": "Bully 1",
+		"anim": "rand",
+		"text": "Have fun finding a place to sit, HAH!",
+		
+		"next": "17",
+	},
+	"17": {
+		"zoom": [2.3, 2.3],
+		"star": "target",
+		"name": "Colin",
+		"anim": "mc",
+		"text": "These... guys... are... [font size=36]crazy![/font]",
+		
+		"next": "18",
+	},
+	"18": {
+		"zoom": [3, 3],
+		"star": "NPC_MT",
+		"name": "Ms. Barbara",
+		"anim": "mt",
+		"text": "Oh dear... What happened here??",
+		
+		"next": "19",
+	},
+	"19": {
+		"zoom": [3, 3],
+		"star": "player",
+		"name": "Colin",
+		"anim": "mc",
+		"text": "I'm sorry Ms. Barbara, we'll deal with this!",
+		
+		"next": "20",
+	},
+	"20": {
+		"name": "Perry",
+		"anim": "dm",
+		"text": "Colin...",
+		
+		"next": "END",
+	},
+	"END": {
+		"node": "/root/GameController",
+		"func": "start_next_task",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": "",
+	},
+	
+}
