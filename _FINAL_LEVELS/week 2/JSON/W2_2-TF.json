@@ -1,0 +1,50 @@
+{
+	"0": {
+		"star": "NPC_DM",
+		"name": "Perry",
+		"anim": "dm",
+		"text": "O-Oh... yeah, there is good too...",
+		
+		"next": "1",
+	},
+	"1": {
+		"star": "player",
+		"name": "Colin",
+		"anim": "mc",
+		"text": "You'll have to do the rest, sorry.",
+		
+		"next": "2",
+	},
+	"2": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "My job here is done.",
+		
+		"next": "3",
+	},
+	"3": {
+		"name": "Perry",
+		"anim": "dm",
+		"text": "O-Oh, sure...",
+		
+		"next": "4",
+	},
+	"4": {
+		"star": "exit_point",
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Great, time to go!",
+		
+		"next": "END",
+	},
+	"END": {
+		"star": "player",
+		"node": "/root/GameController",
+		"func": "start_next_task",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": "",
+	},
+}

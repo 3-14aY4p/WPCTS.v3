@@ -6,36 +6,42 @@ extends Node
 @onready var animation_player: AnimationPlayer = $TransitionHandler/AnimationPlayer
 
 # for saving progress
-var current_day: int = 1
-var current_scene_index: int = 11
-var tasks_failed: int = 0
-var total_credit: int = 0
+var current_day: int = 2
+var current_scene_index: int = 0
+var total_score: int = 0
+var total_tasks_passed: int = 0
+
+const total_tests: int = 4
+const total_tasks: int = 5 # [2, 3, 0, 0, 0]
+
 
 # houses the list of scenes per day
 var scene_data: Dictionary = {
-	1: {
-		0: "uid://djlbee5dfgims", # blank screen
-		1: "uid://qyb4xoryjck8", # dorm room
-		2: "uid://cfmw7cwkvevs1", # dorm hallway
-		3: "uid://bgg4lmgk586mt", # dorm lobby
-		4: "uid://cg3fhfygs5tmk", # cafeteria
-		5: "uid://pnmxiwj47qni", # blank screen
-		6: "uid://db43argg36g4o", # classroom
-		7: "---", # initial assessment
-		8: "uid://cws4d336mldtl", # classroom ()PRE Perry
-		9: "uid://lrey5nrrad7h", # classroom ()POST Perry
-		10: "uid://pj6lqnqb1tjq",
-		11: "uid://d1b61hjlmplrr",
-		12: "uid://bpywkotjygshj", # dorm
+	"1": {
+		'0': "uid://djlbee5dfgims", # blank 
+		'1': "uid://qyb4xoryjck8", # dorm room
+		'2': "uid://cfmw7cwkvevs1", # dorm hallway
+		'3': "uid://bgg4lmgk586mt", # dorm lobby
+		'4': "uid://cg3fhfygs5tmk", # cafeteria
+		'5': "uid://pnmxiwj47qni", # blank 
+		'6': "uid://db43argg36g4o", # classroom
+		'7': "---", # initial assessment
+		'8': "uid://cws4d336mldtl", # classroom ()PRE Perry
+		'9': "uid://lrey5nrrad7h", # classroom ()POST Perry - chair task
+		'10': "uid://pj6lqnqb1tjq", # classroom - heavy box task
+		'11': "uid://d1b61hjlmplrr", # classroom dismissal
+		'12': "uid://bpywkotjygshj", # dorm room
 	},
-	2 : {
-		0: "", # 
-		1: "", # 
-		2: "", # 
-		3: "", # 
-		4: "", # 
-		5: "", # 
-		6: "", # 
+	"2": {
+		'0': "uid://btoibh04mpfbv", # blank screen
+		'1': "uid://bhlidls2l4083", # dorm room
+		'2': "uid://dglxi3xwixvcw", # dorm hallway 
+		'3': "uid://cptqqy4qhid5i", # classroom
+		'4': "---", # First Law assessment
+		'5': "uid://cc5k68iydaues", # 
+		'6': "uid://41tf8o343xgw", # 
+		'7': "", # 
+		'8': "", # 
 	},
 	#: {
 		#0: "", # 
@@ -65,24 +71,26 @@ func start_next_task():
 # load next level; dependent on scene_data dictionary
 func load_next_scene():
 	# player reached the end of the game
-	if current_day >= scene_data.size():
+	if current_day > scene_data.size():
 		display_results()
 		return
-	# player reached the end of the day
-	if current_scene_index >= scene_data[current_day].size():
-		current_day += 1
-		current_scene_index = 0
-		load_next_scene()
 		
-	var curr_scene = scene_data[current_day][current_scene_index]
+	# player reached the end of the day
+	if current_scene_index > scene_data[str(current_day)].size():
+		current_scene_index = 0
+		current_day += 1
+		
+	var curr_scene = scene_data[str(current_day)][str(current_scene_index)]
 	if curr_scene == "---":
 		current_scene_index += 1
-		load_next_scene()
+		curr_scene = scene_data[str(current_day)][str(current_scene_index)]
+		load_scene(curr_scene)
+		current_scene_index += 1
 	else:
 		load_scene(curr_scene)
 		current_scene_index += 1
 		
-	if current_scene_index == scene_data[current_day].size():
+	if current_scene_index == scene_data[str(current_day)].size():
 		end_of_day = true
 
 func transition_to_next_scene():

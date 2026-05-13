@@ -1,0 +1,86 @@
+{
+	"0": {
+		"star": "NPC_PF",
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "...",
+		
+		"next": "1",
+	},
+	"1": {
+		"star": "player",
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Is the box glued down to the floor or something?",
+		
+		"next": "2",
+	},
+	"2": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "...",
+		
+		"next": "3",
+	},
+	"3": {
+		"star": "NPC_PF",
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Any more questions..?",
+		
+		"next": "4",
+	},
+	"4": {
+		"zoom": [2.5, 2.5],
+		"name": "Classmate",
+		"anim": "rand",
+		"text": "None, ma'am!",
+		
+		"next": "5",
+	},
+	"5": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Alright then, let's have our assessment for this next week.",
+		
+		"next": "6",
+	},
+	"6": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "That's all, everyone. You are dismissed.",
+		
+		"next": "7",
+	},
+	"7": {
+		"name": "Classmates",
+		"anim": "rand",
+		"text": "Goodbye and thank you, ma'am!",
+		
+		"next": "8",
+	},
+	"8": {
+		"star": "player",
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Except for you, Colin. You stay...",
+		
+		"next": "9",
+	},
+	"9": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Oh... alright...",
+		
+		"next": "END",
+	},
+	"END": {
+		"node": "/root/GameController",
+		"func": "transition_to_next_scene",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": "",
+	},
+}

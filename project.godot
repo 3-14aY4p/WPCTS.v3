@@ -63,6 +63,7 @@ NPC_RAND=""
 NPC_UNKN=""
 target=""
 extra_light=""
+non-shoveable=""
 
 [input]
 

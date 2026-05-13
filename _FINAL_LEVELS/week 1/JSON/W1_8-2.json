@@ -40,9 +40,9 @@
 		"next": "5",
 	},
 	"5": {
-		"name": "Prof. Candice",
-		"anim": "pf",
-		"text": "An object at rest tends to stay at rest and an object in motion tends to stay in motion unless acted upon a force.",
+		"name": "",
+		"anim": "",
+		"text": "\"An object at rest tends to stay at rest and an object in motion tends to stay in motion unless acted upon a force.\"",
 		
 		"next": "6",
 	},

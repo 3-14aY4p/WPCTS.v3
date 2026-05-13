@@ -13,7 +13,8 @@ signal task_failed
 enum TaskType {
 	PLACE, 				## Player must get the object into the area and make it stay there.
 	BRING,				## Player bring the object to the area, and the object gets deleted.
-	REACH				## Player must reach the target area.
+	REACH,				## Player must reach the target area.
+	MIXED,
 }
 @export var task_type: TaskType
 
@@ -26,12 +27,6 @@ enum TaskState {
 	COMPLETED,
 }
 @export var task_state: TaskState
-
-# MOVE START TASK SOMEWHERE ELSE!!!
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_accept"):
-		start_task()
-
 
 func _ready() -> void:
 	area_boundary.hide()
@@ -71,6 +66,7 @@ func start_task():
 		highlight_task_objects(1)
 		for area: TargetArea in target_areas:
 			area.deactivated = false
+			area.is_task_started = true
 		area_boundary.show()
 		
 		if time_limit > 0:
@@ -89,7 +85,7 @@ func complete_task():
 		
 		area_boundary.hide()
 		for area: TargetArea in target_areas:
-			area.deactivated = true
+			area.queue_free()
 		if time_limit != 0:
 			timer.stop()
 			
@@ -100,6 +96,7 @@ func fail_task():
 	if task_state == TaskState.ONGOING:
 		task_state = TaskState.AVAILABLE
 		task_failed.emit()
+		queue_free()
 
 func on_time_exceeded():
 	fail_task()

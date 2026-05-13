@@ -1,0 +1,16 @@
+{
+	"0": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Prof. Candice is gonna end up berating me again.",
+		
+		"next": "1",
+	},
+	"1": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "There's no escape on this one.",
+		
+		"next": "",
+	},
+}

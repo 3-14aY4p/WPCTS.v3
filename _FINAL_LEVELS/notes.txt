@@ -1,0 +1,234 @@
+" " : INITIAL DIALOGUE FILE
+"E" : EOS DIALOGUE FILE
+"BA" : (PRE) ASSESSMENT FILE
+"AA" : (POST) ASSESSMENT FILE
+"T" : TUTORIAL POPUP FILE
+"TC" : TASK COMPLETE
+"TF" : TASK FAILED
+
+
+
+	"0": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "Last week, we learned about acceleration.",
+		
+		"next": "1",
+	},
+	
+	"1": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "Now, we want to know about the relationship between acceleration to the force",
+		
+		"next": "2",
+	},
+
+	"2": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "This will be our topic for this week.",
+		
+		"next": "3",
+	},
+
+	"3": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "Newton's Second Law which states that…",
+		
+		"next": "4",
+	},
+
+	"4": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "The acceleration of an object is directly proportional to the net force acting on it but inversely proportional to its mass.",
+		
+		"next": "5",
+	},
+
+	"5": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "Let's proceed to our first example:",
+		
+		"next": "6",
+	},
+
+	"6": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "f you can recall, the formula for it is...",
+		
+		"next": "7",
+	},
+
+	"7": {
+		"name": "Classmate",
+		"anim": "rand",
+		"text": "Fnet​= ma, where Fnet is the net force measured in Newtons N and N is equal to (kg m/s^2 ), m is mass in (kg), and a is the acceleration (m/s^2).",
+		
+		"next": "8",
+	},
+
+	"8": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "Question 1: Estimate the net force needed to accelerate (a) a 1000kg car at ½ g, and (b) a 200g apple at the same rate.",
+		
+		"next": "9",
+	},
+
+	"9": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "Part 1: We will use the formula: Fnet​= ma ",
+		
+		"next": "10",
+	},
+
+	"10": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "Substitute their value.",
+		
+		"next": "11",
+	},
+
+	"11": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "= (1000kg) (½g)",
+		
+		"next": "12",
+	},
+
+	"12": {
+		"name": "Classmate",
+		"anim": "rand",
+		"text": "Here, we see that m = 1000kg of the car multiplied by ½ of g or gravity.",
+		
+		"next": "13",
+	},
+
+	"13": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "This g stands for acceleration due to gravity, and we know that g is equal to 9.8m/s2.",
+		
+		"next": "14",
+	},
+
+
+	"14": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "Now, this gives us:",
+		
+		"next": "15",
+	},
+
+	"15": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "= (1000kg) (4.9m/s^2) = 5000 N",
+		
+		"next": "16",
+	},
+
+	"16": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "The 4.9m/s^2 is a given from the  9.8m/s^2 is multiplied by our problem given ½ g.",
+		
+		"next": "17",
+	},
+
+	"17": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "We changed the unit into N or Newtons due to our statement earlier that N = kg m/s^2",
+		
+		"next": "18",
+	},
+
+	"18": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "We will now proceed to our second example.",
+		
+		"next": "19",
+	},
+
+	"19": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "= (0.200kg) (4.9m/s2) = 1N (0.98 N)",
+		
+		"next": "20",
+	},
+
+	"20": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "We simply substituted the mass into 0.200kg from the problem, while it is still under the same rate.",
+		
+		"next": "21",
+	},
+
+	"21": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "A worker with spikes on his shoes pulls with a constant horizontal force of 20N on a box with mass of 40kg on the flat frictionless surface of a frozen lake.",
+		
+		"next": "22",
+	},
+
+	"22": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "We want to get the acceleration.",
+		
+		"next": "23",
+	},
+
+	"23": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "Class, note here that “frictionless” means that the ice doesn't have any force to oppose the motion. Since there is only one horizontal component of force, we will change our formula from:",
+		
+		"next": "24",
+	},
+
+	"24": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "Part 1: Fnet = ma",
+		
+		"next": "25",
+	},
+
+	"25": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "Part 2: ax = Fx/m",
+		
+		"next": "26",
+	},
+
+	"26": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "= 20N / 40kg ",
+		
+		"next": "27",
+	},
+
+	"27": {
+		"name": "Professor Candice",
+		"anim": "pf",
+		"text": "= 20kg m/s^2 over 40kg = 0.5m/s^2",
+		
+		"next": "28",
+	},

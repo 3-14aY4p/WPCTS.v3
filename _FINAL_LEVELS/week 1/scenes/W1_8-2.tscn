@@ -23,6 +23,7 @@ y_sort_enabled = true
 script = ExtResource("1_uf3qp")
 initial_dialogue = "res://_FINAL_LEVELS/week 1/JSON/W1_8-2.json"
 task_complete_dialogue = "res://_FINAL_LEVELS/week 1/JSON/W1_8-2-TC.json"
+task_fail_dialogue = "res://_FINAL_LEVELS/week 1/JSON/W1_8-2-TF.json"
 
 [node name="UserInterface" parent="." unique_id=1485922269 instance=ExtResource("2_jwti8")]
 
@@ -65,38 +66,38 @@ position = Vector2(112, 89)
 [node name="SmallTable" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="1" unique_id=1234466296 instance=ExtResource("6_n23mn")]
 position = Vector2(96, 114)
 
-[node name="SmallTable2" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="2" unique_id=1549086287 instance=ExtResource("6_n23mn")]
+[node name="SmallTable2" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="2" unique_id=1412761637 instance=ExtResource("6_n23mn")]
 position = Vector2(128, 114)
 
-[node name="SmallTable3" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="3" unique_id=2001757547 instance=ExtResource("6_n23mn")]
+[node name="SmallTable3" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="3" unique_id=1937459681 instance=ExtResource("6_n23mn")]
 position = Vector2(160, 114)
 
-[node name="SmallTable4" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="4" unique_id=1558560677 instance=ExtResource("6_n23mn")]
+[node name="SmallTable4" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="4" unique_id=1468749309 instance=ExtResource("6_n23mn")]
 position = Vector2(192, 114)
 
-[node name="SmallTable6" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="5" unique_id=644690218 instance=ExtResource("6_n23mn")]
-position = Vector2(96, 147)
+[node name="SmallTable6" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="5" unique_id=711652234 instance=ExtResource("6_n23mn")]
+position = Vector2(96, 146)
 
-[node name="SmallTable7" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="6" unique_id=142672080 instance=ExtResource("6_n23mn")]
-position = Vector2(128, 147)
+[node name="SmallTable7" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="6" unique_id=201572388 instance=ExtResource("6_n23mn")]
+position = Vector2(128, 146)
 
-[node name="SmallTable8" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="7" unique_id=417529084 instance=ExtResource("6_n23mn")]
-position = Vector2(160, 147)
+[node name="SmallTable8" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="7" unique_id=1360675611 instance=ExtResource("6_n23mn")]
+position = Vector2(160, 146)
 
-[node name="SmallTable9" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="8" unique_id=1919094327 instance=ExtResource("6_n23mn")]
-position = Vector2(192, 147)
+[node name="SmallTable9" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="8" unique_id=1107979029 instance=ExtResource("6_n23mn")]
+position = Vector2(192, 146)
 
-[node name="SmallTable11" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="9" unique_id=847903524 instance=ExtResource("6_n23mn")]
-position = Vector2(96, 181)
+[node name="SmallTable11" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="9" unique_id=1388986909 instance=ExtResource("6_n23mn")]
+position = Vector2(96, 178)
 
-[node name="SmallTable12" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="10" unique_id=2047057708 instance=ExtResource("6_n23mn")]
-position = Vector2(128, 181)
+[node name="SmallTable12" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="10" unique_id=1534534693 instance=ExtResource("6_n23mn")]
+position = Vector2(128, 178)
 
-[node name="SmallTable13" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="11" unique_id=665961252 instance=ExtResource("6_n23mn")]
-position = Vector2(160, 181)
+[node name="SmallTable13" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="11" unique_id=135982158 instance=ExtResource("6_n23mn")]
+position = Vector2(160, 178)
 
-[node name="SmallTable14" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="12" unique_id=1393573540 instance=ExtResource("6_n23mn")]
-position = Vector2(192, 181)
+[node name="SmallTable14" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="12" unique_id=1148704040 instance=ExtResource("6_n23mn")]
+position = Vector2(192, 178)
 
 [node name="ChairH" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="0" unique_id=626750987 groups=["task_object"] instance=ExtResource("7_n0e3p")]
 position = Vector2(145, 81)
@@ -173,38 +174,41 @@ position = Vector2(192, 193)
 [node name="Sprite2D" parent="GameWorld/ObjectContainer/ChairH13" index="0" unique_id=1356431179]
 frame = 1
 
+[node name="NPCS" type="Node2D" parent="GameWorld" unique_id=319001795]
+y_sort_enabled = true
+
+[node name="NPC" parent="GameWorld/NPCS" unique_id=744398630 instance=ExtResource("10_42tqm")]
+position = Vector2(192, 151)
+
+[node name="NPC2" parent="GameWorld/NPCS" unique_id=1821075657 instance=ExtResource("10_42tqm")]
+position = Vector2(160, 118)
+
+[node name="NPC3" parent="GameWorld/NPCS" unique_id=939403013 instance=ExtResource("10_42tqm")]
+position = Vector2(192, 118)
+
+[node name="NPC4" parent="GameWorld/NPCS" unique_id=603151409 instance=ExtResource("10_42tqm")]
+position = Vector2(96, 151)
+
+[node name="NPC5" parent="GameWorld/NPCS" unique_id=1781185037 instance=ExtResource("10_42tqm")]
+position = Vector2(128, 151)
+
+[node name="NPC6" parent="GameWorld/NPCS" unique_id=1276236778 instance=ExtResource("10_42tqm")]
+position = Vector2(160, 151)
+
+[node name="NPC7" parent="GameWorld/NPCS" unique_id=1275319499 instance=ExtResource("10_42tqm")]
+position = Vector2(128, 185)
+
+[node name="NPC8" parent="GameWorld/NPCS" unique_id=1580790040 instance=ExtResource("10_42tqm")]
+position = Vector2(160, 185)
+
+[node name="NPC9" parent="GameWorld/NPCS" unique_id=560024845 instance=ExtResource("10_42tqm")]
+position = Vector2(192, 185)
+
 [node name="Player" parent="GameWorld" unique_id=1674835234 instance=ExtResource("8_i67vr")]
 position = Vector2(128, 118)
 
 [node name="ProfCandice" parent="GameWorld" unique_id=999642883 instance=ExtResource("9_ckkex")]
 position = Vector2(128, 94)
-
-[node name="NPC" parent="GameWorld" unique_id=744398630 instance=ExtResource("10_42tqm")]
-position = Vector2(192, 151)
-
-[node name="NPC2" parent="GameWorld" unique_id=1821075657 instance=ExtResource("10_42tqm")]
-position = Vector2(160, 118)
-
-[node name="NPC3" parent="GameWorld" unique_id=939403013 instance=ExtResource("10_42tqm")]
-position = Vector2(192, 118)
-
-[node name="NPC4" parent="GameWorld" unique_id=603151409 instance=ExtResource("10_42tqm")]
-position = Vector2(96, 151)
-
-[node name="NPC5" parent="GameWorld" unique_id=1781185037 instance=ExtResource("10_42tqm")]
-position = Vector2(128, 151)
-
-[node name="NPC6" parent="GameWorld" unique_id=1276236778 instance=ExtResource("10_42tqm")]
-position = Vector2(160, 151)
-
-[node name="NPC7" parent="GameWorld" unique_id=1275319499 instance=ExtResource("10_42tqm")]
-position = Vector2(128, 185)
-
-[node name="NPC8" parent="GameWorld" unique_id=1580790040 instance=ExtResource("10_42tqm")]
-position = Vector2(160, 185)
-
-[node name="NPC9" parent="GameWorld" unique_id=560024845 instance=ExtResource("10_42tqm")]
-position = Vector2(192, 185)
 
 [node name="Perry" parent="GameWorld" unique_id=1000218583 instance=ExtResource("11_3ovra")]
 position = Vector2(96, 118)

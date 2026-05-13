@@ -1,0 +1,297 @@
+{
+	"0": {
+		"star": "NPC_PF",
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Alright, now that the assessment is done, let's move on to our discussions!",
+		
+		"next": "1",
+	},
+	"1": {
+		"zoom": [4, 4],
+		"star": "target",
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "I have another demonstration lined up for you guys. But anyway...",
+		
+		"next": "2",
+	},
+	"2": {
+		"star": "NPC_PF",
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Last week, we learned about acceleration.",
+		
+		"next": "3",
+	},
+	"3": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Today, I'll be teaching you about the relationship between force and acceleration",
+		
+		"next": "4",
+	},
+	"4": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "I'm sure you guys have heard of that infamous formula: F = ma.",
+		
+		"next": "5",
+	},
+	"5": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Well, it falls under Newton's Second Law of Motion which states that:",
+		
+		"next": "6",
+	},
+	"6": {
+		"name": "",
+		"anim": "",
+		"text": "\"The acceleration of an object is directly proportional to the net force acting on it but inversely proportional to its mass.\"",
+		
+		"next": "7",
+	},
+	"7": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Let's proceed to our first example!",
+		
+		"next": "8",
+	},
+	"8": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "If anyone in here can recall, the formula for it is...?",
+		
+		"next": "9",
+	},
+	"9": {
+		"star": "NPC_DM",
+		"name": "Perry",
+		"anim": "dm",
+		"text": "F[font size=12]net[/font] = ma, where F[font size=12]net[/font] is the net force measured in Newtons N.",
+		
+		"next": "9.1",
+	},
+	"9.1": {
+		"star": "NPC_DM",
+		"name": "Perry",
+		"anim": "dm",
+		"text": "N is equal to [pulse](kg m/s^2 )[/pulse], m is mass in (kg), and a is the acceleration [pulse](m/s^2)[/pulse].",
+		
+		"next": "10",
+	},
+	"10": {
+		"star": "NPC_PF",
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Correct! That's right, Perry!",
+		
+		"next": "11",
+	},
+	"11": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "For our first question: Estimate the net force needed to accelerate a 1000kg car at ½ g.",
+		
+		"next": "12",
+	},
+	"12": {
+		"star": "player",
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "...",
+		
+		"next": "13",
+	},
+	"13": {
+		"star": "NPC_PF",
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "To solve this problem, we will use the formula: F[font size=12]net[/font] ​= ma.",
+		
+		"next": "14",
+	},
+	
+	"14": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "First, we substitute their values with the given: F = (1000kg)(½g).",
+		
+		"next": "15",
+	},
+	"15": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Here, we see that m = 1000kg of the car is multiplied by ½ of g or gravity.",
+		
+		"next": "16",
+	},
+	
+	"16": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "This g stands for acceleration due to gravity, and we know that g is equal to 9.8m/s^2.",
+		
+		"next": "17",
+	},
+	
+	"17": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "With that in mind, this now gives us: F = (1000kg)(4.9m/s^2), which is equal to...?",
+		
+		"next": "18",
+	},
+	"18": {
+		"star":"player",
+		"text": "F = (1000kg)(4.9m/s^2) is equal to...",
+		
+		"choices": {
+			"5000 N": "19.1",
+			"3965 N": "19.2",
+		},
+	},
+	"19.1": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Yes, that is correct, the answer is 5000 N.",
+		
+		"next": "20",
+	},
+	"19.2": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "No Colin, that is wrong, the correct answer is 5000 N.",
+		
+		"next": "20",
+	},
+	"20": {
+		"star":"NPC_PF",
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "The 4.9m/s^2 is a given from the 9.8m/s^2 is multiplied by our problem given ½ g.",
+		
+		"next": "21",
+	},
+	"21": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "We changed the unit into N or Newtons due to our statement earlier that N = kg m/s^2.",
+		
+		"next": "22",
+	},
+	"22": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "We will now proceed to our second example.",
+		
+		"next": "23",
+	},
+	"23": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "A worker with spikes on his shoes pulls with a constant horizontal force of...",
+		
+		"next": "24",
+	},
+	"24": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "20N on a box with mass of 40kg on the flat [pulse]frictionless[/pulse] surface of a frozen lake.",
+		
+		"next": "25",
+	},
+	"25": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Class, note here that “frictionless” means that the ice doesn't have any force to oppose the motion.",
+		
+		"next": "26",
+	},
+	"26": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Since there is only one horizontal component of force, we will change our formula from: F[font size=12]net[/font] ​= ma to a[font size=12]x[/font] ​= F[font size=12]x[/font]/m",
+		
+		"next": "27",
+	},
+	"27": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "After substitution, it becomes: a[font size=12]x[/font] = 20N/40kg ",
+		
+		"next": "28",
+	},
+	"28": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "To which the answer is...?",
+		
+		"next": "29",
+	},
+	"29": {
+		"star":"player",
+		"text": "a[font size=12]x[/font] = 20N/40kg is equal to...",
+		
+		"choices": {
+			"0.3m/s^s": "30.1",
+			"0.5m/s^3": "30.2",
+		},
+	},
+	"30.1": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "No, the answer is 0.5m/s^3. Do you not have your calculator out? Anyway...",
+		
+		"next": "31",
+	},
+	"30.2": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Yes, that is right. The answer is 0.5m/s^3. Good job!",
+		
+		"next": "31",
+	},
+	"31": {
+		"star":"NPC_PF",
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Let's now proceed to our demonstration!",
+		
+		"next": "32",
+	},
+	"32": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Come on up, Colin. Time to shine!",
+		
+		"next": "33",
+	},
+	"33": {
+		"star": "player",
+		"name": "Colin",
+		"anim": "mc",
+		"text": "* Why is it always me? *",
+		
+		"next": "34",
+	},
+	"34": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Try shoving them each at full force.",
+		
+		"next": "END",
+	},
+	"END": {
+		"star": "player",
+		"node": "/root/GameController",
+		"func": "start_next_task",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": "",
+	},
+}

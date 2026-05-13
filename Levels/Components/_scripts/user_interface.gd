@@ -32,7 +32,7 @@ func update_timer_label():
 
 func _on_task_controller_task_start() -> void:
 	pass # Replace with function body.
-	
+
 func _on_task_controller_task_completed() -> void:
 	completion_text.text = "task completed!"
 	animation_player.play("task_finished")

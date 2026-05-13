@@ -1,0 +1,56 @@
+{
+	"0": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Hey Perry, what's with those boxes?",
+		
+		"next": "1",
+	},
+	"1": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Would you mind moving them out of the way? I'm running late over here!",
+		
+		"next": "2",
+	},
+	"2": {
+		"star": "NPC_DM",
+		"name": "Perry",
+		"anim": "dm",
+		"text": "O-Oh, Colin... I'm sorry it's just...",
+		
+		"next": "3",
+	},
+	"3": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "It's what??",
+		
+		"next": "4",
+	},
+	"4": {
+		"name": "Perry",
+		"anim": "dm",
+		"text": "I might need some help getting these over to my door...",
+		
+		"next": "5",
+	},
+	"5": {
+		"zoom": [6, 6],
+		"star": "player",
+		"name": "Colin",
+		"anim": "mc",
+		"text": "...",
+		
+		"next": "END",
+	},
+	"END": {
+		"node": "/root/GameController",
+		"func": "start_next_task",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": "",
+	},
+}

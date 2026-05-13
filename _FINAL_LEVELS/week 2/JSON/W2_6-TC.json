@@ -1,0 +1,116 @@
+{
+	"0": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Uhhh...",
+		"next": "1"
+	},
+	"1": {
+		"zoom": [
+			2.3,
+			2.3
+		],
+		"star": "target",
+		"name": "Colin",
+		"anim": "mc",
+		"text": "[shake]Uhm... ma'am... has there been a tornado in here... per chance?[/shake]",
+		"next": "2"
+	},
+	"2": {
+		"star": "NPC_PF",
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Oh... Hi Colin, you're here.",
+		"next": "3"
+	},
+	"3": {
+		"zoom": [
+			2.3,
+			2.3
+		],
+		"name": "Colin",
+		"anim": "mc",
+		"text": "...",
+		"next": "4"
+	},
+	"4": {
+		"zoom": [
+			2.3,
+			2.3
+		],
+		"star": "target",
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "So, as you can see, it's quite a mess, in here.",
+		"next": "5"
+	},
+	"5": {
+		"zoom": [
+			2.3,
+			2.3
+		],
+		"name": "Colin",
+		"anim": "mc",
+		"text": "I think mess is an understatement...",
+		"next": "6"
+	},
+	"6": {
+		"star": "NPC_PF",
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "...",
+		"next": "7"
+	},
+	"7": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "* Coughs * Yes ma'am, please continue...",
+		"next": "8"
+	},
+	"8": {
+		"zoom": [
+			2.3,
+			2.3
+		],
+		"star": "target",
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "* Sigh * I'm going to need you to clean this up on your own. I have to leave early today.",
+		"next": "9"
+	},
+	"9": {
+		"zoom": [
+			2.3,
+			2.3
+		],
+		"star": "player",
+		"name": "Colin",
+		"anim": "mc",
+		"text": "O-Oh... Yes, ma'am...",
+		"next": "10"
+	},
+	"10": {
+		"zoom": [
+			2.3,
+			2.3
+		],
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "You just need to fix up the chairs and pickup the trash.",
+		"next": "11"
+	},
+	"11": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Here's my number. Give me a call and update me later.",
+		"next": "END"
+	},
+	"END": {
+		"node": "/root/GameController",
+		"func": "start_next_task",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		"comment": ""
+	}
+}

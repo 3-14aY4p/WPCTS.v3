@@ -9,7 +9,7 @@ class_name TargetArea extends Area2D
 @export var object_limit: int = 1
 @export var object_persistence: bool = true
 @export var deactivated: bool = true
-
+@export var is_task_started: bool = false
 
 var objects_delivered: int = 0
 var objects_in_area: Array
@@ -24,6 +24,11 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if not player:
 		player = get_tree().get_first_node_in_group("player")
+		
+	if is_task_started:
+		if find_parent("Player"):
+			deactivated = true
+		else: deactivated = false
 		
 	if object_group == "player":
 		hide_label = true
@@ -42,7 +47,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		if objects_delivered >= object_limit:
 			area_goal_reached = true
-		
 
 func update_label():
 	if object_persistence:

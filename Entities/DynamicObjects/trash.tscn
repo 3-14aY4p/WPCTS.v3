@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b8btcyhn5d17r"]
+
+[ext_resource type="Texture2D" uid="uid://cj10xnuyer7uy" path="res://Assets/Art/objects.png" id="1_0ffye"]
+[ext_resource type="Script" uid="uid://m6fhjn54lxbf" path="res://Entities/DynamicObjects/randomized_object.gd" id="1_coime"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_coime"]
+radius = 3.1622777
+
+[node name="Trash" type="RigidBody2D" unique_id=719706039 groups=["extra_light", "non-shoveable", "pickable_object"]]
+collision_layer = 4
+collision_mask = 0
+mass = 0.1
+lock_rotation = true
+script = ExtResource("1_coime")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1093568825]
+texture = ExtResource("1_0ffye")
+offset = Vector2(0, -4)
+hframes = 3
+region_enabled = true
+region_rect = Rect2(0, 128, 48, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1981756689]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_coime")

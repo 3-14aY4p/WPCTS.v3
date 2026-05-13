@@ -1,0 +1,47 @@
+{
+	"0": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Alright, that's good enough. Thank you, Colin.",
+		
+		"next": "1",
+	},
+	"1": {
+		"name": "Colin",
+		"anim": "mc",
+		"text": "* Phew, I made it... *",
+		
+		"next": "2",
+	},
+	"2": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Anyway, as you guys may have seen, mass has a significant effect on the force need to move an object.",
+		
+		"next": "3",
+	},
+	"3": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "We'll have your assessment on this topic in the following week, as per usual. You are now dismissed!",
+		
+		"next": "4",
+	},
+	"4": {
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "As for you, Colin, I'll see you in the afternoon...",
+		
+		"next": "END",
+	},
+	"END": {
+		"star": "player",
+		"node": "/root/GameController",
+		"func": "transition_to_next_scene",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": "",
+	},
+}

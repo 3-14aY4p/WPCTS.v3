@@ -26,15 +26,13 @@ size = Vector2(26, 8)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jddo7"]
 size = Vector2(20, 16)
 
-[node name="CampusCafeteria" type="Node2D" unique_id=762134968 node_paths=PackedStringArray("delete_nodes_on_task")]
+[node name="CampusCafeteria" type="Node2D" unique_id=762134968]
 y_sort_enabled = true
 script = ExtResource("1_rw2oj")
 initial_dialogue = "res://_FINAL_LEVELS/week 1/JSON/W1_4.json"
 task_complete_dialogue = "res://_FINAL_LEVELS/week 1/JSON/W1_4-E.json"
-delete_nodes_on_task = [NodePath("GameWorld/MsBarbara")]
 
-[node name="UserInterface" parent="." unique_id=1485922269 node_paths=PackedStringArray("task") instance=ExtResource("2_l0en0")]
-task = NodePath("../TaskController")
+[node name="UserInterface" parent="." unique_id=1485922269 instance=ExtResource("2_l0en0")]
 
 [node name="GameWorld" parent="." unique_id=1410708023 instance=ExtResource("3_3i5xn")]
 
@@ -219,37 +217,40 @@ position = Vector2(243, 104)
 [node name="AnimatedSprite2D" parent="GameWorld/MsBarbara" index="0" unique_id=1223570923]
 flip_h = true
 
-[node name="NPC" parent="GameWorld" unique_id=744398630 instance=ExtResource("14_am3w2")]
+[node name="NPCS" type="Node2D" parent="GameWorld" unique_id=1086768936]
+y_sort_enabled = true
+
+[node name="NPC" parent="GameWorld/NPCS" unique_id=744398630 instance=ExtResource("14_am3w2")]
 position = Vector2(170, 119)
 
-[node name="NPC2" parent="GameWorld" unique_id=1300110971 instance=ExtResource("14_am3w2")]
+[node name="NPC2" parent="GameWorld/NPCS" unique_id=1300110971 instance=ExtResource("14_am3w2")]
 position = Vector2(184, 127)
 
-[node name="AnimatedSprite2D" parent="GameWorld/NPC2" index="0" unique_id=2028275097]
+[node name="AnimatedSprite2D" parent="GameWorld/NPCS/NPC2" index="0" unique_id=2028275097]
 flip_h = true
 
-[node name="NPC3" parent="GameWorld" unique_id=270333413 instance=ExtResource("14_am3w2")]
+[node name="NPC3" parent="GameWorld/NPCS" unique_id=270333413 instance=ExtResource("14_am3w2")]
 position = Vector2(256, 75)
 
-[node name="AnimatedSprite2D" parent="GameWorld/NPC3" index="0" unique_id=2028275097]
+[node name="AnimatedSprite2D" parent="GameWorld/NPCS/NPC3" index="0" unique_id=2028275097]
 flip_h = true
 
-[node name="NPC4" parent="GameWorld" unique_id=1717555255 instance=ExtResource("14_am3w2")]
+[node name="NPC4" parent="GameWorld/NPCS" unique_id=1717555255 instance=ExtResource("14_am3w2")]
 position = Vector2(270, 85)
 
-[node name="AnimatedSprite2D" parent="GameWorld/NPC4" index="0" unique_id=2028275097]
+[node name="AnimatedSprite2D" parent="GameWorld/NPCS/NPC4" index="0" unique_id=2028275097]
 flip_h = true
 
-[node name="NPC5" parent="GameWorld" unique_id=2044080039 instance=ExtResource("14_am3w2")]
+[node name="NPC5" parent="GameWorld/NPCS" unique_id=2044080039 instance=ExtResource("14_am3w2")]
 position = Vector2(206, 147)
 
-[node name="NPC6" parent="GameWorld" unique_id=1661134585 instance=ExtResource("14_am3w2")]
+[node name="NPC6" parent="GameWorld/NPCS" unique_id=1661134585 instance=ExtResource("14_am3w2")]
 position = Vector2(272, 165)
 
-[node name="AnimatedSprite2D" parent="GameWorld/NPC6" index="0" unique_id=2028275097]
+[node name="AnimatedSprite2D" parent="GameWorld/NPCS/NPC6" index="0" unique_id=2028275097]
 flip_h = true
 
-[node name="NPC7" parent="GameWorld" unique_id=824540016 instance=ExtResource("14_am3w2")]
+[node name="NPC7" parent="GameWorld/NPCS" unique_id=824540016 instance=ExtResource("14_am3w2")]
 position = Vector2(218, 74)
 
 [node name="CameraMarker" parent="GameWorld" unique_id=1282981573 instance=ExtResource("15_owyyq")]
@@ -298,9 +299,9 @@ shape = SubResource("RectangleShape2D_jddo7")
 [editable path="GameWorld/ObjectContainer/Plate3"]
 [editable path="GameWorld/ObjectContainer/Plate4"]
 [editable path="GameWorld/MsBarbara"]
-[editable path="GameWorld/NPC2"]
-[editable path="GameWorld/NPC3"]
-[editable path="GameWorld/NPC4"]
-[editable path="GameWorld/NPC6"]
-[editable path="GameWorld/NPC7"]
+[editable path="GameWorld/NPCS/NPC2"]
+[editable path="GameWorld/NPCS/NPC3"]
+[editable path="GameWorld/NPCS/NPC4"]
+[editable path="GameWorld/NPCS/NPC6"]
+[editable path="GameWorld/NPCS/NPC7"]
 [editable path="TaskController"]
