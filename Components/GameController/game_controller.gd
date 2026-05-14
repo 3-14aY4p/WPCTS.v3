@@ -25,7 +25,7 @@ var scene_data: Dictionary = {
 		'4': "uid://cg3fhfygs5tmk", # cafeteria
 		'5': "uid://pnmxiwj47qni", # blank 
 		'6': "uid://db43argg36g4o", # classroom
-		'7': "---", # initial assessment
+		'7': "uid://ta0b5g0bokls", # initial assessment
 		'8': "uid://cws4d336mldtl", # classroom ()PRE Perry
 		'9': "uid://lrey5nrrad7h", # classroom ()POST Perry - chair task
 		'10': "uid://pj6lqnqb1tjq", # classroom - heavy box task
@@ -37,7 +37,7 @@ var scene_data: Dictionary = {
 		'1': "uid://bhlidls2l4083", # dorm room
 		'2': "uid://dglxi3xwixvcw", # dorm hallway help task
 		'3': "uid://cptqqy4qhid5i", # classroom
-		'4': "---", # First Law assessment
+		'4': "uid://dlq4kaqw0ep7h", # First Law assessment
 		'5': "uid://cc5k68iydaues", # classroom week 2 demo
 		'6': "uid://41tf8o343xgw", # classroom cleanup task
 		'7': "uid://dkfy0ry2rpufm", # blank screen
@@ -50,7 +50,7 @@ var scene_data: Dictionary = {
 		'2': "uid://tc3h7goy7g58", # dorm hallway
 		'3': "uid://0203j4k7rht4", # cafeteria
 		'4': "uid://rquw8k5471g6", # classroom
-		'5': "---", # Second Law assessment
+		'5': "uid://bj85i1okyb7d7", # Second Law assessment
 		'6': "uid://b6wmei7ck26re", # classroom
 		'7': "uid://bql6duk7bnc8s", # library
 		'8': "uid://q78sikh4v3ep", # dorm hallway

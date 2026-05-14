@@ -12,7 +12,7 @@ var save_data: Dictionary = {
 
 func new_game() -> void:
 	GameController.current_day = 1
-	GameController.current_scene_index = 0
+	GameController.current_scene_index = 7
 	GameController.total_score = 0
 	GameController.total_task_completed = 0
 	

@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://dlq4kaqw0ep7h"]
+
+[ext_resource type="Script" uid="uid://slqlf0kdhgo0" path="res://Levels/QUIZ/scripts/quiz.gd" id="1_q5djw"]
+[ext_resource type="FontFile" uid="uid://bthadkgdkntt8" path="res://Assets/Font/superstar_memesbruh03.ttf" id="2_2j0x7"]
+
+[node name="Quiz" type="Control" unique_id=1903510125]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q5djw")
+
+[node name="BG" type="ColorRect" parent="." unique_id=1512943140]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.051, 0.059, 0.078, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1233395232]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="VBox" type="VBoxContainer" parent="MarginContainer" unique_id=1397031679]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="TopBar" type="HBoxContainer" parent="MarginContainer/VBox" unique_id=1823550348]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="MarginContainer/VBox/TopBar" unique_id=1154139085]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ProgressLabel" type="Label" parent="MarginContainer/VBox/TopBar" unique_id=1469756868]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.54, 0.65, 1)
+theme_override_fonts/font = ExtResource("2_2j0x7")
+theme_override_font_sizes/font_size = 13
+text = "1 / 10"
+horizontal_alignment = 1
+
+[node name="Spacer2" type="Control" parent="MarginContainer/VBox/TopBar" unique_id=1196186348]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScoreLabel" type="Label" parent="MarginContainer/VBox/TopBar" unique_id=1494866306]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_2j0x7")
+theme_override_font_sizes/font_size = 13
+text = "Score: 0"
+horizontal_alignment = 2
+
+[node name="TopicLabel" type="Label" parent="MarginContainer/VBox" unique_id=64773455]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_2j0x7")
+theme_override_font_sizes/font_size = 12
+
+[node name="QuestionPanel" type="PanelContainer" parent="MarginContainer/VBox" unique_id=1926824696]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="QuestionLabel" type="RichTextLabel" parent="MarginContainer/VBox/QuestionPanel" unique_id=995577337]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_2j0x7")
+theme_override_font_sizes/normal_font_size = 17
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="ChoicesVBox" type="VBoxContainer" parent="MarginContainer/VBox" unique_id=484378196]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="FeedbackPanel" type="PanelContainer" parent="MarginContainer/VBox" unique_id=619572744]
+visible = false
+layout_mode = 2
+
+[node name="FeedbackLabel" type="RichTextLabel" parent="MarginContainer/VBox/FeedbackPanel" unique_id=1035690122]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_2j0x7")
+theme_override_font_sizes/normal_font_size = 14
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="NextBtn" type="Button" parent="MarginContainer/VBox" unique_id=1055564899]
+visible = false
+custom_minimum_size = Vector2(0, 26)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_2j0x7")
+theme_override_font_sizes/font_size = 16
+text = "Next  "
