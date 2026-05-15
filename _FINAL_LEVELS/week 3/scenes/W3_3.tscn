@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://0203j4k7rht4"]
 
-[ext_resource type="Script" uid="uid://bqj7qe6p744c8" path="res://Levels/level.gd" id="1_25be8"]
-[ext_resource type="PackedScene" uid="uid://bi64xwfbb4jjq" path="res://Levels/Components/user_interface.tscn" id="2_54yso"]
-[ext_resource type="PackedScene" uid="uid://16qn3y3y8hs3" path="res://Levels/Components/game_world.tscn" id="3_a7ruf"]
+[ext_resource type="Script" uid="uid://bqj7qe6p744c8" path="res://Components/LevelComponents/_scripts/level.gd" id="1_25be8"]
+[ext_resource type="PackedScene" uid="uid://bi64xwfbb4jjq" path="res://Components/LevelComponents/user_interface.tscn" id="2_54yso"]
+[ext_resource type="PackedScene" uid="uid://16qn3y3y8hs3" path="res://Components/LevelComponents/game_world.tscn" id="3_a7ruf"]
 [ext_resource type="PackedScene" uid="uid://prmvfl2foyy7" path="res://Components/CameraManager/camera_zone.tscn" id="4_hw011"]
 [ext_resource type="PackedScene" uid="uid://cm4j648a2rb77" path="res://Entities/StaticObjects/Decoration/long_food_aisle.tscn" id="5_7jfkt"]
 [ext_resource type="PackedScene" uid="uid://uqxjdn0nhvqi" path="res://Entities/StaticObjects/Decoration/kitchen_sink.tscn" id="6_rft0u"]
@@ -12,11 +12,11 @@
 [ext_resource type="PackedScene" uid="uid://ocoa45qdyuqx" path="res://Entities/DynamicObjects/stool_chair.tscn" id="10_vj0vu"]
 [ext_resource type="PackedScene" uid="uid://dexfk8n4vtikx" path="res://Entities/Characters/npc.tscn" id="11_gux2p"]
 [ext_resource type="PackedScene" uid="uid://c0twyucy5xnqo" path="res://Entities/Characters/Player/player.tscn" id="11_pbrra"]
-[ext_resource type="PackedScene" uid="uid://3om0cgx1mkfr" path="res://Levels/Components/task_controller.tscn" id="12_gp1uw"]
+[ext_resource type="PackedScene" uid="uid://3om0cgx1mkfr" path="res://Components/LevelComponents/task_controller.tscn" id="12_gp1uw"]
 [ext_resource type="PackedScene" uid="uid://db76wka6i6443" path="res://Entities/Characters/NPCs/perry.tscn" id="13_3v3wb"]
 [ext_resource type="PackedScene" uid="uid://b8bmbdr7owniy" path="res://Entities/Characters/NPCs/ms_barbara.tscn" id="14_1lemg"]
 [ext_resource type="PackedScene" uid="uid://bc656gimj8coc" path="res://Components/CameraManager/camera_marker.tscn" id="15_3v3wb"]
-[ext_resource type="PackedScene" uid="uid://d11hpb8uv2jhd" path="res://Levels/Components/target_area.tscn" id="17_q0qkc"]
+[ext_resource type="PackedScene" uid="uid://d11hpb8uv2jhd" path="res://Components/LevelComponents/target_area.tscn" id="17_q0qkc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q0qkc"]
 size = Vector2(4, 4)

@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://cd3rm34d3gcna"]
 
-[ext_resource type="Script" uid="uid://bqj7qe6p744c8" path="res://Levels/level.gd" id="1_0wwbl"]
-[ext_resource type="PackedScene" uid="uid://bi64xwfbb4jjq" path="res://Levels/Components/user_interface.tscn" id="2_uptag"]
-[ext_resource type="PackedScene" uid="uid://16qn3y3y8hs3" path="res://Levels/Components/game_world.tscn" id="3_34kg3"]
+[ext_resource type="Script" uid="uid://bqj7qe6p744c8" path="res://Components/LevelComponents/_scripts/level.gd" id="1_0wwbl"]
+[ext_resource type="PackedScene" uid="uid://bi64xwfbb4jjq" path="res://Components/LevelComponents/user_interface.tscn" id="2_uptag"]
+[ext_resource type="PackedScene" uid="uid://16qn3y3y8hs3" path="res://Components/LevelComponents/game_world.tscn" id="3_34kg3"]
 [ext_resource type="PackedScene" uid="uid://prmvfl2foyy7" path="res://Components/CameraManager/camera_zone.tscn" id="4_vnchb"]
 [ext_resource type="PackedScene" uid="uid://dgkd53alfxttf" path="res://Entities/StaticObjects/Interactable/bathroom_door.tscn" id="5_vw72d"]
 [ext_resource type="PackedScene" uid="uid://d4g2oxiq0m2ey" path="res://Entities/StaticObjects/Decoration/bathroom_sink.tscn" id="6_xkkwa"]
@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dhbj1bg2g2vme" path="res://Components/DialogueManager/dialogue_area.tscn" id="9_uptag"]
 [ext_resource type="PackedScene" uid="uid://v8g3hjhyk64b" path="res://Components/GameController/exit_point.tscn" id="9_vnchb"]
 [ext_resource type="PackedScene" uid="uid://db76wka6i6443" path="res://Entities/Characters/NPCs/perry.tscn" id="10_e2chn"]
-[ext_resource type="PackedScene" uid="uid://3om0cgx1mkfr" path="res://Levels/Components/task_controller.tscn" id="11_xye5r"]
+[ext_resource type="PackedScene" uid="uid://3om0cgx1mkfr" path="res://Components/LevelComponents/task_controller.tscn" id="11_xye5r"]
 [ext_resource type="PackedScene" uid="uid://dexfk8n4vtikx" path="res://Entities/Characters/npc.tscn" id="12_34kg3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vw72d"]

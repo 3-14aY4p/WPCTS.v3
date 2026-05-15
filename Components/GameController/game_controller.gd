@@ -6,13 +6,13 @@ extends Node
 @onready var animation_player: AnimationPlayer = $TransitionHandler/AnimationPlayer
 
 # for saving progress
-var current_day: int = 1
+var current_day: int = 1 
 var current_scene_index: int = 0
-var total_score: int = 0
-var total_task_completed: int = 0
 
-const total_tests: int = 4
-const total_tasks: int = 5 # [2, 3, 3, 0, 0]
+var task_completed: int = 0
+var total_score: int = 0
+var initial_score: int = 0
+var final_score: int = 0
 
 
 # houses the list of scenes per day
@@ -61,8 +61,9 @@ var scene_data: Dictionary = {
 	},
 }
 var current_scene: String
-var task_controller: TaskController
 var end_of_day: bool = false
+
+var task_controller: TaskController
 
 func _ready() -> void:
 	pass
@@ -79,7 +80,7 @@ func start_next_task():
 func load_next_scene():
 	# player reached the end of the game
 	if current_day > scene_data.size():
-		display_results()
+		display_final_results()
 		return
 		
 	# player reached the end of the day
@@ -106,12 +107,16 @@ func transition_to_next_scene():
 	load_next_scene()
 	animation_player.play_backwards("fade")
 
-func display_results():
+func load_scene_with_transition(scene_path: String):
+	animation_player.play("fade")
+	await animation_player.animation_finished
+	load_scene(scene_path)
+	animation_player.play_backwards("fade")
+
+func display_final_results():
 	pass
 
-func unlock_exit_points():
-	for exit: ExitPoint in get_tree().get_nodes_in_group("exit_point"):
-		exit.locked = false
+
 
 func restart_scene():
 	get_tree().reload_current_scene()

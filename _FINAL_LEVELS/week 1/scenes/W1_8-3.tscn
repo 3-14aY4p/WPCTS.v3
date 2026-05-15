@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://pj6lqnqb1tjq"]
 
-[ext_resource type="Script" uid="uid://bqj7qe6p744c8" path="res://Levels/level.gd" id="1_06b20"]
-[ext_resource type="PackedScene" uid="uid://bi64xwfbb4jjq" path="res://Levels/Components/user_interface.tscn" id="2_by65q"]
-[ext_resource type="PackedScene" uid="uid://16qn3y3y8hs3" path="res://Levels/Components/game_world.tscn" id="3_46yip"]
+[ext_resource type="Script" uid="uid://bqj7qe6p744c8" path="res://Components/LevelComponents/_scripts/level.gd" id="1_06b20"]
+[ext_resource type="PackedScene" uid="uid://bi64xwfbb4jjq" path="res://Components/LevelComponents/user_interface.tscn" id="2_by65q"]
+[ext_resource type="PackedScene" uid="uid://16qn3y3y8hs3" path="res://Components/LevelComponents/game_world.tscn" id="3_46yip"]
 [ext_resource type="PackedScene" uid="uid://prmvfl2foyy7" path="res://Components/CameraManager/camera_zone.tscn" id="4_1eroo"]
 [ext_resource type="PackedScene" uid="uid://4b57skeon417" path="res://Entities/StaticObjects/Decoration/medium_table_h.tscn" id="5_r8x0g"]
 [ext_resource type="PackedScene" uid="uid://bg8y4dnhwihwu" path="res://Entities/StaticObjects/Decoration/small_table.tscn" id="6_wdgl5"]
@@ -11,9 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://c0twyucy5xnqo" path="res://Entities/Characters/Player/player.tscn" id="8_oh6b8"]
 [ext_resource type="PackedScene" uid="uid://u2ebgsullxsk" path="res://Entities/Characters/NPCs/prof_candice.tscn" id="9_2kl48"]
 [ext_resource type="PackedScene" uid="uid://dexfk8n4vtikx" path="res://Entities/Characters/npc.tscn" id="10_nabvs"]
-[ext_resource type="PackedScene" uid="uid://3om0cgx1mkfr" path="res://Levels/Components/task_controller.tscn" id="10_sv2t8"]
+[ext_resource type="PackedScene" uid="uid://3om0cgx1mkfr" path="res://Components/LevelComponents/task_controller.tscn" id="10_sv2t8"]
 [ext_resource type="PackedScene" uid="uid://db76wka6i6443" path="res://Entities/Characters/NPCs/perry.tscn" id="11_6xgif"]
-[ext_resource type="PackedScene" uid="uid://d11hpb8uv2jhd" path="res://Levels/Components/target_area.tscn" id="13_1eroo"]
+[ext_resource type="PackedScene" uid="uid://d11hpb8uv2jhd" path="res://Components/LevelComponents/target_area.tscn" id="13_1eroo"]
 [ext_resource type="PackedScene" uid="uid://bc656gimj8coc" path="res://Components/CameraManager/camera_marker.tscn" id="14_r8x0g"]
 
 [node name="CampusClassroom" type="Node2D" unique_id=1450742048]

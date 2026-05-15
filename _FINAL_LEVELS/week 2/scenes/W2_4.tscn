@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dlq4kaqw0ep7h"]
 
-[ext_resource type="Script" uid="uid://slqlf0kdhgo0" path="res://Levels/QUIZ/scripts/quiz.gd" id="1_q5djw"]
+[ext_resource type="Script" uid="uid://slqlf0kdhgo0" path="res://BaseLevels/QUIZ/scripts/quiz.gd" id="1_q5djw"]
 [ext_resource type="FontFile" uid="uid://bthadkgdkntt8" path="res://Assets/Font/superstar_memesbruh03.ttf" id="2_2j0x7"]
 
 [node name="Quiz" type="Control" unique_id=1903510125]

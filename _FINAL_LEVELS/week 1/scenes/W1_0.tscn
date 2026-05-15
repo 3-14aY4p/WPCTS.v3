@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://djlbee5dfgims"]
 
-[ext_resource type="Script" uid="uid://ba1xlr2bfaj8r" path="res://Levels/Blank/blank_screen.gd" id="1_b1nlm"]
+[ext_resource type="Script" uid="uid://ba1xlr2bfaj8r" path="res://BaseLevels/BaseScenes/blank_screen.gd" id="1_b1nlm"]
 
 [node name="BlankScreen" type="CanvasLayer" unique_id=1999547854]
 script = ExtResource("1_b1nlm")

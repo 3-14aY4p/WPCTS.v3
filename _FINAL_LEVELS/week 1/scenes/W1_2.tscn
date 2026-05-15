@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://cfmw7cwkvevs1"]
 
-[ext_resource type="Script" uid="uid://bqj7qe6p744c8" path="res://Levels/level.gd" id="1_lb6b6"]
-[ext_resource type="PackedScene" uid="uid://bi64xwfbb4jjq" path="res://Levels/Components/user_interface.tscn" id="2_hxcfr"]
-[ext_resource type="PackedScene" uid="uid://16qn3y3y8hs3" path="res://Levels/Components/game_world.tscn" id="3_ev8i4"]
+[ext_resource type="Script" uid="uid://bqj7qe6p744c8" path="res://Components/LevelComponents/_scripts/level.gd" id="1_lb6b6"]
+[ext_resource type="PackedScene" uid="uid://bi64xwfbb4jjq" path="res://Components/LevelComponents/user_interface.tscn" id="2_hxcfr"]
+[ext_resource type="PackedScene" uid="uid://16qn3y3y8hs3" path="res://Components/LevelComponents/game_world.tscn" id="3_ev8i4"]
 [ext_resource type="PackedScene" uid="uid://prmvfl2foyy7" path="res://Components/CameraManager/camera_zone.tscn" id="4_wjntx"]
 [ext_resource type="PackedScene" uid="uid://bgdacbfpjdyxs" path="res://Entities/DynamicObjects/medium_box.tscn" id="5_yxikw"]
 [ext_resource type="PackedScene" uid="uid://cq5nry25y5yvx" path="res://Entities/DynamicObjects/large_box.tscn" id="6_xkl7y"]
@@ -11,8 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://v8g3hjhyk64b" path="res://Components/GameController/exit_point.tscn" id="9_drvi8"]
 [ext_resource type="PackedScene" uid="uid://c0twyucy5xnqo" path="res://Entities/Characters/Player/player.tscn" id="10_6awpj"]
 [ext_resource type="PackedScene" uid="uid://bc656gimj8coc" path="res://Components/CameraManager/camera_marker.tscn" id="11_tbcen"]
-[ext_resource type="PackedScene" uid="uid://3om0cgx1mkfr" path="res://Levels/Components/task_controller.tscn" id="12_keg1a"]
-[ext_resource type="PackedScene" uid="uid://d11hpb8uv2jhd" path="res://Levels/Components/target_area.tscn" id="13_fgr6o"]
+[ext_resource type="PackedScene" uid="uid://3om0cgx1mkfr" path="res://Components/LevelComponents/task_controller.tscn" id="12_keg1a"]
+[ext_resource type="PackedScene" uid="uid://d11hpb8uv2jhd" path="res://Components/LevelComponents/target_area.tscn" id="13_fgr6o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ac4i"]
 size = Vector2(8, 40)

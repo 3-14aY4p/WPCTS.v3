@@ -1,14 +1,14 @@
 [gd_scene format=4 uid="uid://bpywkotjygshj"]
 
-[ext_resource type="Script" uid="uid://bqj7qe6p744c8" path="res://Levels/level.gd" id="1_duf5v"]
-[ext_resource type="PackedScene" uid="uid://bi64xwfbb4jjq" path="res://Levels/Components/user_interface.tscn" id="2_stom4"]
-[ext_resource type="PackedScene" uid="uid://16qn3y3y8hs3" path="res://Levels/Components/game_world.tscn" id="3_htqnx"]
+[ext_resource type="Script" uid="uid://bqj7qe6p744c8" path="res://Components/LevelComponents/_scripts/level.gd" id="1_duf5v"]
+[ext_resource type="PackedScene" uid="uid://bi64xwfbb4jjq" path="res://Components/LevelComponents/user_interface.tscn" id="2_stom4"]
+[ext_resource type="PackedScene" uid="uid://16qn3y3y8hs3" path="res://Components/LevelComponents/game_world.tscn" id="3_htqnx"]
 [ext_resource type="PackedScene" uid="uid://prmvfl2foyy7" path="res://Components/CameraManager/camera_zone.tscn" id="4_ck4bi"]
 [ext_resource type="PackedScene" uid="uid://cw5v0xodqc5ob" path="res://Entities/StaticObjects/Interactable/bed.tscn" id="5_6271u"]
 [ext_resource type="PackedScene" uid="uid://ce4biku3uir3v" path="res://Entities/StaticObjects/Interactable/study_desk.tscn" id="6_w8unl"]
 [ext_resource type="PackedScene" uid="uid://bcc1dsvs0kte3" path="res://Entities/StaticObjects/Interactable/study_shelf.tscn" id="7_k2ivv"]
 [ext_resource type="PackedScene" uid="uid://c0twyucy5xnqo" path="res://Entities/Characters/Player/player.tscn" id="9_utc1y"]
-[ext_resource type="PackedScene" uid="uid://3om0cgx1mkfr" path="res://Levels/Components/task_controller.tscn" id="10_wwgoj"]
+[ext_resource type="PackedScene" uid="uid://3om0cgx1mkfr" path="res://Components/LevelComponents/task_controller.tscn" id="10_wwgoj"]
 
 [node name="DormRoom" type="Node2D" unique_id=453450293]
 y_sort_enabled = true

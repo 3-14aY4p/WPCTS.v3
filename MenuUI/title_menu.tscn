@@ -1,9 +1,57 @@
 [gd_scene format=3 uid="uid://ch2mm3rlr513m"]
 
 [ext_resource type="Script" uid="uid://c6u6p6jitpamr" path="res://MenuUI/title_menu.gd" id="1_ha7ql"]
-[ext_resource type="Theme" uid="uid://b4gxjcrjef1na" path="res://Themes/button_theme_2.tres" id="2_ha7ql"]
-[ext_resource type="Texture2D" uid="uid://8ysa2xtbp2ae" path="res://Assets/Art/cover.png" id="2_sqprt"]
-[ext_resource type="Theme" uid="uid://dimc0cp4ncfuj" path="res://Themes/richtextlabel_theme.tres" id="3_xmeli"]
+[ext_resource type="Texture2D" uid="uid://8ysa2xtbp2ae" path="res://Assets/Art/cover1.png" id="2_sqprt"]
+[ext_resource type="Theme" uid="uid://dimc0cp4ncfuj" path="res://Themes/richtextlabel_theme_1.tres" id="3_xmeli"]
+[ext_resource type="Theme" uid="uid://du27erqskfwy7" path="res://Themes/button_theme_3.tres" id="4_sqprt"]
+[ext_resource type="FontFile" uid="uid://ckbixblavooub" path="res://Assets/Font/Pixel Millennium.ttf" id="4_xmeli"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xmeli"]
+bg_color = Color(0.69803923, 0.7607843, 0.49019608, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0.4509804, 0.6039216, 0.3372549, 1)
+shadow_size = 1
+shadow_offset = Vector2(3, 3)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w64x0"]
+bg_color = Color(0.4509804, 0.59607846, 0.34117648, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+shadow_color = Color(0.25882354, 0.4, 0.3529412, 1)
+shadow_size = 1
+shadow_offset = Vector2(3, 3)
+anti_aliasing = false
+
+[sub_resource type="Theme" id="Theme_xmeli"]
+default_font = ExtResource("4_xmeli")
+default_font_size = 16
+Button/colors/font_color = Color(0.25882354, 0.4, 0.3529412, 1)
+Button/colors/font_focus_color = Color(0.69803923, 0.7607843, 0.49019608, 1)
+Button/colors/font_hover_color = Color(0.4509804, 0.59607846, 0.34117648, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0.69803923, 0.7607843, 0.49019608, 1)
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("4_xmeli")
+Button/icons/icon = null
+Button/styles/disabled = null
+Button/styles/focus = SubResource("StyleBoxFlat_xmeli")
+Button/styles/hover = SubResource("StyleBoxFlat_xmeli")
+Button/styles/normal = SubResource("StyleBoxFlat_w64x0")
+Button/styles/pressed = SubResource("StyleBoxFlat_w64x0")
 
 [node name="TitleMenu" type="Control" unique_id=1273646821]
 layout_mode = 3
@@ -24,41 +72,61 @@ grow_vertical = 2
 color = Color(0.20784314, 0.23921569, 0.27450982, 1)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=212790389]
-visible = false
 layout_mode = 0
 offset_right = 640.0
 offset_bottom = 360.0
 texture = ExtResource("2_sqprt")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1020767544]
+[node name="TitleLabel" type="RichTextLabel" parent="." unique_id=1020767544]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 32.0
-offset_right = 448.0
-offset_bottom = 152.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 624.0
+offset_bottom = 71.0
 theme = ExtResource("3_xmeli")
 theme_override_font_sizes/normal_font_size = 54
 bbcode_enabled = true
 text = "WHEN PUSH COMES TO SHOVE"
+fit_content = true
+scroll_active = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=318064720]
 layout_mode = 1
-offset_left = 512.0
-offset_top = 216.0
-offset_right = 589.0
-offset_bottom = 314.0
-theme_override_constants/separation = 10
+offset_left = 480.0
+offset_top = 96.0
+offset_right = 612.0
+offset_bottom = 220.0
+theme_override_constants/separation = 20
 alignment = 1
 
 [node name="PlayGame" type="Button" parent="VBoxContainer" unique_id=1898250689]
 layout_mode = 2
-theme = ExtResource("2_ha7ql")
+theme = SubResource("Theme_xmeli")
 text = "Play"
+
+[node name="Leaderboards" type="Button" parent="VBoxContainer" unique_id=624912283]
+layout_mode = 2
+theme = ExtResource("4_sqprt")
+text = "Leaderboards"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=1311008435]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("4_sqprt")
+text = "Settings"
+
+[node name="Separator" type="Control" parent="VBoxContainer" unique_id=2013227021]
+custom_minimum_size = Vector2(0, 88)
+layout_mode = 2
+size_flags_vertical = 3
 
 [node name="ExitGame" type="Button" parent="VBoxContainer" unique_id=1165733767]
 layout_mode = 2
-theme = ExtResource("2_ha7ql")
+size_flags_horizontal = 3
+theme = ExtResource("4_sqprt")
 text = "Exit"
 
 [connection signal="pressed" from="VBoxContainer/PlayGame" to="." method="_on_play_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/Leaderboards" to="." method="_on_leaderboards_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="VBoxContainer/ExitGame" to="." method="_on_exit_game_pressed"]

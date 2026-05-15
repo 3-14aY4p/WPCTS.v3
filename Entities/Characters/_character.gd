@@ -14,6 +14,6 @@ func turn():
 		else:
 			animated_sprite_2d.flip_h = true
 
-func _on_timer_timeout() -> void:
+func _on_timer_timeout() -> void: 
 	if random_turns:
 		turn()

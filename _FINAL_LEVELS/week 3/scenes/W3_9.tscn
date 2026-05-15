@@ -1,15 +1,15 @@
 [gd_scene format=4 uid="uid://sk2hvgesb0tg"]
 
-[ext_resource type="Script" uid="uid://bqj7qe6p744c8" path="res://Levels/level.gd" id="1_cyuj2"]
-[ext_resource type="PackedScene" uid="uid://bi64xwfbb4jjq" path="res://Levels/Components/user_interface.tscn" id="2_ko3cu"]
-[ext_resource type="PackedScene" uid="uid://16qn3y3y8hs3" path="res://Levels/Components/game_world.tscn" id="3_s0gep"]
+[ext_resource type="Script" uid="uid://bqj7qe6p744c8" path="res://Components/LevelComponents/_scripts/level.gd" id="1_cyuj2"]
+[ext_resource type="PackedScene" uid="uid://bi64xwfbb4jjq" path="res://Components/LevelComponents/user_interface.tscn" id="2_ko3cu"]
+[ext_resource type="PackedScene" uid="uid://16qn3y3y8hs3" path="res://Components/LevelComponents/game_world.tscn" id="3_s0gep"]
 [ext_resource type="PackedScene" uid="uid://prmvfl2foyy7" path="res://Components/CameraManager/camera_zone.tscn" id="4_wpacs"]
 [ext_resource type="PackedScene" uid="uid://cw5v0xodqc5ob" path="res://Entities/StaticObjects/Interactable/bed.tscn" id="5_apdf7"]
 [ext_resource type="PackedScene" uid="uid://ce4biku3uir3v" path="res://Entities/StaticObjects/Interactable/study_desk.tscn" id="6_jcjcd"]
 [ext_resource type="PackedScene" uid="uid://bcc1dsvs0kte3" path="res://Entities/StaticObjects/Interactable/study_shelf.tscn" id="7_t68sd"]
 [ext_resource type="PackedScene" uid="uid://v8g3hjhyk64b" path="res://Components/GameController/exit_point.tscn" id="8_s1x7x"]
 [ext_resource type="PackedScene" uid="uid://c0twyucy5xnqo" path="res://Entities/Characters/Player/player.tscn" id="9_jc5c0"]
-[ext_resource type="PackedScene" uid="uid://3om0cgx1mkfr" path="res://Levels/Components/task_controller.tscn" id="10_u7dr2"]
+[ext_resource type="PackedScene" uid="uid://3om0cgx1mkfr" path="res://Components/LevelComponents/task_controller.tscn" id="10_u7dr2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rcnug"]
 size = Vector2(14, 14)

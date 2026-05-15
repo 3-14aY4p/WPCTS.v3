@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://rquw8k5471g6"]
 
-[ext_resource type="PackedScene" uid="uid://bi64xwfbb4jjq" path="res://Levels/Components/user_interface.tscn" id="1_dai81"]
-[ext_resource type="Script" uid="uid://bqj7qe6p744c8" path="res://Levels/level.gd" id="1_mq14h"]
-[ext_resource type="PackedScene" uid="uid://16qn3y3y8hs3" path="res://Levels/Components/game_world.tscn" id="2_el64x"]
+[ext_resource type="PackedScene" uid="uid://bi64xwfbb4jjq" path="res://Components/LevelComponents/user_interface.tscn" id="1_dai81"]
+[ext_resource type="Script" uid="uid://bqj7qe6p744c8" path="res://Components/LevelComponents/_scripts/level.gd" id="1_mq14h"]
+[ext_resource type="PackedScene" uid="uid://16qn3y3y8hs3" path="res://Components/LevelComponents/game_world.tscn" id="2_el64x"]
 [ext_resource type="PackedScene" uid="uid://prmvfl2foyy7" path="res://Components/CameraManager/camera_zone.tscn" id="3_f555c"]
 [ext_resource type="PackedScene" uid="uid://4b57skeon417" path="res://Entities/StaticObjects/Decoration/medium_table_h.tscn" id="4_qsh7o"]
 [ext_resource type="PackedScene" uid="uid://bg8y4dnhwihwu" path="res://Entities/StaticObjects/Decoration/small_table.tscn" id="5_q1xhj"]
@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c0twyucy5xnqo" path="res://Entities/Characters/Player/player.tscn" id="7_buuhx"]
 [ext_resource type="PackedScene" uid="uid://dexfk8n4vtikx" path="res://Entities/Characters/npc.tscn" id="7_ekhwo"]
 [ext_resource type="PackedScene" uid="uid://db76wka6i6443" path="res://Entities/Characters/NPCs/perry.tscn" id="8_1un2e"]
-[ext_resource type="PackedScene" uid="uid://3om0cgx1mkfr" path="res://Levels/Components/task_controller.tscn" id="8_ayo21"]
+[ext_resource type="PackedScene" uid="uid://3om0cgx1mkfr" path="res://Components/LevelComponents/task_controller.tscn" id="8_ayo21"]
 [ext_resource type="PackedScene" uid="uid://u2ebgsullxsk" path="res://Entities/Characters/NPCs/prof_candice.tscn" id="10_ucfa4"]
 
 [node name="CampusClassroom" type="Node2D" unique_id=1450742048]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cejr7n5mqmd57" path="res://Assets/Art/ui.png" id="1_02nin"]
 [ext_resource type="Script" uid="uid://bb0giaehporxd" path="res://Components/DialogueManager/dialogue_popup.gd" id="1_lcki0"]
-[ext_resource type="Theme" uid="uid://dimc0cp4ncfuj" path="res://Themes/richtextlabel_theme.tres" id="2_l2pk7"]
+[ext_resource type="Theme" uid="uid://dimc0cp4ncfuj" path="res://Themes/richtextlabel_theme_1.tres" id="2_l2pk7"]
 [ext_resource type="FontFile" uid="uid://ckbixblavooub" path="res://Assets/Font/Pixel Millennium.ttf" id="3_lpfid"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_btloh"]

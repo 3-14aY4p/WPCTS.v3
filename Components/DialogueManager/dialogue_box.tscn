@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cejr7n5mqmd57" path="res://Assets/Art/ui.png" id="2_486cr"]
 [ext_resource type="FontFile" uid="uid://bthadkgdkntt8" path="res://Assets/Font/superstar_memesbruh03.ttf" id="3_ijj8p"]
 [ext_resource type="Texture2D" uid="uid://17svgm5pbki0" path="res://Assets/Art/characters.png" id="4_p6euh"]
-[ext_resource type="Theme" uid="uid://dimc0cp4ncfuj" path="res://Themes/richtextlabel_theme.tres" id="5_0qpf6"]
+[ext_resource type="Theme" uid="uid://dimc0cp4ncfuj" path="res://Themes/richtextlabel_theme_1.tres" id="5_0qpf6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_s6cjy"]
 font = ExtResource("3_ijj8p")
