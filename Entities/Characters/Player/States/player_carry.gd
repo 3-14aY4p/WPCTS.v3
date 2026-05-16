@@ -10,7 +10,7 @@ func enter():
 	player.on_hand.set_collision_layer_value(3, false)
 	player.on_hand.reparent(player.carry_point)
 	
-	if player.on_hand.is_in_group("extra_light"):
+	if player.on_hand.is_in_group("light_object"):
 		player.on_hand.z_index = 1
 
 func physics_update(delta: float):
@@ -19,7 +19,7 @@ func physics_update(delta: float):
 	var modifier = player.on_hand.mass/2
 	modifier = clamp(modifier, 2.0, 10.0)
 	
-	if player.on_hand.is_in_group("extra_light"):
+	if player.on_hand.is_in_group("light_object"):
 		player.handle_movement(player.DEFAULT_SPEED/1.2)
 	else:
 		player.handle_movement(player.DEFAULT_SPEED/modifier)

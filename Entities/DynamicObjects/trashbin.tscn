@@ -10,7 +10,7 @@ bounce = 0.6
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4gy25"]
 size = Vector2(8, 5)
 
-[node name="Trashbin" type="RigidBody2D" unique_id=1848538655]
+[node name="Trashbin" type="RigidBody2D" unique_id=1848538655 groups=["dynamic_object"]]
 z_index = 1
 collision_layer = 4
 collision_mask = 15

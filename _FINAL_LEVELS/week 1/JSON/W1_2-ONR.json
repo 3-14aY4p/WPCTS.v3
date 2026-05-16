@@ -1,0 +1,46 @@
+{
+	"0": {
+		"zoom": [8, 8],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Woah!",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [7, 7],
+		"focus": "camera_marker",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Boxes??",
+		
+		"next": "2"
+	},
+	"2": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Who owns these?",
+		
+		"next": "3"
+	},
+	"3": {
+		"zoom": [],
+		"focus": "player",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "I wonder what's inside...",
+		
+		"next": ""
+	},
+}

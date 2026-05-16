@@ -47,7 +47,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="DiialoguePopup" type="Control" unique_id=1080280741]
+[node name="DialoguePopup" type="Control" unique_id=1080280741]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

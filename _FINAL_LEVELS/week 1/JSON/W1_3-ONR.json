@@ -1,0 +1,132 @@
+{
+	"0": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Thank you Ms. Barbara, the food was delectable!",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Ms. Barbara",
+		"anim": "mt",
+		"text": "Anything for you, sweetie~!",
+		
+		"next": "2"
+	},
+	"2": {
+		"zoom": [5, 5],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Ms. Barbara",
+		"anim": "mt",
+		"text": "Oh... Oh dear...",
+		
+		"next": "3"
+	},
+	"3": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Is something the matter?",
+		
+		"next": "4"
+	},
+	"4": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Ms. Barbara",
+		"anim": "mt",
+		"text": "It's been quite hectic ever since the Science Month began.",
+		
+		"next": "5"
+	},
+	"5": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Ms. Barbara",
+		"anim": "mt",
+		"text": "So we're a little understaffed right now...",
+		
+		"next": "6"
+	},
+	"6": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Ms. Barbara",
+		"anim": "mt",
+		"text": "I would hate to ask, but could you help me out by bringing the plates into the kitchen?",
+		
+		"next": "7"
+	},
+	"7": {
+		"zoom": [],
+		"focus": "camera_marker",
+		"index": 0,
+		
+		"name": "Ms. Barbara",
+		"anim": "mt",
+		"text": "Just drop them off by the sink.",
+		
+		"next": "8"
+	},
+	"8": {
+		"zoom": [],
+		"focus": "player",
+		"index": 0,
+		
+		"name": "Ms. Barbara",
+		"anim": "mt",
+		"text": "I'm sorry, sweetie! It'll be quick, I promise.",
+		
+		"next": "9"
+	},
+	"9": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Ms. Barbara",
+		"anim": "mt",
+		"text": "You can leave right after.",
+		
+		"next": "10"
+	},
+	"10": {
+		"zoom": [4, 4],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Oh uhm...",
+		
+		"next": "END"
+	},
+	"END": {
+		"node": "/root/GameController",
+		"func": "start_level_task",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": ""
+	}
+}

@@ -13,7 +13,6 @@ func _ready() -> void:
 
 func _on_interactable_area_interact() -> void:
 	if disabled: return
-	
 	if not dialogue_file:
 		push_warning("%s is missing a Dialogue File." % [self.name])
 

@@ -19,6 +19,11 @@ var next_block: Dictionary
 var await_choice: bool = false
 
 func _ready() -> void:
+	#get_tree().paused = true
+	if player:
+		if player.state_machine.current_state != PlayerDisabled:
+			player.state_machine.change_state("playerdisabled")
+			
 	visible = false
 	button_container.hide()
 	indicator.hide()
@@ -31,6 +36,12 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("_next_line") and not await_choice:
 		next()
+
+func _physics_process(delta: float) -> void:
+	if not player:
+		player = get_tree().get_first_node_in_group("player")
+	else: if next_block != {}:
+		player.state_machine.change_state("playerdisabled")
 
 # manually load dialogue
 func load_dialogue(char_name: String, char_anim: String, text: String):
@@ -55,18 +66,26 @@ func get_json(src: String):
 	var json_dict: Dictionary = JSON.parse_string(json_text)
 	return json_dict
 
+
 # update GUI
 func load_block(block: Dictionary): 
 	# star of the show!! (determines the focus of the camera)
-	if block.has("star"):
-		var target_group = block["star"]
-		camera.target = get_tree().get_first_node_in_group(target_group)
-		
+	if block.has("focus"):
+		if block["focus"] != "":
+			var target_group = block["focus"]
+			if block.has("index"):
+				var group = get_tree().get_nodes_in_group(target_group)
+				camera.target = group[block["index"]]
+			else:
+				camera.target = get_tree().get_first_node_in_group(target_group)
+			
 	# camera zoom
 	if camera:
 		if block.has("zoom"):
-			camera.override_zoom = Vector2(block["zoom"][0], block["zoom"][1])
-		else: camera.override_zoom = Vector2.ZERO
+			if block["zoom"] != []:
+				camera.override_zoom = Vector2(block["zoom"][0], block["zoom"][1])
+			else: 
+				camera.override_zoom = Vector2.ZERO
 		
 	# no name to display if no portrait to display
 	if block.has("anim") and block["anim"] != "": 
@@ -96,7 +115,7 @@ func load_block(block: Dictionary):
 			next_block = scene_script[key]
 		else:
 			next_block = {}
-		
+			
 	elif block.has("choices"):
 		button_container.show()
 		indicator.hide()
@@ -128,7 +147,7 @@ func load_block(block: Dictionary):
 		
 		# Since we can't directly put the properties in the
 		# json file itself, we can just retrieve them here
-		var raw_args = block["args"]	# String values
+		var raw_args = block["args"]		# String values
 		var func_args = []
 		
 		# convert string values to property
@@ -151,6 +170,7 @@ func load_block(block: Dictionary):
 				while not signal_state.done:
 					await get_tree().process_frame
 					
+		# proceed to another dialogue item after call
 		if block["comment"] != "":
 			var key = block["comment"]
 			next_block = scene_script[key]
@@ -177,6 +197,7 @@ func next():
 		curr_block = next_block
 		load_block(curr_block)
 	else:
+		#get_tree().paused = false
 		if player:
 			player.state_machine.change_state("playeridle")
 		queue_free()

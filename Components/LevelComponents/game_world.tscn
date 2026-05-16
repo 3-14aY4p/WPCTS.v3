@@ -4,6 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://cwx0yy54hn0c0" path="res://Components/Containers/object_container.tscn" id="2_rf56v"]
 [ext_resource type="PackedScene" uid="uid://b5a4ukc1uw60v" path="res://Components/Containers/static_container.tscn" id="3_tbhff"]
 [ext_resource type="PackedScene" uid="uid://ct5i5pvbu32xg" path="res://Components/Containers/tile_map_container.tscn" id="4_q2873"]
+[ext_resource type="PackedScene" uid="uid://m5bsfo134ybh" path="res://Components/Containers/npc_container.tscn" id="5_15wur"]
+[ext_resource type="PackedScene" uid="uid://dmo5quwwylb82" path="res://Components/Containers/area_container.tscn" id="6_jaqqq"]
+[ext_resource type="PackedScene" uid="uid://dsodu8y34bu60" path="res://Components/Containers/marker_container.tscn" id="7_3hcty"]
 
 [node name="GameWorld" type="Node2D" unique_id=1410708023]
 y_sort_enabled = true
@@ -15,5 +18,11 @@ y_sort_enabled = true
 [node name="StaticContainer" parent="." unique_id=1708936030 instance=ExtResource("3_tbhff")]
 
 [node name="ObjectContainer" parent="." unique_id=1694475121 instance=ExtResource("2_rf56v")]
+
+[node name="NPCContainer" parent="." unique_id=30440007 instance=ExtResource("5_15wur")]
+
+[node name="AreaContainer" parent="." unique_id=41382741 instance=ExtResource("6_jaqqq")]
+
+[node name="MarkerContainer" parent="." unique_id=1204007097 instance=ExtResource("7_3hcty")]
 
 [editable path="TileMapContainer"]

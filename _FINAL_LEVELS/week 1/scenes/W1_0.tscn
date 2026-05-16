@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://djlbee5dfgims"]
+[gd_scene format=3 uid="uid://ohebakx3iuxd"]
 
-[ext_resource type="Script" uid="uid://ba1xlr2bfaj8r" path="res://BaseLevels/BaseScenes/blank_screen.gd" id="1_b1nlm"]
+[ext_resource type="Script" uid="uid://ba1xlr2bfaj8r" path="res://BaseLevels/BaseScenes/miscellaneous/blank_screen.gd" id="1_6dp67"]
 
 [node name="BlankScreen" type="CanvasLayer" unique_id=1999547854]
-script = ExtResource("1_b1nlm")
+script = ExtResource("1_6dp67")
 dialogue_file = "res://_FINAL_LEVELS/week 1/JSON/W1_0.json"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=531310683]

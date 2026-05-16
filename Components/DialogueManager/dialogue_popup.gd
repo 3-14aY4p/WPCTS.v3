@@ -12,9 +12,8 @@ var curr_block: Dictionary
 var next_block: Dictionary
 
 func _ready() -> void:
-	if player:
-		player.state_machine.change_state("playerdisabled")
-		
+	get_tree().paused = true
+	
 	visible = false
 	indicator.hide()
 	
@@ -64,7 +63,7 @@ func load_block(block: Dictionary):
 		
 		# Since we can't directly put the properties in the
 		# json file itself, we can just retrieve them here
-		var raw_args = block["args"]	# String values
+		var raw_args = block["args"]		# String values
 		var func_args = []
 		
 		# convert string values to property
@@ -102,6 +101,5 @@ func next():
 		curr_block = next_block
 		load_block(curr_block)
 	else:
-		if player:
-			player.state_machine.change_state("playeridle")
+		get_tree().paused = false
 		queue_free()

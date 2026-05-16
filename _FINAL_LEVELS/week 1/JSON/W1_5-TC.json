@@ -1,0 +1,154 @@
+{
+	"0": {
+		"zoom": [],
+		"focus": "npc",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Observation, Mr. Colin?",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Heavy objects don't like to move.",
+		
+		"next": "2"
+	},
+	"2": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "More precisely: objects resist changes in motion.",
+		
+		"next": "3"
+	},
+	"3": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "That resistance is called inertia.",
+		
+		"next": "4"
+	},
+	"4": {
+		"zoom": [],
+		"focus": "player",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Sounds close enough to me...",
+		
+		"next": "5"
+	},
+	"5": {
+		"zoom": [],
+		"focus": "npc",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Physics is not memorization.",
+		
+		"next": "6"
+	},
+	"6": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "It's observation.",
+		
+		"next": "7"
+	},
+	"7": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Try staying awake long enough next time, and you may discover that yourself.",
+		
+		"next": "8"
+	},
+	"8": {
+		"zoom": [2.3, 2.3],
+		"focus": "camera_marker",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Anyway, that's all for today class.",
+		
+		"next": "9"
+	},
+	"9": {
+		"zoom": [2.3, 2.3],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "You are now dismissed.",
+		
+		"next": "10"
+	},
+	"10": {
+		"zoom": [2.3, 2.3],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Class",
+		"anim": "rand",
+		"text": "Goodbye and thank you, ma'am!",
+		
+		"next": "11"
+	},
+	"11": {
+		"zoom": [],
+		"focus": "player",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Except for you, Mr. Colin. You stay.",
+		
+		"next": "12"
+	},
+	"12": {
+		"zoom": [5, 5],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "...",
+		
+		"next": "END"
+	},
+	"END": {
+		"node": "/root/GameController",
+		"func": "fade_to_next_scene",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": ""
+	}
+}

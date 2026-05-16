@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://beoxcn51v5v5c"]
 
 [ext_resource type="Script" uid="uid://cl0iiwg5ln1nc" path="res://MenuUI/start_menu.gd" id="1_m4ry4"]
-[ext_resource type="Texture2D" uid="uid://mmbp1u2hfc3q" path="res://Assets/Art/cover2.png" id="2_smg2w"]
 [ext_resource type="Theme" uid="uid://dimc0cp4ncfuj" path="res://Themes/richtextlabel_theme_1.tres" id="3_ksn44"]
-[ext_resource type="Theme" uid="uid://du27erqskfwy7" path="res://Themes/button_theme_3.tres" id="4_smg2w"]
+[ext_resource type="Theme" uid="uid://bui0fgkyyas4h" path="res://Themes/button_theme_5.tres" id="4_smg2w"]
 
 [node name="StartMenu" type="Control" unique_id=1273646821]
 layout_mode = 3
@@ -22,12 +21,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.20784314, 0.23921569, 0.27450982, 1)
-
-[node name="TextureRect" type="TextureRect" parent="." unique_id=111616534]
-layout_mode = 0
-offset_right = 640.0
-offset_bottom = 360.0
-texture = ExtResource("2_smg2w")
 
 [node name="TitleLabel" type="RichTextLabel" parent="." unique_id=1735405756]
 layout_mode = 0
@@ -67,7 +60,7 @@ theme = ExtResource("4_smg2w")
 text = "Quiz Mode"
 
 [node name="Separator" type="Control" parent="VBoxContainer" unique_id=2028608171]
-custom_minimum_size = Vector2(0, 88)
+custom_minimum_size = Vector2(0, 76)
 layout_mode = 2
 size_flags_vertical = 3
 

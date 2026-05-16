@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://bfsc0o4b8ww8j"]
 
 [ext_resource type="PackedScene" uid="uid://bi64xwfbb4jjq" path="res://Components/LevelComponents/user_interface.tscn" id="1_1bf3b"]
-[ext_resource type="Script" uid="uid://bqj7qe6p744c8" path="res://Components/LevelComponents/_scripts/level.gd" id="1_w4nf0"]
+[ext_resource type="Script" uid="uid://bqj7qe6p744c8" path="res://Components/LevelComponents/_scripts/game_level.gd" id="1_w4nf0"]
 [ext_resource type="PackedScene" uid="uid://16qn3y3y8hs3" path="res://Components/LevelComponents/game_world.tscn" id="2_t61f5"]
 [ext_resource type="PackedScene" uid="uid://prmvfl2foyy7" path="res://Components/CameraManager/camera_zone.tscn" id="3_0jw3v"]
 [ext_resource type="PackedScene" uid="uid://3om0cgx1mkfr" path="res://Components/LevelComponents/task_controller.tscn" id="3_gtfvt"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c0twyucy5xnqo" path="res://Entities/Characters/Player/player.tscn" id="7_gjirj"]
 [ext_resource type="PackedScene" uid="uid://duw0li1k7c3ur" path="res://Entities/StaticObjects/Decoration/medium_shelf.tscn" id="8_4qfrj"]
 
-[node name="CampusLibrary" type="Node2D" unique_id=1595669075]
+[node name="CampusLibrary" type="Node2D" unique_id=1595669075 groups=["game_level"]]
 y_sort_enabled = true
 script = ExtResource("1_w4nf0")
 
@@ -105,12 +105,11 @@ position = Vector2(112, 168)
 
 [node name="TaskController" parent="." unique_id=673560431 instance=ExtResource("3_gtfvt")]
 
-[connection signal="task_completed" from="TaskController" to="." method="_on_task_controller_task_completed"]
-[connection signal="task_completed" from="TaskController" to="UserInterface" method="_on_task_controller_task_completed"]
-[connection signal="task_failed" from="TaskController" to="." method="_on_task_controller_task_failed"]
-[connection signal="task_failed" from="TaskController" to="UserInterface" method="_on_task_controller_task_failed"]
+[connection signal="task_complete" from="TaskController" to="." method="_on_task_controller_task_complete"]
+[connection signal="task_complete" from="TaskController" to="UserInterface" method="_on_task_controller_task_complete"]
+[connection signal="task_fail" from="TaskController" to="." method="_on_task_controller_task_fail"]
+[connection signal="task_fail" from="TaskController" to="UserInterface" method="_on_task_controller_task_fail"]
 [connection signal="task_start" from="TaskController" to="." method="_on_task_controller_task_start"]
-[connection signal="task_start" from="TaskController" to="UserInterface" method="_on_task_controller_task_start"]
 
 [editable path="GameWorld"]
 [editable path="GameWorld/CameraZoneContainer/CameraZone"]

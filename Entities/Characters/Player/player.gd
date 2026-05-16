@@ -10,6 +10,7 @@ class_name Player extends CharacterBody2D
 @onready var place_point: Marker2D = $RayCast2D/Marker2D
 @onready var force_meter: ProgressBar = %ForceMeter
 
+# for REACH tasks
 @export var task_object_id: int = 69
 
 const DEFAULT_SPEED: float = 60.0

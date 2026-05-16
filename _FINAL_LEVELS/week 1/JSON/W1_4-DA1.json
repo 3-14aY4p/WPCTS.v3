@@ -1,0 +1,156 @@
+{
+	"0": {
+		"zoom": [3, 3],
+		"focus": "npc",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "...",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [3, 3],
+		"focus": "camera_marker",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "...",
+		
+		"next": "2"
+	},
+	"2": {
+		"zoom": [3, 3],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Mr. Colin, are you aware what time it is?",
+		
+		"next": "3"
+	},
+	"3": {
+		"zoom": [3, 3],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "It's 8:14 AM, ma'am?",
+		
+		"next": "4"
+	},
+	"4": {
+		"zoom": [3, 3],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "And may I ask you what time our class starts?",
+		
+		"next": "5"
+	},
+	"5": {
+		"zoom": [2.3, 2.3],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "[font size=16]It's 7:30 AM... ma'am?[/font]",
+		
+		"next": "6"
+	},
+	"6": {
+		"zoom": [5, 5],
+		"focus": "npc",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Sigh... How many times do I have to tell you to be punctual?",
+		
+		"next": "7"
+	},
+	"7": {
+		"zoom": [3, 3],
+		"focus": "camera_marker",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Probably until [shake]late[/shake] next year.",
+		
+		"next": "8"
+	},
+	"8": {
+		"zoom": [3, 3],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "...",
+		
+		"next": "9"
+	},
+	"9": {
+		"zoom": [5, 5],
+		"focus": "camera_marker",
+		"index": 1,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Why don't you take a seat, Mr. Colin?",
+		
+		"next": "10"
+	},
+	"10": {
+		"zoom": [5, 5],
+		"focus": "npc",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "And since you seem so energetic this morning, you’ll help me with today’s demonstration as well.",
+		
+		"next": "11"
+	},
+	"11": {
+		"zoom": [],
+		"focus": "player",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "I should've just stayed asleep...",
+		
+		"next": "12"
+	},
+	"12": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "...",
+		
+		"next": "13"
+	},
+	"13": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Hurry up, young man.",
+		
+		"next": ""
+	},
+}

@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bcc1dsvs0kte3"]
 
 [ext_resource type="Texture2D" uid="uid://cj10xnuyer7uy" path="res://Assets/Art/objects.png" id="1_3otnh"]
-[ext_resource type="Script" uid="uid://d38765snlc48t" path="res://Entities/StaticObjects/Interactable/scripts/study_shelf.gd" id="1_j4xe5"]
 [ext_resource type="PackedScene" uid="uid://b841dvk8ijc3w" path="res://Components/InteractionHandler/interactable_area.tscn" id="2_k7sy4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kx7rm"]
@@ -12,11 +11,10 @@ size = Vector2(12, 5)
 
 [node name="StudyShelf" type="StaticBody2D" unique_id=1719944828]
 z_index = 1
-script = ExtResource("1_j4xe5")
-disabled = true
 metadata/_edit_group_ = true
 
 [node name="InteractableArea" parent="." unique_id=1780815943 instance=ExtResource("2_k7sy4")]
+monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=446975377]
 position = Vector2(0, -2.5)

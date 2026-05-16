@@ -1,0 +1,66 @@
+{
+	"0": {
+		"zoom": [7, 7],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Ropes, plywood, nails, copperwires...",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "To whoever owns these, I'd rather not have anything to do with you.",
+		
+		"next": "2"
+	},
+	"2": {
+		"zoom": [],
+		"focus": "camera_marker",
+		"index": 1,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "That said, I do need to get to the stairs.",
+		
+		"next": "3"
+	},
+	"3": {
+		"zoom": [],
+		"focus": "player",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "...",
+		
+		"next": "4"
+	},
+	"4": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "I reckon they'd be fine ever after being pushed around!",
+		
+		"next": "END"
+	},
+	"END": {
+		"node": "/root/GameController",
+		"func": "start_level_task",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": ""
+	}
+}

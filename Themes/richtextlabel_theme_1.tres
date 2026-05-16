@@ -13,7 +13,7 @@ vertical = true
 [resource]
 default_font_size = 20
 RichTextLabel/colors/default_color = Color(0.6627451, 0.72156864, 0.46666667, 1)
-RichTextLabel/colors/font_outline_color = Color(0.19607843, 0.22745098, 0.25882354, 1)
+RichTextLabel/colors/font_outline_color = Color(0.20784314, 0.23921569, 0.27450982, 1)
 RichTextLabel/constants/outline_size = 12
 RichTextLabel/fonts/normal_font = ExtResource("1_ths6u")
 VScrollBar/styles/grabber = SubResource("StyleBoxFlat_w0ian")

@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://ce4biku3uir3v"]
 
 [ext_resource type="Texture2D" uid="uid://cj10xnuyer7uy" path="res://Assets/Art/objects.png" id="1_5m1bd"]
-[ext_resource type="Script" uid="uid://bk4vf844382ss" path="res://Entities/StaticObjects/Interactable/scripts/study_desk.gd" id="1_41jt1"]
 [ext_resource type="PackedScene" uid="uid://b841dvk8ijc3w" path="res://Components/InteractionHandler/interactable_area.tscn" id="2_7lgbv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jljd4"]
@@ -13,11 +12,10 @@ size = Vector2(26, 10)
 [node name="StudyDesk" type="StaticBody2D" unique_id=1637569631]
 z_index = 1
 collision_mask = 0
-script = ExtResource("1_41jt1")
-disabled = true
 metadata/_edit_group_ = true
 
 [node name="InteractableArea" parent="." unique_id=1780815943 instance=ExtResource("2_7lgbv")]
+monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=2001674377]
 position = Vector2(0, -5)

@@ -159,6 +159,7 @@ terrain_set_0/terrain_0/color = Color(0.71370316, 0, 0.30220369, 1)
 sources/0 = SubResource("TileSetAtlasSource_crdsc")
 
 [node name="TaskController" type="Node" unique_id=673560431 groups=["task_controller"]]
+process_mode = 1
 script = ExtResource("1_hqmkc")
 
 [node name="AreaBoundary" type="TileMapLayer" parent="." unique_id=1037100174]

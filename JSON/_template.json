@@ -1,17 +1,21 @@
 {
 	"": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
 		"name": "",
 		"anim": "",
 		"text": "",
 		
-		"next": "",
+		"next": ""
 	},
 	"": {
 		"text": "",
 		
 		"choices": {
 			"dialogue": "path 1",
-			"dialogue": "path 2",
+			"dialogue": "path 2"
 		},
 	},
 	"": {
@@ -21,6 +25,6 @@
 		"await": "",
 		"hide_box": true,
 		
-		"comment": "path",
+		"comment": "path"
 	},
 }

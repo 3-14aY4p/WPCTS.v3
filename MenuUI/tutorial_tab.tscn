@@ -1,0 +1,177 @@
+[gd_scene format=3 uid="uid://cybnq7swsyalc"]
+
+[ext_resource type="Texture2D" uid="uid://cejr7n5mqmd57" path="res://Assets/Art/ui.png" id="1_52ed2"]
+[ext_resource type="Theme" uid="uid://dimc0cp4ncfuj" path="res://Themes/richtextlabel_theme_1.tres" id="2_btps7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evuci"]
+atlas = ExtResource("1_52ed2")
+region = Rect2(48, 32, 64, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pxxy"]
+atlas = ExtResource("1_52ed2")
+region = Rect2(80, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgxm4"]
+atlas = ExtResource("1_52ed2")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmx1u"]
+atlas = ExtResource("1_52ed2")
+region = Rect2(64, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ijrfw"]
+atlas = ExtResource("1_52ed2")
+region = Rect2(99, 19, 11, 11)
+
+[node name="TutorialTab" type="Control" unique_id=1557133727]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 240.0
+offset_top = 64.0
+offset_right = 400.0
+offset_bottom = 280.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1489191687]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_52ed2")
+region_rect = Rect2(0, 0, 48, 48)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect" unique_id=1742674401]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/MarginContainer" unique_id=891892550]
+layout_mode = 2
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=88497306]
+layout_mode = 2
+theme = ExtResource("2_btps7")
+theme_override_font_sizes/normal_font_size = 16
+text = "Movement"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=1259947466]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+texture = SubResource("AtlasTexture_evuci")
+stretch_mode = 5
+
+[node name="Separator" type="RichTextLabel" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=434697585]
+layout_mode = 2
+theme = ExtResource("2_btps7")
+theme_override_font_sizes/normal_font_size = 16
+text = "--------------------"
+fit_content = true
+scroll_active = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=725841572]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1395473616]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = SubResource("AtlasTexture_2pxxy")
+stretch_mode = 4
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1638868091]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_btps7")
+theme_override_font_sizes/normal_font_size = 14
+text = "Interact"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=738673506]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1717314762]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = SubResource("AtlasTexture_qgxm4")
+stretch_mode = 4
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1459849408]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_btps7")
+theme_override_font_sizes/normal_font_size = 14
+text = "Carry/Place"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=781617153]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="TextureRect4" type="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=311736507]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = SubResource("AtlasTexture_lmx1u")
+stretch_mode = 4
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1141937960]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_btps7")
+theme_override_font_sizes/normal_font_size = 14
+text = "Shove"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Separator2" type="RichTextLabel" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=1760225859]
+layout_mode = 2
+theme = ExtResource("2_btps7")
+theme_override_font_sizes/normal_font_size = 16
+text = "--------------------"
+fit_content = true
+scroll_active = false
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=1339466614]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="TextureRect5" type="TextureRect" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1253080661]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = SubResource("AtlasTexture_ijrfw")
+stretch_mode = 4
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1973554807]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_btps7")
+theme_override_font_sizes/normal_font_size = 10
+text = "Look around using the mouse pointer"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1

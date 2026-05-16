@@ -3,11 +3,10 @@ class_name DialogueArea extends InteractableArea
 
 @export_file("*.json") var dialogue_file
 @export_enum("box", "popup") var dialogue_bubble = "box"
-@export_enum("touch", 		## dialogue triggers upon player touching the area
-			"talk"			## dialogue triggers upon player interaction
-		) 
-var interact_mode = "touch"
-@export var oneshot: bool = true
+@export_enum("touch", 				## dialogue triggers upon player touching the area
+			"talk"					## dialogue triggers upon player interaction
+) var interact_mode = "touch"
+@export var oneshot: bool = true	## delete after triggering
 
 func _ready() -> void:
 	if interact_mode == "touch":
@@ -21,6 +20,7 @@ func trigger_dialogue():
 			DialogueManager.activate_box(dialogue_file)
 		else:
 			DialogueManager.activate_popup(dialogue_file)
+			
 		if oneshot:
 			queue_free()
 

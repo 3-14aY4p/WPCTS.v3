@@ -5,119 +5,108 @@ extends Node
 @onready var transition_handler: CanvasLayer = $TransitionHandler
 @onready var animation_player: AnimationPlayer = $TransitionHandler/AnimationPlayer
 
-# for saving progress
-var current_day: int = 1 
+# SAVE VARIABLES
+var current_week: int = 1 
 var current_scene_index: int = 0
-
-var task_completed: int = 0
-var total_score: int = 0
+# ---
+var task_completed: Array = []
+var task_failed: Array = []
+# ---
 var initial_score: int = 0
 var final_score: int = 0
-
+# ---
+var total_score: int = 0
+# ---
 
 # houses the list of scenes per day
 var scene_data: Dictionary = {
-	"1": {
-		'0': "uid://djlbee5dfgims", # blank 
-		'1': "uid://qyb4xoryjck8", # dorm room
-		'2': "uid://cfmw7cwkvevs1", # dorm hallway
-		'3': "uid://bgg4lmgk586mt", # dorm lobby
-		'4': "uid://cg3fhfygs5tmk", # cafeteria
-		'5': "uid://pnmxiwj47qni", # blank 
-		'6': "uid://db43argg36g4o", # classroom
-		'7': "uid://ta0b5g0bokls", # initial assessment
-		'8': "uid://cws4d336mldtl", # classroom ()PRE Perry
-		'9': "uid://lrey5nrrad7h", # classroom ()POST Perry - chair task
-		'10': "uid://pj6lqnqb1tjq", # classroom - heavy box task
-		'11': "uid://d1b61hjlmplrr", # classroom dismissal
-		'12': "uid://bpywkotjygshj", # dorm room
+	1: {
+		0: "uid://ohebakx3iuxd",
+		1: "uid://c83fq8xypv83j",	# dorm room
+		2: "uid://c088a6oelxkjm",	# dorm hallway
+		3: "uid://xpr6vr8kf3y7",	# cafeteria
+		4: "uid://ib73g6g2kyjb",	# classroom
+		5: "",	# assessment
+		6: "uid://bsnkpc0bsdxs5",	# classroom
 	},
-	"2": {
-		'0': "uid://btoibh04mpfbv", # blank screen
-		'1': "uid://bhlidls2l4083", # dorm room
-		'2': "uid://dglxi3xwixvcw", # dorm hallway help task
-		'3': "uid://cptqqy4qhid5i", # classroom
-		'4': "uid://dlq4kaqw0ep7h", # First Law assessment
-		'5': "uid://cc5k68iydaues", # classroom week 2 demo
-		'6': "uid://41tf8o343xgw", # classroom cleanup task
-		'7': "uid://dkfy0ry2rpufm", # blank screen
-		'8': "uid://cd3rm34d3gcna", # bathroom
-		'9': "uid://bnp1inc00da0f", # dorm room
+	2: {
+		0: "",
 	},
-	"3": {
-		'0': "uid://djd50uku08326", # blank screen
-		'1': "uid://rvib30m0jqdx", # dorm room
-		'2': "uid://tc3h7goy7g58", # dorm hallway
-		'3': "uid://0203j4k7rht4", # cafeteria
-		'4': "uid://rquw8k5471g6", # classroom
-		'5': "uid://bj85i1okyb7d7", # Second Law assessment
-		'6': "uid://b6wmei7ck26re", # classroom
-		'7': "uid://bql6duk7bnc8s", # library
-		'8': "uid://q78sikh4v3ep", # dorm hallway
-		'9': "uid://sk2hvgesb0tg", # dorm room
+	3: {
+		0: "",
 	},
-	"4": {
-		'0': "", # blank screen
+	4: {
+		0: "", 
+	},
+	5: {
+		0: "", 
 	},
 }
 var current_scene: String
-var end_of_day: bool = false
+var end_of_week: bool = false
 
-var task_controller: TaskController
-
-func _ready() -> void:
-	pass
+var current_task: TaskController
+var current_level: GameLevel
 
 func _physics_process(delta: float) -> void:
-	if not task_controller:
-		task_controller = get_tree().get_first_node_in_group("task_controller")
+	if not current_task:
+		current_task = get_tree().get_first_node_in_group("task_controller")
+		
+	if not current_level:
+		current_level = get_tree().get_first_node_in_group("game_level")
 
-func start_next_task():
-	if task_controller:
-		task_controller.start_task()
+# to make starting tasks from dialogue easier
+func start_level_task():
+	if current_task:
+		current_task._start_task()
+
+# for when game finally ends (idk what to put in here yet)
+func display_final_results():
+	pass
+
 
 # load next level; dependent on scene_data dictionary
 func load_next_scene():
 	# player reached the end of the game
-	if current_day > scene_data.size():
+	if current_week > scene_data.size():
 		display_final_results()
 		return
 		
-	# player reached the end of the day
-	if current_scene_index >= scene_data[str(current_day)].size():
+	# player reached the end of the week
+	if current_scene_index >= scene_data[current_week].size():
+		current_week += 1
 		current_scene_index = 0
-		current_day += 1
 		
-	var curr_scene = scene_data[str(current_day)][str(current_scene_index)]
-	if curr_scene == "---":
-		current_scene_index += 1
-		curr_scene = scene_data[str(current_day)][str(current_scene_index)]
-		load_scene(curr_scene)
-		current_scene_index += 1
+	var current_scene_path = scene_data[current_week][current_scene_index]
+	if current_scene_path != "":
+		load_scene(current_scene_path)
 	else:
-		load_scene(curr_scene)
 		current_scene_index += 1
-		
-	if current_scene_index == scene_data[str(current_day)].size():
-		end_of_day = true
+		load_next_scene()
+		return
+	
+	current_scene_index += 1
+	
+	if current_scene_index == scene_data[current_week].size():
+		end_of_week = true
+	else: end_of_week = false
 
-func transition_to_next_scene():
+
+# changing scenes with transition effects
+func fade_to_next_scene():
 	animation_player.play("fade")
 	await animation_player.animation_finished
 	load_next_scene()
 	animation_player.play_backwards("fade")
 
-func load_scene_with_transition(scene_path: String):
+func fade_on_load_scene(scene_path: String):
 	animation_player.play("fade")
 	await animation_player.animation_finished
 	load_scene(scene_path)
 	animation_player.play_backwards("fade")
 
-func display_final_results():
-	pass
 
-
-
+# reload the current scene to its original state
 func restart_scene():
 	get_tree().reload_current_scene()
 
@@ -125,9 +114,3 @@ func restart_scene():
 func load_scene(scene_path: String):
 	current_scene = scene_path
 	get_tree().change_scene_to_file(scene_path)
-
-# convert json to dictionary
-func get_json(src: String):
-	var json_text: String = FileAccess.get_file_as_string(src)
-	var json_dict: Dictionary = JSON.parse_string(json_text)
-	return json_dict

@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://3h4q6y1i62nu"]
 
-[ext_resource type="Script" uid="uid://bqj7qe6p744c8" path="res://Components/LevelComponents/_scripts/level.gd" id="1_6u116"]
+[ext_resource type="Script" uid="uid://bqj7qe6p744c8" path="res://Components/LevelComponents/_scripts/game_level.gd" id="1_6u116"]
 [ext_resource type="PackedScene" uid="uid://bi64xwfbb4jjq" path="res://Components/LevelComponents/user_interface.tscn" id="2_gd0ov"]
 [ext_resource type="PackedScene" uid="uid://16qn3y3y8hs3" path="res://Components/LevelComponents/game_world.tscn" id="3_kv0pj"]
 [ext_resource type="PackedScene" uid="uid://cw5v0xodqc5ob" path="res://Entities/StaticObjects/Interactable/bed.tscn" id="4_gd0ov"]
@@ -9,15 +9,14 @@
 [ext_resource type="PackedScene" uid="uid://ce4biku3uir3v" path="res://Entities/StaticObjects/Interactable/study_desk.tscn" id="5_kv0pj"]
 [ext_resource type="PackedScene" uid="uid://bcc1dsvs0kte3" path="res://Entities/StaticObjects/Interactable/study_shelf.tscn" id="6_igne8"]
 [ext_resource type="PackedScene" uid="uid://c0twyucy5xnqo" path="res://Entities/Characters/Player/player.tscn" id="7_1uojp"]
-[ext_resource type="PackedScene" uid="uid://v8g3hjhyk64b" path="res://Components/GameController/exit_point.tscn" id="8_52i3d"]
+[ext_resource type="PackedScene" uid="uid://v8g3hjhyk64b" path="res://Components/LevelComponents/exit_point.tscn" id="8_52i3d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rcnug"]
 size = Vector2(14, 14)
 
-[node name="DormRoom" type="Node2D" unique_id=453450293]
+[node name="DormRoom" type="Node2D" unique_id=453450293 groups=["game_level"]]
 y_sort_enabled = true
 script = ExtResource("1_6u116")
-task_fail_dialogue = "<null>"
 
 [node name="UserInterface" parent="." unique_id=1485922269 instance=ExtResource("2_gd0ov")]
 
@@ -59,13 +58,13 @@ position = Vector2(78, 104)
 [node name="StudyDesk" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="1" unique_id=1637569631 instance=ExtResource("5_kv0pj")]
 position = Vector2(93, 74)
 
-[node name="SmallShelf" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="2" unique_id=1719944828 instance=ExtResource("6_igne8")]
+[node name="StudyShelf" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="2" unique_id=1719944828 instance=ExtResource("6_igne8")]
 position = Vector2(72, 69)
 
-[node name="ExitPoint" parent="GameWorld" unique_id=1305555057 instance=ExtResource("8_52i3d")]
+[node name="ExitPoint" parent="GameWorld/AreaContainer" parent_id_path=PackedInt32Array(1410708023, 41382741) index="0" unique_id=1305555057 instance=ExtResource("8_52i3d")]
 position = Vector2(120, 64)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GameWorld/ExitPoint" unique_id=1033436047]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameWorld/AreaContainer/ExitPoint" unique_id=1033436047]
 position = Vector2(0, -7)
 shape = SubResource("RectangleShape2D_rcnug")
 
@@ -74,12 +73,11 @@ position = Vector2(77, 88)
 
 [node name="TaskController" parent="." unique_id=673560431 instance=ExtResource("4_igne8")]
 
-[connection signal="task_completed" from="TaskController" to="." method="_on_task_controller_task_completed"]
-[connection signal="task_completed" from="TaskController" to="UserInterface" method="_on_task_controller_task_completed"]
-[connection signal="task_failed" from="TaskController" to="." method="_on_task_controller_task_failed"]
-[connection signal="task_failed" from="TaskController" to="UserInterface" method="_on_task_controller_task_failed"]
+[connection signal="task_complete" from="TaskController" to="." method="_on_task_controller_task_complete"]
+[connection signal="task_complete" from="TaskController" to="UserInterface" method="_on_task_controller_task_complete"]
+[connection signal="task_fail" from="TaskController" to="." method="_on_task_controller_task_fail"]
+[connection signal="task_fail" from="TaskController" to="UserInterface" method="_on_task_controller_task_fail"]
 [connection signal="task_start" from="TaskController" to="." method="_on_task_controller_task_start"]
-[connection signal="task_start" from="TaskController" to="UserInterface" method="_on_task_controller_task_start"]
 
 [editable path="GameWorld"]
 [editable path="GameWorld/CameraZoneContainer/CameraZone"]

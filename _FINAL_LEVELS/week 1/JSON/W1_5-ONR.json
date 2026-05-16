@@ -1,0 +1,134 @@
+{
+	"0": {
+		"zoom": [5, 5],
+		"focus": "npc",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "So today’s lesson is about Newton’s First Law of Motion.",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [5, 5],
+		"focus": "npc",
+		"index": 0,
+		
+		"name": "",
+		"anim": "",
+		"text": "[shake]* Shuffle shuffle *[/shake]",
+		
+		"next": "2"
+	},
+	"2": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "The law states that:",
+		
+		"next": "3"
+	},
+	"3": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "",
+		"anim": "",
+		"text": "[shake]* Shuffle shuffle shuffle *[/shake]",
+		
+		"next": "4"
+	},
+	"4": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "\"An object at rest remains at rest, and an object in motion remains in motion unless acted upon by an external force.\"",
+		
+		"next": "5"
+	},
+	"5": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "...",
+		
+		"next": "5.5"
+	},
+	"5.5": {
+		"zoom": [],
+		"focus": "player",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Mr. Colin, are you listening?",
+		
+		"next": "6"
+	},
+	"6": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "You're basically saying that objects are lazy.",
+		
+		"next": "7"
+	},
+	"7": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "That is the least scientific interpretation possible.",
+		
+		"next": "8"
+	},
+	"8": {
+		"zoom": [5, 5],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "But surprisingly usable...",
+		
+		"next": "9"
+	},
+	"9": {
+		"zoom": [],
+		"focus": "task_object",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Here. Try pushing these two boxes forward.",
+		
+		"next": "END"
+	},
+	"END": {
+		"focus": "player",
+		
+		"node": "/root/GameController",
+		"func": "start_level_task",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": ""
+	},
+}

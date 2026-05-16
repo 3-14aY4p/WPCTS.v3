@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cw5v0xodqc5ob"]
 
+[ext_resource type="Script" uid="uid://cvv3llw2lh131" path="res://Entities/StaticObjects/Interactable/scripts/bed_script.gd" id="1_auqwr"]
 [ext_resource type="Texture2D" uid="uid://cj10xnuyer7uy" path="res://Assets/Art/objects.png" id="1_f6x25"]
-[ext_resource type="Script" uid="uid://ddtjtivvmp6ha" path="res://Entities/StaticObjects/Interactable/scripts/bed.gd" id="1_n0cys"]
 [ext_resource type="PackedScene" uid="uid://b841dvk8ijc3w" path="res://Components/InteractionHandler/interactable_area.tscn" id="1_nkben"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n0cys"]
@@ -13,9 +13,7 @@ size = Vector2(28, 10)
 [node name="Bed" type="StaticBody2D" unique_id=98163697]
 z_index = 1
 collision_mask = 0
-script = ExtResource("1_n0cys")
-dialogue_file = "res://JSON/constants/bed.json"
-metadata/_edit_group_ = true
+script = ExtResource("1_auqwr")
 
 [node name="InteractableArea" parent="." unique_id=1780815943 instance=ExtResource("1_nkben")]
 

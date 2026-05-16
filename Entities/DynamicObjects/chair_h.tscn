@@ -10,7 +10,7 @@ bounce = 0.2
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ami58"]
 size = Vector2(10, 6)
 
-[node name="ChairH" type="RigidBody2D" unique_id=626750987]
+[node name="ChairH" type="RigidBody2D" unique_id=626750987 groups=["dynamic_object"]]
 z_index = 1
 collision_layer = 4
 collision_mask = 15
