@@ -1,0 +1,143 @@
+{
+	"0": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "What a day...",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "I got buried in boxes, carried plates, got lectured for being late, and got dragged into the Physics committee.",
+		
+		"next": "2"
+	},
+	"2": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "That Candice woman seriously treats punctuality like a law of nature.",
+		
+		"next": "3"
+	},
+	"3": {
+		"zoom": [6, 6],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Still...",
+		
+		"next": "4"
+	},
+	"4": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "That stuff from class wasn't completely terrible.",
+		
+		"next": "5"
+	},
+	"5": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "An object stays how it is unless something forces it to change.",
+		
+		"next": "6"
+	},
+	"6": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "The hallway this morning proved it enough.",
+		
+		"next": "7"
+	},
+	"7": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Those boxes weren’t moving themselves anytime soon.",
+		
+		"next": "8"
+	},
+	"8": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Right... I still have to talk to that Perry guy.",
+		
+		"next": "9"
+	},
+	"9": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Whatever...",
+		
+		"next": "10"
+	},
+	"10": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "That's for future Colin to deal with.",
+		
+		"next": "11"
+	},
+	"11": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "I should sleep.",
+		
+		"next": "END"
+	},
+	"END": {
+		"node": "/root/GameController",
+		"func": "fade_to_next_scene",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": ""
+	}
+}

@@ -12,10 +12,7 @@ var current_scene_index: int = 0
 var task_completed: Array = []
 var task_failed: Array = []
 # ---
-var initial_score: int = 0
-var final_score: int = 0
-# ---
-var total_score: int = 0
+var weekly_score: Array[int] = []
 # ---
 
 # houses the list of scenes per day
@@ -28,6 +25,8 @@ var scene_data: Dictionary = {
 		4: "uid://ib73g6g2kyjb",	# classroom
 		5: "",	# assessment
 		6: "uid://bsnkpc0bsdxs5",	# classroom
+		7: "uid://d0h7rrufyampu", # classroom
+		8: "uid://e64rtobwbf6n", # dorm room
 	},
 	2: {
 		0: "",

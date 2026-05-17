@@ -46,7 +46,7 @@ func _ready() -> void:
 	add_child(timer)
 	timer.autostart = false
 	timer.start(2)
-	
+
 	if onready_dialogue:
 		if onready_dialogue_type == "box":
 			timer.connect("timeout", DialogueManager.activate_box.bind(onready_dialogue))
@@ -114,12 +114,13 @@ func _on_task_controller_task_fail() -> void:
 		
 	GameController.task_failed.append(task_controller.task_id)
 
-func delete_nodes(nodes: Array[Node2D]):
+func delete_nodes(nodes: Array[Node2D], tweener: bool = true):
 	var tween: Tween = get_tree().create_tween()
 	if not nodes.is_empty():
 		for node in nodes:
-			tween.tween_property(node, "modulate:a", 0.0, 0.5)
-			await tween.finished
+			if tweener:
+				tween.tween_property(node, "modulate:a", 0.0, 0.5)
+				await tween.finished
 			node.queue_free()
 
 func instantiate_nodes(nodes: Array[PackedScene], spawnpoints: Array[Marker2D]):

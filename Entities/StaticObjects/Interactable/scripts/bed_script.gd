@@ -11,6 +11,8 @@ func _on_interactable_area_interact() -> void:
 	if disabled: return
 	
 	if GameController.end_of_week:
-		DialogueManager.activate_box(dialogue_file)
+		if dialogue_file:
+			DialogueManager.activate_box(dialogue_file)
+		else: GameController.fade_to_next_scene()
 	else:
 		DialogueManager.activate_box_line(character_name, character_anim, dialogue_line)

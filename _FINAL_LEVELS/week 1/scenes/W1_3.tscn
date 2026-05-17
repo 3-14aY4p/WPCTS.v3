@@ -193,6 +193,9 @@ position = Vector2(263, 163)
 [node name="Plate" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="29" unique_id=1509571963 groups=["pickable_object", "task_object"] instance=ExtResource("11_t0giv")]
 position = Vector2(226, 114)
 
+[node name="Sprite2D" parent="GameWorld/ObjectContainer/Plate" index="0" unique_id=538423381]
+frame = 1
+
 [node name="Plate2" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="30" unique_id=210501360 groups=["pickable_object"] instance=ExtResource("11_t0giv")]
 position = Vector2(180, 120)
 
@@ -310,6 +313,7 @@ shape = SubResource("RectangleShape2D_t0giv")
 [editable path="GameWorld/CameraZoneContainer/CameraZone2"]
 [editable path="GameWorld/CameraZoneContainer/CameraZone3"]
 [editable path="GameWorld/TileMapContainer"]
+[editable path="GameWorld/ObjectContainer/Plate"]
 [editable path="GameWorld/ObjectContainer/Plate3"]
 [editable path="GameWorld/ObjectContainer/Plate4"]
 [editable path="GameWorld/ObjectContainer/Plate5"]

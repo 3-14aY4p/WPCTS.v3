@@ -1,0 +1,145 @@
+{
+	"0": {
+		"zoom": [],
+		"focus": "",
+		"index": 0.0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Mr. Colin...",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [],
+		"focus": "",
+		"index": 0.0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "I'm sure you're aware that the preparations for the Science Fair have begun, no?",
+		
+		"next": "2"
+	},
+	"2": {
+		"zoom": [],
+		"focus": "",
+		"index": 0.0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Well... I was certainly aware the Science Month just started.",
+		
+		"next": "3"
+	},
+	"3": {
+		"zoom": [],
+		"focus": "",
+		"index": 0.0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Regardless,",
+		
+		"next": "4"
+	},
+	"4": {
+		"zoom": [],
+		"focus": "",
+		"index": 0.0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "I'm going to need you to join the Physics Committee.",
+		
+		"next": "5"
+	},
+	"5": {
+		"zoom": [],
+		"focus": "",
+		"index": 0.0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "[shake]Bu-[/shake]",
+		
+		"next": "6"
+	},
+	"6": {
+		"zoom": [],
+		"focus": "",
+		"index": 0.0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "No buts, Mr.",
+		
+		"next": "7"
+	},
+	"7": {
+		"zoom": [],
+		"focus": "",
+		"index": 0.0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Just think of it as your \"practical learning grounds.\"",
+		
+		"next": "8"
+	},
+	"8": {
+		"zoom": [],
+		"focus": "",
+		"index": 0.0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "You'll be paired with your classmate, Perry.",
+		
+		"next": "9"
+	},
+	"9": {
+		"zoom": [],
+		"focus": "",
+		"index": 0.0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "You don't have to fear needing to do everything on your own.",
+		
+		"next": "10"
+	},
+	"10": {
+		"zoom": [],
+		"focus": "",
+		"index": 0.0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "( Perry? The one the guys call \"shy mushroom\"? )",
+		
+		"next": "11"
+	},
+	"11": {
+		"zoom": [],
+		"focus": "",
+		"index": 0.0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Anyway,",
+		
+		"next": "12"
+	},
+	"12": {
+		"zoom": [],
+		"focus": "",
+		"index": 0.0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "You can leave now.",
+		
+		"next": ""
+	},
+}
