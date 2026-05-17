@@ -1,0 +1,24 @@
+{
+	"0": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Hey, mushroom! I've returned the books. I'm gonna leave now.",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [],
+		"focus": "npc",
+		"index": 0,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "W-what? O-oh ok...",
+		
+		"next": ""
+	},
+}

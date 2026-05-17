@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://bf82ttpv6ijrc"]
+[gd_scene format=3 uid="uid://st0yi2xk2v4h"]
 
-[ext_resource type="Script" uid="uid://ch4qrb53yjgl5" path="res://Entities/DynamicObjects/_dynamic_object.gd" id="1_70j73"]
-[ext_resource type="Texture2D" uid="uid://cj10xnuyer7uy" path="res://Assets/Art/objects.png" id="2_2da7u"]
+[ext_resource type="Script" uid="uid://ch4qrb53yjgl5" path="res://Entities/DynamicObjects/_dynamic_object.gd" id="1_3juxo"]
+[ext_resource type="Texture2D" uid="uid://cj10xnuyer7uy" path="res://Assets/Art/objects.png" id="2_wthkr"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2da7u"]
 friction = 0.3
@@ -10,25 +10,25 @@ bounce = 0.5
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2da7u"]
 size = Vector2(10, 6)
 
-[node name="EmptyCart" type="RigidBody2D" unique_id=679673808 groups=["dynamic_object"]]
+[node name="FilledCart" type="RigidBody2D" unique_id=679673808 groups=["dynamic_object"]]
 z_index = 1
 collision_layer = 4
 collision_mask = 15
-mass = 4.0
+mass = 8.0
 physics_material_override = SubResource("PhysicsMaterial_2da7u")
 lock_rotation = true
 linear_damp_mode = 1
 linear_damp = 3.0
-script = ExtResource("1_70j73")
+script = ExtResource("1_3juxo")
 minimum_force = 35.0
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1466516795]
-texture = ExtResource("2_2da7u")
+texture = ExtResource("2_wthkr")
 offset = Vector2(0, -7)
 hframes = 2
 region_enabled = true
-region_rect = Rect2(64, 96, 32, 16)
+region_rect = Rect2(96, 96, 32, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1174174479]
 position = Vector2(0, -3)

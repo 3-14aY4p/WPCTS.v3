@@ -1,0 +1,101 @@
+{
+	"0": {
+		"zoom": [5, 5],
+		"focus": "npc",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Newton’s Second Law explains the relationship between force, mass, and acceleration.",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "The law states that:",
+		
+		"next": "2"
+	},
+	"2": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "\"The acceleration of an object is directly proportional to the net force acting on it but inversely proportional to its mass.\"",
+		
+		"next": "3"
+	},
+	"3": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Hence, the infamous F=[font size=18]ma[/font] equation.",
+		
+		"next": "4"
+	},
+	"4": {
+		"zoom": [],
+		"focus": "player",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Translation?",
+		
+		"next": "5"
+	},
+	"5": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "The harder you push something, the faster it accelerates.",
+		
+		"next": "6"
+	},
+	"6": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "But the heavier it is, the harder that becomes.",
+		
+		"next": "7"
+	},
+	"7": {
+		"zoom": [],
+		"focus": "task_object",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Here, try it on these carts.",
+		
+		"next": "END"
+	},
+	"END": {
+		"focus": "player",
+		
+		"node": "/root/GameController",
+		"func": "start_level_task",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": ""
+	},
+}

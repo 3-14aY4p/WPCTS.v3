@@ -8,8 +8,12 @@ func _on_new_game_pressed() -> void:
 	GameController.fade_to_next_scene()
 
 func _on_load_game_pressed() -> void:
-	SaveHandler.load_game()
-	GameController.fade_to_next_scene()
+	# change res:// to user:// on export
+	if ResourceLoader.exists("res://save.json"):
+		SaveHandler.load_game()
+		GameController.fade_to_next_scene()
+	else:
+		push_warning("Save file does not exist.")
 
 func _on_quiz_mode_pressed() -> void:
 	pass # Replace with function body.

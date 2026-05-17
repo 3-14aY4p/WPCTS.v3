@@ -1,0 +1,46 @@
+{
+	"0": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Phew...",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Now that that's done...",
+		
+		"next": "2"
+	},
+	"2": {
+		"zoom": [],
+		"focus": "target_area",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Time to shove it all the way there...",
+		
+		"next": "END"
+	},
+	"END": {
+		"focus": "player",
+		
+		"node": "/root/GameController",
+		"func": "start_level_task",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": ""
+	},
+}

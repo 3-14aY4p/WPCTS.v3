@@ -121,7 +121,7 @@
 		"next": "11"
 	},
 	"11": {
-		"zoom": [],
+		"zoom": [5, 5],
 		"focus": "player",
 		"index": 0,
 		

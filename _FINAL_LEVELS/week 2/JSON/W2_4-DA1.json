@@ -1,0 +1,79 @@
+{
+	"0": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Well, well, well... If it isn't Mr. Colin.",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Good morning, ma'am.",
+		
+		"next": "2"
+	},
+	"2": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "You were aware that we we're gonna have a quiz today, right?",
+		
+		"next": "3"
+	},
+	"3": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Most certainly! ( most certainly forgot about it! )",
+		
+		"next": "4"
+	},
+	"4": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "It doesn't seem to bother you that you could've missed the test entirely.",
+		
+		"next": "5"
+	},
+	"5": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Well now it does bother me a litte.",
+		
+		"next": "6"
+	},
+	"6": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Go on and take a seat then. We'll start right as soon as you get settled.",
+		
+		"next": ""
+	},
+}

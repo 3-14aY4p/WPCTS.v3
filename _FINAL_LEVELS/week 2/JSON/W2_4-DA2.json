@@ -1,0 +1,55 @@
+{
+	"0": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Some of you did reasonably well in last week’s assessment.",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Others wrote answers so concerning that I briefly considered retirement.",
+		
+		"next": "2"
+	},
+	"2": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "I’m afraid to ask which category I landed in.",
+		
+		"next": "3"
+	},
+	"3": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "You were a bit of both.",
+		
+		"next": "END"
+	},
+	"END": {
+		"node": "/root/GameController",
+		"func": "fade_to_next_scene",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": ""
+	},
+}

@@ -1,0 +1,110 @@
+{
+	"0": {
+		"zoom": [],
+		"focus": "npc",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "And so, what happened?",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "The lighter one practically flew.",
+		
+		"next": "2"
+	},
+	"2": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "The heavy one moved like it paid taxes.",
+		
+		"next": "3"
+	},
+	"3": {
+		"zoom": [5, 5],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Or in other terms: larger mass produces smaller acceleration under equal force.",
+		
+		"next": "4"
+	},
+	"4": {
+		"zoom": [5, 5],
+		"focus": "npc",
+		"index": 1,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "S-so... more mass means more resistance to acceleration?",
+		
+		"next": "5"
+	},
+	"5": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Exactly.",
+		
+		"next": "6"
+	},
+	"6": {
+		"zoom": [],
+		"focus": "npc",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Thank you for restoring my faith in this classroom, Perry.",
+		
+		"next": "7"
+	},
+	"7": {
+		"zoom": [],
+		"focus": "npc",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "I'm sensing favoritism here, teach...",
+		
+		"next": "8"
+	},
+	"8": {
+		"zoom": [],
+		"focus": "npc",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Go back to your seat. We'll discuss further examples.",
+		
+		"next": "END"
+	},
+	"END": {
+		"node": "/root/GameController",
+		"func": "fade_to_next_scene",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": ""
+	},
+}

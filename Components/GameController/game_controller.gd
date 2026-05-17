@@ -6,11 +6,12 @@ extends Node
 @onready var animation_player: AnimationPlayer = $TransitionHandler/AnimationPlayer
 
 # SAVE VARIABLES
-var current_week: int = 1 
-var current_scene_index: int = 0
+var current_week: int = 2
+var current_scene_index: int = 10
 # ---
 var task_completed: Array = []
 var task_failed: Array = []
+var task_points: float = 0
 # ---
 var weekly_score: Array[int] = []
 # ---
@@ -25,11 +26,21 @@ var scene_data: Dictionary = {
 		4: "uid://ib73g6g2kyjb",	# classroom
 		5: "",	# assessment
 		6: "uid://bsnkpc0bsdxs5",	# classroom
-		7: "uid://d0h7rrufyampu", # classroom
-		8: "uid://e64rtobwbf6n", # dorm room
+		7: "uid://d0h7rrufyampu", 	# classroom
+		8: "uid://e64rtobwbf6n", 	# dorm room
 	},
 	2: {
-		0: "",
+		0: "uid://b5og3whrcafos",
+		1: "uid://ck3fdh1eo2y7x",	# dorm room
+		2: "uid://3cgxv5supjcu",	# dorm hallway
+		3: "uid://vl35s160bwen",	# dorm lobby
+		4: "uid://c7g566bi0jrsn",	# classroom
+		5: "",	# assessment
+		6: "uid://bgo4chu11mvpl",	# classroom
+		7: "uid://t76u0pwrytqd",	# classroom
+		8: "uid://cstvspqyvvil2",	# library
+		9: "uid://bmrir1f6vkvo2",	# library
+		10: "uid://derdp5wh82xma",	# dorm room
 	},
 	3: {
 		0: "",
@@ -63,6 +74,10 @@ func start_level_task():
 func display_final_results():
 	pass
 
+func save_and_next():
+	SaveHandler.save_game()
+	fade_to_next_scene()
+
 
 # load next level; dependent on scene_data dictionary
 func load_next_scene():
@@ -89,7 +104,6 @@ func load_next_scene():
 	if current_scene_index == scene_data[current_week].size():
 		end_of_week = true
 	else: end_of_week = false
-
 
 # changing scenes with transition effects
 func fade_to_next_scene():

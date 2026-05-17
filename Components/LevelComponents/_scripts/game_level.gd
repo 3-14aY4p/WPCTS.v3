@@ -88,31 +88,33 @@ func _on_task_controller_task_start() -> void:
 
 func _on_task_controller_task_complete() -> void:
 	post_task_cleanup()
-	
-	if on_complete_dialogue:
-		if on_complete_dialogue_type == "box":
-			DialogueManager.activate_box(on_complete_dialogue)
-		else: DialogueManager.activate_popup(on_complete_dialogue)
 		
 	if free_on_complete: delete_nodes(free_on_complete)
 	if instantiate_on_complete and points_on_complete:
 		instantiate_nodes(instantiate_on_complete, points_on_complete)
 		
 	GameController.task_completed.append(task_controller.task_id)
+	
+	if on_complete_dialogue:
+		if on_complete_dialogue_type == "box":
+			DialogueManager.activate_box(on_complete_dialogue)
+		else: DialogueManager.activate_popup(on_complete_dialogue)
+	#else: GameController.fade_to_next_scene()
 
 func _on_task_controller_task_fail() -> void:
 	post_task_cleanup()
-	
-	if on_fail_dialogue:
-		if on_fail_dialogue_type == "box":
-			DialogueManager.activate_box(on_fail_dialogue)
-		else: DialogueManager.activate_popup(on_fail_dialogue)
 		
 	if free_on_fail: delete_nodes(free_on_fail)
 	if instantiate_on_fail and points_on_fail:
 		instantiate_nodes(instantiate_on_fail, points_on_fail)
 		
 	GameController.task_failed.append(task_controller.task_id)
+	
+	if on_fail_dialogue:
+		if on_fail_dialogue_type == "box":
+			DialogueManager.activate_box(on_fail_dialogue)
+		else: DialogueManager.activate_popup(on_fail_dialogue)
+	#else: GameController.fade_to_next_scene()
 
 func delete_nodes(nodes: Array[Node2D], tweener: bool = true):
 	var tween: Tween = get_tree().create_tween()

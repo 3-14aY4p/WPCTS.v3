@@ -1,0 +1,24 @@
+{
+	"0": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Ms. Barbara",
+		"anim": "mt",
+		"text": "It's ok, sweetie! I'll deal with the rest.",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Ms. Barbara",
+		"anim": "mt",
+		"text": "You go along now. Goodluck with school~!",
+		
+		"next": ""
+	},
+}

@@ -6,7 +6,7 @@
 		
 		"name": "Colin",
 		"anim": "mc",
-		"text": "What a day...",
+		"text": "I still don’t understand how boxes keep multiplying around this dorm.",
 		
 		"next": "1"
 	},
@@ -17,7 +17,7 @@
 		
 		"name": "Colin",
 		"anim": "mc",
-		"text": "I got buried in boxes, carried plates, got lectured for being late, and got dragged into the Physics committee.",
+		"text": "And somehow I keep ending up moving all of them.",
 		
 		"next": "2"
 	},
@@ -28,7 +28,7 @@
 		
 		"name": "Colin",
 		"anim": "mc",
-		"text": "That Candice woman seriously treats punctuality like a law of nature.",
+		"text": "Today was about force and motion...",
 		
 		"next": "3"
 	},
@@ -39,7 +39,7 @@
 		
 		"name": "Colin",
 		"anim": "mc",
-		"text": "Still...",
+		"text": "The heavier something is, the harder you need to push it.",
 		
 		"next": "4"
 	},
@@ -50,7 +50,7 @@
 		
 		"name": "Colin",
 		"anim": "mc",
-		"text": "That stuff from class wasn't completely terrible.",
+		"text": "Simple enough.",
 		
 		"next": "5"
 	},
@@ -61,7 +61,7 @@
 		
 		"name": "Colin",
 		"anim": "mc",
-		"text": "An object stays how it is unless something forces it to change.",
+		"text": "Honestly, Physics makes way more sense when someone lets me do things instead of stuffing formulas into my brain.",
 		
 		"next": "6"
 	},
@@ -72,7 +72,7 @@
 		
 		"name": "Colin",
 		"anim": "mc",
-		"text": "The hallway this morning proved it enough.",
+		"text": "That Perry guy is still awkward, though.",
 		
 		"next": "7"
 	},
@@ -83,7 +83,7 @@
 		
 		"name": "Colin",
 		"anim": "mc",
-		"text": "Those boxes weren’t moving themselves anytime soon.",
+		"text": "I ask one question and he answers like he’s buffering.",
 		
 		"next": "8"
 	},
@@ -94,7 +94,7 @@
 		
 		"name": "Colin",
 		"anim": "mc",
-		"text": "Right... I still have to talk to that Perry guy.",
+		"text": "\"Shy mushroom\" really is the perfect nickname for him.",
 		
 		"next": "9"
 	},
@@ -105,7 +105,7 @@
 		
 		"name": "Colin",
 		"anim": "mc",
-		"text": "Whatever...",
+		"text": "But I gotta say...",
 		
 		"next": "10"
 	},
@@ -116,7 +116,7 @@
 		
 		"name": "Colin",
 		"anim": "mc",
-		"text": "That's for future Colin to deal with.",
+		"text": "He does know his stuff.",
 		
 		"next": "11"
 	},
@@ -127,7 +127,29 @@
 		
 		"name": "Colin",
 		"anim": "mc",
-		"text": "I should sleep.",
+		"text": "...",
+		
+		"next": "12"
+	},
+	"12": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Next week, we will finally start real committee work.",
+		
+		"next": "13"
+	},
+	"13": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "This is definitely going to end with me carrying more boxes.",
 		
 		"next": "END"
 	},

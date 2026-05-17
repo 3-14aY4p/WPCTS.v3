@@ -1,8 +1,8 @@
 extends Node
 # this is an autoload
 
-
-const file_path: String = "user://save.json"
+# change res:// to user:// on export
+const file_path: String = "res://save.json"
 var save_data := {
 	"current_week": 1,
 	"current_scene_index": 0,
@@ -13,7 +13,7 @@ var save_data := {
 
 func new_game() -> void:
 	GameController.current_week = 1
-	GameController.current_scene_index = 8
+	GameController.current_scene_index = 0
 	GameController.task_completed = []
 	GameController.task_failed = []
 	GameController.weekly_score = []

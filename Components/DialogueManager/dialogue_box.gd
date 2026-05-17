@@ -200,4 +200,5 @@ func next():
 		#get_tree().paused = false
 		if player:
 			player.state_machine.change_state("playeridle")
+		camera.target = player
 		queue_free()

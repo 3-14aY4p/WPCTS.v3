@@ -1,0 +1,101 @@
+{
+	"0": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Wait.",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [],
+		"focus": "npc",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "How's the Physics Committee?",
+		
+		"next": "2"
+	},
+	"2": {
+		"zoom": [2.3, 2.3],
+		"focus": "camera_marker",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Have you talked to Perry yet?",
+		
+		"next": "3"
+	},
+	"3": {
+		"zoom": [2.3, 2.3],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Uhmm... no, actually. I haven't.",
+		
+		"next": "4"
+	},
+	"4": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Well, you should.",
+		
+		"next": "5"
+	},
+	"5": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "A week has already passed.",
+		
+		"next": "5.5"
+	},
+	"5.5": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "...",
+		
+		"next": "6"
+	},
+	"6": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "I heard he frequents the library.",
+		
+		"next": "7"
+	},
+	"7": {
+		"zoom": [],
+		"focus": "player",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "You should check there first.",
+		
+		"next": ""
+	},
+}

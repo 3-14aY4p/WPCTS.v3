@@ -1,0 +1,201 @@
+{
+	"0": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "...",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Uhm... Perry, right?",
+		
+		"next": "2"
+	},
+	"2": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": ".....",
+		
+		"next": "3"
+	},
+	"3": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "What are you reading?",
+		
+		"next": "4"
+	},
+	"4": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "U-uhm... here...",
+		
+		"next": "5"
+	},
+	"5": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "( A Physics textbook..? Ughh... )",
+		
+		"next": "6"
+	},
+	"6": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "...",
+		
+		"next": "7"
+	},
+	"7": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "So about the Physics Committee...",
+		
+		"next": "8"
+	},
+	"8": {
+		"zoom": [5, 5],
+		"focus": "npc",
+		"index": 0,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "A-about that...",
+		
+		"next": "9"
+	},
+	"9": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "W-we're still a little short on materials.",
+		
+		"next": "10"
+	},
+	"10": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "Rest assured, though! W-we can start by next week.",
+		
+		"next": "11"
+	},
+	"11": {
+		"zoom": [5, 5],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "Come meet me again by then.",
+		
+		"next": "11.5"
+	},
+	"11.5": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "...",
+		
+		"next": "12"
+	},
+	"12": {
+		"zoom": [],
+		"focus": "player",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Is there anything I can do to help for the time being, at least?",
+		
+		"next": "13"
+	},
+	"13": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "( I don't want to get told off by that [shake]tyrant[/shake] again )",
+		
+		"next": "14"
+	},
+	"14": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "W-well... I would appreciate if y-you could help me put these books back?",
+		
+		"next": "15"
+	},
+	"15": {
+		"zoom": [5, 5],
+		"focus": "npc",
+		"index": 1,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "You can l-leave the cart with the librarian once you've loaded in the books.",
+		
+		"next": "END"
+	},
+	"END": {
+		"zoom": [],
+		"focus": "player",
+		
+		"node": "/root/GameController",
+		"func": "start_level_task",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": ""
+	},
+}
