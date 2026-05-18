@@ -1,7 +1,7 @@
 {
 	"0": {
 		"zoom": [],
-		"focus": "",
+		"focus": "npc",
 		"index": 0,
 		
 		"name": "Prof. Candice",
@@ -12,7 +12,7 @@
 	},
 	"1": {
 		"zoom": [],
-		"focus": "",
+		"focus": "camera_marker",
 		"index": 0,
 		
 		"name": "Colin",

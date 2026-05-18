@@ -23,6 +23,7 @@ grow_vertical = 2
 color = Color(0.20784314, 0.23921569, 0.27450982, 1)
 
 [node name="TitleLabel" type="RichTextLabel" parent="." unique_id=1735405756]
+clip_contents = false
 layout_mode = 0
 offset_left = 16.0
 offset_top = 16.0

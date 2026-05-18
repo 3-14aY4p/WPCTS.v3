@@ -94,7 +94,7 @@
 		
 		"name": "Prof. Candice",
 		"anim": "pf",
-		"text": "Go back to your seat. We'll discuss further examples.",
+		"text": "Go back to your seat. We'll discuss further examples before we end the class.",
 		
 		"next": "END"
 	},

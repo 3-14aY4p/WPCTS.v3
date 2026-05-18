@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bic7qb4kocv0" path="res://Entities/Characters/npc_dm.tscn" id="9_sanvn"]
 [ext_resource type="PackedScene" uid="uid://dexfk8n4vtikx" path="res://Entities/Characters/npc.tscn" id="10_yufbp"]
 [ext_resource type="PackedScene" uid="uid://dhbj1bg2g2vme" path="res://Components/DialogueManager/dialogue_area.tscn" id="11_yufbp"]
+[ext_resource type="PackedScene" uid="uid://bc656gimj8coc" path="res://Components/DialogueManager/Components/camera_marker.tscn" id="12_e87ha"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yufbp"]
 
@@ -169,7 +170,7 @@ position = Vector2(192, 190)
 [node name="Sprite2D" parent="GameWorld/ObjectContainer/ChairH13" index="0" unique_id=1356431179]
 frame = 1
 
-[node name="NPC_pf" parent="GameWorld/NPCContainer" parent_id_path=PackedInt32Array(1410708023, 30440007) index="0" unique_id=744398630 instance=ExtResource("8_e7s0q")]
+[node name="NPC_pf" parent="GameWorld/NPCContainer" parent_id_path=PackedInt32Array(1410708023, 30440007) index="0" unique_id=744398630 groups=["npc"] instance=ExtResource("8_e7s0q")]
 position = Vector2(144, 96)
 
 [node name="NPC_dm" parent="GameWorld/NPCContainer" parent_id_path=PackedInt32Array(1410708023, 30440007) index="1" unique_id=413997773 instance=ExtResource("9_sanvn")]
@@ -210,10 +211,16 @@ dialogue_file = "res://_FINAL_LEVELS/week 2/JSON/W2_4-DA1.json"
 polygon = PackedVector2Array(-12, -23, -12, 33, 12, 33, 20, 25, 20, -15, 21, -15, 21, 25, 13, 34, -13, 34, -13, -24, 17, -24, 17, -23)
 
 [node name="DialogueArea2" parent="GameWorld/AreaContainer" parent_id_path=PackedInt32Array(1410708023, 41382741) index="1" unique_id=1589113258 instance=ExtResource("11_yufbp")]
-position = Vector2(96, 112)
+position = Vector2(96, 121)
+dialogue_file = "res://_FINAL_LEVELS/week 2/JSON/W2_4-DA2.json"
+interact_mode = "talk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GameWorld/AreaContainer/DialogueArea2" unique_id=494439690]
+position = Vector2(0, -9)
 shape = SubResource("RectangleShape2D_yufbp")
+
+[node name="CameraMarker" parent="GameWorld/MarkerContainer" parent_id_path=PackedInt32Array(1410708023, 1204007097) index="0" unique_id=1282981573 instance=ExtResource("12_e87ha")]
+position = Vector2(176, 136)
 
 [node name="Player" parent="GameWorld" unique_id=1674835234 instance=ExtResource("8_7ubf1")]
 position = Vector2(216, 192)

@@ -23,7 +23,7 @@
 size = Vector2(24, 11)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t0giv"]
-size = Vector2(18, 18)
+size = Vector2(18, 14)
 
 [node name="CampusCafeteria" type="Node2D" unique_id=762134968 node_paths=PackedStringArray("free_on_start") groups=["game_level"]]
 y_sort_enabled = true
@@ -291,7 +291,7 @@ task_id = "w1_3"
 task_type = 1
 
 [node name="AreaBoundary" parent="TaskController" index="0" unique_id=1037100174]
-position = Vector2(5, 2)
+position = Vector2(5, -10)
 tile_map_data = PackedByteArray("AAAFAAQAAAADAAAAAAAFAAUAAAADAAIAAAAEAAUAAAABAAIAAAAEAAQAAAABAAAAAAA=")
 
 [node name="TargetArea" parent="TaskController" unique_id=1782192655 instance=ExtResource("16_4rb1a")]
@@ -299,7 +299,7 @@ position = Vector2(85, 62)
 object_persistence = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TaskController/TargetArea" unique_id=325632520]
-position = Vector2(0, 20)
+position = Vector2(0, 18)
 shape = SubResource("RectangleShape2D_t0giv")
 
 [connection signal="task_complete" from="TaskController" to="." method="_on_task_controller_task_complete"]

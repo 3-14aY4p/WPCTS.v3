@@ -6,8 +6,8 @@ extends Node
 @onready var animation_player: AnimationPlayer = $TransitionHandler/AnimationPlayer
 
 # SAVE VARIABLES
-var current_week: int = 2
-var current_scene_index: int = 10
+var current_week: int = 1
+var current_scene_index: int = 0
 # ---
 var task_completed: Array = []
 var task_failed: Array = []
@@ -43,7 +43,8 @@ var scene_data: Dictionary = {
 		10: "uid://derdp5wh82xma",	# dorm room
 	},
 	3: {
-		0: "",
+		0: "uid://el4o3xwgsscf",
+		1: "uid://bm5fvq8ow8c4p",
 	},
 	4: {
 		0: "", 

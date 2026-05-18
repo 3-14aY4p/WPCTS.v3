@@ -1,0 +1,33 @@
+{
+	"0": {
+		"zoom": [6, 6],
+		"focus": "camera_marker",
+		"index": 1,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "Alright t-that should be good enough.",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "Let's go check on them downstairs.",
+		
+		"next": "END"
+	},
+	"END": {
+		"node": "/root/GameController",
+		"func": "fade_to_next_scene",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": ""
+	},
+}

@@ -1,0 +1,132 @@
+{
+	"0": {
+		"zoom": [6, 6],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "[shake]* Grunt *",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Perry..?",
+		
+		"next": "1.5"
+	},
+	"1.5": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "( He's the kid living to the room next to mine? )",
+		
+		"next": "2"
+	},
+	"2": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "O-oh, Colin.",
+		
+		"next": "3"
+	},
+	"3": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "What are you doing with those boxes?",
+		
+		"next": "4"
+	},
+	"4": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "T-the last batch of materials needed for the booth arrived.",
+		
+		"next": "5"
+	},
+	"5": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "So now we need to get t-these ones to school...",
+		
+		"next": "6"
+	},
+	"6": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Ohhh, I see...",
+		
+		"next": "7"
+	},
+	"7": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "We can't just s-shove these around either as they're quite fragile...",
+		
+		"next": "8"
+	},
+	"8": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "( Oopsies... )",
+		
+		"next": "9"
+	},
+	"9": {
+		"zoom": [],
+		"focus": "camera_marker",
+		"index": 0,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "T-think you can help me carry these down the stairs?",
+		
+		"next": "END"
+	},
+	"END": {
+		"node": "/root/GameController",
+		"func": "start_level_task",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": ""
+	},
+}
