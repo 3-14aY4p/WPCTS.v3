@@ -1,0 +1,55 @@
+{
+	"0": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Oh, Perry.",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "Oh uhm... you took longer than usual.",
+		
+		"next": "2"
+	},
+	"2": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "You were waiting?",
+		
+		"next": "3"
+	},
+	"3": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "I was thinking w-we could return to the dorms together?",
+		
+		"next": "END"
+	},
+	"END": {
+		"node": "/root/GameController",
+		"func": "fade_to_next_scene",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": ""
+	},
+}

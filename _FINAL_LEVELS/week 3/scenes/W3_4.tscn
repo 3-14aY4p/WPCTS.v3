@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://bbimlp6wqqocu"]
+[gd_scene format=4 uid="uid://cvol3xfbo5mcc"]
 
 [ext_resource type="Script" uid="uid://bqj7qe6p744c8" path="res://Components/LevelComponents/_scripts/game_level.gd" id="1_3i8qc"]
 [ext_resource type="PackedScene" uid="uid://bi64xwfbb4jjq" path="res://Components/LevelComponents/user_interface.tscn" id="2_t5pgi"]
@@ -176,7 +176,7 @@ position = Vector2(192, 184)
 frame = 1
 
 [node name="NPC_dm" parent="GameWorld/NPCContainer" parent_id_path=PackedInt32Array(1410708023, 30440007) index="0" unique_id=744398630 groups=["npc"] instance=ExtResource("8_ekhwo")]
-position = Vector2(128, 118)
+position = Vector2(192, 150)
 random_turns = true
 
 [node name="Path2D" type="Path2D" parent="GameWorld/NPCContainer" parent_id_path=PackedInt32Array(1410708023, 30440007) index="1" unique_id=592574358]
@@ -208,7 +208,7 @@ position = Vector2(96, 150)
 position = Vector2(160, 150)
 
 [node name="NPC5" parent="GameWorld/NPCContainer" parent_id_path=PackedInt32Array(1410708023, 30440007) index="6" unique_id=1134733361 instance=ExtResource("10_hkjon")]
-position = Vector2(192, 150)
+position = Vector2(128, 118)
 
 [node name="NPC6" parent="GameWorld/NPCContainer" parent_id_path=PackedInt32Array(1410708023, 30440007) index="7" unique_id=1282855640 instance=ExtResource("10_hkjon")]
 position = Vector2(96, 182)

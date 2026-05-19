@@ -1,0 +1,187 @@
+{
+	"0": {
+		"zoom": [],
+		"focus": "npc",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "What did you notice?",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "It pushes back.",
+		
+		"next": "2"
+	},
+	"2": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Well,",
+		
+		"next": "3"
+	},
+	"3": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Not literally.",
+		
+		"next": "4"
+	},
+	"4": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "But, you can feel it.",
+		
+		"next": "5"
+	},
+	"5": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Exactly.",
+		
+		"next": "6"
+	},
+	"6": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Forces always occur in pairs.",
+		
+		"next": "7"
+	},
+	"7": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "When you exert force on an object, the object exerts force back onto you.",
+		
+		"next": "8"
+	},
+	"8": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "That is the reason why we can walk around as we do.",
+		
+		"next": "9"
+	},
+	"9": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "The ground exerts force back onto us, fighting the force of gravity, enabling us to stand firmly no the ground.",
+		
+		"next": "10"
+	},
+	"10": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Rather than fall through to the inner layers of the Earth.",
+		
+		"next": "11"
+	},
+	"11": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "...",
+		
+		"next": "11.5"
+	},
+	"11.5": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "You're improving, Mr. Colin.",
+		
+		"next": "12"
+	},
+	"12": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "That sounded dangerously close to a compliment.",
+		
+		"next": "13"
+	},
+	"13": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Do [font size=22]NOT[/font] get used to it.",
+		
+		"next": "14"
+	},
+	"14": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Anyway, let's continue...",
+		
+		"next": "END"
+	},
+	"END": {
+		"node": "/root/GameController",
+		"func": "fade_to_next_level",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": ""
+	},
+}
