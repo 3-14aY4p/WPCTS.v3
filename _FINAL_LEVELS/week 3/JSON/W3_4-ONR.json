@@ -1,0 +1,66 @@
+{
+	"0": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "... Mr. Colin",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [6, 6],
+		"focus": "player",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "You're early.",
+		
+		"next": "2"
+	},
+	"2": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "I'm just as disturbed as you are.",
+		
+		"next": "3"
+	},
+	"3": {
+		"zoom": [],
+		"focus": "npc",
+		"index": 1,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "Well anyway, get your pen and papers out.",
+		
+		"next": "4"
+	},
+	"4": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Prof. Candice",
+		"anim": "pf",
+		"text": "We'll be having a our quiz regarding last week's topic.",
+		
+		"next": "END"
+	},
+	"END": {
+		"node": "/root/GameController",
+		"func": "fade_to_next_scene",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": ""
+	},
+}

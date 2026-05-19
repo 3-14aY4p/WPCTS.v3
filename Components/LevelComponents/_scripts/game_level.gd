@@ -1,11 +1,15 @@
 class_name GameLevel extends Node2D
 
 
+@onready var camera: CustomCamera = get_tree().get_first_node_in_group("camera")
 @onready var task_controller: TaskController = $TaskController
 
 @onready var player: Player = get_tree().get_first_node_in_group("player")
 @onready var exit_points: Array = get_tree().get_nodes_in_group("exit_point")
 @onready var objects: Array = get_tree().get_nodes_in_group("dynamic_object")
+
+@export var initial_camera_focus: Node2D = null
+@export_range(0.0, 100.0, 0.5) var wait_time: float = 2
 
 @export_file("*.json") var onready_dialogue
 @export_enum("box", "popup") var onready_dialogue_type = "box"
@@ -38,14 +42,18 @@ class_name GameLevel extends Node2D
 func _ready() -> void:
 	if player:
 		player.state_machine.change_state("playerdisabled")
-	
+		
+	if initial_camera_focus == null:
+		camera.target = player
+	else: camera.target = initial_camera_focus
+		
 	for object: DynamicObject in objects:
 		object.disabled = true
 		
 	var timer: Timer = Timer.new()
 	add_child(timer)
 	timer.autostart = false
-	timer.start(2)
+	timer.start(wait_time)
 
 	if onready_dialogue:
 		if onready_dialogue_type == "box":

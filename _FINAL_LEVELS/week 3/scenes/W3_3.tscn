@@ -14,10 +14,12 @@
 [ext_resource type="PackedScene" uid="uid://3om0cgx1mkfr" path="res://Components/LevelComponents/task_controller.tscn" id="10_i8ubv"]
 [ext_resource type="PackedScene" uid="uid://elbnp47bsh7e" path="res://Entities/DynamicObjects/small_box.tscn" id="11_1lemg"]
 [ext_resource type="PackedScene" uid="uid://bic7qb4kocv0" path="res://Entities/Characters/npc_dm.tscn" id="12_q0qkc"]
+[ext_resource type="PackedScene" uid="uid://dco1t2yercbwa" path="res://Entities/Characters/npc_mt.tscn" id="13_3v3wb"]
 
 [node name="DormLobby" type="Node2D" unique_id=2071895273 groups=["game_level"]]
 y_sort_enabled = true
 script = ExtResource("1_atvf1")
+onready_dialogue = "res://_FINAL_LEVELS/week 3/JSON/W3_3-ONR.json"
 
 [node name="UserInterface" parent="." unique_id=1485922269 instance=ExtResource("2_kgbcn")]
 
@@ -86,14 +88,17 @@ position = Vector2(181, 87)
 [node name="SmallBox2" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="4" unique_id=556631990 instance=ExtResource("11_1lemg")]
 position = Vector2(232, 82)
 
-[node name="NPC_dm" parent="GameWorld/NPCContainer" parent_id_path=PackedInt32Array(1410708023, 30440007) index="0" unique_id=744398630 instance=ExtResource("12_q0qkc")]
-position = Vector2(217, 87)
+[node name="NPC_dm" parent="GameWorld/NPCContainer" parent_id_path=PackedInt32Array(1410708023, 30440007) index="0" unique_id=744398630 groups=["npc"] instance=ExtResource("12_q0qkc")]
+position = Vector2(223, 97)
 
 [node name="AnimatedSprite2D" parent="GameWorld/NPCContainer/NPC_dm" index="0" unique_id=2028275097]
 flip_h = true
 
+[node name="NPC_mt" parent="GameWorld/NPCContainer" parent_id_path=PackedInt32Array(1410708023, 30440007) index="1" unique_id=255528619 groups=["npc"] instance=ExtResource("13_3v3wb")]
+position = Vector2(168, 128)
+
 [node name="Player" parent="GameWorld" unique_id=1674835234 instance=ExtResource("9_5esa6")]
-position = Vector2(200, 92)
+position = Vector2(208, 72)
 
 [node name="TaskController" parent="." unique_id=673560431 instance=ExtResource("10_i8ubv")]
 

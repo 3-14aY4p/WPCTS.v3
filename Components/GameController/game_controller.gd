@@ -21,11 +21,11 @@ var scene_data: Dictionary = {
 	1: {
 		0: "uid://ohebakx3iuxd",
 		1: "uid://c83fq8xypv83j",	# dorm room
-		2: "uid://c088a6oelxkjm",	# dorm hallway
-		3: "uid://xpr6vr8kf3y7",	# cafeteria
+		2: "uid://c088a6oelxkjm",	# dorm hallway	T
+		3: "uid://xpr6vr8kf3y7",	# cafeteria		T
 		4: "uid://ib73g6g2kyjb",	# classroom
 		5: "",	# assessment
-		6: "uid://bsnkpc0bsdxs5",	# classroom
+		6: "uid://bsnkpc0bsdxs5",	# classroom		T
 		7: "uid://d0h7rrufyampu", 	# classroom
 		8: "uid://e64rtobwbf6n", 	# dorm room
 	},
@@ -33,18 +33,23 @@ var scene_data: Dictionary = {
 		0: "uid://b5og3whrcafos",
 		1: "uid://ck3fdh1eo2y7x",	# dorm room
 		2: "uid://3cgxv5supjcu",	# dorm hallway
-		3: "uid://vl35s160bwen",	# dorm lobby
+		3: "uid://vl35s160bwen",	# dorm lobby	T
 		4: "uid://c7g566bi0jrsn",	# classroom
 		5: "",	# assessment
-		6: "uid://bgo4chu11mvpl",	# classroom
+		6: "uid://bgo4chu11mvpl",	# classroom		T
 		7: "uid://t76u0pwrytqd",	# classroom
-		8: "uid://cstvspqyvvil2",	# library
-		9: "uid://bmrir1f6vkvo2",	# library
+		8: "uid://cstvspqyvvil2",	# library		T
+		9: "uid://bmrir1f6vkvo2",	# library		T
 		10: "uid://derdp5wh82xma",	# dorm room
 	},
 	3: {
 		0: "uid://el4o3xwgsscf",
-		1: "uid://bm5fvq8ow8c4p",
+		1: "uid://bm5fvq8ow8c4p",	# dorm room
+		2: "uid://dhslx0vteq5gu",	# dorm hallway	T
+		3: "uid://ovp3csejegeo",	# dorm lobby
+		4: "uid://bbimlp6wqqocu",	# classroom
+		5: "",	# assessment
+		6: "",	# classroom
 	},
 	4: {
 		0: "", 

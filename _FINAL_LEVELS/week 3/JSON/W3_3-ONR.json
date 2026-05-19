@@ -1,0 +1,110 @@
+{
+	"0": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Phews... we're finally done.",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "Now we just have to g-get these to school...",
+		
+		"next": "2"
+	},
+	"2": {
+		"zoom": [3, 3],
+		"focus": "npc",
+		"index": 1,
+		
+		"name": "Ms. Barbara",
+		"anim": "mt",
+		"text": "My, oh my...",
+		
+		"next": "3"
+	},
+	"3": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Ms. Barbara",
+		"anim": "mt",
+		"text": "You two look exhausted!",
+		
+		"next": "4"
+	},
+	"4": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Ms. Barbara",
+		"anim": "mt",
+		"text": "It's new seeing you both working together.",
+		
+		"next": "5"
+	},
+	"5": {
+		"zoom": [3, 3],
+		"focus": "player",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Be more surprised I woke up early!",
+		
+		"next": "6"
+	},
+	"6": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Oh, right! Class!",
+		
+		"next": "7"
+	},
+	"7": {
+		"zoom": [3, 3],
+		"focus": "npc",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Perry, let's go!",
+		
+		"next": "8"
+	},
+	"8": {
+		"zoom": [3, 3],
+		"focus": "npc",
+		"index": 0,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "Y-yes, let's!",
+		
+		"next": "END"
+	},
+	"END": {
+		"node": "/root/GameController",
+		"func": "fade_to_next_scene",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": ""
+	},
+}

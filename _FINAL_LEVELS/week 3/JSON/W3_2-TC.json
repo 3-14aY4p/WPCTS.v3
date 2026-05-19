@@ -6,7 +6,7 @@
 		
 		"name": "Perry",
 		"anim": "dm",
-		"text": "Alright t-that should be good enough.",
+		"text": "J-just a few more left.",
 		
 		"next": "1"
 	},
@@ -15,9 +15,9 @@
 		"focus": "",
 		"index": 0,
 		
-		"name": "Perry",
-		"anim": "dm",
-		"text": "Let's go check on them downstairs.",
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Alright, let's get this done with.",
 		
 		"next": "END"
 	},
