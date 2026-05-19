@@ -1,0 +1,277 @@
+[gd_scene format=4 uid="uid://dmgakbo0uno24"]
+
+[ext_resource type="Script" uid="uid://bqj7qe6p744c8" path="res://Components/LevelComponents/_scripts/game_level.gd" id="1_a7pq2"]
+[ext_resource type="PackedScene" uid="uid://bi64xwfbb4jjq" path="res://Components/LevelComponents/user_interface.tscn" id="2_xovjt"]
+[ext_resource type="PackedScene" uid="uid://16qn3y3y8hs3" path="res://Components/LevelComponents/game_world.tscn" id="3_555yv"]
+[ext_resource type="PackedScene" uid="uid://prmvfl2foyy7" path="res://Components/CameraManager/camera_zone.tscn" id="4_dsgff"]
+[ext_resource type="PackedScene" uid="uid://cm4j648a2rb77" path="res://Entities/StaticObjects/Decoration/long_food_aisle.tscn" id="5_day5l"]
+[ext_resource type="PackedScene" uid="uid://uqxjdn0nhvqi" path="res://Entities/StaticObjects/Decoration/kitchen_sink.tscn" id="6_h5pod"]
+[ext_resource type="PackedScene" uid="uid://cffsrgjxvp2fl" path="res://Entities/StaticObjects/Decoration/stove_top.tscn" id="7_niiwy"]
+[ext_resource type="PackedScene" uid="uid://cmco1mbm5qjta" path="res://Entities/DynamicObjects/trashbin.tscn" id="9_5s2yg"]
+[ext_resource type="PackedScene" uid="uid://cq5nry25y5yvx" path="res://Entities/DynamicObjects/large_box.tscn" id="9_fyc11"]
+[ext_resource type="PackedScene" uid="uid://bic7qb4kocv0" path="res://Entities/Characters/npc_dm.tscn" id="9_lld6e"]
+[ext_resource type="PackedScene" uid="uid://dexfk8n4vtikx" path="res://Entities/Characters/npc.tscn" id="10_h81wf"]
+[ext_resource type="PackedScene" uid="uid://bgdacbfpjdyxs" path="res://Entities/DynamicObjects/medium_box.tscn" id="10_xu4a4"]
+[ext_resource type="PackedScene" uid="uid://elbnp47bsh7e" path="res://Entities/DynamicObjects/small_box.tscn" id="11_vublt"]
+[ext_resource type="PackedScene" uid="uid://c0twyucy5xnqo" path="res://Entities/Characters/Player/player.tscn" id="11_w2bfx"]
+[ext_resource type="PackedScene" uid="uid://d11hpb8uv2jhd" path="res://Components/LevelComponents/target_area.tscn" id="12_2ypbm"]
+[ext_resource type="PackedScene" uid="uid://3om0cgx1mkfr" path="res://Components/LevelComponents/task_controller.tscn" id="12_ofeyr"]
+[ext_resource type="PackedScene" uid="uid://st0yi2xk2v4h" path="res://Entities/DynamicObjects/filled_cart.tscn" id="17_54yk8"]
+[ext_resource type="PackedScene" uid="uid://d64f4is78q7e" path="res://Entities/DynamicObjects/chair_h.tscn" id="18_ov85s"]
+[ext_resource type="PackedScene" uid="uid://ihtnil7as3dc" path="res://Entities/DynamicObjects/book.tscn" id="19_cn7e2"]
+
+[sub_resource type="Curve2D" id="Curve2D_t0t2k"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 248, 88, 0, 0, 0, 0, 248, 152, 0, 0, 0, 0, 256, 152, 0, 0, 0, 0, 256, 88, 0, 0, 0, 0, 248, 88)
+}
+point_count = 5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h81wf"]
+size = Vector2(50, 34)
+
+[node name="CampusCafeteria" type="Node2D" unique_id=762134968 groups=["game_level"]]
+y_sort_enabled = true
+script = ExtResource("1_a7pq2")
+onready_dialogue = "res://_FINAL_LEVELS/week 4/JSON/W4_7-ONR.json"
+on_complete_dialogue = "res://_FINAL_LEVELS/week 4/JSON/W4_7-TC.json"
+on_fail_dialogue = "res://_FINAL_LEVELS/week 4/JSON/W4_7-TC.json"
+
+[node name="UserInterface" parent="." unique_id=1485922269 instance=ExtResource("2_xovjt")]
+
+[node name="GameWorld" parent="." unique_id=1410708023 instance=ExtResource("3_555yv")]
+
+[node name="CameraZone" parent="GameWorld/CameraZoneContainer" parent_id_path=PackedInt32Array(1410708023, 749433630) index="0" unique_id=2111838270 instance=ExtResource("4_dsgff")]
+camera_zoom = Vector2(3, 3)
+
+[node name="Jurisdiction" parent="GameWorld/CameraZoneContainer/CameraZone" index="0" unique_id=609086849]
+polygon = PackedVector2Array(120, 48, 120, 160, 64, 160, 64, 208, 224, 208, 224, 176, 256, 176, 256, 208, 312, 208, 312, 48, 176, 48, 176, 80, 144, 80, 144, 48)
+
+[node name="CameraZone2" parent="GameWorld/CameraZoneContainer" parent_id_path=PackedInt32Array(1410708023, 749433630) index="1" unique_id=1042068945 instance=ExtResource("4_dsgff")]
+camera_zoom = Vector2(6, 6)
+
+[node name="Jurisdiction" parent="GameWorld/CameraZoneContainer/CameraZone2" index="0" unique_id=609086849]
+polygon = PackedVector2Array(176, 48, 176, 80, 144, 80, 144, 40, 312, 40, 312, 208, 224, 208, 224, 176, 256, 176, 256, 200, 304, 200, 304, 48)
+
+[node name="CameraZone3" parent="GameWorld/CameraZoneContainer" parent_id_path=PackedInt32Array(1410708023, 749433630) index="2" unique_id=1702457583 instance=ExtResource("4_dsgff")]
+camera_zoom = Vector2(5, 5)
+
+[node name="Jurisdiction" parent="GameWorld/CameraZoneContainer/CameraZone3" index="0" unique_id=609086849]
+polygon = PackedVector2Array(64, 48, 64, 160, 120, 160, 120, 48)
+
+[node name="Background" parent="GameWorld/TileMapContainer" parent_id_path=PackedInt32Array(1410708023, 695135423) index="0" unique_id=1231930454]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAMAAAABAAEAAAAAAAMAAAACAAIAAAAAAAMAAAADAAIAAAAAAAMAAAAEAAMAAAAAAAMAAAAFAAMAAAAAAAMAAAAGAAMAAAAAAAMAAAAGAAQAAAAAAAMAAAAHAAQAAAAAAAMAAAAIAAUAAAAAAAMAAAAJAAUAAAAAAAMAAAAJAAYAAAAAAAMAAAAKAAYAAAAAAAMAAAAKAAcAAAAAAAMAAAALAAcAAAAAAAMAAAALAAgAAAAAAAMAAAAMAAgAAAAAAAMAAAAMAAkAAAAAAAMAAAANAAkAAAAAAAMAAAAAAAEAAAAAAAMAAAAAAAIAAAAAAAMAAAAAAAMAAAAAAAMAAAAAAAQAAAAAAAMAAAAAAAUAAAAAAAMAAAAAAAYAAAAAAAMAAAAAAAcAAAAAAAMAAAAAAAgAAAAAAAMAAAAAAAkAAAAAAAMAAAAAAAoAAAAAAAMAAAAAAAsAAAAAAAMAAAAAAAwAAAAAAAMAAAAAAA0AAAAAAAMAAAAAAA4AAAAAAAMAAAABAAAAAAAAAAMAAAABAAIAAAAAAAMAAAABAAMAAAAAAAMAAAABAAQAAAAAAAMAAAABAAUAAAAAAAMAAAABAAYAAAAAAAMAAAABAAcAAAAAAAMAAAABAAgAAAAAAAMAAAABAAkAAAAAAAMAAAABAAoAAAAAAAMAAAABAAsAAAAAAAMAAAABAAwAAAAAAAMAAAABAA0AAAAAAAMAAAABAA4AAAAAAAMAAAACAAAAAAAAAAMAAAACAAEAAAAAAAMAAAACAAMAAAAAAAMAAAACAAQAAAAAAAMAAAACAAUAAAAAAAMAAAACAAYAAAAAAAMAAAACAAcAAAAAAAMAAAACAAgAAAAAAAMAAAACAAkAAAAAAAMAAAACAAoAAAAAAAMAAAACAAsAAAAAAAMAAAACAAwAAAAAAAMAAAACAA0AAAAAAAMAAAACAA4AAAAAAAMAAAADAAAAAAAAAAMAAAADAAEAAAAAAAMAAAADAAMAAAAAAAMAAAADAAQAAAAAAAMAAAADAAUAAAAAAAMAAAADAAYAAAAAAAMAAAADAAcAAAAAAAMAAAADAAgAAAAAAAMAAAADAAkAAAAAAAMAAAADAAoAAAAAAAMAAAADAAsAAAAAAAMAAAADAAwAAAAAAAMAAAADAA0AAAAAAAMAAAADAA4AAAAAAAMAAAAEAAAAAAAAAAMAAAAEAAEAAAAAAAMAAAAEAAIAAAAAAAMAAAAEAAQAAAAAAAMAAAAEAAUAAAAAAAMAAAAEAAYAAAAAAAMAAAAEAAcAAAAAAAMAAAAEAAgAAAAAAAMAAAAEAAkAAAAAAAMAAAAEAAoAAAAAAAMAAAAEAAsAAAAAAAMAAAAEAAwAAAAAAAMAAAAEAA0AAAAAAAMAAAAEAA4AAAAAAAMAAAAFAAAAAAAAAAMAAAAFAAEAAAAAAAMAAAAFAAIAAAAAAAMAAAAFAAQAAAAAAAMAAAAFAAUAAAAAAAMAAAAFAAYAAAAAAAMAAAAFAAcAAAAAAAMAAAAFAAgAAAAAAAMAAAAFAAkAAAAAAAMAAAAFAAoAAAAAAAMAAAAFAAsAAAAAAAMAAAAFAAwAAAAAAAMAAAAFAA0AAAAAAAMAAAAFAA4AAAAAAAMAAAAGAAAAAAAAAAMAAAAGAAEAAAAAAAMAAAAGAAIAAAAAAAMAAAAGAAUAAAAAAAMAAAAGAAYAAAAAAAMAAAAGAAcAAAAAAAMAAAAGAAgAAAAAAAMAAAAGAAkAAAAAAAMAAAAGAAoAAAAAAAMAAAAGAAsAAAAAAAMAAAAGAAwAAAAAAAMAAAAGAA0AAAAAAAMAAAAGAA4AAAAAAAMAAAAHAAAAAAAAAAMAAAAHAAEAAAAAAAMAAAAHAAIAAAAAAAMAAAAHAAMAAAAAAAMAAAAHAAUAAAAAAAMAAAAHAAYAAAAAAAMAAAAHAAcAAAAAAAMAAAAHAAgAAAAAAAMAAAAHAAkAAAAAAAMAAAAHAAoAAAAAAAMAAAAHAAsAAAAAAAMAAAAHAAwAAAAAAAMAAAAHAA0AAAAAAAMAAAAHAA4AAAAAAAMAAAAIAAAAAAAAAAMAAAAIAAEAAAAAAAMAAAAIAAIAAAAAAAMAAAAIAAMAAAAAAAMAAAAIAAQAAAAAAAMAAAAIAAYAAAAAAAMAAAAIAAcAAAAAAAMAAAAIAAgAAAAAAAMAAAAIAAkAAAAAAAMAAAAIAAoAAAAAAAMAAAAIAAsAAAAAAAMAAAAIAAwAAAAAAAMAAAAIAA0AAAAAAAMAAAAIAA4AAAAAAAMAAAAJAAAAAAAAAAMAAAAJAAEAAAAAAAMAAAAJAAIAAAAAAAMAAAAJAAMAAAAAAAMAAAAJAAQAAAAAAAMAAAAJAAcAAAAAAAMAAAAJAAgAAAAAAAMAAAAJAAkAAAAAAAMAAAAJAAoAAAAAAAMAAAAJAAsAAAAAAAMAAAAJAAwAAAAAAAMAAAAJAA0AAAAAAAMAAAAJAA4AAAAAAAMAAAAKAAAAAAAAAAMAAAAKAAEAAAAAAAMAAAAKAAIAAAAAAAMAAAAKAAMAAAAAAAMAAAAKAAQAAAAAAAMAAAAKAAUAAAAAAAMAAAAKAAgAAAAAAAMAAAAKAAkAAAAAAAMAAAAKAAoAAAAAAAMAAAAKAAsAAAAAAAMAAAAKAAwAAAAAAAMAAAAKAA0AAAAAAAMAAAAKAA4AAAAAAAMAAAALAAAAAAAAAAMAAAALAAEAAAAAAAMAAAALAAIAAAAAAAMAAAALAAMAAAAAAAMAAAALAAQAAAAAAAMAAAALAAUAAAAAAAMAAAALAAYAAAAAAAMAAAALAAkAAAAAAAMAAAALAAoAAAAAAAMAAAALAAsAAAAAAAMAAAALAAwAAAAAAAMAAAALAA0AAAAAAAMAAAALAA4AAAAAAAMAAAAMAAAAAAAAAAMAAAAMAAEAAAAAAAMAAAAMAAIAAAAAAAMAAAAMAAMAAAAAAAMAAAAMAAQAAAAAAAMAAAAMAAUAAAAAAAMAAAAMAAYAAAAAAAMAAAAMAAcAAAAAAAMAAAAMAAoAAAAAAAMAAAAMAAsAAAAAAAMAAAAMAAwAAAAAAAMAAAAMAA0AAAAAAAMAAAAMAA4AAAAAAAMAAAANAAAAAAAAAAMAAAANAAEAAAAAAAMAAAANAAIAAAAAAAMAAAANAAMAAAAAAAMAAAANAAQAAAAAAAMAAAANAAUAAAAAAAMAAAANAAYAAAAAAAMAAAANAAcAAAAAAAMAAAANAAgAAAAAAAMAAAANAAoAAAAAAAMAAAANAAsAAAAAAAMAAAANAAwAAAAAAAMAAAANAA0AAAAAAAMAAAANAA4AAAAAAAMAAAAOAAAAAAAAAAMAAAAOAAEAAAAAAAMAAAAOAAIAAAAAAAMAAAAOAAMAAAAAAAMAAAAOAAQAAAAAAAMAAAAOAAUAAAAAAAMAAAAOAAYAAAAAAAMAAAAOAAcAAAAAAAMAAAAOAAgAAAAAAAMAAAAOAAkAAAAAAAMAAAAOAAoAAAAAAAMAAAAOAAsAAAAAAAMAAAAOAAwAAAAAAAMAAAAOAA0AAAAAAAMAAAAOAA4AAAAAAAMAAAAPAAAAAAAAAAMAAAAPAAEAAAAAAAMAAAAPAAIAAAAAAAMAAAAPAAMAAAAAAAMAAAAPAAQAAAAAAAMAAAAPAAUAAAAAAAMAAAAPAAYAAAAAAAMAAAAPAAcAAAAAAAMAAAAPAAgAAAAAAAMAAAAPAAkAAAAAAAMAAAAPAAoAAAAAAAMAAAAPAAsAAAAAAAMAAAAPAAwAAAAAAAMAAAAPAA0AAAAAAAMAAAAPAA4AAAAAAAMAAAAQAAAAAAAAAAMAAAAQAAEAAAAAAAMAAAAQAAIAAAAAAAMAAAAQAAMAAAAAAAMAAAAQAAQAAAAAAAMAAAAQAAUAAAAAAAMAAAAQAAYAAAAAAAMAAAAQAAcAAAAAAAMAAAAQAAgAAAAAAAMAAAAQAAkAAAAAAAMAAAAQAAoAAAAAAAMAAAAQAAsAAAAAAAMAAAAQAAwAAAAAAAMAAAAQAA0AAAAAAAMAAAAQAA4AAAAAAAMAAAARAAAAAAAAAAMAAAARAAEAAAAAAAMAAAARAAIAAAAAAAMAAAARAAMAAAAAAAMAAAARAAQAAAAAAAMAAAARAAUAAAAAAAMAAAARAAYAAAAAAAMAAAARAAcAAAAAAAMAAAARAAgAAAAAAAMAAAARAAkAAAAAAAMAAAARAAoAAAAAAAMAAAARAAsAAAAAAAMAAAARAAwAAAAAAAMAAAARAA0AAAAAAAMAAAARAA4AAAAAAAMAAAASAAAAAAAAAAMAAAASAAEAAAAAAAMAAAASAAIAAAAAAAMAAAASAAMAAAAAAAMAAAASAAQAAAAAAAMAAAASAAUAAAAAAAMAAAASAAYAAAAAAAMAAAASAAcAAAAAAAMAAAASAAgAAAAAAAMAAAASAAkAAAAAAAMAAAASAAoAAAAAAAMAAAASAAsAAAAAAAMAAAASAAwAAAAAAAMAAAASAA0AAAAAAAMAAAASAA4AAAAAAAMAAAATAAAAAAAAAAMAAAATAAEAAAAAAAMAAAATAAIAAAAAAAMAAAATAAMAAAAAAAMAAAATAAQAAAAAAAMAAAATAAUAAAAAAAMAAAATAAYAAAAAAAMAAAATAAcAAAAAAAMAAAATAAgAAAAAAAMAAAATAAkAAAAAAAMAAAATAAoAAAAAAAMAAAATAAsAAAAAAAMAAAATAAwAAAAAAAMAAAATAA0AAAAAAAMAAAATAA4AAAAAAAMAAAAUAAAAAAAAAAMAAAAUAAEAAAAAAAMAAAAUAAIAAAAAAAMAAAAUAAMAAAAAAAMAAAAUAAQAAAAAAAMAAAAUAAUAAAAAAAMAAAAUAAYAAAAAAAMAAAAUAAcAAAAAAAMAAAAUAAgAAAAAAAMAAAAUAAkAAAAAAAMAAAAUAAoAAAAAAAMAAAAUAAsAAAAAAAMAAAAUAAwAAAAAAAMAAAAUAA0AAAAAAAMAAAAUAA4AAAAAAAMAAAAVAAAAAAAAAAMAAAAVAAEAAAAAAAMAAAAVAAIAAAAAAAMAAAAVAAMAAAAAAAMAAAAVAAQAAAAAAAMAAAAVAAUAAAAAAAMAAAAVAAYAAAAAAAMAAAAVAAcAAAAAAAMAAAAVAAgAAAAAAAMAAAAVAAkAAAAAAAMAAAAVAAoAAAAAAAMAAAAVAAsAAAAAAAMAAAAVAAwAAAAAAAMAAAAVAA0AAAAAAAMAAAAVAA4AAAAAAAMAAAAWAAAAAAAAAAMAAAAWAAEAAAAAAAMAAAAWAAIAAAAAAAMAAAAWAAMAAAAAAAMAAAAWAAQAAAAAAAMAAAAWAAUAAAAAAAMAAAAWAAYAAAAAAAMAAAAWAAcAAAAAAAMAAAAWAAgAAAAAAAMAAAAWAAkAAAAAAAMAAAAWAAoAAAAAAAMAAAAWAAsAAAAAAAMAAAAWAAwAAAAAAAMAAAAWAA0AAAAAAAMAAAAWAA4AAAAAAAMAAAA=")
+
+[node name="FloorBase" parent="GameWorld/TileMapContainer" parent_id_path=PackedInt32Array(1410708023, 695135423) index="1" unique_id=1255974423]
+tile_map_data = PackedByteArray("AAAEAAMAAAABAAMAAAAEAAQAAAABAAMAAAAEAAUAAAABAAMAAAAEAAYAAAABAAMAAAAEAAcAAAABAAMAAAAEAAgAAAABAAMAAAAEAAkAAAABAAMAAAAEAAoAAAABAAMAAAAEAAsAAAABAAMAAAAFAAMAAAABAAMAAAAFAAQAAAABAAMAAAAFAAUAAAABAAMAAAAFAAYAAAABAAMAAAAFAAcAAAABAAMAAAAFAAgAAAABAAMAAAAFAAkAAAABAAMAAAAFAAoAAAABAAMAAAAFAAsAAAABAAMAAAAGAAMAAAABAAMAAAAGAAQAAAABAAMAAAAGAAUAAAABAAMAAAAGAAYAAAABAAMAAAAGAAcAAAABAAMAAAAGAAgAAAABAAMAAAAGAAkAAAABAAMAAAAGAAoAAAABAAMAAAAGAAsAAAABAAMAAAAHAAMAAAABAAMAAAAHAAQAAAABAAMAAAAHAAUAAAABAAMAAAAHAAYAAAABAAMAAAAHAAcAAAABAAMAAAAHAAgAAAABAAMAAAAHAAkAAAABAAMAAAAHAAoAAAABAAMAAAAHAAsAAAABAAMAAAAIAAMAAAABAAMAAAAIAAQAAAABAAMAAAAIAAUAAAABAAMAAAAIAAYAAAABAAMAAAAIAAcAAAABAAMAAAAIAAgAAAABAAMAAAAIAAkAAAABAAMAAAAIAAoAAAABAAMAAAAIAAsAAAABAAMAAAAJAAMAAAABAAMAAAAJAAQAAAABAAMAAAAJAAUAAAABAAMAAAAJAAYAAAABAAMAAAAJAAcAAAABAAMAAAAJAAgAAAABAAMAAAAJAAkAAAABAAMAAAAJAAoAAAABAAMAAAAJAAsAAAABAAMAAAAKAAMAAAABAAMAAAAKAAQAAAABAAMAAAAKAAUAAAABAAMAAAAKAAYAAAABAAMAAAAKAAcAAAABAAMAAAAKAAgAAAABAAMAAAAKAAkAAAABAAMAAAAKAAoAAAABAAMAAAAKAAsAAAABAAMAAAALAAMAAAABAAMAAAALAAQAAAABAAMAAAALAAUAAAABAAMAAAALAAYAAAABAAMAAAALAAcAAAABAAMAAAALAAgAAAABAAMAAAALAAkAAAABAAMAAAALAAoAAAABAAMAAAALAAsAAAABAAMAAAAMAAMAAAABAAMAAAAMAAQAAAABAAMAAAAMAAUAAAABAAMAAAAMAAYAAAABAAMAAAAMAAcAAAABAAMAAAAMAAgAAAABAAMAAAAMAAkAAAABAAMAAAAMAAoAAAABAAMAAAAMAAsAAAABAAMAAAANAAMAAAABAAMAAAANAAQAAAABAAMAAAANAAUAAAABAAMAAAANAAYAAAABAAMAAAANAAcAAAABAAMAAAANAAgAAAABAAMAAAANAAkAAAABAAMAAAANAAoAAAABAAMAAAANAAsAAAABAAMAAAAOAAMAAAABAAMAAAAOAAQAAAABAAMAAAAOAAUAAAABAAMAAAAOAAYAAAABAAMAAAAOAAcAAAABAAMAAAAOAAgAAAABAAMAAAAOAAkAAAABAAMAAAAOAAoAAAABAAMAAAAOAAsAAAABAAMAAAAPAAMAAAABAAMAAAAPAAQAAAABAAMAAAAPAAUAAAABAAMAAAAPAAYAAAABAAMAAAAPAAcAAAABAAMAAAAPAAgAAAABAAMAAAAPAAkAAAABAAMAAAAPAAoAAAABAAMAAAAPAAsAAAABAAMAAAAQAAMAAAABAAMAAAAQAAQAAAABAAMAAAAQAAUAAAABAAMAAAAQAAYAAAABAAMAAAAQAAcAAAABAAMAAAAQAAgAAAABAAMAAAAQAAkAAAABAAMAAAAQAAoAAAABAAMAAAAQAAsAAAABAAMAAAARAAMAAAABAAMAAAARAAQAAAABAAMAAAARAAUAAAABAAMAAAARAAYAAAABAAMAAAARAAcAAAABAAMAAAARAAgAAAABAAMAAAARAAkAAAABAAMAAAARAAoAAAABAAMAAAARAAsAAAABAAMAAAASAAMAAAABAAMAAAASAAQAAAABAAMAAAASAAUAAAABAAMAAAASAAYAAAABAAMAAAASAAcAAAABAAMAAAASAAgAAAABAAMAAAASAAkAAAABAAMAAAASAAoAAAABAAMAAAASAAsAAAABAAMAAAAOAAwAAAABAAMAAAAPAAwAAAABAAMAAAA=")
+
+[node name="FloorOverlay" parent="GameWorld/TileMapContainer" parent_id_path=PackedInt32Array(1410708023, 695135423) index="2" unique_id=1749672302]
+tile_map_data = PackedByteArray("AAAEAAQAAAAFAAEAAAAFAAQAAAAFAAEAAAAGAAQAAAAAAAEAAAAHAAQAAAAFAAEAAAAIAAQAAAAFAAEAAAAJAAQAAAABAAEAAAAKAAQAAAACAAEAAAALAAQAAAAFAAEAAAAMAAQAAAAFAAEAAAANAAQAAAAFAAEAAAAOAAQAAAAFAAEAAAAPAAQAAAAFAAEAAAAQAAQAAAAFAAEAAAARAAQAAAAFAAEAAAASAAQAAAAFAAEAAAA=")
+
+[node name="RoomBase" parent="GameWorld/TileMapContainer" parent_id_path=PackedInt32Array(1410708023, 695135423) index="3" unique_id=489774172]
+tile_map_data = PackedByteArray("AAAEAAMAAAAFAAAAAAAFAAMAAAAFAAAAAAAGAAMAAAAAAAAAAAAHAAMAAAAFAAAAAAAIAAMAAAAFAAAAAAAJAAMAAAABAAAAAAAKAAMAAAACAAAAAAALAAMAAAAFAAAAAAAMAAMAAAAFAAAAAAANAAMAAAAFAAAAAAAOAAMAAAAFAAAAAAAPAAMAAAAFAAAAAAAQAAMAAAAFAAAAAAARAAMAAAAFAAAAAAASAAMAAAAFAAAAAAA=")
+
+[node name="RoomOverlay" parent="GameWorld/TileMapContainer" parent_id_path=PackedInt32Array(1410708023, 695135423) index="4" unique_id=2082319703]
+tile_map_data = PackedByteArray("AAAFAAMAAAAEAAEAAAAEAAMAAAABAAAAAAAMAAMAAAACAAAAAAANAAMAAAADAAAAAAAQAAMAAAACAAAAAAARAAMAAAADAAAAAAAIAAMAAAAAAAEAAAA=")
+
+[node name="Walls" parent="GameWorld/TileMapContainer" parent_id_path=PackedInt32Array(1410708023, 695135423) index="5" unique_id=597676183]
+tile_map_data = PackedByteArray("AAASAAwAAAABAAIAAAASAAsAAAABAAEAAAASAAoAAAABAAEAAAASAAkAAAABAAEAAAASAAgAAAABAAEAAAASAAcAAAABAAEAAAASAAYAAAABAAEAAAASAAUAAAABAAEAAAASAAQAAAABAAEAAAASAAMAAAABAAEAAAASAAIAAAABAAAAAAARAAwAAAABAAIAAAARAAsAAAABAAEAAAARAAoAAAABAAEAAAARAAkAAAABAAEAAAARAAgAAAABAAEAAAARAAcAAAABAAEAAAARAAYAAAABAAEAAAARAAUAAAABAAEAAAARAAQAAAABAAEAAAARAAMAAAABAAEAAAARAAIAAAABAAAAAAAQAAsAAAABAAEAAAAQAAoAAAABAAEAAAAQAAkAAAABAAEAAAAQAAgAAAABAAEAAAAQAAcAAAABAAEAAAAQAAYAAAABAAEAAAAQAAUAAAABAAEAAAAQAAQAAAABAAEAAAAQAAMAAAABAAEAAAAQAAIAAAABAAAAAAAPAAwAAAACAAMAAAAPAAsAAAABAAEAAAAPAAoAAAABAAEAAAAPAAkAAAABAAEAAAAPAAgAAAABAAEAAAAPAAcAAAABAAEAAAAPAAYAAAABAAEAAAAPAAUAAAABAAEAAAAPAAQAAAABAAEAAAAPAAMAAAABAAEAAAAPAAIAAAABAAAAAAAOAAwAAAABAAMAAAAOAAsAAAABAAEAAAAOAAoAAAABAAEAAAAOAAkAAAABAAEAAAAOAAgAAAABAAEAAAAOAAcAAAABAAEAAAAOAAYAAAABAAEAAAAOAAUAAAABAAEAAAAOAAQAAAABAAEAAAAOAAMAAAABAAEAAAAOAAIAAAABAAAAAAANAAwAAAABAAIAAAANAAsAAAABAAEAAAANAAoAAAABAAEAAAANAAkAAAABAAEAAAANAAgAAAABAAEAAAANAAcAAAABAAEAAAANAAYAAAABAAEAAAANAAUAAAABAAEAAAANAAQAAAABAAEAAAANAAMAAAABAAEAAAANAAIAAAABAAAAAAAMAAwAAAABAAIAAAAMAAsAAAABAAEAAAAMAAoAAAABAAEAAAAMAAkAAAABAAEAAAAMAAgAAAABAAEAAAAMAAcAAAABAAEAAAAMAAYAAAABAAEAAAAMAAUAAAABAAEAAAAMAAQAAAABAAEAAAAMAAMAAAABAAEAAAAMAAIAAAABAAAAAAALAAwAAAABAAIAAAALAAsAAAABAAEAAAALAAoAAAABAAEAAAALAAkAAAABAAEAAAALAAgAAAABAAEAAAALAAcAAAABAAEAAAALAAYAAAABAAEAAAALAAUAAAABAAEAAAALAAQAAAABAAEAAAALAAMAAAABAAEAAAALAAIAAAABAAAAAAAKAAwAAAABAAIAAAAKAAsAAAABAAEAAAAKAAoAAAABAAEAAAAKAAkAAAABAAEAAAAKAAgAAAABAAEAAAAKAAcAAAABAAEAAAAKAAYAAAABAAEAAAAKAAUAAAABAAEAAAAKAAQAAAABAAEAAAAKAAMAAAABAAEAAAAKAAIAAAABAAAAAAAJAAwAAAABAAIAAAAJAAsAAAABAAEAAAAJAAoAAAABAAEAAAAJAAkAAAABAAEAAAAJAAgAAAABAAEAAAAJAAcAAAABAAEAAAAJAAYAAAABAAEAAAAJAAUAAAABAAEAAAAJAAQAAAABAAEAAAAJAAMAAAABAAEAAAAJAAIAAAABAAAAAAAIAAwAAAABAAIAAAAIAAsAAAABAAEAAAAIAAoAAAABAAEAAAAIAAkAAAABAAEAAAAIAAgAAAABAAEAAAAIAAcAAAABAAEAAAAIAAYAAAABAAEAAAAIAAUAAAABAAEAAAAIAAQAAAABAAEAAAAIAAMAAAABAAEAAAAIAAIAAAABAAAAAAAHAAwAAAABAAIAAAAHAAsAAAABAAEAAAAHAAoAAAABAAEAAAAHAAkAAAABAAEAAAAHAAgAAAABAAEAAAAHAAcAAAABAAEAAAAHAAYAAAABAAEAAAAHAAUAAAABAAEAAAAHAAQAAAABAAEAAAAHAAMAAAABAAEAAAAHAAIAAAABAAAAAAAGAAwAAAABAAIAAAAGAAsAAAABAAEAAAAGAAoAAAABAAEAAAAGAAkAAAABAAEAAAAGAAgAAAABAAEAAAAGAAcAAAABAAEAAAAGAAYAAAABAAEAAAAGAAUAAAABAAEAAAAGAAQAAAABAAEAAAAGAAMAAAABAAEAAAAGAAIAAAABAAAAAAAFAAwAAAABAAIAAAAFAAsAAAABAAEAAAAFAAoAAAABAAEAAAAFAAkAAAABAAEAAAAFAAgAAAABAAEAAAAFAAcAAAABAAEAAAAFAAYAAAABAAEAAAAFAAUAAAABAAEAAAAFAAQAAAABAAEAAAAFAAMAAAABAAEAAAAFAAIAAAABAAAAAAAEAAwAAAABAAIAAAAEAAsAAAABAAEAAAAEAAoAAAABAAEAAAAEAAkAAAABAAEAAAAEAAgAAAABAAEAAAAEAAcAAAABAAEAAAAEAAYAAAABAAEAAAAEAAUAAAABAAEAAAAEAAQAAAABAAEAAAAEAAMAAAABAAEAAAAEAAIAAAABAAAAAAADAAwAAAAAAAIAAAADAAsAAAAAAAEAAAADAAoAAAAAAAEAAAADAAkAAAAAAAEAAAADAAgAAAAAAAEAAAADAAcAAAAAAAEAAAADAAYAAAAAAAEAAAADAAUAAAAAAAEAAAADAAQAAAAAAAEAAAADAAMAAAAAAAEAAAADAAIAAAAAAAAAAAATAAIAAAACAAAAAAATAAwAAAACAAIAAAATAAsAAAACAAEAAAATAAoAAAACAAEAAAATAAkAAAACAAEAAAATAAgAAAACAAEAAAATAAcAAAACAAEAAAATAAYAAAACAAEAAAATAAUAAAACAAEAAAATAAQAAAACAAEAAAATAAMAAAACAAEAAAAQAAwAAAABAAIAAAA=")
+
+[node name="LongFoodAisle" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="0" unique_id=37285916 instance=ExtResource("5_day5l")]
+position = Vector2(103.99999, 165)
+
+[node name="KitchenSink" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="1" unique_id=1833767795 instance=ExtResource("6_h5pod")]
+position = Vector2(77.99999, 74)
+
+[node name="StoveTop" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="2" unique_id=1301172030 instance=ExtResource("7_niiwy")]
+position = Vector2(70, 115)
+rotation = 0.00070062216
+
+[node name="Trashbin" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="0" unique_id=1848538655 instance=ExtResource("9_5s2yg")]
+position = Vector2(69, 122)
+
+[node name="LargeBox" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="1" unique_id=50202933 groups=["pickable_object", "shoveable_object"] instance=ExtResource("9_fyc11")]
+position = Vector2(264, 94)
+
+[node name="LargeBox6" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="2" unique_id=515188315 groups=["pickable_object", "shoveable_object"] instance=ExtResource("9_fyc11")]
+position = Vector2(179, 79)
+
+[node name="LargeBox7" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="3" unique_id=2141364434 groups=["pickable_object", "shoveable_object"] instance=ExtResource("9_fyc11")]
+position = Vector2(206, 73)
+
+[node name="LargeBox2" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="4" unique_id=359924871 groups=["pickable_object", "shoveable_object"] instance=ExtResource("9_fyc11")]
+position = Vector2(242, 83)
+
+[node name="LargeBox4" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="5" unique_id=1856121153 groups=["pickable_object", "shoveable_object", "task_object"] instance=ExtResource("9_fyc11")]
+position = Vector2(286, 195)
+mass = 13.0
+
+[node name="LargeBox3" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="6" unique_id=1802995731 groups=["pickable_object", "shoveable_object"] instance=ExtResource("9_fyc11")]
+position = Vector2(214, 136)
+
+[node name="LargeBox8" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="7" unique_id=55154239 groups=["pickable_object", "shoveable_object"] instance=ExtResource("9_fyc11")]
+position = Vector2(219, 166)
+
+[node name="LargeBox5" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="8" unique_id=1487071145 groups=["pickable_object", "shoveable_object", "task_object"] instance=ExtResource("9_fyc11")]
+position = Vector2(264, 190)
+mass = 13.0
+
+[node name="MediumBox" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="9" unique_id=1906501228 groups=["pickable_object", "shoveable_object"] instance=ExtResource("10_xu4a4")]
+position = Vector2(274, 88)
+
+[node name="MediumBox2" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="10" unique_id=222839907 groups=["pickable_object", "shoveable_object"] instance=ExtResource("10_xu4a4")]
+position = Vector2(236, 101)
+
+[node name="MediumBox3" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="11" unique_id=2107861474 groups=["pickable_object", "shoveable_object"] instance=ExtResource("10_xu4a4")]
+position = Vector2(205, 130)
+
+[node name="MediumBox5" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="12" unique_id=1938425414 groups=["pickable_object", "shoveable_object", "task_object"] instance=ExtResource("10_xu4a4")]
+position = Vector2(280, 187)
+mass = 10.0
+
+[node name="MediumBox4" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="13" unique_id=1405659179 groups=["pickable_object", "shoveable_object", "task_object"] instance=ExtResource("10_xu4a4")]
+position = Vector2(294, 189)
+
+[node name="SmallBox" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="14" unique_id=130535706 groups=["pickable_object", "shoveable_object"] instance=ExtResource("11_vublt")]
+position = Vector2(282, 100)
+
+[node name="SmallBox3" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="15" unique_id=1824222562 groups=["pickable_object", "shoveable_object", "task_object"] instance=ExtResource("11_vublt")]
+position = Vector2(272, 181)
+
+[node name="SmallBox4" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="16" unique_id=1067384223 groups=["pickable_object", "shoveable_object", "task_object"] instance=ExtResource("11_vublt")]
+position = Vector2(290, 180)
+
+[node name="SmallBox2" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="17" unique_id=249687068 groups=["pickable_object", "shoveable_object"] instance=ExtResource("11_vublt")]
+position = Vector2(190, 149)
+
+[node name="FilledCart" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="18" unique_id=679673808 groups=["shoveable_object", "task_object"] instance=ExtResource("17_54yk8")]
+position = Vector2(131, 177)
+
+[node name="FilledCart2" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="19" unique_id=1148607182 groups=["shoveable_object", "task_object"] instance=ExtResource("17_54yk8")]
+position = Vector2(122, 188)
+
+[node name="FilledCart3" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="20" unique_id=877313362 groups=["shoveable_object", "task_object"] instance=ExtResource("17_54yk8")]
+position = Vector2(155, 195)
+
+[node name="FilledCart4" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="21" unique_id=1881865163 groups=["shoveable_object"] instance=ExtResource("17_54yk8")]
+position = Vector2(219, 113)
+
+[node name="FilledCart5" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="22" unique_id=1622246964 groups=["shoveable_object"] instance=ExtResource("17_54yk8")]
+position = Vector2(145, 82)
+
+[node name="ChairH" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="23" unique_id=626750987 groups=["pickable_object", "shoveable_object", "task_object"] instance=ExtResource("18_ov85s")]
+position = Vector2(270, 119)
+
+[node name="Book" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="24" unique_id=7818531 groups=["pickable_object", "task_object"] instance=ExtResource("19_cn7e2")]
+position = Vector2(260, 123)
+
+[node name="Sprite2D" parent="GameWorld/ObjectContainer/Book" index="0" unique_id=778759161]
+frame = 2
+
+[node name="Book3" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="25" unique_id=598272168 groups=["pickable_object"] instance=ExtResource("19_cn7e2")]
+position = Vector2(197, 91)
+
+[node name="Sprite2D" parent="GameWorld/ObjectContainer/Book3" index="0" unique_id=778759161]
+frame = 4
+
+[node name="Book2" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="26" unique_id=846069591 groups=["pickable_object"] instance=ExtResource("19_cn7e2")]
+position = Vector2(185, 130)
+
+[node name="Sprite2D" parent="GameWorld/ObjectContainer/Book2" index="0" unique_id=778759161]
+frame = 3
+
+[node name="NPC_dm" parent="GameWorld/NPCContainer" parent_id_path=PackedInt32Array(1410708023, 30440007) index="0" unique_id=744398630 instance=ExtResource("9_lld6e")]
+position = Vector2(193, 85)
+
+[node name="AnimatedSprite2D" parent="GameWorld/NPCContainer/NPC_dm" index="0" unique_id=2028275097]
+autoplay = "sit"
+
+[node name="Path2D" type="Path2D" parent="GameWorld/NPCContainer" parent_id_path=PackedInt32Array(1410708023, 30440007) index="1" unique_id=1896815106]
+y_sort_enabled = true
+position = Vector2(186, 0)
+scale = Vector2(0.25, 1)
+curve = SubResource("Curve2D_t0t2k")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="GameWorld/NPCContainer/Path2D" unique_id=198637980]
+position = Vector2(248, 88)
+rotation = 1.5707964
+rotates = false
+cubic_interp = false
+
+[node name="NPC" parent="GameWorld/NPCContainer/Path2D/PathFollow2D" unique_id=802582565 instance=ExtResource("10_h81wf")]
+position = Vector2(2, 0)
+rotation = -1.5707964
+scale = Vector2(4, 1)
+
+[node name="NPC2" parent="GameWorld/NPCContainer" parent_id_path=PackedInt32Array(1410708023, 30440007) index="2" unique_id=1297394668 instance=ExtResource("10_h81wf")]
+position = Vector2(269, 76)
+
+[node name="AnimatedSprite2D" parent="GameWorld/NPCContainer/NPC2" index="0" unique_id=2028275097]
+flip_h = true
+
+[node name="NPC3" parent="GameWorld/NPCContainer" parent_id_path=PackedInt32Array(1410708023, 30440007) index="3" unique_id=423600581 instance=ExtResource("10_h81wf")]
+position = Vector2(294, 100)
+
+[node name="AnimatedSprite2D" parent="GameWorld/NPCContainer/NPC3" index="0" unique_id=2028275097]
+flip_h = true
+
+[node name="NPC7" parent="GameWorld/NPCContainer" parent_id_path=PackedInt32Array(1410708023, 30440007) index="4" unique_id=1042559094 instance=ExtResource("10_h81wf")]
+position = Vector2(203, 149)
+
+[node name="AnimatedSprite2D" parent="GameWorld/NPCContainer/NPC7" index="0" unique_id=2028275097]
+flip_h = true
+
+[node name="NPC8" parent="GameWorld/NPCContainer" parent_id_path=PackedInt32Array(1410708023, 30440007) index="5" unique_id=2113872864 instance=ExtResource("10_h81wf")]
+position = Vector2(139, 71)
+
+[node name="NPC5" parent="GameWorld/NPCContainer" parent_id_path=PackedInt32Array(1410708023, 30440007) index="6" unique_id=622591190 instance=ExtResource("10_h81wf")]
+position = Vector2(197, 138)
+
+[node name="AnimatedSprite2D" parent="GameWorld/NPCContainer/NPC5" index="0" unique_id=2028275097]
+flip_h = true
+
+[node name="NPC4" parent="GameWorld/NPCContainer" parent_id_path=PackedInt32Array(1410708023, 30440007) index="7" unique_id=249927049 instance=ExtResource("10_h81wf")]
+position = Vector2(256, 76)
+
+[node name="NPC6" parent="GameWorld/NPCContainer" parent_id_path=PackedInt32Array(1410708023, 30440007) index="8" unique_id=851807475 instance=ExtResource("10_h81wf")]
+position = Vector2(182, 143)
+
+[node name="Player" parent="GameWorld" unique_id=1674835234 instance=ExtResource("11_w2bfx")]
+position = Vector2(185, 107)
+
+[node name="TaskController" parent="." unique_id=673560431 instance=ExtResource("12_ofeyr")]
+task_id = "w4_7"
+time_limit = 120.0
+
+[node name="AreaBoundary" parent="TaskController" index="0" unique_id=1037100174]
+tile_map_data = PackedByteArray("AAANAAUAAAACAAEAAAANAAQAAAACAAAAAAAMAAQAAAACAAAAAAAOAAUAAAADAAEAAAAOAAQAAAADAAAAAAAMAAUAAAACAAEAAAALAAUAAAABAAEAAAALAAQAAAABAAAAAAAOAAYAAAADAAIAAAANAAYAAAACAAIAAAAMAAYAAAACAAIAAAALAAYAAAABAAIAAAA=")
+metadata/_edit_lock_ = true
+
+[node name="TargetArea" parent="TaskController" unique_id=1782192655 instance=ExtResource("12_2ypbm")]
+position = Vector2(208, 80)
+object_limit = 11
+hide_label = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TaskController/TargetArea" unique_id=868474553]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_h81wf")
+
+[connection signal="task_complete" from="TaskController" to="." method="_on_task_controller_task_complete"]
+[connection signal="task_complete" from="TaskController" to="UserInterface" method="_on_task_controller_task_complete"]
+[connection signal="task_fail" from="TaskController" to="." method="_on_task_controller_task_fail"]
+[connection signal="task_fail" from="TaskController" to="UserInterface" method="_on_task_controller_task_fail"]
+[connection signal="task_start" from="TaskController" to="." method="_on_task_controller_task_start"]
+
+[editable path="GameWorld"]
+[editable path="GameWorld/CameraZoneContainer/CameraZone"]
+[editable path="GameWorld/CameraZoneContainer/CameraZone2"]
+[editable path="GameWorld/CameraZoneContainer/CameraZone3"]
+[editable path="GameWorld/TileMapContainer"]
+[editable path="GameWorld/ObjectContainer/Book"]
+[editable path="GameWorld/ObjectContainer/Book3"]
+[editable path="GameWorld/ObjectContainer/Book2"]
+[editable path="GameWorld/NPCContainer/NPC_dm"]
+[editable path="GameWorld/NPCContainer/NPC2"]
+[editable path="GameWorld/NPCContainer/NPC3"]
+[editable path="GameWorld/NPCContainer/NPC7"]
+[editable path="GameWorld/NPCContainer/NPC5"]
+[editable path="TaskController"]

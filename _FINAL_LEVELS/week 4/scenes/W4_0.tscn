@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://0gogodwc7bnm"]
 
-[ext_resource type="Script" uid="uid://ba1xlr2bfaj8r" path="res://BaseLevels/BaseScenes/miscellaneous/blank_screen.gd" id="1_vdevd"]
+[ext_resource type="Script" uid="uid://ba1xlr2bfaj8r" path="res://BaseLevels/BaseScenes/miscellaneous/blank_screen.gd" id="1_vhtgv"]
 
 [node name="BlankScreen" type="CanvasLayer" unique_id=1999547854]
-script = ExtResource("1_vdevd")
+script = ExtResource("1_vhtgv")
+dialogue_file = "res://_FINAL_LEVELS/week 4/JSON/W4_0.json"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=531310683]
 anchors_preset = 15

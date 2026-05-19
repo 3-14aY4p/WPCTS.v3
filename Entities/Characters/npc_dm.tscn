@@ -19,6 +19,22 @@ region = Rect2(32, 0, 16, 16)
 atlas = ExtResource("2_qgreu")
 region = Rect2(48, 0, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2gxs"]
+atlas = ExtResource("2_qgreu")
+region = Rect2(0, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lg48q"]
+atlas = ExtResource("2_qgreu")
+region = Rect2(16, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_66i4u"]
+atlas = ExtResource("2_qgreu")
+region = Rect2(32, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tudk"]
+atlas = ExtResource("2_qgreu")
+region = Rect2(48, 160, 16, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_b4u0s"]
 atlas = ExtResource("2_qgreu")
 region = Rect2(0, 16, 16, 16)
@@ -56,6 +72,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_s2gxs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lg48q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_66i4u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tudk")
+}],
+"loop": true,
+"name": &"sit",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_b4u0s")
 }, {
 "duration": 1.0,
@@ -86,8 +119,9 @@ metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2028275097]
 sprite_frames = SubResource("SpriteFrames_d5nyv")
-animation = &"idle"
+animation = &"sit"
 autoplay = "idle"
+frame_progress = 0.8634701
 offset = Vector2(0, -8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1030702814]

@@ -56,7 +56,7 @@ var scene_data: Dictionary = {
 		10: "uid://ddsibgg7wehps",	# dorm room
 	},
 	4: {
-		0: "", 
+		0: "uid://0gogodwc7bnm", 
 	},
 	5: {
 		0: "", 

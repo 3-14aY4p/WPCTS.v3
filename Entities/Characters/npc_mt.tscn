@@ -86,7 +86,7 @@ metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2028275097]
 sprite_frames = SubResource("SpriteFrames_d5nyv")
-animation = &"walk"
+animation = &"idle"
 autoplay = "idle"
 offset = Vector2(0, -8)
 
