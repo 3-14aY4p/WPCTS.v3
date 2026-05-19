@@ -48,8 +48,12 @@ var scene_data: Dictionary = {
 		2: "uid://dhslx0vteq5gu",	# dorm hallway	T
 		3: "uid://ovp3csejegeo",	# dorm lobby
 		4: "uid://bbimlp6wqqocu",	# classroom
-		5: "",	# assessment
-		6: "",	# classroom
+		5: "",	# assessment; 4.5 in the folders cz forgot
+		6: "uid://bwrde035h5o6",	# classroom		T
+		7: "uid://bbimlp6wqqocu",	# classroom
+		8: "uid://lfhdvnchadlj",	
+		9: "uid://v1j4c6dxtpmm",	# dorm lobby
+		10: "uid://ddsibgg7wehps",	# dorm room
 	},
 	4: {
 		0: "", 

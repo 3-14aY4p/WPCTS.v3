@@ -168,7 +168,7 @@ position = Vector2(192, 184)
 [node name="Sprite2D" parent="GameWorld/ObjectContainer/ChairH13" index="0" unique_id=1356431179]
 frame = 1
 
-[node name="NPC_dm" parent="GameWorld/NPCContainer" parent_id_path=PackedInt32Array(1410708023, 30440007) index="0" unique_id=744398630 instance=ExtResource("9_ebjya")]
+[node name="NPC_dm" parent="GameWorld/NPCContainer" parent_id_path=PackedInt32Array(1410708023, 30440007) index="0" unique_id=744398630 groups=["npc"] instance=ExtResource("9_ebjya")]
 position = Vector2(215, 198)
 
 [node name="AnimatedSprite2D" parent="GameWorld/NPCContainer/NPC_dm" index="0" unique_id=2028275097]

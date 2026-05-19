@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dqw4ouhtw70nh"]
+
+[ext_resource type="Script" uid="uid://ba1xlr2bfaj8r" path="res://BaseLevels/BaseScenes/miscellaneous/blank_screen.gd" id="1_2n7f0"]
+
+[node name="BlankScreen" type="CanvasLayer" unique_id=1999547854]
+script = ExtResource("1_2n7f0")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=531310683]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.20784314, 0.23921569, 0.27450982, 1)
+metadata/_edit_use_anchors_ = true

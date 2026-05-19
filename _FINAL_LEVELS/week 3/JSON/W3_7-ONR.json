@@ -1,36 +1,146 @@
 {
-	"": {
+	"0": {
 		"zoom": [],
 		"focus": "",
 		"index": 0,
 		
-		"name": "",
-		"anim": "",
-		"text": "",
+		"name": "Colin",
+		"anim": "mc",
+		"text": "We don't have committee work today?",
 		
-		"next": ""
+		"next": "1"
 	},
-	"": {
+	"1": {
 		"zoom": [],
 		"focus": "",
 		"index": 0,
 		
-		"name": "",
-		"anim": "",
-		"text": "",
+		"name": "Perry",
+		"anim": "dm",
+		"text": "T-the other guys in the committee said we can take the day off today.",
 		
-		"next": ""
+		"next": "2"
 	},
-	"": {
+	"2": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "That's awfully nice of them.",
+		
+		"next": "3"
+	},
+	"3": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "( Must've been the boxes from earlier. )",
+		
+		"next": "4"
+	},
+	"4": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "Though... they did say...",
+		
+		"next": "4.5"
+	},
+	"4.5": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "We might be on our own on the day of the big event.",
+		
+		"next": "5"
+	},
+	"5": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Oh, right. About that, I still haven't asked...",
+		
+		"next": "6"
+	},
+	"6": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "What exactly are we doing with those materials from earlier?",
+		
+		"next": "7"
+	},
+	"7": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "Oh oh! Ok so about that-!",
+		
+		"next": "8"
+	},
+	"8": {
 		"zoom": [],
 		"focus": "",
 		"index": 0,
 		
 		"name": "",
 		"anim": "",
-		"text": "",
+		"text": ".",
 		
-		"next": ""
+		"next": "9"
+	},
+	"9": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "",
+		"anim": "",
+		"text": "..",
+		
+		"next": "10"
+	},
+	"10": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "",
+		"anim": "",
+		"text": "...",
+		
+		"next": "11"
+	},
+	"11": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "",
+		"anim": "",
+		"text": "....",
+		
+		"next": "END"
 	},
 	"END": {
 		"node": "/root/GameController",
