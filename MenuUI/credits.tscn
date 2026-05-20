@@ -1,0 +1,223 @@
+[gd_scene format=3 uid="uid://cn2y8roc1tqge"]
+
+[ext_resource type="Script" uid="uid://c3gjkm5ovhi4t" path="res://MenuUI/disposable_ui.gd" id="1_haj3p"]
+[ext_resource type="Texture2D" uid="uid://cejr7n5mqmd57" path="res://Assets/Art/ui.png" id="1_nr052"]
+[ext_resource type="FontFile" uid="uid://ckbixblavooub" path="res://Assets/Font/Pixel Millennium.ttf" id="2_nr052"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_haj3p"]
+font = ExtResource("2_nr052")
+font_color = Color(0.67058825, 0.7294118, 0.4745098, 1)
+outline_size = 4
+outline_color = Color(0.2, 0.23137255, 0.26666668, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7sh31"]
+font = ExtResource("2_nr052")
+font_color = Color(0.4509804, 0.59607846, 0.34117648, 1)
+outline_size = 4
+outline_color = Color(0.2, 0.23137255, 0.26666668, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ow60y"]
+font = ExtResource("2_nr052")
+font_size = 12
+font_color = Color(0.67058825, 0.7294118, 0.4745098, 1)
+outline_size = 4
+outline_color = Color(0.2, 0.23137255, 0.26666668, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_08wqa"]
+font = ExtResource("2_nr052")
+font_size = 12
+font_color = Color(0.67058825, 0.7294118, 0.4745098, 1)
+outline_size = 6
+outline_color = Color(0.2, 0.23137255, 0.26666668, 1)
+
+[node name="Credits" type="Control" unique_id=1981014189]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_haj3p")
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1400977997]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.20784314, 0.23921569, 0.27450982, 0.627451)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=116370798]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.0
+offset_top = -92.0
+offset_right = 78.0
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_nr052")
+region_rect = Rect2(0, 0, 48, 48)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect" unique_id=1423005771]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/MarginContainer" unique_id=1660781107]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=860178552]
+layout_mode = 2
+text = "Credits"
+label_settings = SubResource("LabelSettings_haj3p")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=33557996]
+layout_mode = 2
+text = "Team JETPAC"
+label_settings = SubResource("LabelSettings_7sh31")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=216376244]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=79518583]
+layout_mode = 2
+text = "YAP, P. I."
+label_settings = SubResource("LabelSettings_ow60y")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=1281589998]
+layout_mode = 2
+text = "BOHOLANO, T. M."
+label_settings = SubResource("LabelSettings_ow60y")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=583387742]
+layout_mode = 2
+text = "PASCO, J. M."
+label_settings = SubResource("LabelSettings_ow60y")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=1085071670]
+layout_mode = 2
+text = "MALLORCA, C."
+label_settings = SubResource("LabelSettings_ow60y")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=1689540975]
+layout_mode = 2
+text = "CALERA, E. D."
+label_settings = SubResource("LabelSettings_ow60y")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="." unique_id=1987878548]
+anchors_preset = 0
+offset_left = 400.0
+offset_top = 168.0
+offset_right = 440.0
+offset_bottom = 208.0
+
+[node name="Label" type="Label" parent="Control" unique_id=149258070]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.0
+anchor_right = 2.4
+anchor_bottom = 0.3
+text = "<-- Borderline insane"
+label_settings = SubResource("LabelSettings_08wqa")
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label6" type="Label" parent="Control" unique_id=1285527110]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.475
+anchor_top = 0.3
+anchor_right = 2.925
+anchor_bottom = 0.6
+text = "Save me, please."
+label_settings = SubResource("LabelSettings_08wqa")
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Control" unique_id=252807692]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.0
+anchor_top = 0.8
+anchor_right = 2.45
+anchor_bottom = 1.1
+text = "<-- Hi bestie, please reply"
+label_settings = SubResource("LabelSettings_08wqa")
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label5" type="Label" parent="Control" unique_id=725480777]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.0
+anchor_top = 1.6
+anchor_right = 2.4
+anchor_bottom = 1.9
+text = "<-- Gone for a week (2)"
+label_settings = SubResource("LabelSettings_08wqa")
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Control" unique_id=1745118139]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -6.6
+anchor_top = 0.4
+anchor_right = -3.2
+anchor_bottom = 0.7
+text = "Made good music -->"
+label_settings = SubResource("LabelSettings_08wqa")
+horizontal_alignment = 2
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="Control" unique_id=1783652069]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -6.6
+anchor_top = 1.2
+anchor_right = -3.2
+anchor_bottom = 1.5
+text = "Certified chat lurker -->"
+label_settings = SubResource("LabelSettings_08wqa")
+horizontal_alignment = 2
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

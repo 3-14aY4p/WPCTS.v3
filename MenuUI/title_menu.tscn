@@ -76,6 +76,16 @@ size_flags_horizontal = 3
 theme = ExtResource("4_sqprt")
 text = "Exit"
 
+[node name="CreditsButton" type="Button" parent="." unique_id=1395131174]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 280.0
+offset_right = 384.0
+offset_bottom = 304.0
+theme = ExtResource("4_sqprt")
+text = "?"
+
 [connection signal="pressed" from="PlayGame" to="." method="_on_play_game_pressed"]
 [connection signal="pressed" from="Leaderboards" to="." method="_on_leaderboards_pressed"]
 [connection signal="pressed" from="ExitGame" to="." method="_on_exit_game_pressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]

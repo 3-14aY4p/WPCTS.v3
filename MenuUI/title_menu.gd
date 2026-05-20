@@ -18,3 +18,7 @@ func _on_settings_pressed() -> void:
 
 func _on_exit_game_pressed() -> void:
 	get_tree().quit()
+
+func _on_credits_button_pressed() -> void:
+	var credits_instance = preload("res://MenuUI/credits.tscn").instantiate()
+	add_child(credits_instance)
