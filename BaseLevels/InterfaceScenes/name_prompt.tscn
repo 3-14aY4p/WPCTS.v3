@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://45tf4ipqytbv"]
+
+[ext_resource type="Texture2D" uid="uid://cejr7n5mqmd57" path="res://Assets/Art/ui.png" id="1_g7cp1"]
+[ext_resource type="Script" uid="uid://u6uu1hw8rydd" path="res://BaseLevels/InterfaceScenes/name_prompt.gd" id="1_vbpj2"]
+[ext_resource type="FontFile" uid="uid://ckbixblavooub" path="res://Assets/Font/Pixel Millennium.ttf" id="3_jio3a"]
+[ext_resource type="Theme" uid="uid://bui0fgkyyas4h" path="res://Themes/button_theme_5.tres" id="4_jio3a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_515i6"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.41960785, 0.5529412, 0.32941177, 1)
+
+[sub_resource type="Theme" id="Theme_6crrm"]
+LineEdit/colors/font_color = Color(0.43529412, 0.57254905, 0.3372549, 1)
+LineEdit/font_sizes/font_size = 16
+LineEdit/fonts/font = ExtResource("3_jio3a")
+LineEdit/icons/clear = null
+LineEdit/styles/focus = SubResource("StyleBoxFlat_515i6")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_515i6")
+
+[node name="NamePrompt" type="Control" unique_id=1342782557]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vbpj2")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=696080025]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -104.0
+offset_top = -52.0
+offset_right = 104.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_g7cp1")
+region_rect = Rect2(0, 0, 48, 48)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect" unique_id=1510685645]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/MarginContainer" unique_id=984150564]
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=156509153]
+layout_mode = 2
+theme = SubResource("Theme_6crrm")
+theme_override_colors/font_color = Color(0.67058825, 0.7294118, 0.4745098, 1)
+theme_override_colors/font_selected_color = Color(0.67058825, 0.7294118, 0.47843137, 1)
+theme_override_colors/font_placeholder_color = Color(0.2509804, 0.3764706, 0.3372549, 1)
+theme_override_colors/selection_color = Color(0.67058825, 0.7294118, 0.47843137, 0.41568628)
+placeholder_text = "Enter name"
+
+[node name="SubmitButton" type="Button" parent="NinePatchRect/MarginContainer/VBoxContainer" unique_id=526145874]
+clip_contents = true
+layout_mode = 2
+theme = ExtResource("4_jio3a")
+text = "submit"
+
+[connection signal="pressed" from="NinePatchRect/MarginContainer/VBoxContainer/SubmitButton" to="." method="_on_submit_button_pressed"]

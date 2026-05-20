@@ -5,6 +5,8 @@ var player: Player
 
 func enter():
 	player = state_machine.get_parent()
+	
+	player.carry_sfx.play(0.0)
 	InteractionHandler.can_interact = false
 	
 	player.on_hand.set_collision_layer_value(3, false)
@@ -37,6 +39,7 @@ func handle_input(event: InputEvent):
 			player.on_hand.reparent(get_tree().get_first_node_in_group("object_container"))
 			player.on_hand.global_position = player.place_point.global_position
 			
+			player.carry_sfx.play(0.0)
 			state_machine.change_state("playeridle")
 
 func exit():

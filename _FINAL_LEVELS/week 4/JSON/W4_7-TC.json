@@ -1,5 +1,5 @@
 {
-	"END": {
+	"0": {
 		"node": "/root/GameController",
 		"func": "fade_to_next_scene",
 		"args": [],

@@ -1,12 +1,17 @@
 [gd_scene format=3 uid="uid://b841dvk8ijc3w"]
 
 [ext_resource type="Script" uid="uid://dnex1c1mntuur" path="res://Components/InteractionHandler/interactable_area.gd" id="1_dk6l4"]
+[ext_resource type="AudioStream" uid="uid://dxlellithotjh" path="res://Assets/Soundtrack/SFX/interact_examine.wav" id="2_3tyrb"]
 
 [node name="InteractableArea" type="Area2D" unique_id=1780815943]
 collision_layer = 0
 collision_mask = 16
 monitorable = false
 script = ExtResource("1_dk6l4")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1864723827]
+stream = ExtResource("2_3tyrb")
+bus = &"SFX"
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

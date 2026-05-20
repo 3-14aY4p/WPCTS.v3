@@ -1,0 +1,33 @@
+{
+	"0": {
+		"zoom": [2.3, 2.3],
+		"focus": "",
+		"index": 0,
+		
+		"name": "",
+		"anim": "",
+		"text": "The cafeteria is as chaotic as ever,",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [],
+		"focus": "npc",
+		"index": 0,
+		
+		"name": "",
+		"anim": "",
+		"text": "and Ms. Barbara is just as busy.",
+		
+		"next": "END"
+	},
+	"END": {
+		"node": "/root/GameController",
+		"func": "fade_to_next_scene",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": ""
+	},
+}

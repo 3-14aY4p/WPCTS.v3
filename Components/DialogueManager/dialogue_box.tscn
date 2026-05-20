@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bjr3lwaepedk2" path="res://Components/DialogueManager/dialogue_box.gd" id="1_2msrq"]
 [ext_resource type="Texture2D" uid="uid://cejr7n5mqmd57" path="res://Assets/Art/ui.png" id="2_486cr"]
+[ext_resource type="AudioStream" uid="uid://du1y1xe1vx4dd" path="res://Assets/Soundtrack/SFX/interact_use.wav" id="2_ijj8p"]
 [ext_resource type="FontFile" uid="uid://bthadkgdkntt8" path="res://Assets/Font/superstar_memesbruh03.ttf" id="3_ijj8p"]
 [ext_resource type="Texture2D" uid="uid://17svgm5pbki0" path="res://Assets/Art/characters.png" id="4_p6euh"]
 [ext_resource type="Theme" uid="uid://dimc0cp4ncfuj" path="res://Themes/richtextlabel_theme_1.tres" id="5_0qpf6"]
@@ -131,7 +132,6 @@ animations = [{
 }]
 
 [node name="DialogueBox" type="Control" unique_id=1290065068]
-process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -139,6 +139,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2msrq")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1330725462]
+stream = ExtResource("2_ijj8p")
+bus = &"SFX"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=19607380]
 layer = 2

@@ -32,6 +32,7 @@ size = Vector2(46, 31)
 [node name="CampusLibrary" type="Node2D" unique_id=1595669075 groups=["game_level"]]
 y_sort_enabled = true
 script = ExtResource("1_nlch1")
+soundtrack = "CFTR"
 on_complete_dialogue = "res://_FINAL_LEVELS/week 2/JSON/W2_8-TC.json"
 on_fail_dialogue = "res://_FINAL_LEVELS/week 2/JSON/W2_8-TC.json"
 

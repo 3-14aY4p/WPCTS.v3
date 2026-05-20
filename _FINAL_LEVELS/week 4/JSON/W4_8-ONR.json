@@ -85,6 +85,50 @@
 		"anim": "mc",
 		"text": "... doing it is kinda fun...",
 		
+		"next": "7.5"
+	},
+	"7.5": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "...",
+		
+		"next": "8"
+	},
+	"8": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Perry",
+		"anim": "dm",
+		"text": "Think you'll join the Physics Committee again next year?",
+		
+		"next": "9"
+	},
+	"9": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "Y'know what...",
+		
+		"next": "10"
+	},
+	"10": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "Colin",
+		"anim": "mc",
+		"text": "I'll think about it.",
+		
 		"next": "END"
 	},
 	"END": {

@@ -3,5 +3,4 @@
 [ext_resource type="Script" uid="uid://bectckgjh1grl" path="res://Components/DialogueManager/dialogue_manager.gd" id="1_1gu42"]
 
 [node name="DialogueManager" type="Node" unique_id=833499889]
-process_mode = 3
 script = ExtResource("1_1gu42")

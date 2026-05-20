@@ -11,10 +11,10 @@ var current_scene_index: int = 0
 # ---
 var task_completed: Array = []
 var task_failed: Array = []
-var task_points: float = 0
 # ---
 var weekly_score: Array[int] = []
 # ---
+var final_score: float = 0
 
 # houses the list of scenes per day
 var scene_data: Dictionary = {
@@ -24,7 +24,9 @@ var scene_data: Dictionary = {
 		2: "uid://c088a6oelxkjm",	# dorm hallway	T
 		3: "uid://xpr6vr8kf3y7",	# cafeteria		T
 		4: "uid://ib73g6g2kyjb",	# classroom
-		5: "",	# assessment
+		
+		5: "uid://vh38wcdivjoq",	# assessment
+		
 		6: "uid://bsnkpc0bsdxs5",	# classroom		T
 		7: "uid://d0h7rrufyampu", 	# classroom
 		8: "uid://e64rtobwbf6n", 	# dorm room
@@ -35,7 +37,9 @@ var scene_data: Dictionary = {
 		2: "uid://3cgxv5supjcu",	# dorm hallway
 		3: "uid://vl35s160bwen",	# dorm lobby	T
 		4: "uid://c7g566bi0jrsn",	# classroom
-		5: "",	# assessment
+		
+		5: "uid://vh38wcdivjoq",	# assessment
+		
 		6: "uid://bgo4chu11mvpl",	# classroom		T
 		7: "uid://t76u0pwrytqd",	# classroom
 		8: "uid://cstvspqyvvil2",	# library		T
@@ -47,8 +51,10 @@ var scene_data: Dictionary = {
 		1: "uid://bm5fvq8ow8c4p",	# dorm room
 		2: "uid://dhslx0vteq5gu",	# dorm hallway	T
 		3: "uid://ovp3csejegeo",	# dorm lobby
-		4: "uid://bbimlp6wqqocu",	# classroom
-		5: "",	# assessment; 4.5 in the folders cz forgot
+		4: "uid://cvol3xfbo5mcc",	# classroom
+		
+		5: "uid://vh38wcdivjoq",	# assessment; 4-5 in folders
+		
 		6: "uid://bwrde035h5o6",	# classroom		T
 		7: "uid://bbimlp6wqqocu",	# classroom
 		8: "uid://lfhdvnchadlj",	
@@ -57,9 +63,27 @@ var scene_data: Dictionary = {
 	},
 	4: {
 		0: "uid://0gogodwc7bnm", 
+		1: "uid://b0yv4in7e42vo", 
+		2: "uid://c53imr7nikjsq", 	# T
+		3: "uid://b3n3v30ydxkfd", 
+		
+		4: "uid://vh38wcdivjoq", 
+		
+		5: "uid://bbpono46es2hv", 
+		6: "uid://cr0bon1m33bgc", 
+		7: "uid://dmgakbo0uno24", 	# T
+		8: "uid://tpxkiw4a3vpu", 
+		9: "uid://bjb1bl6vxim45", 
 	},
 	5: {
-		0: "", 
+		0: "uid://dqw4ouhtw70nh", 
+		1: "uid://dqhyhrenpcvod", 
+		2: "uid://dk4q6ly425k74", 
+		3: "uid://c7ih00055cuau", 
+		4: "uid://co6vycpmufmv0", 
+		5: "uid://7d0f6msnvf1n", 
+		
+		6: "uid://vh38wcdivjoq", 
 	},
 }
 var current_scene: String
@@ -82,7 +106,7 @@ func start_level_task():
 
 # for when game finally ends (idk what to put in here yet)
 func display_final_results():
-	pass
+	fade_on_load_scene("uid://bnnu4ay1qjx0p")
 
 func save_and_next():
 	SaveHandler.save_game()

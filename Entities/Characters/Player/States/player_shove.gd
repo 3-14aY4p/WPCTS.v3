@@ -26,6 +26,7 @@ func physics_update(delta: float):
 		if collided is DynamicObject and collided.is_in_group("shoveable_object"):
 			collided.apply_shove(player.force_dir, player.applied_force)
 			player.set_collision_layer_value(4, true)
+			player.shove_sfx.play(0.0)
 			
 			state_machine.change_state("playerknockback")
 			

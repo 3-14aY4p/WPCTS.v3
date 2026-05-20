@@ -54,6 +54,8 @@ func _physics_process(delta: float) -> void:
 		_complete_task()
 
 func _start_task():
+	AudioManager.play_music("BTHR")
+	
 	if task_state == TaskState.AVAILABLE:
 		task_state = TaskState.ONGOING
 		

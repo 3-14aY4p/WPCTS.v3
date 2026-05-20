@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://car7tkilk5wsa"]
+
+[ext_resource type="Script" uid="uid://bfvypgpetkhmg" path="res://Components/AudioManager/audio_manager.gd" id="1_j63e5"]
+[ext_resource type="AudioStream" uid="uid://c65va34ewwd4o" path="res://Assets/Soundtrack/Music/UI.wav" id="2_7e0b3"]
+[ext_resource type="AudioStream" uid="uid://pkotx7gb0dhx" path="res://Assets/Soundtrack/Music/Dorm.wav" id="3_j4c88"]
+[ext_resource type="AudioStream" uid="uid://bldc0ljle1pem" path="res://Assets/Soundtrack/Music/Cafeteria.wav" id="4_sgkpt"]
+[ext_resource type="AudioStream" uid="uid://b86pavqyrx4v8" path="res://Assets/Soundtrack/Music/Classroom.wav" id="5_fc4a4"]
+[ext_resource type="AudioStream" uid="uid://t4l88ak6dme0" path="res://Assets/Soundtrack/Music/Library.wav" id="6_g6iq7"]
+[ext_resource type="AudioStream" uid="uid://ei60n84oe3wi" path="res://Assets/Soundtrack/Music/Bathroom.wav" id="7_tqjsq"]
+[ext_resource type="AudioStream" uid="uid://b6gce4xrxnrat" path="res://Assets/Soundtrack/Music/Assessment.wav" id="8_75axf"]
+
+[node name="AudioManager" type="Node" unique_id=1410468520]
+process_mode = 3
+script = ExtResource("1_j63e5")
+
+[node name="Clips" type="Node" parent="." unique_id=933825914]
+
+[node name="UI" type="AudioStreamPlayer" parent="Clips" unique_id=1508968259]
+stream = ExtResource("2_7e0b3")
+bus = &"Music"
+
+[node name="QUIZ" type="AudioStreamPlayer" parent="Clips" unique_id=1108406249]
+stream = ExtResource("8_75axf")
+bus = &"Music"
+
+[node name="DORM" type="AudioStreamPlayer" parent="Clips" unique_id=1083228576]
+stream = ExtResource("3_j4c88")
+bus = &"Music"
+
+[node name="CLSR" type="AudioStreamPlayer" parent="Clips" unique_id=1630874568]
+stream = ExtResource("5_fc4a4")
+bus = &"Music"
+
+[node name="CFTR" type="AudioStreamPlayer" parent="Clips" unique_id=1369589904]
+stream = ExtResource("7_tqjsq")
+bus = &"Music"
+
+[node name="LIBR" type="AudioStreamPlayer" parent="Clips" unique_id=1171114209]
+stream = ExtResource("6_g6iq7")
+bus = &"Music"
+
+[node name="BTHR" type="AudioStreamPlayer" parent="Clips" unique_id=189969335]
+stream = ExtResource("4_sgkpt")
+bus = &"Music"

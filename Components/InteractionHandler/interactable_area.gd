@@ -5,6 +5,8 @@ signal interaction_available
 signal interaction_unavailable
 signal interact
 
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+
 @export var interaction_input: String = "_interact"
 @export var action_hint: String = "[E] interact"
 
@@ -20,6 +22,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 		
 	if event.is_action_pressed(interaction_input):
+		audio_stream_player.play(0.0)
 		if not InteractionHandler.active_areas.is_empty():
 			if InteractionHandler.can_interact and InteractionHandler.nearest == self:
 				InteractionHandler.can_interact = false

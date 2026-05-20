@@ -5,6 +5,7 @@ class_name UI extends CanvasLayer
 @onready var completion_popup: Control = $TaskUI/CompletionPopup
 @onready var animation_player: AnimationPlayer = $TaskUI/AnimationPlayer
 @onready var completion_text: RichTextLabel = $TaskUI/CompletionPopup/MarginContainer/NinePatchRect/CompletionText
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 var task: TaskController
 
@@ -32,6 +33,7 @@ func update_timer_label():
 func _on_task_controller_task_complete() -> void:
 	completion_text.text = "task completed!"
 	animation_player.play("task_finished")
+	audio_stream_player.play(0.0)
 
 func _on_task_controller_task_fail() -> void:
 	completion_text.text = "task failed!"

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ch2mm3rlr513m"]
 
 [ext_resource type="Script" uid="uid://c6u6p6jitpamr" path="res://MenuUI/title_menu.gd" id="1_ha7ql"]
+[ext_resource type="Texture2D" uid="uid://bf23een7hfy3n" path="res://Assets/Art/cover.png" id="2_sqprt"]
 [ext_resource type="Theme" uid="uid://dimc0cp4ncfuj" path="res://Themes/richtextlabel_theme_1.tres" id="3_xmeli"]
 [ext_resource type="Theme" uid="uid://bui0fgkyyas4h" path="res://Themes/button_theme_5.tres" id="4_sqprt"]
 
@@ -22,6 +23,18 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.20784314, 0.23921569, 0.27450982, 1)
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=761395356]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.11111111
+anchor_right = 0.8916666
+anchor_bottom = 0.9777778
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_sqprt")
+metadata/_edit_use_anchors_ = true
+
 [node name="TitleLabel" type="RichTextLabel" parent="." unique_id=1020767544]
 layout_mode = 0
 offset_left = 16.0
@@ -35,43 +48,34 @@ text = "WHEN PUSH COMES TO SHOVE"
 fit_content = true
 scroll_active = false
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=318064720]
-layout_mode = 1
-offset_left = 480.0
-offset_top = 96.0
-offset_right = 612.0
-offset_bottom = 220.0
-theme_override_constants/separation = 20
-alignment = 1
-
-[node name="PlayGame" type="Button" parent="VBoxContainer" unique_id=1898250689]
-layout_mode = 2
+[node name="PlayGame" type="Button" parent="." unique_id=1898250689]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 128.0
+offset_right = 600.0
+offset_bottom = 168.0
 theme = ExtResource("4_sqprt")
 text = "Play"
 
-[node name="Leaderboards" type="Button" parent="VBoxContainer" unique_id=624912283]
-layout_mode = 2
+[node name="Leaderboards" type="Button" parent="." unique_id=624912283]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 184.0
+offset_right = 600.0
+offset_bottom = 256.0
 theme = ExtResource("4_sqprt")
 text = "Leaderboards"
 
-[node name="Settings" type="Button" parent="VBoxContainer" unique_id=1311008435]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("4_sqprt")
-text = "Settings"
-
-[node name="Separator" type="Control" parent="VBoxContainer" unique_id=2013227021]
-custom_minimum_size = Vector2(0, 76)
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="ExitGame" type="Button" parent="VBoxContainer" unique_id=1165733767]
-layout_mode = 2
+[node name="ExitGame" type="Button" parent="." unique_id=1165733767]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 272.0
+offset_right = 600.0
+offset_bottom = 312.0
 size_flags_horizontal = 3
 theme = ExtResource("4_sqprt")
 text = "Exit"
 
-[connection signal="pressed" from="VBoxContainer/PlayGame" to="." method="_on_play_game_pressed"]
-[connection signal="pressed" from="VBoxContainer/Leaderboards" to="." method="_on_leaderboards_pressed"]
-[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="VBoxContainer/ExitGame" to="." method="_on_exit_game_pressed"]
+[connection signal="pressed" from="PlayGame" to="." method="_on_play_game_pressed"]
+[connection signal="pressed" from="Leaderboards" to="." method="_on_leaderboards_pressed"]
+[connection signal="pressed" from="ExitGame" to="." method="_on_exit_game_pressed"]

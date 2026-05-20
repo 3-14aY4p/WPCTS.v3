@@ -32,6 +32,7 @@ size = Vector2(50, 34)
 [node name="CampusCafeteria" type="Node2D" unique_id=762134968 groups=["game_level"]]
 y_sort_enabled = true
 script = ExtResource("1_a7pq2")
+soundtrack = "BTHR"
 onready_dialogue = "res://_FINAL_LEVELS/week 4/JSON/W4_7-ONR.json"
 on_complete_dialogue = "res://_FINAL_LEVELS/week 4/JSON/W4_7-TC.json"
 on_fail_dialogue = "res://_FINAL_LEVELS/week 4/JSON/W4_7-TC.json"
@@ -240,7 +241,7 @@ position = Vector2(185, 107)
 
 [node name="TaskController" parent="." unique_id=673560431 instance=ExtResource("12_ofeyr")]
 task_id = "w4_7"
-time_limit = 120.0
+time_limit = 185.0
 
 [node name="AreaBoundary" parent="TaskController" index="0" unique_id=1037100174]
 tile_map_data = PackedByteArray("AAANAAUAAAACAAEAAAANAAQAAAACAAAAAAAMAAQAAAACAAAAAAAOAAUAAAADAAEAAAAOAAQAAAADAAAAAAAMAAUAAAACAAEAAAALAAUAAAABAAEAAAALAAQAAAABAAAAAAAOAAYAAAADAAIAAAANAAYAAAACAAIAAAAMAAYAAAACAAIAAAALAAYAAAABAAIAAAA=")

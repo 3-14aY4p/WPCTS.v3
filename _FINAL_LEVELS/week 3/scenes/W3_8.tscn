@@ -21,6 +21,7 @@ point_count = 2
 [node name="DormLobby" type="Node2D" unique_id=2071895273 groups=["game_level"]]
 y_sort_enabled = true
 script = ExtResource("1_atvf1")
+soundtrack = "DORM"
 onready_dialogue = "res://_FINAL_LEVELS/week 3/JSON/W3_8-ONR.json"
 
 [node name="UserInterface" parent="." unique_id=1485922269 instance=ExtResource("2_kgbcn")]

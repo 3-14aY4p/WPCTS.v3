@@ -17,6 +17,7 @@ size = Vector2(14, 14)
 [node name="DormRoom" type="Node2D" unique_id=453450293 groups=["game_level"]]
 y_sort_enabled = true
 script = ExtResource("1_e0dr7")
+soundtrack = "DORM"
 
 [node name="UserInterface" parent="." unique_id=1485922269 instance=ExtResource("2_vaoa0")]
 
@@ -55,6 +56,7 @@ tile_map_data = PackedByteArray("AAAJAAYAAAACAAIAAAAJAAUAAAACAAEAAAAJAAQAAAACAAE
 [node name="Bed" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="0" unique_id=98163697 instance=ExtResource("5_d4unv")]
 position = Vector2(78, 104)
 dialogue_line = "Goodnight."
+dialogue_file = "res://_FINAL_LEVELS/week 4/JSON/W4_9.json"
 
 [node name="StudyDesk" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="1" unique_id=1637569631 instance=ExtResource("6_sg6l6")]
 position = Vector2(93, 74)

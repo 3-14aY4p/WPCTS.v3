@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dm7bb22vrtdo3"]
+
+[ext_resource type="Theme" uid="uid://dimc0cp4ncfuj" path="res://Themes/richtextlabel_theme_1.tres" id="1_cw55e"]
+[ext_resource type="Script" uid="uid://bg2mqc8xv74d7" path="res://MenuUI/leaderboards/lb_row.gd" id="1_j5pxb"]
+
+[node name="LeaderboardRow" type="HBoxContainer" unique_id=455353992]
+offset_right = 640.0
+offset_bottom = 20.0
+script = ExtResource("1_j5pxb")
+
+[node name="RankLabel" type="RichTextLabel" parent="." unique_id=436608042]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme = ExtResource("1_cw55e")
+text = "1
+"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NameLabel" type="RichTextLabel" parent="." unique_id=2140006441]
+custom_minimum_size = Vector2(380, 0)
+layout_mode = 2
+theme = ExtResource("1_cw55e")
+text = "Rice"
+fit_content = true
+scroll_active = false
+vertical_alignment = 1
+
+[node name="ScoreLabel" type="RichTextLabel" parent="." unique_id=1717726849]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_cw55e")
+text = "89.2"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 2
+vertical_alignment = 1

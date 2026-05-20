@@ -17,6 +17,7 @@ size = Vector2(14, 14)
 [node name="DormRoom" type="Node2D" unique_id=453450293 groups=["game_level"]]
 y_sort_enabled = true
 script = ExtResource("1_xh13g")
+soundtrack = "DORM"
 
 [node name="UserInterface" parent="." unique_id=1485922269 instance=ExtResource("2_0guir")]
 

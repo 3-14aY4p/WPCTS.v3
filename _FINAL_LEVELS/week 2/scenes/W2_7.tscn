@@ -22,6 +22,7 @@ size = Vector2(4, 20)
 [node name="CampusClassroom" type="Node2D" unique_id=1450742048 groups=["game_level"]]
 y_sort_enabled = true
 script = ExtResource("1_0aj1t")
+soundtrack = "BTHR"
 
 [node name="UserInterface" parent="." unique_id=1485922269 instance=ExtResource("2_383pa")]
 

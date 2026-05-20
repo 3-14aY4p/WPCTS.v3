@@ -17,6 +17,7 @@ size = Vector2(14, 14)
 [node name="DormRoom" type="Node2D" unique_id=453450293 groups=["game_level"]]
 y_sort_enabled = true
 script = ExtResource("1_50sa1")
+soundtrack = "BTHR"
 onready_dialogue = "res://_FINAL_LEVELS/week 3/JSON/W3_1-ONR.json"
 
 [node name="UserInterface" parent="." unique_id=1485922269 instance=ExtResource("2_d580e")]

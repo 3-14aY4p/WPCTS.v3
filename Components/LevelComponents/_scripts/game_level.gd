@@ -8,6 +8,8 @@ class_name GameLevel extends Node2D
 @onready var exit_points: Array = get_tree().get_nodes_in_group("exit_point")
 @onready var objects: Array = get_tree().get_nodes_in_group("dynamic_object")
 
+@export_enum("UI", "QUIZ", "DORM", "CLSR", "CFTR", "LIBR", "BTHR") var soundtrack: String = "LIBR"
+
 @export var initial_camera_focus: Node2D = null
 @export_range(0.0, 100.0, 0.5) var wait_time: float = 2
 
@@ -40,6 +42,8 @@ class_name GameLevel extends Node2D
 @export var instantiate_on_fail: Array[PackedScene]
 
 func _ready() -> void:
+	AudioManager.play_music(soundtrack)
+	
 	if player:
 		player.state_machine.change_state("playerdisabled")
 		
@@ -73,6 +77,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		else: DialogueManager.activate_popup(oninput_dialogue)
 		
 		oninput_dialogue = null
+		
+	if event.is_action_pressed("_exit"):
+		var pause_menu = preload("uid://btabiq1aojweb").instantiate()
+		add_child(pause_menu)
+
 
 func _physics_process(delta: float) -> void:
 	if not player:

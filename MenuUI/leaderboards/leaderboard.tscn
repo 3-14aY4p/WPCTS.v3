@@ -1,0 +1,142 @@
+[gd_scene format=3 uid="uid://bsewjhvw4x7ih"]
+
+[ext_resource type="Script" uid="uid://iblmsc2bvtw" path="res://MenuUI/leaderboards/leaderboards.gd" id="1_754i7"]
+[ext_resource type="Texture2D" uid="uid://cejr7n5mqmd57" path="res://Assets/Art/ui.png" id="2_8rrlj"]
+[ext_resource type="Theme" uid="uid://dimc0cp4ncfuj" path="res://Themes/richtextlabel_theme_1.tres" id="3_0evbk"]
+[ext_resource type="Theme" uid="uid://bui0fgkyyas4h" path="res://Themes/button_theme_5.tres" id="3_8rrlj"]
+[ext_resource type="Theme" uid="uid://bslvdtxym4ceo" path="res://Themes/richtextlabel_theme_2.tres" id="4_3f1nn"]
+
+[node name="Leaderboard" type="Control" unique_id=2088590534]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_754i7")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=645186210]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.20784314, 0.23921569, 0.27450982, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1522042975]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_8rrlj")
+region_rect = Rect2(0, 0, 48, 48)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1927344604]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=456724023]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=1495147317]
+layout_mode = 2
+theme = ExtResource("3_0evbk")
+theme_override_font_sizes/normal_font_size = 34
+text = "+ LEADERBOARDS +"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Separator" type="ColorRect" parent="MarginContainer/VBoxContainer" unique_id=1518577385]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.67058825, 0.7294118, 0.4745098, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=455353992]
+layout_mode = 2
+
+[node name="RankLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=436608042]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme = ExtResource("3_0evbk")
+theme_override_colors/default_color = Color(0.4509804, 0.59607846, 0.34117648, 1)
+text = "RANK"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NameLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=2140006441]
+custom_minimum_size = Vector2(380, 0)
+layout_mode = 2
+theme = ExtResource("3_0evbk")
+theme_override_colors/default_color = Color(0.4509804, 0.59607846, 0.34117648, 1)
+text = "NAME"
+fit_content = true
+scroll_active = false
+vertical_alignment = 1
+
+[node name="ScoreLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1717726849]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_0evbk")
+theme_override_colors/default_color = Color(0.4509804, 0.59607846, 0.34117648, 1)
+text = "SCORE   "
+fit_content = true
+scroll_active = false
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Separator2" type="ColorRect" parent="MarginContainer/VBoxContainer" unique_id=692900273]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.67058825, 0.7294118, 0.4745098, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer" unique_id=1699467759]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("4_3f1nn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer" unique_id=1947809931]
+custom_minimum_size = Vector2(580, 0)
+layout_mode = 2
+
+[node name="LeaderboardRow" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=635236970 instance_placeholder="res://MenuUI/leaderboards/lb_row.tscn"]
+layout_mode = 2
+
+[node name="LeaderboardRow2" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1144417368 instance_placeholder="res://MenuUI/leaderboards/lb_row.tscn"]
+layout_mode = 2
+
+[node name="LeaderboardRow3" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=841877959 instance_placeholder="res://MenuUI/leaderboards/lb_row.tscn"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="." unique_id=407840885]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 26.0
+offset_right = 54.0
+offset_bottom = 46.0
+theme = ExtResource("3_8rrlj")
+text = "<-"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

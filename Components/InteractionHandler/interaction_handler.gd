@@ -1,6 +1,7 @@
 extends Node
 # this is an autoload
 
+
 @onready var player: Player = get_tree().get_first_node_in_group("player")
 @onready var label: Label = $Label
 

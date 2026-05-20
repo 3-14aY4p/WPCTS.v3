@@ -1,0 +1,77 @@
+{
+	"0": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "",
+		"anim": "",
+		"text": "You arrived on time.",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "",
+		"anim": "",
+		"text": "And so did Prof. Candice.",
+		
+		"next": "2"
+	},
+	"2": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "",
+		"anim": "",
+		"text": "She gives you a small nod.",
+		
+		"next": "2.5"
+	},
+	"2.5": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "",
+		"anim": "",
+		"text": "And you nod back.",
+		
+		"next": "3"
+	},
+	"3": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "",
+		"anim": "",
+		"text": "And with that,",
+		
+		"next": "3.5"
+	},
+	"3.5": {
+		"zoom": [6, 6],
+		"focus": "",
+		"index": 0,
+		
+		"name": "",
+		"anim": "",
+		"text": "The final assessment began.",
+		
+		"next": "END"
+	},
+	"END": {
+		"node": "/root/GameController",
+		"func": "fade_to_next_scene",
+		"args": [],
+		"await": "",
+		"hide_box": true,
+		
+		"comment": ""
+	},
+}

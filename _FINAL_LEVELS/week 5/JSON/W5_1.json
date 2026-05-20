@@ -1,0 +1,24 @@
+{
+	"0": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "",
+		"anim": "",
+		"text": "It's finals week.",
+		
+		"next": "1"
+	},
+	"1": {
+		"zoom": [],
+		"focus": "",
+		"index": 0,
+		
+		"name": "",
+		"anim": "",
+		"text": "You should go to class.",
+		
+		"next": ""
+	},
+}

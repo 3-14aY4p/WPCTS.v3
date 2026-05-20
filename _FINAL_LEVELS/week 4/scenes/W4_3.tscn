@@ -22,6 +22,7 @@ point_count = 3
 [node name="CampusClassroom" type="Node2D" unique_id=1450742048 node_paths=PackedStringArray("initial_camera_focus") groups=["game_level"]]
 y_sort_enabled = true
 script = ExtResource("1_6bpl5")
+soundtrack = "CLSR"
 initial_camera_focus = NodePath("GameWorld/NPCContainer/Path2D/PathFollow2D/NPC_pf")
 onready_dialogue = "res://_FINAL_LEVELS/week 4/JSON/W4_3-ONR.json"
 

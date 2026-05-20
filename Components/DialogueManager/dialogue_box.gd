@@ -3,6 +3,7 @@ class_name DialogueBox extends Control
 
 @onready var player: Player = get_tree().get_first_node_in_group("player")
 @onready var camera: CustomCamera = get_tree().get_first_node_in_group("camera")
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 @onready var portrait_container: Control = %PortraitContainer
 @onready var character_name: Label = %CharacterName
@@ -102,6 +103,7 @@ func load_block(block: Dictionary):
 		dialogue_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		
 	if block.has("text"): 
+		audio_stream_player.play(0.0)
 		dialogue_label.text = block["text"]
 		
 	# check if it's line, choice, or func, or if it's the last item

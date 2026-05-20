@@ -3,12 +3,15 @@
 [ext_resource type="Script" uid="uid://dg8qagexqhhwt" path="res://Entities/Characters/Player/player.gd" id="1_mv1ah"]
 [ext_resource type="Texture2D" uid="uid://babbqstx2ptg7" path="res://Assets/Art/player.png" id="2_3uyv8"]
 [ext_resource type="Script" uid="uid://cg0nwknkxhi6g" path="res://Components/StateMachine/state_machine.gd" id="2_lu8i8"]
+[ext_resource type="AudioStream" uid="uid://bdsjts1uo07vp" path="res://Assets/Soundtrack/SFX/impact_hit.wav" id="2_nv0be"]
+[ext_resource type="AudioStream" uid="uid://bts8fljly0n22" path="res://Assets/Soundtrack/SFX/impact_smash.wav" id="3_ih7kn"]
 [ext_resource type="Script" uid="uid://djimeiq387sgd" path="res://Entities/Characters/Player/States/player_disabled.gd" id="3_lub02"]
 [ext_resource type="Script" uid="uid://cxcnu7yyxifll" path="res://Entities/Characters/Player/States/player_idle.gd" id="3_tekja"]
 [ext_resource type="Script" uid="uid://yx0gcchvusbo" path="res://Entities/Characters/Player/States/player_walk.gd" id="5_x1y6q"]
 [ext_resource type="Script" uid="uid://cuka3njmx1q8a" path="res://Entities/Characters/Player/States/player_carry.gd" id="6_ap3xn"]
 [ext_resource type="Script" uid="uid://ccbq5tq7xnvb0" path="res://Entities/Characters/Player/States/player_shove.gd" id="7_iplt1"]
 [ext_resource type="Script" uid="uid://b4e1hci1ac8pv" path="res://Entities/Characters/Player/States/player_knockback.gd" id="8_owvpp"]
+[ext_resource type="Theme" uid="uid://bqvj04y111fe7" path="res://Themes/progress_bar.tres" id="10_cag7h"]
 [ext_resource type="PackedScene" uid="uid://cqngnytombuvg" path="res://Components/CameraManager/custom_camera.tscn" id="10_x1y6q"]
 
 [sub_resource type="Animation" id="Animation_lu8i8"]
@@ -198,23 +201,6 @@ height = 10.0
 radius = 0.5
 height = 2.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3uyv8"]
-bg_color = Color(0.20392157, 0.23529412, 0.26666668, 1)
-anti_aliasing = false
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lu8i8"]
-bg_color = Color(0.67058825, 0.7294118, 0.4745098, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.2, 0.23137255, 0.26666668, 1)
-anti_aliasing = false
-
-[sub_resource type="Theme" id="Theme_tekja"]
-ProgressBar/styles/background = SubResource("StyleBoxFlat_3uyv8")
-ProgressBar/styles/fill = SubResource("StyleBoxFlat_lu8i8")
-
 [node name="Player" type="CharacterBody2D" unique_id=1674835234 groups=["player"]]
 z_index = 1
 y_sort_enabled = true
@@ -222,6 +208,15 @@ collision_layer = 8
 collision_mask = 7
 script = ExtResource("1_mv1ah")
 metadata/_edit_group_ = true
+
+[node name="ShoveSFX" type="AudioStreamPlayer" parent="." unique_id=1809130461]
+stream = ExtResource("2_nv0be")
+volume_db = 24.0
+bus = &"SFX"
+
+[node name="CarrySFX" type="AudioStreamPlayer" parent="." unique_id=631632035]
+stream = ExtResource("3_ih7kn")
+bus = &"SFX"
 
 [node name="StateMachine" type="Node" parent="." unique_id=396408628 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("2_lu8i8")
@@ -316,7 +311,7 @@ offset_top = -3.0
 offset_right = 6.0
 grow_horizontal = 2
 grow_vertical = 0
-theme = SubResource("Theme_tekja")
+theme = ExtResource("10_cag7h")
 step = 0.0
 value = 50.0
 show_percentage = false

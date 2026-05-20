@@ -16,6 +16,7 @@ func _on_interactable_area_interact() -> void:
 		else:
 			if dialogue_line != "":
 				DialogueManager.activate_box_line(character_name, character_anim, dialogue_line)
+				
 			GameController.save_and_next()
 	else:
 		DialogueManager.activate_box_line(character_name, character_anim, dialogue_line)

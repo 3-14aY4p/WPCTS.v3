@@ -22,6 +22,7 @@ size = Vector2(4, 4)
 [node name="CampusClassroom" type="Node2D" unique_id=1450742048 groups=["game_level"]]
 y_sort_enabled = true
 script = ExtResource("1_q2afa")
+soundtrack = "BTHR"
 onready_dialogue = "res://_FINAL_LEVELS/week 1/JSON/W1_6-ONR.json"
 on_complete_dialogue = "res://_FINAL_LEVELS/week 1/JSON/W1_6-TC.json"
 on_fail_dialogue = "res://_FINAL_LEVELS/week 1/JSON/W1_6-TC.json"
@@ -177,8 +178,8 @@ frame = 1
 
 [node name="LargeBox" parent="GameWorld/ObjectContainer" parent_id_path=PackedInt32Array(1410708023, 1694475121) index="13" unique_id=50202933 groups=["shoveable_object", "task_object"] instance=ExtResource("9_ihjai")]
 position = Vector2(160, 96)
-mass = 14.0
-minimum_force = 250.0
+mass = 12.0
+minimum_force = 115.0
 
 [node name="NPC_pf" parent="GameWorld/NPCContainer" parent_id_path=PackedInt32Array(1410708023, 30440007) index="0" unique_id=744398630 groups=["npc"] instance=ExtResource("10_ya4oo")]
 position = Vector2(134, 85)

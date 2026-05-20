@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://beoxcn51v5v5c"]
 
 [ext_resource type="Script" uid="uid://cl0iiwg5ln1nc" path="res://MenuUI/start_menu.gd" id="1_m4ry4"]
+[ext_resource type="Texture2D" uid="uid://bf23een7hfy3n" path="res://Assets/Art/cover.png" id="2_smg2w"]
 [ext_resource type="Theme" uid="uid://dimc0cp4ncfuj" path="res://Themes/richtextlabel_theme_1.tres" id="3_ksn44"]
 [ext_resource type="Theme" uid="uid://bui0fgkyyas4h" path="res://Themes/button_theme_5.tres" id="4_smg2w"]
 
@@ -22,6 +23,18 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.20784314, 0.23921569, 0.27450982, 1)
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1657871052]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.11111111
+anchor_right = 0.8916666
+anchor_bottom = 0.9777778
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_smg2w")
+metadata/_edit_use_anchors_ = true
+
 [node name="TitleLabel" type="RichTextLabel" parent="." unique_id=1735405756]
 clip_contents = false
 layout_mode = 0
@@ -36,41 +49,33 @@ text = "WHEN PUSH COMES TO SHOVE"
 fit_content = true
 scroll_active = false
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=318064720]
-layout_mode = 1
-offset_left = 480.0
-offset_top = 96.0
-offset_right = 612.0
-offset_bottom = 220.0
-theme_override_constants/separation = 20
-alignment = 1
-
-[node name="NewGame" type="Button" parent="VBoxContainer" unique_id=1898250689]
-layout_mode = 2
+[node name="NewGame" type="Button" parent="." unique_id=1898250689]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 128.0
+offset_right = 600.0
+offset_bottom = 176.0
 theme = ExtResource("4_smg2w")
 text = "New Game"
 
-[node name="LoadGame" type="Button" parent="VBoxContainer" unique_id=1165733767]
-layout_mode = 2
+[node name="LoadGame" type="Button" parent="." unique_id=1165733767]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 192.0
+offset_right = 600.0
+offset_bottom = 240.0
 theme = ExtResource("4_smg2w")
 text = "Load Game"
 
-[node name="QuizMode" type="Button" parent="VBoxContainer" unique_id=7636787]
-layout_mode = 2
-theme = ExtResource("4_smg2w")
-text = "Quiz Mode"
-
-[node name="Separator" type="Control" parent="VBoxContainer" unique_id=2028608171]
-custom_minimum_size = Vector2(0, 76)
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="Back" type="Button" parent="VBoxContainer" unique_id=1524740686]
-layout_mode = 2
+[node name="Back" type="Button" parent="." unique_id=1524740686]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 256.0
+offset_right = 600.0
+offset_bottom = 312.0
 theme = ExtResource("4_smg2w")
 text = "Back"
 
-[connection signal="pressed" from="VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
-[connection signal="pressed" from="VBoxContainer/LoadGame" to="." method="_on_load_game_pressed"]
-[connection signal="pressed" from="VBoxContainer/QuizMode" to="." method="_on_quiz_mode_pressed"]
-[connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="LoadGame" to="." method="_on_load_game_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

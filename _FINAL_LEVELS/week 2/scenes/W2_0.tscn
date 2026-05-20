@@ -4,6 +4,7 @@
 
 [node name="BlankScreen" type="CanvasLayer" unique_id=1999547854]
 script = ExtResource("1_qfrvd")
+soundtrack = "LIBR"
 dialogue_file = "res://_FINAL_LEVELS/week 2/JSON/W2_0.json"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=531310683]

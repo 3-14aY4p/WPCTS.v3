@@ -23,6 +23,7 @@ size = Vector2(32, 11)
 [node name="DormHallway" type="Node2D" unique_id=1278440609 node_paths=PackedStringArray("free_on_complete", "free_on_fail", "points_on_complete", "points_on_fail") groups=["game_level"]]
 y_sort_enabled = true
 script = ExtResource("1_el3vu")
+soundtrack = "BTHR"
 on_complete_dialogue = "res://_FINAL_LEVELS/week 3/JSON/W3_2-TC.json"
 on_fail_dialogue = "res://_FINAL_LEVELS/week 3/JSON/W3_2-TC.json"
 free_on_complete = [NodePath("GameWorld/NPCContainer/NPC_dm")]

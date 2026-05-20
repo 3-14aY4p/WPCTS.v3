@@ -64,6 +64,7 @@ position = Vector2(72, 69)
 
 [node name="ExitPoint" parent="GameWorld/AreaContainer" parent_id_path=PackedInt32Array(1410708023, 41382741) index="0" unique_id=1305555057 instance=ExtResource("8_l6xjl")]
 position = Vector2(120, 64)
+locked = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GameWorld/AreaContainer/ExitPoint" unique_id=1033436047]
 position = Vector2(0, -7)

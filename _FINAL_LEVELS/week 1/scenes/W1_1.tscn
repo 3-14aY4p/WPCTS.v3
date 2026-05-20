@@ -80,7 +80,6 @@ tile_map_data = PackedByteArray("AAAJAAYAAAACAAIAAAAJAAUAAAACAAEAAAAJAAQAAAACAAE
 [node name="Bed" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="0" unique_id=98163697 instance=ExtResource("5_j2rvt")]
 position = Vector2(78, 104)
 dialogue_line = "I have a class to attend..."
-action_hint = "[E] sleep"
 
 [node name="StudyDesk" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="1" unique_id=1637569631 instance=ExtResource("6_uddjx")]
 position = Vector2(93, 74)

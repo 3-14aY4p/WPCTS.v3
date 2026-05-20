@@ -40,6 +40,7 @@ _data = {
 }
 
 [node name="GameController" type="Node" unique_id=243023303]
+process_mode = 3
 script = ExtResource("1_5i5eb")
 
 [node name="TransitionHandler" type="CanvasLayer" parent="." unique_id=418000816]

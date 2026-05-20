@@ -28,6 +28,7 @@ size = Vector2(18, 14)
 [node name="CampusCafeteria" type="Node2D" unique_id=762134968 node_paths=PackedStringArray("free_on_start") groups=["game_level"]]
 y_sort_enabled = true
 script = ExtResource("1_42ndk")
+soundtrack = "CFTR"
 onready_dialogue = "res://_FINAL_LEVELS/week 1/JSON/W1_3-ONR.json"
 on_complete_dialogue = "res://_FINAL_LEVELS/week 1/JSON/W1_3-TC.json"
 free_on_start = [NodePath("GameWorld/NPCContainer/NPC_mt")]

@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://c42vv3i5kbptl"]
+
+[ext_resource type="Script" uid="uid://cobi3sgsqb1ty" path="res://BaseLevels/InterfaceScenes/results_interface.gd" id="1_abb1q"]
+[ext_resource type="Texture2D" uid="uid://cejr7n5mqmd57" path="res://Assets/Art/ui.png" id="2_jr2y4"]
+[ext_resource type="FontFile" uid="uid://ckbixblavooub" path="res://Assets/Font/Pixel Millennium.ttf" id="3_ebypu"]
+[ext_resource type="FontFile" uid="uid://bthadkgdkntt8" path="res://Assets/Font/superstar_memesbruh03.ttf" id="4_syxe0"]
+[ext_resource type="Theme" uid="uid://bui0fgkyyas4h" path="res://Themes/button_theme_5.tres" id="5_ivqug"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_syxe0"]
+font = ExtResource("3_ebypu")
+font_size = 20
+font_color = Color(0.2509804, 0.3764706, 0.3372549, 1)
+outline_size = 4
+outline_color = Color(0.2, 0.23137255, 0.26666668, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ivqug"]
+font = ExtResource("4_syxe0")
+font_size = 40
+font_color = Color(0.42352942, 0.5647059, 0.33333334, 1)
+outline_size = 4
+outline_color = Color(0.2, 0.23137255, 0.26666668, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kxbog"]
+font = ExtResource("3_ebypu")
+font_size = 32
+font_color = Color(0.6666667, 0.7254902, 0.4745098, 1)
+outline_size = 4
+outline_color = Color(0.2, 0.23137255, 0.26666668, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dstvk"]
+font = ExtResource("3_ebypu")
+font_size = 24
+font_color = Color(0.42352942, 0.5647059, 0.33333334, 1)
+outline_size = 4
+outline_color = Color(0.2, 0.23137255, 0.26666668, 1)
+
+[node name="ResultsInterface" type="Control" unique_id=1061778138]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_abb1q")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=612296767]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.20784314, 0.23921569, 0.27450982, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1655319587]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_jr2y4")
+region_rect = Rect2(0, 96, 48, 48)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=903422471]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1480048182]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1117943278]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+text = "ASSESSMENT COMPLETE!"
+label_settings = SubResource("LabelSettings_syxe0")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer" unique_id=647739624]
+layout_mode = 2
+text = "You got"
+label_settings = SubResource("LabelSettings_ivqug")
+horizontal_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=485489206]
+layout_mode = 2
+text = "0 out of 10"
+label_settings = SubResource("LabelSettings_kxbog")
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1645610223]
+layout_mode = 2
+text = "correct"
+label_settings = SubResource("LabelSettings_dstvk")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=141620666]
+layout_mode = 1
+offset_left = 504.0
+offset_top = 312.0
+offset_right = 612.0
+offset_bottom = 332.0
+theme = ExtResource("5_ivqug")
+theme_override_font_sizes/font_size = 16
+text = "Return to class"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

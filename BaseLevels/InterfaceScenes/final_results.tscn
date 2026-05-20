@@ -1,0 +1,230 @@
+[gd_scene format=3 uid="uid://bnnu4ay1qjx0p"]
+
+[ext_resource type="Texture2D" uid="uid://cejr7n5mqmd57" path="res://Assets/Art/ui.png" id="1_6p4q2"]
+[ext_resource type="Script" uid="uid://bljjnja7piv" path="res://BaseLevels/InterfaceScenes/final_results.gd" id="1_u0sf7"]
+[ext_resource type="FontFile" uid="uid://ckbixblavooub" path="res://Assets/Font/Pixel Millennium.ttf" id="2_ygpny"]
+[ext_resource type="Texture2D" uid="uid://pbum3ny3yj34" path="res://Assets/Art/lecture.png" id="3_ygpny"]
+[ext_resource type="Texture2D" uid="uid://17svgm5pbki0" path="res://Assets/Art/characters.png" id="4_ousns"]
+[ext_resource type="Theme" uid="uid://bui0fgkyyas4h" path="res://Themes/button_theme_5.tres" id="6_76p8x"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ousns"]
+font = ExtResource("2_ygpny")
+font_size = 50
+font_color = Color(0.42352942, 0.5647059, 0.33333334, 1)
+outline_size = 4
+outline_color = Color(0.2, 0.23137255, 0.26666668, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nrsew"]
+font = ExtResource("2_ygpny")
+font_size = 24
+font_color = Color(0.4117647, 0.54509807, 0.32941177, 1)
+outline_size = 4
+outline_color = Color(0.2, 0.23137255, 0.26666668, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ygpny"]
+font = ExtResource("2_ygpny")
+font_size = 24
+font_color = Color(0.67058825, 0.7294118, 0.4745098, 1)
+outline_size = 4
+outline_color = Color(0.2, 0.23137255, 0.26666668, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_u0sf7"]
+font = ExtResource("2_ygpny")
+font_size = 24
+font_color = Color(0.6431373, 0.69803923, 0.45882353, 1)
+outline_size = 4
+outline_color = Color(0.2, 0.23137255, 0.26666668, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_76p8x"]
+font = ExtResource("2_ygpny")
+font_size = 24
+font_color = Color(0.67058825, 0.7294118, 0.47843137, 1)
+outline_size = 4
+outline_color = Color(0.2, 0.23137255, 0.26666668, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_76p8x"]
+atlas = ExtResource("4_ousns")
+region = Rect2(96, 48, 32, 48)
+
+[node name="FinalResults" type="Control" unique_id=2085077801]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u0sf7")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=365485438]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.20784314, 0.23921569, 0.27450982, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1626576978]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6p4q2")
+region_rect = Rect2(0, 0, 48, 48)
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1898520603]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=789939947]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1109542294]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+text = "FINAL RESULTS"
+label_settings = SubResource("LabelSettings_ousns")
+vertical_alignment = 1
+
+[node name="Separator" type="ColorRect" parent="MarginContainer/VBoxContainer" unique_id=1447720859]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.67058825, 0.7294118, 0.4745098, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1841554692]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=2142270091]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1653705229]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+text = "Initial Assessment"
+label_settings = SubResource("LabelSettings_nrsew")
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1765297107]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+text = "Final Assessment"
+label_settings = SubResource("LabelSettings_nrsew")
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=2002028490]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+text = "Tasks Completed"
+label_settings = SubResource("LabelSettings_nrsew")
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1492531887]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1832532180]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+text = "Practical Rating"
+label_settings = SubResource("LabelSettings_nrsew")
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=2081377894]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+text = "FINAL GRADE"
+label_settings = SubResource("LabelSettings_nrsew")
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=610055536]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="InitialAssLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=296521291]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+text = "23"
+label_settings = SubResource("LabelSettings_ygpny")
+vertical_alignment = 1
+
+[node name="FinalAssLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=170117249]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+text = "43"
+label_settings = SubResource("LabelSettings_u0sf7")
+vertical_alignment = 1
+
+[node name="TaskCompLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1294422846]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+text = "5/11"
+label_settings = SubResource("LabelSettings_76p8x")
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=2095148218]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="PractRatingLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=315843464]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+text = "Pass"
+label_settings = SubResource("LabelSettings_76p8x")
+vertical_alignment = 1
+
+[node name="FinalGradeLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=718640352]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+text = "92.9"
+label_settings = SubResource("LabelSettings_76p8x")
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1386995559]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 105.095245
+offset_right = 606.0
+offset_bottom = 309.90475
+size_flags_horizontal = 3
+texture = SubResource("AtlasTexture_76p8x")
+stretch_mode = 4
+flip_h = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=640688128]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 226.0
+offset_right = 635.8667
+offset_bottom = 348.0
+size_flags_horizontal = 3
+texture = ExtResource("3_ygpny")
+
+[node name="NextButton" type="Button" parent="." unique_id=338482771]
+layout_mode = 0
+offset_left = 544.0
+offset_top = 40.0
+offset_right = 604.0
+offset_bottom = 60.0
+theme = ExtResource("6_76p8x")
+text = "Next"
+
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]

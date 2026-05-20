@@ -20,6 +20,7 @@
 [node name="CampusClassroom" type="Node2D" unique_id=1450742048 groups=["game_level"]]
 y_sort_enabled = true
 script = ExtResource("1_fuql6")
+soundtrack = "CLSR"
 
 [node name="UserInterface" parent="." unique_id=1485922269 instance=ExtResource("2_n38ea")]
 

@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://dqw4ouhtw70nh"]
 
-[ext_resource type="Script" uid="uid://ba1xlr2bfaj8r" path="res://BaseLevels/BaseScenes/miscellaneous/blank_screen.gd" id="1_2n7f0"]
+[ext_resource type="Script" uid="uid://ba1xlr2bfaj8r" path="res://BaseLevels/BaseScenes/miscellaneous/blank_screen.gd" id="1_tww6v"]
 
 [node name="BlankScreen" type="CanvasLayer" unique_id=1999547854]
-script = ExtResource("1_2n7f0")
+script = ExtResource("1_tww6v")
+soundtrack = "DORM"
+dialogue_file = "res://_FINAL_LEVELS/week 5/JSON/W5_0.json"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=531310683]
 anchors_preset = 15
