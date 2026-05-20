@@ -8,7 +8,8 @@ extends Control
 @onready var final_grade_label: Label = $MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/FinalGradeLabel
 
 func _ready() -> void:
-	AudioManager.play_music("UI")
+	if AudioManager.active_music_stream != AudioManager.clips.get_node("DORM"):
+		AudioManager.play_music("QUIZ")
 	
 	initial_ass_label.text = str(GameController.weekly_score[0])
 	final_ass_label.text = str(GameController.weekly_score[4])

@@ -27,9 +27,10 @@ var active_qbank: Array
 var current_index: int = 0
 
 func _ready() -> void:
-	AudioManager.play_music("QUIZ")
+	if AudioManager.active_music_stream != AudioManager.clips.get_node("DORM"):
+		AudioManager.play_music("QUIZ")
 	
-	qbank = QuestionData.WEEKS[GameController.current_week]['questions']
+	qbank = QuestionData.WEEKS[GameController.current_week - 1]['questions']
 	active_qbank = qbank.duplicate(true)	# making an editable copy
 	
 	active_qbank.shuffle()
@@ -41,6 +42,7 @@ func _ready() -> void:
 	timer.wait_time = answer_window
 	time_indicator.max_value = answer_window
 	
+	update_progress()
 	next_question()
 
 func _physics_process(delta: float) -> void:

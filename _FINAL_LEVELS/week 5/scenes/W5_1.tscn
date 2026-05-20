@@ -56,6 +56,7 @@ tile_map_data = PackedByteArray("AAAJAAYAAAACAAIAAAAJAAUAAAACAAEAAAAJAAQAAAACAAE
 
 [node name="Bed" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="0" unique_id=98163697 instance=ExtResource("5_j3t48")]
 position = Vector2(78, 104)
+disabled = true
 
 [node name="StudyDesk" parent="GameWorld/StaticContainer" parent_id_path=PackedInt32Array(1410708023, 1708936030) index="1" unique_id=1637569631 instance=ExtResource("6_xe68f")]
 position = Vector2(93, 74)

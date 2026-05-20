@@ -115,8 +115,9 @@ func save_and_next():
 
 # load next level; dependent on scene_data dictionary
 func load_next_scene():
+	print(current_week)
 	# player reached the end of the game
-	if current_week > scene_data.size():
+	if current_week == 6:
 		display_final_results()
 		return
 		
@@ -124,6 +125,8 @@ func load_next_scene():
 	if current_scene_index >= scene_data[current_week].size():
 		current_week += 1
 		current_scene_index = 0
+		load_next_scene()
+		return
 		
 	var current_scene_path = scene_data[current_week][current_scene_index]
 	if current_scene_path != "":

@@ -3,7 +3,7 @@ extends InteractableObject
 
 @export var character_name: String = "Colin"
 @export_enum(
-	"mc", "dm", "mt", "pf", "rand", "unkn"
+	"mc", "dm", "mt", "pf", "rand", "unkn",
 ) var character_anim = "mc"
 @export_multiline() var dialogue_line: String
 
